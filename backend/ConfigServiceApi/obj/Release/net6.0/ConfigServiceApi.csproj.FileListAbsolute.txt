@@ -1,0 +1,12 @@
+D:\ConfigService\XinChuang\ConfigServiceApi\bin\Release\net6.0\ConfigServiceApi.deps.json
+D:\ConfigService\XinChuang\ConfigServiceApi\bin\Release\net6.0\ConfigServiceApi.dll
+D:\ConfigService\XinChuang\ConfigServiceApi\bin\Release\net6.0\ConfigServiceApi.pdb
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\ConfigServiceApi.csproj.AssemblyReference.cache
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\ConfigServiceApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\ConfigServiceApi.AssemblyInfoInputs.cache
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\ConfigServiceApi.AssemblyInfo.cs
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\ConfigServiceApi.csproj.CoreCompileInputs.cache
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\ConfigServiceApi.dll
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\refint\ConfigServiceApi.dll
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\ConfigServiceApi.pdb
+D:\ConfigService\XinChuang\ConfigServiceApi\obj\Release\net6.0\ref\ConfigServiceApi.dll

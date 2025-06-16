@@ -1,0 +1,145 @@
+[
+  {
+    "label": "基础数据",
+    "key": "base",
+    "icon": "SnippetsOutlined",
+    "children": [
+      { "label": "数据字典", "key": "dictionary", "icon": "AppstoreAddOutlined", "path": "/common/crud","fileName":"dictionary.json"},
+      { "label": "病人类型", "key": "patType", "icon": "SnippetsOutlined", "path": "/common/crud","fileName":"patType.json"},
+      { "label": "检查项目", "key": "gmExamitem", "icon": "SnippetsOutlined", "path": "/common/crud","fileName":"gmExamitem.json"},
+	  { 
+		"label": "请检部位", 
+		"key": "qingjianBodypart", 
+		"icon": "SnippetsOutlined", 
+		"path": "/common/crud",
+		"fileName":"qingjianBodypart.json"
+	  },
+      { 
+		"label": "请检医生", 
+		"key": "doctor", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/common/crud",
+		"fileName":"doctor.json"
+	  },
+      { 
+		"label": "采集方式", 
+		"key": "caijifangshi", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/common/crud",
+		"fileName":"caijifangshi.json"
+	  },
+      { 
+		"label": "标本类型", 
+		"key": "biaobenleixing", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/common/crud",
+		"fileName":"biaobenleixing.json"
+	  } 
+    ]
+  },
+  {
+    "label": "部门/科室",
+    "key": "dept",
+    "icon": "AppstoreAddOutlined",
+    "children": [
+      {
+        "label": "部门",
+        "key": "department",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"department.json"
+      },
+      {
+        "label": "请检医院",
+        "key": "hospital",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"hospital.json"
+      },
+      {
+        "label": "请检科室",
+        "key": "clinicalDept",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"clinicalDept.json"
+      },
+      {
+        "label": "病区",
+        "key": "ward",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"ward.json"
+      },
+      {
+        "label": "病房",
+        "key": "sickroom",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"sickroom.json"
+      }
+    ]
+  },
+  {
+    "label": "用户/角色",
+    "key": "user",
+    "icon": "SnippetsOutlined",
+    "children": [
+      {
+        "label": "用户",
+        "key": "userManager",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"userManager.json"
+      },
+      { 
+		"label": "角色", 
+		"key": "userActor", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/common/crud",
+		"fileName":"userActor.json"
+	  },
+	  { 
+		"label": "权限", 
+		"key": "userRole", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/common/crud",
+		"fileName":"userRole.json"
+	  }
+    ]
+  },
+  {
+    "label": "知识库",
+    "key": "reportLibrary",
+    "icon": "ZhihuOutlined",
+    "path": "/reportLibrary",
+	"fileName":"reportLibrary.json"
+  },
+  {
+    "label": "取材/巨检",
+    "key": "giantInspectionSampling",
+    "icon": "SnippetsOutlined",
+    "children": [
+	  { 
+		"label": "取材部位", 
+		"key": "qucaiTempalte", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/common/crud",
+		"fileName":"qucaiTempalte.json"
+	  },
+      { 
+		"label": "巨检描述", 
+		"key": "jujianTemplate", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/common/crud",
+		"fileName":"jujianTemplate.json"
+	  }
+    ]
+  },
+  {
+    "label": "打印模板",
+    "key": "previewPrintStyle",
+    "icon": "SnippetsOutlined",
+	"path": "/webgm/styleCategory",
+	"fileName":"styleCategory.json"
+  }
+]

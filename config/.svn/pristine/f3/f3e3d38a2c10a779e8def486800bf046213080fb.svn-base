@@ -1,0 +1,125 @@
+{
+  "columnConfig": [
+    {
+      "title": "权限名称",
+      "key": "USERROLENAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "权限名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择权限名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "权限编码",
+      "key": "USERROLECODE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "角色编号",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入角色编号"
+          }
+        ],
+        "defaultValueBySql": "select '8' ||  LPAD(COUNT(*) , 3, '0') AS value from t_userrole where userrolegroup = '8' and deleted='0'"
+      }
+    },
+	{
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select userroleid id,u.* from t_userrole u where u.userrolegroup = '8'",
+    "insert": "insert into t_userrole(userroleid,userrolecode,userrolename,userrolegroup) values('{ID}','{USERROLECODE}','{USERROLENAME}','8')",
+    "update": "update t_userrole set userrolecode='{USERROLECODE}',userrolename='{USERROLENAME}' where userroleid='{ID}'",
+    "setState": "update t_userrole set deleted = '{DELETED}' where userroleid = '{ID}'",
+	"delete": "delete from t_userrole where userroleid = '{ID}'",
+	"setSequence":"update t_userrole set sequence = '{SEQUENCE}' where userroleid = '{ID}'",
+    "exportData": "select e.*,e.userroleid id from t_userrole e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  }
+}

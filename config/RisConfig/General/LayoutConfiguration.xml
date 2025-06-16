@@ -1,0 +1,24 @@
+<config>
+	<item name="LayoutConfiguration">
+		<!-- 完整列表模式下检查列表占比百分数. 注意:过小过大时可能不生效,因为表格有最小高度-->
+		<item name="GeneralWorklistPercent" value="50"/>
+		<!-- 报告模式下检查列表显示方式 0 隐藏, 1 显示 -->
+		<item name="ReportWorklistDisplay" value="1"/>
+		<!-- 报告模式下历史和同名列表显示方式 0 隐藏, 1 显示 -->
+		<item name="ReportHistoryDisplay" value="0" />
+		<!-- 完整列表模式下是否显示当前查询项目条 -->
+		<item name="QueryBarDisplay" value="1"/>
+		<!-- 报告模式下检查列表占比百分数. 注意:过小过大时可能不生效,因为表格有最小高度-->
+		<item name="ReportWorklistPercent" value="30"/>
+		<!-- 报告模式下病人信息显示方式 0 隐藏, 1 单行, 2 多行 -->
+		<item name="PatientInfoBoard" value="0"/>
+		<!-- 报告模式下关联检查列表占下部两表的比百分数. 注意:过小过大时可能不生效,因为表格有最小高度 -->
+		<item name="AssociatedExamPercent" value="60"/>
+		<!-- 关闭所有诊断报告时是否跳转到worklist界面 -->
+		<item name="AutoJumpToWorkList" value="1"/>    
+		<!-- 报告模式下关联检查列表显示方式 0 隐藏, 1 显示 -->
+		<item name="ReportAssociatedDisplay" value="0" />
+		<!-- 移动版是否显示收藏夹 0:不显示，1:显示-->
+		<item name="MobileShowFavarite" value="0"/>
+	</item>
+</config>

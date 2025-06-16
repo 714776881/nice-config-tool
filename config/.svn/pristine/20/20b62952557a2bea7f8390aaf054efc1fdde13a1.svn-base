@@ -1,0 +1,23 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "孕龄编码格式，用来回传PACS",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='PacsReturn']"
+		}
+	],
+	"keyLabelMap":[
+		{
+			"key": "Name",
+			"label" : "名称"
+		},
+		{
+			"key": "Code",
+			"label" : "编码"
+		},
+		{
+			"key": "Format",
+			"label" : "格式"
+		}
+	]
+}

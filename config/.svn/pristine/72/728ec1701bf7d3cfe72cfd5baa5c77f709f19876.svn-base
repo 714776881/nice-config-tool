@@ -1,0 +1,151 @@
+[
+  {
+    "label": "基础数据",
+    "key": "base",
+    "icon": "SnippetsOutlined",
+    "children": [
+      { "label": "检查类型", "key": "modality","icon": "AppstoreAddOutlined", "path": "/common/crud","fileName":"modality.json"},
+      { "label": "检查项目", "key": "examItem", "icon": "SnippetsOutlined", "path": "/common/crud","fileName":"examitem.json"},
+      { "label": "孕龄类型", "key": "ageType", "icon": "SnippetsOutlined", "path": "/common/crud","fileName":"ageType.json"},	  
+      {
+        "label": "切面字典",
+        "key": "sectionDic",
+        "icon": "SnippetsOutlined",
+        "path": "/common/crud",
+		"fileName":"sectionDic.json"
+      },
+	  {
+        "label": "切面评分项字典",
+        "key": "sectionItemDic",
+        "icon": "SnippetsOutlined",
+        "path": "/common/crud",
+		"fileName":"sectionItemDic.json"
+      },
+      {
+        "label": "解剖结构字典",
+        "key": "structureDic",
+        "icon": "SnippetsOutlined",
+        "path": "/common/crud",
+		"fileName":"structureDic.json"
+      },
+      {
+        "label": "AI解剖结构字典",
+        "key": "AIStructureDic",
+        "icon": "SnippetsOutlined",
+        "path": "/common/crud",
+		"fileName":"AIStructureDic.json"
+      }
+    ]
+  },
+  {
+    "label": "用户/部门",
+    "key": "userRole",
+    "icon": "AppstoreAddOutlined",
+    "children": [
+      {
+        "label": "个人信息",
+        "key": "userinfo",
+        "icon": "SnippetsOutlined",
+        "path": "/userinfo"
+      },
+      {
+        "label": "用户管理",
+        "key": "userManager",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"userManager.json"
+      },
+      {
+        "label": "部门管理",
+        "key": "department",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"department.json"
+      }
+    ]
+  },
+  {
+    "label": "测量项和公式",
+    "key": "measurement",
+    "icon": "SnippetsOutlined",
+    "children": [
+      {
+        "label": "测量项",
+        "key": "measurementItem",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"measurementItem.json"
+      },
+      { 
+		"label": "公式", 
+		"key": "formula", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/obmate/formula",
+		"fileName":"formula.json"
+	  } 
+    ]
+  },
+  {
+    "label": "报告编辑模板",
+    "key": "OBMateReportConfig",
+    "icon": "SnippetsOutlined",
+    "path": "/obmate/reportTemp",
+	"fileName":"OBMateReportConfig.json"
+  },
+  { 
+	"label": "A20设备管理", 
+	"key": "equipment",
+	"icon": "SnippetsOutlined",
+	"path": "/common/crud",
+	"fileName":"equipment.json"
+  },
+  {
+    "label": "系统参数",
+    "key": "system",
+    "icon": "SnippetsOutlined",
+    "children": [
+	  {
+        "label": "图像存储位置",
+        "key": "imageStrageLocation",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"imageStrageLocation.json"
+      },
+	  {
+        "label": "孕龄编码格式",
+        "key": "SGACode",
+        "icon": "SnippetsOutlined",
+        "path": "/common/dict",
+		"fileName":"SGACode.json"
+      },
+      {
+        "label": "测量值参数",
+        "key": "serviceConfig",
+        "icon": "SnippetsOutlined",
+        "path": "/common/dict",
+		"fileName":"serviceConfig.json"
+      },
+	  {
+        "label": "终端参数",
+        "key": "terminalGeneralConfig",
+        "icon": "SnippetsOutlined",
+        "path": "/common/dict",
+		"fileName":"terminalGeneralConfig.json"
+      },
+	  {
+        "label": "数据源参数",
+        "key": "dataSourceConfig",
+        "icon": "SnippetsOutlined",
+        "path": "/common/dict",
+		"fileName":"dataSourceConfig.json"
+      },
+	  {
+        "label": "通用报告参数",
+        "key": "ReportConfiguration",
+        "icon": "SnippetsOutlined",
+        "path": "/common/dict",
+		"fileName":"ReportConfiguration.json"
+      }
+    ]
+  }
+]

@@ -1,0 +1,658 @@
+﻿<config>
+	<item name="RegisterConfiguration">
+		<!-- 登记窗口 -->
+		<item name="frmRISRegister">
+			<!-- 登记窗口，门诊病人 -->
+			<item name="O">
+				<item name="lblModality">
+					<item name="Desc" value="检查类型"/>
+				</item>
+				<item name="comboModality">
+					<item name="Desc" value="检查类型"/>
+					<item name="Enabled" value="False"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatType">
+					<item name="Desc" value="病人类型"/>
+				</item>
+				<item name="comboPatType">
+					<item name="Desc" value="病人类型"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+
+				<item name="lblMedicalID">
+					<item name="Desc" value="就诊卡号"/>
+				</item>
+				<item name="txtMedicalID">
+					<item name="Desc" value="就诊卡号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="lblInpatientID">
+					<item name="Desc" value="门诊号"/>
+				</item>
+				<item name="txtInpatientID">
+					<item name="Desc" value="门诊号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatientID">
+					<item name="Desc" value="影像号"/>
+				</item>
+				<item name="txtPatientID">
+					<item name="Desc" value="影像号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblModalityID">
+					<item name="Desc" value="模态号"/>
+				</item>
+				<item name="txtModalityID">
+					<item name="Desc" value="模态号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatName">
+					<item name="Desc" value="姓名"/>
+				</item>
+				<item name="txtPatName">
+					<item name="Desc" value="姓名"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatNameEn">
+					<item name="Desc" value="拼音"/>
+				</item>
+				<item name="txtPatNameEn">
+					<item name="Desc" value="拼音"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblLastName">
+					<item name="Desc" value="Last Name"/>
+				</item>
+				<item name="txtLastName">
+					<item name="Desc" value="Last Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblMiddleName">
+					<item name="Desc" value="Middle Name"/>
+				</item>
+				<item name="txtMiddleName">
+					<item name="Desc" value="Middle Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="lblFirstName">
+					<item name="Desc" value="First Name"/>
+				</item>
+				<item name="txtFirstName">
+					<item name="Desc" value="First Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>	
+				<item name="lblPatSex">
+					<item name="Desc" value="性别"/>
+				</item>
+				<item name="comboPatSex">
+					<item name="Desc" value="性别"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatAge">
+					<item name="Desc" value="年龄"/>
+				</item>
+				<item name="txtPatAge">
+					<item name="Desc" value="年龄"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblBirthday">
+					<item name="Desc" value="出生日期"/>
+				</item>
+				<item name="dtpBirthday">
+					<item name="Desc" value="出生日期"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblIDCard">
+					<item name="Desc" value="身份证号"/>
+				</item>
+				<item name="txtIDCard">
+					<item name="Desc" value="身份证号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="btnLoadHisOrder">
+					<item name="Desc" value="HIS申请单"/>
+					<item name="Enabled" value="True"/>
+					<item name="Visible" value="False"/>
+				</item>
+				<item name="btnReadCard">
+					<item name="Desc" value=" 读 卡 "/>
+					<item name="Enabled" value="True"/>
+					<item name="Visible" value="False"/>
+				</item>
+			</item>
+
+			<!-- 登记窗口，住院病人 -->
+			<item name="I">
+				<item name="lblModality">
+					<item name="Desc" value="检查类型"/>
+				</item>
+				<item name="comboModality">
+					<item name="Desc" value="检查类型"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatType">
+					<item name="Desc" value="病人类型"/>
+				</item>
+				<item name="comboPatType">
+					<item name="Desc" value="病人类型"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblMedicalID">
+					<item name="Desc" value="就诊卡号"/>
+				</item>
+				<item name="txtMedicalID">
+					<item name="Desc" value="就诊卡号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="lblInpatientID">
+					<item name="Desc" value="住院号"/>
+				</item>
+				<item name="txtInpatientID">
+					<item name="Desc" value="住院号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatientID">
+					<item name="Desc" value="影像号"/>
+				</item>
+				<item name="txtPatientID">
+					<item name="Desc" value="影像号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblModalityID">
+					<item name="Desc" value="模态号"/>
+				</item>
+				<item name="txtModalityID">
+					<item name="Desc" value="模态号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatName">
+					<item name="Desc" value="姓名"/>
+				</item>
+				<item name="txtPatName">
+					<item name="Desc" value="姓名"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatNameEn">
+					<item name="Desc" value="拼音"/>
+				</item>
+				<item name="txtPatNameEn">
+					<item name="Desc" value="拼音"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblLastName">
+					<item name="Desc" value="Last Name"/>
+				</item>
+				<item name="txtLastName">
+					<item name="Desc" value="Last Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblMiddleName">
+					<item name="Desc" value="Middle Name"/>
+				</item>
+				<item name="txtMiddleName">
+					<item name="Desc" value="Middle Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="lblFirstName">
+					<item name="Desc" value="First Name"/>
+				</item>
+				<item name="txtFirstName">
+					<item name="Desc" value="First Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatSex">
+					<item name="Desc" value="性别"/>
+				</item>
+				<item name="comboPatSex">
+					<item name="Desc" value="性别"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatAge">
+					<item name="Desc" value="年龄"/>
+				</item>
+				<item name="txtPatAge">
+					<item name="Desc" value="年龄"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblBirthday">
+					<item name="Desc" value="出生日期"/>
+				</item>
+				<item name="dtpBirthday">
+					<item name="Desc" value="出生日期"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblIDCard">
+					<item name="Desc" value="身份证号"/>
+				</item>
+				<item name="txtIDCard">
+					<item name="Desc" value="身份证号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="btnLoadHisOrder">
+					<item name="Desc" value="HIS申请单"/>
+					<item name="Enabled" value="True"/>
+					<item name="Visible" value="False"/>
+				</item>
+				<item name="btnReadCard">
+					<item name="Desc" value=" 读 卡 "/>
+					<item name="Enabled" value="True"/>
+					<item name="Visible" value="False"/>
+				</item>
+			</item>
+
+			<!-- 登记窗口，急诊病人 -->
+			<item name="E">
+				<item name="lblModality">
+					<item name="Desc" value="检查类型"/>
+				</item>
+				<item name="comboModality">
+					<item name="Desc" value="检查类型"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatType">
+					<item name="Desc" value="病人类型"/>
+				</item>
+				<item name="comboPatType">
+					<item name="Desc" value="病人类型"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblMedicalID">
+					<item name="Desc" value="就诊卡号"/>
+				</item>
+				<item name="txtMedicalID">
+					<item name="Desc" value="就诊卡号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="lblInpatientID">
+					<item name="Desc" value="急诊号"/>
+				</item>
+				<item name="txtInpatientID">
+					<item name="Desc" value="急诊号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatientID">
+					<item name="Desc" value="影像号"/>
+				</item>
+				<item name="txtPatientID">
+					<item name="Desc" value="影像号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblModalityID">
+					<item name="Desc" value="模态号"/>
+				</item>
+				<item name="txtModalityID">
+					<item name="Desc" value="模态号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatName">
+					<item name="Desc" value="姓名"/>
+				</item>
+				<item name="txtPatName">
+					<item name="Desc" value="姓名"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatNameEn">
+					<item name="Desc" value="拼音"/>
+				</item>
+				<item name="txtPatNameEn">
+					<item name="Desc" value="拼音"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblLastName">
+					<item name="Desc" value="Last Name"/>
+				</item>
+				<item name="txtLastName">
+					<item name="Desc" value="Last Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblMiddleName">
+					<item name="Desc" value="Middle Name"/>
+				</item>
+				<item name="txtMiddleName">
+					<item name="Desc" value="Middle Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="lblFirstName">
+					<item name="Desc" value="First Name"/>
+				</item>
+				<item name="txtFirstName">
+					<item name="Desc" value="First Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatSex">
+					<item name="Desc" value="性别"/>
+				</item>
+				<item name="comboPatSex">
+					<item name="Desc" value="性别"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatAge">
+					<item name="Desc" value="年龄"/>
+				</item>
+				<item name="txtPatAge">
+					<item name="Desc" value="年龄"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblBirthday">
+					<item name="Desc" value="出生日期"/>
+				</item>
+				<item name="dtpBirthday">
+					<item name="Desc" value="出生日期"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="btnLoadHisOrder">
+					<item name="Desc" value="HIS申请单"/>
+					<item name="Enabled" value="True"/>
+					<item name="Visible" value="False"/>
+				</item>
+				<item name="btnReadCard">
+					<item name="Desc" value=" 读 卡 "/>
+					<item name="Enabled" value="True"/>
+					<item name="Visible" value="False"/>
+				</item>
+			</item>
+	  
+			<!-- 登记窗口，体检病人 -->
+			<item name="P">
+				<item name="lblModality">
+					<item name="Desc" value="检查类型"/>
+				</item>
+				<item name="comboModality">
+					<item name="Desc" value="检查类型"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatType">
+					<item name="Desc" value="病人类型"/>
+				</item>
+				<item name="comboPatType">
+					<item name="Desc" value="病人类型"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<!-- <item name="lblPatientCategory">
+					<item name="Desc" value="病人类别"/>
+				</item>
+				<item name="comboPatientCategory">
+					<item name="Desc" value="病人类别"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item> -->
+				<item name="lblMedicalID">
+					<item name="Desc" value="就诊卡号"/>
+				</item>
+				<item name="txtMedicalID">
+					<item name="Desc" value="就诊卡号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="lblInpatientID">
+					<item name="Desc" value="体检号"/>
+				</item>
+				<item name="txtInpatientID">
+					<item name="Desc" value="体检号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatientID">
+					<item name="Desc" value="影像号"/>
+				</item>
+				<item name="txtPatientID">
+					<item name="Desc" value="影像号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblModalityID">
+					<item name="Desc" value="模态号"/>
+				</item>
+				<item name="txtModalityID">
+					<item name="Desc" value="模态号"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatName">
+					<item name="Desc" value="姓名"/>
+				</item>
+				<item name="txtPatName">
+					<item name="Desc" value="姓名"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatNameEn">
+					<item name="Desc" value="拼音"/>
+				</item>
+				<item name="txtPatNameEn">
+					<item name="Desc" value="拼音"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblLastName">
+					<item name="Desc" value="Last Name"/>
+				</item>
+				<item name="txtLastName">
+					<item name="Desc" value="Last Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblMiddleName">
+					<item name="Desc" value="Middle Name"/>
+				</item>
+				<item name="txtMiddleName">
+					<item name="Desc" value="Middle Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="0"/>
+				</item>
+				<item name="lblFirstName">
+					<item name="Desc" value="First Name"/>
+				</item>
+				<item name="txtFirstName">
+					<item name="Desc" value="First Name"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatSex">
+					<item name="Desc" value="性别"/>
+				</item>
+				<item name="comboPatSex">
+					<item name="Desc" value="性别"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblPatAge">
+					<item name="Desc" value="年龄"/>
+				</item>
+				<item name="txtPatAge">
+					<item name="Desc" value="年龄"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="lblBirthday">
+					<item name="Desc" value="出生日期"/>
+				</item>
+				<item name="dtpBirthday">
+					<item name="Desc" value="出生日期"/>
+					<item name="Enabled" value="True"/>
+					<item name="Essential" value="1"/>
+				</item>
+				<item name="btnLoadHisOrder">
+					<item name="Desc" value="HIS申请单"/>
+					<item name="Enabled" value="True"/>
+					<item name="Visible" value="False"/>
+				</item>
+				<item name="btnReadCard">
+					<item name="Desc" value=" 读 卡 "/>
+					<item name="Enabled" value="True"/>
+					<item name="Visible" value="False"/>
+				</item>
+			</item>
+	  
+		</item>
+		<!--- 电子申请单列表界面，列表可调整 ；-->
+		<item name="SelectHISOrderListDialog" value="#Array">
+			<item>
+				<item name="Name" value="OrderDT"/>
+				<item name="Desc" value="登记时间"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="PatName"/>
+				<item name="Desc" value="姓名"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="Modality"/>
+				<item name="Desc" value="检查类型"/>
+				<item name="Width" value="70"/>
+			</item>
+			<item>
+				<item name="Name" value="ExamItem"/>
+				<item name="Desc" value="检查项目"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="Charge"/>
+				<item name="Desc" value="费用"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="PhysicalExamID"/>
+				<item name="Desc" value="体检号"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="MedicalID"/>
+				<item name="Desc" value="门诊/住院号"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="Ward"/>
+				<item name="Desc" value="病区"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="OrderDr"/>
+				<item name="Desc" value="开单医生"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="PatBirthday"/>
+				<item name="Desc" value="出生日期"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="PatSex"/>
+				<item name="Desc" value="性别"/>
+				<item name="Width" value="50"/>
+			</item>
+			<item>
+				<item name="Name" value="OutpatientID"/>
+				<item name="Desc" value="门诊号"/>
+				<item name="Width" value="100"/>
+			</item>
+			<item>
+				<item name="Name" value="MedicalID"/>
+				<item name="Desc" value="门诊/住院号"/>
+				<item name="Width" value="100"/>
+			</item>
+		</item>
+		
+		<!--- 登记完成后，页面挑战逻辑, 0: 继续登记，1：跳转到worklist  2：跳转到书写报告-->
+		<item name="RegisterCompletedAction" value="1"/>
+		<!--- 登记完成后  界面的按钮控制  0：不显示  1：显示 ；-->
+		<item name="RegisterCompletedButton">
+			<item name="ScanOrderPaper" value="1"/>
+			<item name="PrintOrderPaper" value="1"/>
+			<item name="SelectQueNumber" value="0"/>
+		</item>
+	
+		<!--- 是否启用HIS接口, 0: 不启用HIS服务，手工单登记，1：启用HIS服务登记-->
+		<item name="UseHISInterface" value="0"/>
+		<!-- 同一个HISID的申请单是否同时登记  0：不同时   1：同时  -->
+		<item name="RegisterOrderByHISID" value="1"/>
+		<!-- 同一个HISID的申请单是否同时删除  0：不同时   1：同时  -->
+		<item name="DeleteOrderByHISID" value="1"/>
+		<!-- 可用模态 -->
+		<item name="UsableModalities" value="US,CT,DX,CR,ES,MR"/>
+		<!-- 缺省模态 -->
+		<item name="DefaultModality" value="US"/>
+		<!-- 可用病人类型 -->
+		<item name="UsablePatientType" value="O,I,E,P"/>
+		<!-- 缺省病人类型, O=门诊病人, I=住院病人, E=急诊病人, P=体检病人, F=复查病人, W=外院病人 -->
+		<item name="DefaultPatientType" value="O"/>
+
+		<!-- 登记时是否启动默认设备  0：不启用   1：启动  -->
+		<item name="UseDefaultEquipment" value="0"/>
+    
+		<!-- 登记读卡的类型 -->
+		<item name="RegisterCard" value="#Array">
+			<item>
+				<item name="Name" value="MedicalCard"/>
+				<item name="Text" value="医保卡"/>
+			</item>
+			<item>
+				<item name="Name" value="CitizenCard"/>
+				<item name="Text" value="市民卡"/>
+			</item>
+		</item>
+
+		<!-- 打印登记单条码（二维码:PatID、ModalityID） -->
+		<item name="RegisterTicketCode">
+			<item name="QRCode">
+				<item name="Name" value="PatID"/>
+				<item name="Width" value="120"/>
+				<item name="Height" value="120"/>
+			</item>
+			<item name="BarCode">
+				<item name="Name" value="PatID"/>
+				<item name="Width" value="180"/>
+				<item name="Height" value="80"/>
+			</item>
+		</item>
+
+	</item>
+</config>

@@ -1,0 +1,73 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "数据库连接参数",
+			"filePath":"General/DataSourceConfiguration.xml",
+			"nodePath":"/config/item[@name='DataSourceConfiguration']/item[@name='DataBaseFactory']/item[@name='DataBases']"
+		},
+		{
+			"name": "院区数据源",
+			"filePath":"General/DataSourceConfiguration.xml",
+			"nodePath":"/config/item[@name='DataSourceConfiguration']/item[@name='DataSourceFactory']"
+		}
+		
+	],
+	"keyLabelMap":[
+		{
+			"key": "type",
+			"label" : "类型"
+		},
+		{
+			"key": "insName",
+			"label" : "数据库名称"
+		},
+		{
+			"key": "userName",
+			"label" : "用户名称"
+		},
+		{
+			"key": "password",
+			"label" : "用户密码"
+		},
+		{
+			"key": "passwordEncrypt",
+			"label" : "加密后的密码"
+		},
+		{
+			"key": "ip",
+			"label" : "IP地址"
+		},
+		{
+			"key": "port",
+			"label" : "端口"
+		},
+		{
+			"key": "FormateDate",
+			"label" : "是否格式化时间"
+		},
+		{
+			"key": "default",
+			"label" : "默认"
+		},
+		{
+			"key": "filterByHospitalId",
+			"label" : "是否根据医院过滤"
+		},
+		{
+			"key": "dbName",
+			"label" : "数据库名称"
+		},
+		{
+			"key": "HospitalID",
+			"label" : "医院编码"
+		},
+		{
+			"key": "HospitalName",
+			"label" : "医院名称"
+		},
+		{
+			"key": "DepartmentName",
+			"label" : "部门名称"
+		}
+	]
+}

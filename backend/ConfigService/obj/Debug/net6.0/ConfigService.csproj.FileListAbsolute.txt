@@ -1,0 +1,12 @@
+F:\Code\ConfigTool\backend\ConfigService\bin\Debug\net6.0\ConfigService.deps.json
+F:\Code\ConfigTool\backend\ConfigService\bin\Debug\net6.0\ConfigService.dll
+F:\Code\ConfigTool\backend\ConfigService\bin\Debug\net6.0\ConfigService.pdb
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\ConfigService.csproj.AssemblyReference.cache
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\ConfigService.GeneratedMSBuildEditorConfig.editorconfig
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\ConfigService.AssemblyInfoInputs.cache
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\ConfigService.AssemblyInfo.cs
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\ConfigService.csproj.CoreCompileInputs.cache
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\ConfigService.dll
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\refint\ConfigService.dll
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\ConfigService.pdb
+F:\Code\ConfigTool\backend\ConfigService\obj\Debug\net6.0\ref\ConfigService.dll

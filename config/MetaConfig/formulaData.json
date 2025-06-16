@@ -1,0 +1,171 @@
+{
+  "columnConfig": [
+    {
+      "title": "孕龄值",
+      "key": "GAVALUE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "孕龄值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "孕龄值"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "测量项值",
+      "key": "MEASUREVALUE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "测量项值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入测量项值"
+          }
+        ]
+      }
+    },
+	{
+      "title": "正偏差值",
+      "key": "SDPOS",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "正偏差值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入正偏差值"
+          }
+        ]
+      }
+    },
+	{
+      "title": "负偏差值",
+      "key": "SDNEG",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "负偏差值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入负偏差值"
+          }
+        ]
+      }
+    },
+    {
+      "title": "最大值",
+      "key": "MAX",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "最大值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入最大值"
+          }
+        ]
+      }
+    },
+	{
+      "title": "最小值",
+      "key": "MIN",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "最小值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入最小值"
+          }
+        ]
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_ob_formula_item where formulaseq = '{SUPER}{FORMULASEQ}'",
+    "insert": "insert into t_ob_formula_item(formulaseq,gavalue,measurevalue,sdpos,sdneg,max,min,id) values('{SUPER}{FORMULASEQ}','{GAVALUE}','{MEASUREVALUE}','{SDPOS}','{SDNEG}','{MAX}','{MIN}','{ID}')",
+    "update": "update t_ob_formula_item set gavalue = '{GAVALUE}', measurevalue = '{MEASUREVALUE}', sdpos = '{SDPOS}', sdneg = '{SDNEG}', max = '{MAX}',min = '{MIN}' where id = '{ID}' and formulaseq = '{SUPER}{FORMULASEQ}'",
+    "setState": "",
+	"delete": "delete from t_ob_formula_item where ID = '{ID}'",
+	"setSequence":"",
+    "exportData": "select * from t_ob_formula_item where formulaseq = '{SUPER}{FORMULASEQ}'"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": false,
+	"setStateToDelete": true,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  }
+}

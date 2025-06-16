@@ -1,0 +1,753 @@
+[
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.CategoryController",
+    "Method": "AddExamItemCategory",
+    "RelativePath": "Api/Category/AddExamItemCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bodyPartId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isPublic",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.AddExamItemCategoryForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.CategoryController",
+    "Method": "GetExamItemCategory",
+    "RelativePath": "Api/Category/GetExamItemCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modality",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isPublic",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "state",
+        "Type": "ConfigServiceApi.Models.ReptLibState",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.CategoryController",
+    "Method": "GetExamItemCategoryByBodypartId",
+    "RelativePath": "Api/Category/GetExamItemCategoryByBodypartId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bodyPartId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isPublic",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "state",
+        "Type": "ConfigServiceApi.Models.ReptLibState",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ConfigFileController",
+    "Method": "Get",
+    "RelativePath": "Api/ConfigFile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ConfigFileController",
+    "Method": "Post",
+    "RelativePath": "Api/ConfigFile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileContent",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.CrudController",
+    "Method": "Select",
+    "RelativePath": "Api/Crud",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sql",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.CrudController",
+    "Method": "ExeBatchSql",
+    "RelativePath": "Api/Crud/ExeBatchSql",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ConfigServiceApi.Models.BatchSqlModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.CrudController",
+    "Method": "ExeSql",
+    "RelativePath": "Api/Crud/ExeSql",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sql",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.DalController",
+    "Method": "Select",
+    "RelativePath": "Api/Dal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.DalForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.DalController",
+    "Method": "ExeBatchSql",
+    "RelativePath": "Api/Dal/ExeBatchSql",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.DalBatchForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.DalController",
+    "Method": "ExeSql",
+    "RelativePath": "Api/Dal/ExeSql",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.DalForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.DictionaryController",
+    "Method": "GetExamItems",
+    "RelativePath": "Api/Dictionary/GetExamItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bodypartId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.DictionaryController",
+    "Method": "GetModality",
+    "RelativePath": "Api/Dictionary/GetModality",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.HospitalController",
+    "Method": "EditHospitalByPost",
+    "RelativePath": "Api/EditHospital",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "ConfigServiceApi.Models.HospitalRequestModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.LoginController",
+    "Method": "Post",
+    "RelativePath": "Api/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginModel",
+        "Type": "ConfigServiceApi.Models.LoginForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptCatelogController",
+    "Method": "AddCatelogNode",
+    "RelativePath": "Api/ReptCatelog/AddCatelogNode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.AddCatologForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptCatelogController",
+    "Method": "CopyCatelogNode",
+    "RelativePath": "Api/ReptCatelog/CopyCatelogNode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.CopyMoveCatologForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptCatelogController",
+    "Method": "DeleteCatelogNode",
+    "RelativePath": "Api/ReptCatelog/DeleteCatelogNode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.CatelogNodeForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptCatelogController",
+    "Method": "GetCatelog",
+    "RelativePath": "Api/ReptCatelog/GetCatelog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modality",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "state",
+        "Type": "ConfigServiceApi.Models.ReptLibState",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptCatelogController",
+    "Method": "MoveCatelogNode",
+    "RelativePath": "Api/ReptCatelog/MoveCatelogNode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.CopyMoveCatologForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptCatelogController",
+    "Method": "UpdateCatelogNode",
+    "RelativePath": "Api/ReptCatelog/UpdateCatelogNode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.CatelogNodeForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptTempController",
+    "Method": "AddReptTemp",
+    "RelativePath": "Api/ReptTemp/Add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reptTempModel",
+        "Type": "ConfigServiceApi.Models.TReptTempEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptTempController",
+    "Method": "GetReptTemp",
+    "RelativePath": "Api/ReptTemp/Get",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reptTempId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ReptTempController",
+    "Method": "UpdateReptTemp",
+    "RelativePath": "Api/ReptTemp/Update",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.ReptTempForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.XmlFileController",
+    "Method": "Get",
+    "RelativePath": "Api/XmlFile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filePath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nodePath",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.XmlFileController",
+    "Method": "Post",
+    "RelativePath": "Api/XmlFile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filePath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nodePath",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "nodeValueModel",
+        "Type": "ConfigServiceApi.Models.NodeValueModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.Controllers.ConfigController",
+    "Method": "ConfigSettingLoadByPost",
+    "RelativePath": "WSConfigService/XmlConfig",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "param",
+        "Type": "ConfigService.Request.DC_RequestParam",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigService.Request.DC_RequestResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

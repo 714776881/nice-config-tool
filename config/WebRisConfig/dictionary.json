@@ -1,0 +1,199 @@
+{
+  "columnConfig": [
+    {
+      "title": "字典类型",
+      "key": "DICCATEGORY",
+	  "width": 200,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择字典类型",
+		  "option-type": "button",
+          "options": [
+            {
+              "label": "报告类型",
+              "value": "1017"
+            },
+            {
+              "label": "国家",
+              "value": "1002"
+            },
+            {
+              "label": "民族",
+              "value": "1003"
+            },
+            {
+              "label": "职称",
+              "value": "1004"
+            },
+            {
+              "label": "职务",
+              "value": "1005"
+            },
+            {
+              "label": "性别",
+              "value": "1014"
+            }
+          ],
+		  "style":"width:500px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择字典类型"
+          }
+        ],
+        "defaultValue": "1017"
+      }
+    },
+    {
+      "title": "名称",
+      "key": "ITEMNAME",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "编码",
+      "key": "ITEMCODE",
+      "width": 200,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入编码"
+          }
+        ],
+		"defaultValueBySql":"select '1' ||  LPAD(COUNT(*) , 3, '0') value from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017')"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017')"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence",
+    "insert": "insert into t_dictionary(dictionaryid,diccategory,itemcode,itemname,deleted,sequence) values('{ID}','{DICCATEGORY}','{ITEMCODE}','{ITEMNAME}','{DELETED}','{SEQUENCE}')",
+    "update": "update t_dictionary d set d.diccategory = '{DICCATEGORY}',d.itemcode = '{ITEMCODE}',d.itemname = '{ITEMNAME}' where d.dictionaryid = '{ID}'",
+    "setState": "update t_dictionary set deleted = '{DELETED}' where dictionaryid = '{ID}'",
+	"delete": "delete from t_dictionary where dictionaryid = '{ID}'",
+	"setSequence":"update t_dictionary set sequence = '{SEQUENCE}' where dictionaryid = '{ID}'",
+    "exportData": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017')"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  }
+}

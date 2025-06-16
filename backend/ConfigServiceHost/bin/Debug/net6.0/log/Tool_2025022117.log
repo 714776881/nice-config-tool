@@ -1,0 +1,139 @@
+创建日志:2025/2/21 17:01:44
+2025/2/21 17:01:44  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:01:44  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:01:45  Info-[RESULT]：22个
+2025/2/21 17:01:53  Info-[Select]：select count(*) value from t_dictionary d where (d.diccategory = '1007')
+2025/2/21 17:01:53  Info-[RESULT]：1个
+2025/2/21 17:01:57  Info-[ExeSql]：insert into t_dictionary(dictionaryid,diccategory,itemcode,itemname,deleted) values('lrm6a4csha','1007','test','test','0')
+2025/2/21 17:01:57  Info-[RESULT]：1
+2025/2/21 17:01:57  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:01:57  Info-[RESULT]：10个
+2025/2/21 17:02:02  Info-[Select]：select count(*) value from t_dictionary d where (d.diccategory = '1007')
+2025/2/21 17:02:02  Info-[RESULT]：1个
+2025/2/21 17:02:50  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:03:15  Info-[RESULT]：10个
+2025/2/21 17:03:19  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:03:19  Info-[RESULT]：22个
+2025/2/21 17:03:27  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:03:27  Info-[RESULT]：15个
+2025/2/21 17:03:30  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:03:30  Info-[RESULT]：0个
+2025/2/21 17:03:32  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/21 17:03:32  Info-[RESULT]：2个
+2025/2/21 17:03:33  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:03:33  Info-[RESULT]：0个
+2025/2/21 17:03:33  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:03:34  Info-[RESULT]：15个
+2025/2/21 17:04:44  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:04:44  Info-[RESULT]：22个
+2025/2/21 17:04:50  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:04:50  Info-[RESULT]：10个
+2025/2/21 17:07:15  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:15  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:15  Info-[RESULT]：10个
+2025/2/21 17:07:15  Info-[RESULT]：15个
+2025/2/21 17:07:18  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:18  Info-[RESULT]：10个
+2025/2/21 17:07:19  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:19  Info-[RESULT]：15个
+2025/2/21 17:07:25  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:25  Info-[RESULT]：0个
+2025/2/21 17:07:26  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:27  Info-[RESULT]：2个
+2025/2/21 17:07:28  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:28  Info-[RESULT]：0个
+2025/2/21 17:07:31  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:31  Info-[RESULT]：2个
+2025/2/21 17:07:31  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1089') where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:31  Info-[RESULT]：1个
+2025/2/21 17:07:32  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2810') where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:32  Info-[RESULT]：2个
+2025/2/21 17:07:34  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:34  Info-[RESULT]：8个
+2025/2/21 17:07:34  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:34  Info-[RESULT]：5个
+2025/2/21 17:07:35  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:35  Info-[RESULT]：77个
+2025/2/21 17:07:35  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:35  Info-[RESULT]：9个
+2025/2/21 17:07:36  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1012') where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:36  Info-[RESULT]：0个
+2025/2/21 17:07:39  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/21 17:07:39  Info-[RESULT]：16个
+2025/2/21 17:07:39  Info-[RESULT]：2个
+2025/2/21 17:07:39  Info-[RESULT]：126个
+2025/2/21 17:07:40  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+e rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/21 17:07:40  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/21 17:07:40  Info-[RESULT]：16个
+2025/2/21 17:07:40  Info-[RESULT]：126个
+2025/2/21 17:07:40  Info-[RESULT]：16个
+2025/2/21 17:07:42  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/21 17:07:42  Info-[RESULT]：24个
+2025/2/21 17:07:42  Info-[RESULT]：126个
+2025/2/21 17:07:42  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/21 17:07:42  Info-[RESULT]：24个
+2025/2/21 17:07:43  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/21 17:07:44  Info-[RESULT]：24个
+2025/2/21 17:07:51  Info-[Select]：select '8' ||  LPAD(COUNT(*) , 3, '0') as value from t_userrole where userrolegroup = '8' and deleted='0'
+d ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/21 17:07:51  Info-[RESULT]：1个
+2025/2/21 17:07:51  Info-[RESULT]：24个
+2025/2/21 17:10:18  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8010%'  and DELETED like '0%' 
+2025/2/21 17:10:18  Info-[RESULT]：4个
+2025/2/21 17:10:20  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8920%'  and DELETED like '0%' 
+2025/2/21 17:10:20  Info-[RESULT]：4个
+2025/2/21 17:10:21  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8945%'  and DELETED like '0%' 
+2025/2/21 17:10:22  Info-[RESULT]：2个
+2025/2/21 17:10:24  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8900%'  and DELETED like '0%' 
+2025/2/21 17:10:24  Info-[RESULT]：4个
+2025/2/21 17:10:25  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8823%'  and DELETED like '0%' 
+2025/2/21 17:10:25  Info-[RESULT]：2个
+2025/2/21 17:10:29  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8250%'  and DELETED like '0%' 
+2025/2/21 17:10:29  Info-[RESULT]：4个
+2025/2/21 17:10:31  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '9000%'  and DELETED like '0%' 
+2025/2/21 17:10:31  Info-[RESULT]：3个
+2025/2/21 17:10:33  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8960%'  and DELETED like '0%' 
+2025/2/21 17:10:33  Info-[RESULT]：4个
+2025/2/21 17:10:35  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8955%'  and DELETED like '0%' 
+2025/2/21 17:10:35  Info-[RESULT]：2个
+2025/2/21 17:10:37  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8945%'  and DELETED like '0%' 
+2025/2/21 17:10:37  Info-[RESULT]：2个
+2025/2/21 17:10:38  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8940%'  and DELETED like '0%' 
+2025/2/21 17:10:38  Info-[RESULT]：2个
+2025/2/21 17:10:40  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8930%'  and DELETED like '0%' 
+2025/2/21 17:10:40  Info-[RESULT]：4个
+2025/2/21 17:10:42  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8920%'  and DELETED like '0%' 
+2025/2/21 17:10:42  Info-[RESULT]：4个
+2025/2/21 17:10:43  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8900%'  and DELETED like '0%' 
+2025/2/21 17:10:43  Info-[RESULT]：4个
+2025/2/21 17:10:45  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8823%'  and DELETED like '0%' 
+2025/2/21 17:10:45  Info-[RESULT]：2个
+2025/2/21 17:10:46  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8756%'  and DELETED like '0%' 
+2025/2/21 17:10:46  Info-[RESULT]：20个
+2025/2/21 17:10:48  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8510%'  and DELETED like '0%' 
+2025/2/21 17:10:48  Info-[RESULT]：8个
+2025/2/21 17:10:50  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/21 17:10:50  Info-[RESULT]：24个
+2025/2/21 17:10:53  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8410%'  and DELETED like '0%' 
+2025/2/21 17:10:53  Info-[RESULT]：8个
+2025/2/21 17:10:55  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8340%'  and DELETED like '0%' 
+2025/2/21 17:10:55  Info-[RESULT]：5个
+2025/2/21 17:10:59  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8330%'  and DELETED like '0%' 
+2025/2/21 17:10:59  Info-[RESULT]：16个
+2025/2/21 17:11:01  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8260%'  and DELETED like '0%' 
+2025/2/21 17:11:01  Info-[RESULT]：4个
+2025/2/21 17:11:02  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8250%'  and DELETED like '0%' 
+2025/2/21 17:11:02  Info-[RESULT]：4个
+2025/2/21 17:11:03  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8245%'  and DELETED like '0%' 
+2025/2/21 17:11:03  Info-[RESULT]：5个
+2025/2/21 17:11:04  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8230%'  and DELETED like '0%' 
+2025/2/21 17:11:04  Info-[RESULT]：4个
+2025/2/21 17:11:06  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8100%'  and DELETED like '0%' 
+2025/2/21 17:11:06  Info-[RESULT]：8个
+2025/2/21 17:11:08  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and USERROLEGROUP like '8025%'  and DELETED like '0%' 
+2025/2/21 17:11:08  Info-[RESULT]：3个
+2025/2/21 17:11:10  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/21 17:11:10  Info-[RESULT]：24个
+2025/2/21 17:11:13  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 17:11:13  Info-[RESULT]：15个

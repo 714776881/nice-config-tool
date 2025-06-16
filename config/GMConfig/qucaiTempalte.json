@@ -1,0 +1,275 @@
+{
+  "columnConfig": [
+    {
+      "title": "部位名称",
+      "key": "BODYNAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 120,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "部位名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入部位名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "输入码(SRM)",
+      "key": "SRM",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "输入码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入输入码"
+          }
+        ]
+      }
+    },
+	{
+      "title": "检查类型",
+      "key": "EXAMITEMTYPE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择检查类型",
+		  "option-type": "button",
+		  "options": [
+            {
+              "label": "常规",
+              "value": "GM1 "
+            },
+            {
+              "label": "冰冻",
+              "value": "GM5 "
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入常规项目"
+          }
+        ],
+		"defaultValue":"GM1 "
+      }
+    },
+	{
+      "title": "模板内容",
+      "key": "CONTENT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 400,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "模板内容",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写模板内容"
+          }
+        ],
+		"span":"24"
+      }
+    },
+	{
+      "title": "大小部位",
+      "key": "ISBIG",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 100,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择部位类型",
+		  "options": [
+            {
+              "label": "大部位",
+              "value": "0"
+            },
+            {
+              "label": "小部位",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择部位类型"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "活检类型",
+      "key": "MATERIALTYPE",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 100,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择活检类型",
+		  "options": [
+            {
+              "label": "活检",
+              "value": "1000"
+            },
+            {
+              "label": "小手术和根治",
+              "value": "10001"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择活检类型"
+          }
+        ],
+        "defaultValue": "1000"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from T_GM_DeliverPart t where t.materialtype='1000' and t.isbig = '0'"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select t.*,t.bodyid id from T_GM_DeliverPart t where t.materialtype='1000' and t.isbig = '0' order by sequence",
+    "insert": "insert into t_gm_deliverPart(Bodyid,Bodyname,Srm,Examitemtype,Content,Isbig,Materialtype,Deleted,Sequence) values('{ID}','{BODYNAME}','{SRM}','{EXAMITEMTYPE}','{CONTENT}','{ISBIG}','{MATERIALTYPE}','0','{SEQUENCE}')",
+    "update": "update t_gm_deliverPart set Bodyname='{BODYNAME}',Srm='{SRM}',Examitemtype='{EXAMITEMTYPE}',Content='{CONTENT}',Isbig='{ISBIG}',Materialtype='{MATERIALTYPE}' where bodyId='{ID}'",
+    "setState": "update t_gm_deliverPart set deleted = '{DELETED}' where bodyId = '{ID}'",
+	"delete": "delete from t_gm_deliverPart where bodyId = '{ID}'",
+	"setSequence":"update t_gm_deliverPart set sequence = '{SEQUENCE}' where bodyId = '{ID}'",
+    "exportData": "select t.*,t.bodyid id from T_GM_DeliverPart t where t.materialtype='1000' and t.isbig = '0'"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"50"
+  }
+}

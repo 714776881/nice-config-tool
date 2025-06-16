@@ -1,0 +1,176 @@
+{
+  "columnConfig": [
+    {
+      "title": "检查类型",
+      "key": "ITEMNAME",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "检查类型"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入检查类型"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "编码",
+      "key": "ITEMCODE",
+      "width": 200,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "编码",
+		  "disabled": "false"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入编码"
+          }
+        ],
+		"defaultValueBySql":"select 'OB' || COUNT(*)  value from t_dictionary d where d.diccategory = '5001'"
+      }
+    },
+	{
+      "title": "类型",
+      "key": "DICCATEGORY",
+	  "width": 120,
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请选择孕龄单位"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择类型"
+          }
+        ],
+        "defaultValue": "5001"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            },
+            {
+              "label": "全部",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_dictionary d where d.diccategory = '5001'"
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '5001' order by d.sequence",
+    "insert": "insert into t_dictionary(dictionaryid,diccategory,itemcode,itemname,deleted,sequence) values('{ID}','{DICCATEGORY}','{ITEMCODE}','{ITEMNAME}','{DELETED}','{SEQUENCE}')",
+    "update": "update t_dictionary d set d.diccategory = '{DICCATEGORY}',d.itemcode = '{ITEMCODE}',d.itemname = '{ITEMNAME}',d.sequence='{SEQUENCE}' where d.dictionaryid = '{ID}'",
+    "setState": "update t_dictionary set deleted = '{DELETED}' where dictionaryid = '{ID}'",
+	"delete": "delete from t_dictionary where dictionaryid = '{ID}'",
+	"setSequence":"update t_dictionary set sequence = '{SEQUENCE}' where dictionaryid = '{ID}'",
+    "exportData": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '5001'"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": false,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  }
+}

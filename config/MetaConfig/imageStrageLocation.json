@@ -1,0 +1,285 @@
+{
+  "columnConfig": [
+    {
+      "title": "IP地址",
+      "key": "IPADDRESS",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 160,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "IP地址"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入IP地址"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "端口",
+      "key": "PORT",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "端口"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入端口"
+          }
+        ]
+      }
+    },
+    {
+      "title": "用户名",
+      "key": "FTPUSER",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "用户名"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入用户名"
+          }
+        ]
+      }
+    },
+    {
+      "title": "密码",
+      "key": "FTPPASSWORD",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "密码*******"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入密码"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "模式",
+      "key": "BPASV",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择模式",
+          "options": [
+            {
+              "label": "被动模式",
+              "value": "0"
+            },
+            {
+              "label": "主动模式",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择模式"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "虚拟路径",
+      "key": "VIRTUALPATH",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入虚拟路径"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择虚拟路径"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "是否当前路径",
+      "key": "CURRENTROOT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "",
+          "options": [
+            {
+              "label": "否",
+              "value": "0"
+            },
+            {
+              "label": "是",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": ""
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "索引值",
+      "key": "ROOTINDEX",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "索引值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入索引值"
+          }
+        ]
+      }
+    },
+    {
+      "title": "存储类型",
+      "key": "ROOTTYPE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择存储类型",
+          "options": [
+            {
+              "label": "存储报告TX文件",
+              "value": "1"
+            },
+            {
+              "label": "存储拍摄申请单",
+              "value": "2"
+            },
+            {
+              "label": "超声图像",
+              "value": "3"
+            },
+            {
+              "label": "报告贴图",
+              "value": "4"
+            },
+            {
+              "label": "定位图",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择存储类型"
+          }
+        ],
+		"defaultValue": "3"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_rootlist where regionid = '100'",
+    "insert": "insert into t_rootlist(id,ipaddress,port,ftpuser,ftppassword,bpasv,virtualpath,rootindex,currentroot,roottype,regionid) values('{ID}','{IPADDRESS}','{PORT}','{FTPUSER}','{FTPPASSWORD}','{BPASV}','{VIRTUALPATH}','{ROOTINDEX}','{CURRENTROOT}','{ROOTTYPE}','100')",
+    "update": "update t_rootlist set ipaddress = '{IPADDRESS}',port = '{PORT}',ftpuser = '{FTPUSER}',ftppassword = '{FTPPASSWORD}',bpasv = '{BPASV}',virtualpath = '{VIRTUALPATH}',rootindex = '{ROOTINDEX}',currentroot = '{CURRENTROOT}',roottype = '{ROOTTYPE}',regionid = '100' where id = '{ID}'",
+    "setState": "",
+	"delete": "delete from t_rootlist where id = '{ID}'",
+	"setSequence":"",
+    "exportData": "select * from t_rootlist where regionid = '100'"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": false,
+	"setStateToDelete": true,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  }
+}

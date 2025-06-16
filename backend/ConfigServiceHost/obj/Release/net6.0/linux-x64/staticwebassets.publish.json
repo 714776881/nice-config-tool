@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Jd0XCGC3EuHrNGULFUYWvZCbC/T5OgClabOOQ8yTm3Y=",
+  "Source": "ConfigServiceHost",
+  "BasePath": "_content/ConfigServiceHost",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

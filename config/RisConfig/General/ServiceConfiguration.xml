@@ -1,0 +1,84 @@
+<config>
+	<item name="ServiceConfiguration">
+
+		<!-- 报告管理服务 ReportManagerService -->
+		<item name="ReportManagerService" value=""/>
+		<!-- 登记管理服务 RegisterManagerService -->
+		<item name="RegisterManagerService" value=""/>
+		<!-- HIS接口服务 HISInterfaceService -->
+		<item name="HISInterfaceUrl" value=""/>
+		<!-- 检查管理服务 EMS -->
+		<item name="ExamServiceAddress" value=""/>
+		<!--ImageManagerService WebSocket监听 -->
+		<item name="ImageManagerServiceUrl" value=""/>
+		<!-- 队列服务 -->
+		<!-- <item name="QueueService" value=""/> -->
+	
+		<!--登记工作站-->
+		<item name="WebRegisterAddress" value="/WebRegister/MainRegister.html?"/>
+		<!--工作列表-->
+		<item name="WorklistAddress" value="/ObMateWorklist/OBMateWorklist.html?"/>
+		<!--工作列表（移动版）-->
+		<item name="WorklistCardAddress" value="/WebWorlistMobile/WebWorklistCard.html?" />
+		<!--工具栏-->
+		<item name="ToolbarAddress" value="/WebWorklist/WebToolbar.aspx?"/>
+		<!--超声采图列表-->
+		<item name="USListPath" value="/USImageList/USList.aspx"/>
+		<!-- WebConsultStatistic 网站 -->
+		<item name="WebConsultStatisticUrl" value="/WebStatistic/index.aspx?"/>
+
+		<!-- WebConfigTool 网站 -->
+		<item name="WebConfigToolUrl" value="https://10.32.38.38:8080/WebConfig/Home/Index"/>
+		<!-- WebConfigTool 网站的KeyCode -->
+		<item name="WebConfigToolKeyCode" value="24899"/>
+		
+		<!-- StatisticsScreen网站 -->
+		<item name="StatisticsScreenUrl" value="http://192.168.1.67:9001/Default.aspx?"/>
+		<!-- StatisticsScreen网站的KeyCode -->
+		<item name="StatisticsScreenKeyCode" value="24874"/>
+
+		<!-- 视频会议 网站 -->
+		<item name="MeetingConsultUrl" value="https://192.168.1.67:8080/AgoraVideo/MeetingPage.aspx"/>
+		<!-- 视频会议 网站的KeyCode -->
+		<item name="MeetingConsultKeyCode" value="24199"/>
+	
+		<!-- Dcm图像上传地址 -->
+		<item name="DcmUploadUrl" value=""/>
+		<item name="UltraSyncClientDownloadUrl" value=""/>
+		<!-- 讯影服务器地址Url -->
+		<item name="MindrayConsultUrl" value="https://consult.mindray.com/CreateConsultation"/>
+		<item name="MindrayConsultKey" value="24678"/>
+	
+		<!-- 启动页面是否base64加密  1:加密  0:不加密   -->
+		<item name="URLEncodeBase64" value="1"/>
+	
+		<!-- iScanHelper -->
+		<item name="iScanHelperAddress" value="https://192.168.1.67:8080/iScanHelper/iscanhelperview.aspx"/>
+		<!-- iScanHelper KeyCode -->
+		<item name="iScanHelperKeyCode" value="123456789"/>
+	
+		<!--桌面版Viewer地址-->
+		<item name="DesktopViewerUrl" value="mviewer:{4100&amp; -D [HospitalID] -U [UserID] -P [UserPwd] -A [Accno] -M [Modality] -RU [UserID]}"/>
+		<!--桌面版Viewer地址(历史图像追加)-->
+		<item name="DesktopViewerHistoryUrl" value="mviewer:{4100&amp;-D [HospitalID] -U [UserID] -P [UserPwd] -A [Accno] -M [Modality] -RU [UserID] -L 1}"/>
+	
+		<!--HtmlViewer地址-->
+		<item name="HtmlViewerUrl" value="https://192.168.1.67:8088/NewViewerPC/WebViewer.aspx?{cnt=1&amp;jcbh=[Accno]&amp;querymode=localhidden&amp;region=[DataSourceName]&amp;timestamp=[TimeStamp]&amp;token=[Token]}"/>
+		<!--HtmlViewer地址(历史图像追加)-->
+		<item name="HtmlViewerHistoryUrl" value="https://192.168.1.67:8088/NewViewerPC/WebViewer.aspx?{cnt=1&amp;jcbh=[Accno]&amp;querymode=localhidden&amp;region=[DataSourceName]&amp;timestamp=[TimeStamp]&amp;token=[Token]}"/>
+		<!-- WebViewer 网站的KeyCode -->
+		<item name="WebViewerKeyCode" value="549827"/>
+		
+		<!--MobileViewer地址-->
+		<item name="MobileViewerUrl" value="https://192.168.1.67:8088/NewViewerPC/WebViewer.aspx?{cnt=1&amp;jcbh=[Accno]&amp;querymode=localhidden&amp;region=[DataSourceName]&amp;timestamp=[TimeStamp]&amp;token=[Token]}"/>
+
+		
+		<!--每个item的name对应OperationPreDefine里的操作的name, 如果在ExtraUrl有, 则优先采用网页打开方式-->
+		<item name="ExtraUrl">
+			<item name="BrowseImage" value=""/>
+			<item name="ShowImage" value=""/>
+			<item name="MeetingConsult" value="https://v.nice2meet.cn/j?id=15210352326&amp;name=[UserCode]"/>
+		</item>
+
+	</item>
+</config>

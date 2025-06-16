@@ -1,0 +1,79 @@
+<config>
+  <item name="DataSourceConfiguration">
+    <item name="DataBaseFactory">
+      <item name="DataBases">
+        <item name="db">
+          <item name="type" value="RIS" />
+          <item name="insName" value="ris14" />
+          <item name="userName" value="ris" />
+          <item name="password" value="maroland" />
+          <item name="passwordEncrypt" value="1oLUGQDS3rlZRjDAzjy8Sw==" />
+          <item name="ip" value="192.168.1.60" />
+          <item name="port" value="1521" />
+          <item name="maxRetNum" value="1000" />
+          <item name="dataServRootPath" value="" />
+          <item name="dataServName" value="" />
+          <item name="dataServPassword" value="" />
+          <item name="FormateDate" value="false" />
+        </item>
+        <item name="dbOB">
+          <item name="type" value="RIS_OBORACLE" />
+          <item name="insName" value="ris" />
+          <item name="userName" value="ris@pacs#pacs_test" />
+          <item name="password" value="OceanBase##123" />
+          <item name="passwordEncrypt" value="pMGaNM0zo7VNIxKviBdM+w==" />
+          <item name="ip" value="10.24.2.24" />
+          <item name="port" value="2883" />
+          <item name="maxRetNum" value="1000" />
+          <item name="dataServRootPath" value="" />
+          <item name="dataServName" value="" />
+          <item name="dataServPassword" value="" />
+          <item name="FormateDate" value="false" />
+        </item>
+      </item>
+    </item>
+    <item name="DataSourceFactory">
+      <item name="default" value="浙江省人民滨江院区" />
+      <item name="filterByHospitalId" value="false" />
+      <item name="defaultWithAll" value="false" />
+      <item name="DataSources">
+        <item name="浙江省人民滨江院区">
+          <item name="dbName" value="dbOB" />
+          <item name="HospitalID" value="srm102" />
+          <item name="HospitalName" value="浙江省人民滨江院区" />
+          <item name="DepartmentName" value="放射科;超声科;内镜科" />
+        </item>
+        <item name="钱塘江卫生院">
+          <item name="dbName" value="dbOB" />
+          <item name="HospitalID" value="qtj101" />
+          <item name="HospitalName" value="钱塘江卫生院" />
+          <item name="DepartmentName" value="超声科;内镜科" />
+        </item>
+        <item name="HK Central Hospital">
+          <item name="dbName" value="dbOB" />
+          <item name="HospitalID" value="HKCH" />
+          <item name="HospitalName" value="HK Central Hospital" />
+          <item name="DepartmentName" value="Ultrasound" />
+        </item>
+        <item name="滨江院区">
+          <item name="dbName" value="db" />
+          <item name="HospitalID" value="102" />
+          <item name="HospitalName" value="滨江院区" />
+          <item name="DepartmentName" value="放射科;超声科;内镜科" />
+        </item>
+      </item>
+    </item>
+    <item name="ExternalDataSourceFactory">
+      <item name="default" value="北大国际" />
+      <item name="DataSources">
+        <item name="北大国际PACS">
+          <item name="dbName" value="db" />
+          <item name="Type" value="pacs" />
+          <item name="HospitalID" value="104" />
+          <item name="HospitalName" value="北大国际" />
+          <item name="DepartmentName" value="超声科" />
+        </item>
+      </item>
+    </item>
+  </item>
+</config>

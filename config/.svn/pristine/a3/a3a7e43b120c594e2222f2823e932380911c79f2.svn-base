@@ -1,0 +1,167 @@
+{
+  "columnConfig": [
+    {
+      "title": "AI解剖结构",
+      "key": "NAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 150,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "AI解剖结构"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入AI解剖结构"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "AI结构编码",
+      "key": "CODE",
+      "width": 150,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "AI解剖结构编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入AI解剖结构编码"
+          }
+        ]
+      }
+    },
+	{
+      "title": "分组",
+      "key": "GROUPNUMBER",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 150,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "解剖结构所属的组（对应A20分组）"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入分组"
+          }
+        ]
+      }
+    },
+	{
+      "title": "索引",
+      "key": "INDEXNUMBER",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 150,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "解剖结构索引（对应A20解剖结构索引）"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入索引"
+          }
+        ]
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_ai_anatomical_structure where hospitalid='{GLOBAL}{HOSPITALID}' and departmentid = '{GLOBAL}{DEPARTMENTID}' ",
+    "insert": "insert into t_ai_anatomical_structure(id,code,name,groupnumber,indexnumber,departmentid,hospitalid,deleted) values('{ID}','{CODE}','{NAME}','{GROUPNUMBER}','{INDEXNUMBER}','{GLOBAL}{DEPARTMETNID}','{GLOBAL}{HOSPITALID}','{DELETED}')",
+    "update": "update t_ai_anatomical_structure t set t.name='{NAME}',t.code='{CODE}',t.groupnumber='{GROUPNUMBER}',t.indexnumber='{INDEXNUMBER}',t.departmentid='{GLOBAL}{DEPARTMETNID}',t.hospitalid='{GLOBAL}{HOSPITALID}',t.deleted='{DELETED}' where t.id='{ID}'",
+    "setState": "update t_ai_anatomical_structure set deleted = '{DELETED}' where id = '{ID}'",
+	"delete": "delete from t_ai_anatomical_structure where id = '{ID}'",
+	"setSequence":"update t_ai_anatomical_structure set sequence = '{SEQUENCE}' where id = '{ID}'",
+    "exportData": "select o.*,o.id id from t_ai_anatomical_structure o"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  }
+}

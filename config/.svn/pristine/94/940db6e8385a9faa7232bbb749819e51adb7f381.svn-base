@@ -1,0 +1,404 @@
+{
+  "columnConfig": [
+    {
+      "title": "测量项名称",
+      "key": "ITEMNAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 140,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "测量项名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入测量项名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "测量项编码",
+      "key": "CODE",
+      "width": 180,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "测量项编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入测量项编码"
+          }
+        ]
+      }
+    },
+	{
+      "title": "值类型",
+      "key": "VALUETYPE",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+			"options": [
+            {
+              "label": "数字",
+              "value": "number"
+            },
+            {
+              "label": "文本",
+              "value": "string"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择值类型"
+          }
+        ]
+      },
+      "dicSql": ""
+    },
+	{
+      "title": "单位",
+      "key": "UNIT",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "单位"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入单位"
+          }
+        ]
+      }
+    },
+	{
+      "title": "描述信息",
+      "key": "DESCRIPTION",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 150,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "描述信息",
+		  "auto-size":{
+			"minRows": 4
+		  }
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入描述信息"
+          }
+        ],
+		"span":"24"
+      }
+    },
+    {
+      "title": "计算公式",
+      "key": "FORMULA",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 150,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "计算公式",
+		  "auto-size":{
+			"minRows": 2
+		  }
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入计算公式"
+          }
+        ],
+		"span":"24"
+      }
+    },
+    {
+      "title": "发育曲线公式",
+      "key": "FGFORMULAID",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+		  "allowClear": true,
+          "placeholder": "请选择发育曲线公式"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择发育曲线公式"
+          }
+        ],
+		"addShow": false,
+        "defaultValue": ""
+      },
+	  "dicSql":"select DISTINCT formulaid value,formulaname as label from t_ob_formula where formulaType='1' and measurecode like '%{CODE}%'"
+    },
+    {
+      "title": "孕龄计算公式",
+      "key": "GAFORMULAID",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+		  "allowClear": true,
+          "placeholder": "请选择孕龄计算公式"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择孕龄计算公式"
+          }
+        ],
+		"addShow": false,
+        "defaultValue": ""
+      },
+	  "dicSql":"select DISTINCT formulaid value,formulaname as label from t_ob_formula  where formulaType='0' and measurecode like '%{CODE}%'"
+    },
+    {
+      "title": "多胎发育公式",
+      "key": "FGFORMULAIDMF",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+		  "allowClear": true,
+          "placeholder": "请选择多胎发育曲线公式"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择多胎发育曲线公式"
+          }
+        ],
+		"addShow": false
+      },
+	  "dicSql":"select DISTINCT formulaid value,formulaname as label from t_ob_formula  where formulaType='1' and measurecode like '%{CODE}%'"
+    },
+    {
+      "title": "多胎孕龄公式",
+      "key": "GAFORMULAIDMF",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+		  "allowClear": true,
+          "placeholder": "请选择多胎孕龄计算公式"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择多胎孕龄计算公式"
+          }
+        ],
+		"addShow": false
+      },
+	  "dicSql":"select DISTINCT formulaid value,formulaname as label from t_ob_formula  where formulaType='0' and measurecode like '%{CODE}%'"
+    },
+    {
+      "title": "PACS测量项",
+      "key": "EXTERNALNAME",
+	  "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "PACS测量项"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入PACS测量项"
+          }
+        ]
+      }
+    },
+	{
+      "title": "PACS编码",
+      "key": "EXTERNALCODE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "PACS编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入PACS编码"
+          }
+        ]
+      }
+    },
+	{
+      "title": "测量项路径",
+      "key": "XPATH",
+      "width": "120px",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+		   "placeholder": "请填写XPATH路径！",
+		   "auto-size":{
+			 "minRows": 2
+		   }
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写值路径"
+          },        
+		  {
+			"validator": "isValidJSON",
+			"message": "请输入有效的 JSON 格式！"
+		  }
+        ],
+		"span": "24"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_measure_template_item",
+    "insert": "insert into t_measure_template_item(id,templateid,itemname,valuetype,unit,deleted,xpath,formula,code,fgformulaid,gaformulaid,fgformulaidmf,gaformulaidmf,externalname,externalcode,description) values('{ID}','BEE0A696-4184-41D7-8F99-CD805EAC2BF0','{ITEMNAME}','{VALUETYPE}','{UNIT}','{DELETED}','{XPATH}','{FORMULA}','{CODE}','{FGFORMULAID}','{GAFORMULAID}','{FGFORMULAIDMF}','{GAFORMULAIDMF}','{EXTERNALNAME}','{EXTERNALCODE}','{DESCRIPTION}')",
+    "update": "update t_measure_template_item set templateid = '{TEMPLATEID}',itemname = '{ITEMNAME}',valuetype = '{VALUETYPE}',unit = '{UNIT}',deleted = '{DELETED}',xpath = '{XPATH}',formula = '{FORMULA}',code = '{CODE}',fgformulaid = '{FGFORMULAID}',gaformulaid = '{GAFORMULAID}',fgformulaidmf = '{FGFORMULAIDMF}',gaformulaidmf = '{GAFORMULAIDMF}',externalname = '{EXTERNALNAME}',externalcode = '{EXTERNALCODE}',description = '{DESCRIPTION}' where id = '{ID}'",
+    "setState": "update t_measure_template_item set deleted = '{DELETED}' where id = '{ID}'",
+	"delete": "delete from t_measure_template_item where id = '{ID}'",
+	"setSequence":"update t_measure_template_item set sequence = '{SEQUENCE}' where id = '{ID}'",
+    "exportData": "select * from t_measure_template_item"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  }
+}

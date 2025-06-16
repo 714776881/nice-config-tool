@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Attention" xml:space="preserve">
+    <value>Attention:</value>
+  </data>
+  <data name="AttentionCommonDetail" xml:space="preserve">
+    <value>1. This service only support Windows operation.
+2. If server open windows firewall, it needs to permit this service accessing network in firewall setting, otherwise client may fail to connect to this service.
+3. If client is silverlight web version, IP port for this service should set between 4502 and 4534.
+4. If client is silverlight web version, this service should run together with policy service, otherwise client will fail to connect to this service.</value>
+  </data>
+  <data name="AttentionLicenseDetail" xml:space="preserve">
+    <value>5. To run this sevice, it needs to provide proper license file "lic.lic".</value>
+  </data>
+  <data name="BalanceServiceConfigReadFail" xml:space="preserve">
+    <value>Load Balancing Service read configuation file failed. Please close application and check whether configuation file exit and correct or not. Make sure file correct and restart application! Failed Reason:</value>
+  </data>
+  <data name="BalanceServiceDescription" xml:space="preserve">
+    <value>Use specify dispatch algorithm to provide availabe PDV service for client, make sure client can always use one available PDV service</value>
+  </data>
+  <data name="BalanceServiceTitle" xml:space="preserve">
+    <value>PACS Load Balancing Service</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CannotFindAvailablePDV" xml:space="preserve">
+    <value>Can not find available PDV service</value>
+  </data>
+  <data name="CannotOpenLogFile" xml:space="preserve">
+    <value>Can not open log file</value>
+  </data>
+  <data name="ClickServiceRestartButton" xml:space="preserve">
+    <value>Click service restart button</value>
+  </data>
+  <data name="ClientLinkTimeOut" xml:space="preserve">
+    <value>Connect timeout</value>
+  </data>
+  <data name="Colon" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="Config" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="ConfigLoadFail" xml:space="preserve">
+    <value>Configure file load failed</value>
+  </data>
+  <data name="ConfigServiceDescription" xml:space="preserve">
+    <value>Manage configuation, provide accessing and saving functions for all clients</value>
+  </data>
+  <data name="ConfigServiceTitle" xml:space="preserve">
+    <value>PACS Configure Service</value>
+  </data>
+  <data name="CreatePoliceResponseThreadException" xml:space="preserve">
+    <value>Exception happened when creating policy response thread:</value>
+  </data>
+  <data name="CreateScanTimerException" xml:space="preserve">
+    <value>Exception happened when creating scan timer:</value>
+  </data>
+  <data name="CreateStateThreadException" xml:space="preserve">
+    <value>Exception happened when creating state report thread:</value>
+  </data>
+  <data name="DemoVersion" xml:space="preserve">
+    <value>Demo Version  </value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="DotNetLimit" xml:space="preserve">
+    <value>.This service is base on .Net Framework4.0，please make sure .Net Framework is setup.</value>
+  </data>
+  <data name="EnterListenState" xml:space="preserve">
+    <value>Enter Listen State</value>
+  </data>
+  <data name="ExceptionDetail" xml:space="preserve">
+    <value>Exception Type:{0}
+Exception Message:{1}
+Exception Information:{2}
+</value>
+  </data>
+  <data name="ExcuteStateThreadException" xml:space="preserve">
+    <value>Exception happened when excuting state report thread:</value>
+  </data>
+  <data name="ExitProcessNormal" xml:space="preserve">
+    <value>Quit application normally</value>
+  </data>
+  <data name="ExpiredTime" xml:space="preserve">
+    <value>Expired Time  </value>
+  </data>
+  <data name="Firewall" xml:space="preserve">
+    <value>.If server open windows firewall, it needs to permit this service accessing network in firewall setting, otherwise client may fail to connect to this service.</value>
+  </data>
+  <data name="FunctionDescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="languageSpace" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="LogFileOpenFail" xml:space="preserve">
+    <value>Log file open failed</value>
+  </data>
+  <data name="LogServiceAddress" xml:space="preserve">
+    <value>Log Service IP</value>
+  </data>
+  <data name="LogServiceDescription" xml:space="preserve">
+    <value>Receiving and saving log from clients, cache services and update clients.</value>
+  </data>
+  <data name="LogServicePort" xml:space="preserve">
+    <value>Log service Port</value>
+  </data>
+  <data name="LogServiceTitle" xml:space="preserve">
+    <value>PACS Log Service</value>
+  </data>
+  <data name="MonitorServiceDescription" xml:space="preserve">
+    <value>This service take charge of monitor specify processes. If process is not started, service will start it automatically. If process stop response, service will restart it.</value>
+  </data>
+  <data name="MonitorServiceFinishStart" xml:space="preserve">
+    <value>Monitor service finish starting</value>
+  </data>
+  <data name="MonitorServiceProcessHandle" xml:space="preserve">
+    <value>.To add or delete monitored process, please modify configuration file MonitorService_config.xml.</value>
+  </data>
+  <data name="MonitorServiceTakeAffectWarning" xml:space="preserve">
+    <value>.After modify MonitorService_config.xml, please restart this service to make new configuration take affect.</value>
+  </data>
+  <data name="MonitorServiceTitle" xml:space="preserve">
+    <value>PACS Process Monitor Service</value>
+  </data>
+  <data name="NormalVersion" xml:space="preserve">
+    <value>Formal Version</value>
+  </data>
+  <data name="NotStartPDVManually" xml:space="preserve">
+    <value>.After start this service, please do not start PDV service manually, otherwise monitoring funciton will fail.</value>
+  </data>
+  <data name="NotSupportConfig" xml:space="preserve">
+    <value>Not supported configuration item. Please make sure spelling correct.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OnlyRunOnWindows" xml:space="preserve">
+    <value>.This service only support Windows operation.</value>
+  </data>
+  <data name="ParseConfigError" xml:space="preserve">
+    <value>Parse configuration file error:</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="PolicyProcessStartFinish" xml:space="preserve">
+    <value>Policy Service finish starting</value>
+  </data>
+  <data name="PolicyRequest" xml:space="preserve">
+    <value>policy request</value>
+  </data>
+  <data name="PolicyServiceDescription" xml:space="preserve">
+    <value>This service provide policy description for client of silverlight kind to connect to service.</value>
+  </data>
+  <data name="PolicyServiceTitle" xml:space="preserve">
+    <value>PACS Policy Service</value>
+  </data>
+  <data name="PortMustBiggerThan" xml:space="preserve">
+    <value>4.Port must bigger than</value>
+  </data>
+  <data name="ReadConfigFileFail" xml:space="preserve">
+    <value>Configuration file read failed. Please shutdown service and check whether configuration is correct or not. Make sure it is correct and restart service. Failed reason:</value>
+  </data>
+  <data name="ReceiveLogSeviceQuery" xml:space="preserve">
+    <value>1. Receive query from Log service, provide IP address and port of Log service for client</value>
+  </data>
+  <data name="ReceiveOneRequestFrom" xml:space="preserve">
+    <value>Receive one request from:</value>
+  </data>
+  <data name="ReceiveUpdateQuery" xml:space="preserve">
+    <value>2. Receive update query, provide update package address and access authority information for client</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="RestartObjectCreateFinish" xml:space="preserve">
+    <value>Timer to restart process finish creating</value>
+  </data>
+  <data name="RestartServiceToTakeAffect" xml:space="preserve">
+    <value>5. Changing configuration require restarting service to take affect</value>
+  </data>
+  <data name="ScanObjectCreateFinish" xml:space="preserve">
+    <value>Scan object finish creating</value>
+  </data>
+  <data name="SendDataToBalanceException" xml:space="preserve">
+    <value>Exception happened when sending data to Load Balancing server.</value>
+  </data>
+  <data name="ServiceErrorPleaseRestart" xml:space="preserve">
+    <value>Service error happen, waiting for restart</value>
+  </data>
+  <data name="ServiceProxyFunctionDetail1" xml:space="preserve">
+    <value>.Take charge of start and monitor PDV service. If PDV service stop response, service will restart it.</value>
+  </data>
+  <data name="ServiceProxyTitle" xml:space="preserve">
+    <value>PACS Service Proxy</value>
+  </data>
+  <data name="ServiceRunWithPDV" xml:space="preserve">
+    <value>.This service need to run with PDV service on a same computer.</value>
+  </data>
+  <data name="ServiceStop" xml:space="preserve">
+    <value>Service Stop</value>
+  </data>
+  <data name="SilverlightPortLimit" xml:space="preserve">
+    <value>.If client is silverlight web version, IP port for this service should set between 4502 and 4534.</value>
+  </data>
+  <data name="SilverlightWithPolice" xml:space="preserve">
+    <value>.If client is silverlight web version, this service should run together with policy service, otherwise client will fail to connect to this service.</value>
+  </data>
+  <data name="StackInfo" xml:space="preserve">
+    <value>Application unhandledException:{0};
+Stack information:{1}</value>
+  </data>
+  <data name="StartMonitorClientPoliceRequest" xml:space="preserve">
+    <value>Start listen to request from client</value>
+  </data>
+  <data name="StartRun" xml:space="preserve">
+    <value>Service Run</value>
+  </data>
+  <data name="StartServiceTheadException" xml:space="preserve">
+    <value>Start service thread exception</value>
+  </data>
+  <data name="StopServiceTheadException" xml:space="preserve">
+    <value>Stop service thread exception</value>
+  </data>
+  <data name="ThreadError" xml:space="preserve">
+    <value>Application Thread Exception:{0}</value>
+  </data>
+  <data name="TigerObjectCreateFinish" xml:space="preserve">
+    <value>Process reponse checking object finish creating</value>
+  </data>
+  <data name="UIUnhandleExceptionOccur" xml:space="preserve">
+    <value>Unhandled UI Thread exception happened:</value>
+  </data>
+  <data name="UnhandleExceptionOccur" xml:space="preserve">
+    <value>Unhandled exception happened:</value>
+  </data>
+  <data name="UpdateForAllClients" xml:space="preserve">
+    <value>Provice update service for all clients</value>
+  </data>
+  <data name="UpdateListenPort" xml:space="preserve">
+    <value>Update Service Port</value>
+  </data>
+  <data name="UpdateListenPortBiggerThan" xml:space="preserve">
+    <value>1. Port of update service must bigger than </value>
+  </data>
+  <data name="UpdatePackagePathSet" xml:space="preserve">
+    <value>2. Path of update package must set as network share path</value>
+  </data>
+  <data name="UpdateServiceDemainAddress" xml:space="preserve">
+    <value>3. If server of shared update package is not in domain, domain name need to set as service IP address </value>
+  </data>
+  <data name="UpdateServiceTitle" xml:space="preserve">
+    <value>PACS Update Service</value>
+  </data>
+  <data name="UpdateServiceTitleLinkString" xml:space="preserve">
+    <value> - </value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="ExceptionWhenHandlePolicy" xml:space="preserve">
+    <value>Exception happened when handling policy request:</value>
+  </data>
+  <data name="ServiceProxyFunctionDetail2" xml:space="preserve">
+    <value>.Report PDV service states changing to Load Balancing service</value>
+  </data>
+  <data name="AuthorityCount" xml:space="preserve">
+    <value>   Authority Count   </value>
+  </data>
+  <data name="AuthorityNotRight" xml:space="preserve">
+    <value>Authority Failed！</value>
+  </data>
+  <data name="AuthorityServiceDescription" xml:space="preserve">
+    <value>This service is in charge of client authority, any client should get authority before using.</value>
+  </data>
+  <data name="AuthorityServiceTitle" xml:space="preserve">
+    <value>PACS Authority Service</value>
+  </data>
+  <data name="ServiceRunBeforServiceProxy" xml:space="preserve">
+    <value>.This service needs to run before Service Proxy start.</value>
+  </data>
+  <data name="ServiceUseWithServiceProxy" xml:space="preserve">
+    <value>.This service needs to run together with Service Proxy.</value>
+  </data>
+</root>

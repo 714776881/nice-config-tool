@@ -1,0 +1,418 @@
+{
+  "columnConfig": [
+    {
+      "title": "检查项目",
+      "key": "ITEMNAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 120,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "检查项目"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入检查项目"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "项目编码",
+      "key": "ITEMCODE",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "项目编码",
+		  "disabled":"true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入项目编码"
+          }
+        ],
+		"defaultValueBySql":"select 'GM' || LPAD(COUNT(*) , 3, '0') value from t_gm_examitem t"
+      }
+    },
+	{
+      "title": "前缀",
+      "key": "PREFIX",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "前缀"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入前缀"
+          }
+        ]
+      }
+    },
+	{
+      "title": "格式类型",
+      "key": "FORMATTYPE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择格式类型",
+		  "options": [
+            {
+              "label": "流水号",
+              "value": "1000"
+            },
+            {
+              "label": "yyyymmdd",
+              "value": "1001"
+            },
+            {
+              "label": "yymmdd",
+              "value": "1002"
+            },
+            {
+              "label": "yyyy",
+              "value": "1003"
+            },
+            {
+              "label": "yy",
+              "value": "1004"
+            },
+            {
+              "label": "自定义格式",
+              "value": "1005"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择格式类型"
+          }
+        ],
+        "defaultValue": "1000"
+      }
+    },
+	{
+      "title": "分割号",
+      "key": "SEPARATRIX",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "分割号"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入分割号"
+          }
+        ],
+		"defaultValue":"-"
+      }
+    },
+	{
+      "title": "常规项目",
+      "key": "ISGMEXAMTYPE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "常规项目",
+		  "options": [
+            {
+              "label": "否",
+              "value": "0"
+            },
+            {
+              "label": "是",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入常规项目"
+          }
+        ],
+		"defaultValue":"0"
+      }
+    },
+	{
+      "title": "常规活检项目",
+      "key": "SAMEEXAM",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "常规活检项目",
+		  "options": [
+            {
+              "label": "否",
+              "value": "0"
+            },
+            {
+              "label": "是",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入常规活检项目"
+          }
+        ],
+		"defaultValue":"0"
+      }
+    },
+	{
+      "title": "大标本(天数)",
+      "key": "REPORTDAYS",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "请输入报告天数",
+		  "width": "200px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入报告天数"
+          }
+        ]
+      }
+    },
+	{
+      "title": "小标本(天数)",
+      "key": "LSREPORTDAYS",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "请输入报告天数",
+		  "width": "200px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入报告天数"
+          }
+        ]
+      }
+    },
+	{
+      "title": "冰冻间隔(分钟)",
+      "key": "INTERVALTIME",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入冰冻间隔(分钟)"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入冰冻间隔"
+          }
+        ]
+      }
+    },
+	{
+      "title": "报告类型",
+      "key": "REPORTTYPE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "报告类型",
+		  "options": [
+            {
+              "label": "普通",
+              "value": "1"
+            },
+            {
+              "label": "TX",
+              "value": "2"
+            },
+            {
+              "label": "C1",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入报告类型"
+          }
+        ],
+		"defaultValue":"1"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_dictionary d where (d.diccategory = '1023')"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select t.*,t.itemid id from t_gm_examitem t order by sequence",
+    "insert": "insert into t_gm_examitem(ITEMID,ITEMNAME,ITEMCODE,PREFIX,FORMATTYPE,SEPARATRIX,ISGMEXAMTYPE,SAMEEXAM,REPORTDAYS,LSREPORTDAYS,REPORTTYPE,INTERVALTIME,DELETED,SEQUENCE) values('{ID}','{ITEMNAME}','{ITEMCODE}','{PREFIX}','{FORMATTYPE}','{SEPARATRIX}','{ISGMEXAMTYPE}','{SAMEEXAM}','{REPORTDAYS}','{LSREPORTDAYS}','{REPORTTYPE}','{INTERVALTIME}','{DELETED}','SEQUENCE')",
+    "update": "update t_gm_examitem set ITEMNAME='{ITEMNAME}',ITEMCODE='{ITEMCODE}',PREFIX='{PREFIX}',FORMATTYPE='{FORMATTYPE}',SEPARATRIX='{SEPARATRIX}',ISGMEXAMTYPE='{ISGMEXAMTYPE}',SAMEEXAM='{SAMEEXAM}',REPORTDAYS='{REPORTDAYS}',LSREPORTDAYS='{LSREPORTDAYS}',REPORTTYPE='{REPORTTYPE}',INTERVALTIME='{INTERVALTIME}',DELETED='{DELETED}' where ITEMID = '{ID}'",
+    "setState": "update t_gm_examitem set deleted = '{DELETED}' where ITEMID = '{ID}'",
+	"delete": "delete from t_gm_examitem where ITEMID = '{ID}'",
+	"setSequence":"update t_gm_examitem set sequence = '{SEQUENCE}' where ITEMID = '{ID}'",
+    "exportData": "select e.*,e.ITEMID id from t_gm_examitem e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"50"
+  }
+}

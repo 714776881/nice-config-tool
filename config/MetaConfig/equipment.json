@@ -1,0 +1,253 @@
+{
+  "columnConfig": [
+    {
+      "title": "设备名称",
+      "key": "EQUIPMENT",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "设备名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入设备名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "设备序列号",
+      "key": "SN1",
+      "width": 230,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "设备序列号"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入设备序列号"
+          }
+        ]
+      }
+    },
+    {
+      "title": "备注",
+      "key": "COMMENT1",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "备注"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入备注"
+          }
+        ]
+      }
+    },
+	{
+      "title": "最后一次推送时间",
+      "key": "FORMULAUPDATETIME",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+		  "show-time": "true",
+          "placeholder": "最后一次推送时间"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "最后一次推送时间"
+          }
+        ],
+		"format": "YYYY-MM-DD HH:mm:ss",
+		"valueFormat": "YYYY-MM-DD HH:mm:ss"
+      }
+    },
+    {
+      "title": "推送状态",
+      "key": "FORMULAUPDATERESULT",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+	  "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择推送状态",
+          "options": [
+            {
+              "label": "待推送",
+              "value": "N"
+            },
+            {
+              "label": "推送失败",
+              "value": "E"
+            },
+			{
+              "label": "成功",
+              "value": "0"
+            },
+			{
+              "label": "该版本不支持",
+              "value": "1"
+            },
+			{
+              "label": "应用程序处理错误",
+              "value": "2"
+            },
+			{
+              "label": "请求超时",
+              "value": "3"
+            },
+			{
+              "label": "命令不支持",
+              "value": "4"
+            },
+			{
+              "label": "参数解析失败",
+              "value": "5"
+            },
+			{
+              "label": "被用户拒绝",
+              "value": "6"
+            },
+			{
+              "label": "被Doppler拒绝，无法在此屏幕修改信息",
+              "value": "7"
+            },
+			{
+              "label": "检查号不匹配",
+              "value": "8"
+            },
+			{
+              "label": "回复与预期相应不匹配",
+              "value": "9"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择推送状态"
+          }
+        ],
+        "defaultValue": "N"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select e.*,e.equipmentid id from t_equipment e",
+    "insert": "insert into t_equipment(equipmentid,equipment,sn1,comment1,formulaupdatetime,formulaupdateresult,departmentid,examroom,deleted) values('{ID}','{EQUIPMENT}','{SN1}','{COMMENT1}','{FORMULAUPDATETIME}','{FORMULAUPDATERESULT}','{DEPARTMENTID}','{EQUIPMENT}','{DELETED}') ",
+    "update": "update t_equipment e set e.equipment='{EQUIPMENT}', e.sn1='{SN1}', e.formulaupdatetime = '{FORMULAUPDATETIME}', e.formulaupdateresult = '{FORMULAUPDATERESULT}', e.departmentid = '{DEPARTMENTID}' where e.equipmentid = '{ID}'",
+    "setState": "update t_equipment set deleted = '{DELETED}' where equipmentid = '{ID}'",
+	"delete": "delete from t_equipment where equipmentid = '{ID}'",
+	"setSequence":"update t_equipment set sequence = '{SEQUENCE}' where equipmentid = '{ID}'",
+    "exportData": "select * from t_equipment"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  },
+  "addedButtons":[
+	{
+	   "name": "重新推送",
+	   "isResetFetchData": "1",
+	   "defaultShowText":"是否重新推送该设备？这会把当前设备更改为待推送状态。",
+	   "exeSql":"update t_equipment set FORMULAUPDATERESULT = 'N' where equipmentid = '{ID}'",
+	   "isBetch": ""
+	}
+  ]
+}

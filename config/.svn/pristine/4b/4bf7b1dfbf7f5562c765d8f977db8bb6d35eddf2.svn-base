@@ -1,0 +1,250 @@
+{
+  "columnConfig": [
+    {
+      "title": "用户名",
+      "key": "USERNAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "用户名"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择用户名"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "用户工号",
+      "key": "USERCODE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "用户工号"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入用户工号"
+          }
+        ],
+		"defaultValueBySql":"select '1' || LPAD(COUNT(*) , 3, '0') value from t_user"
+      }
+    },
+	{
+      "title": "用户密码",
+      "key": "PACSPWD",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 100,
+      "component": {
+        "name": "a-input-password",
+        "props": {
+          "placeholder": "用户密码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入用户密码"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "角色",
+      "key": "USERACTOR",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 150,
+      "component": {
+        "name": "lx-select",
+        "props": {
+		  "mode": "multiple",
+          "placeholder": "请选择角色",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入角色"
+          }
+        ],
+        "defaultValue": "",
+		"span":"24"
+      },
+	  "dicSql": "select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'"
+    },
+	{
+      "title": "权限",
+      "key": "USERROLE",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 500,
+      "component": {
+        "name": "tree-select",
+        "props": {
+		  "mode": "multiple",
+          "placeholder": "请选择权限",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择权限"
+          }
+        ],
+        "defaultValue": "",
+		"span":"24"
+      },
+	  "dicSql": "select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label"
+    },
+	{
+      "title": "最新更改时间",
+      "key": "MODIFYPWDDT",
+      "width": 100,
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入更改时间"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择更改时间"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_user"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select u.*,u.userid id from t_user u where u.departmentid = '{GLOBAL}{DEPARTMENTID}' order by u.username",
+    "insert": "insert into t_user(userid,username,usercode,pacspwd,userrole,useractor,modifypwddt,departmentid,deleted,status) values('{ID}','{USERNAME}','{USERCODE}','{PACSPWD}','{USERROLE}','{USERACTOR}','{MODIFYPWDDT}','{GLOBAL}{DEPARTMENTID}','0','1000')",
+    "update": "update t_user t set t.username = '{USERNAME}',t.usercode = '{USERCODE}',t.pacspwd = '{PACSPWD}',t.userrole = '{USERROLE}',t.useractor = '{USERACTOR}',t.modifypwddt = '{MODIFYPWDDT}',t.departmentid = '{GLOBAL}{DEPARTMENTID}' where t.userid = '{ID}'",
+    "setState": "update t_user set deleted = '{DELETED}' where userid = '{ID}'",
+	"delete": "delete from t_user where userid = '{ID}'",
+	"setSequence":"update t_user set sequence = '{SEQUENCE}' where userid = '{ID}'",
+    "exportData": "select e.*,e.userid id from t_user e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  }
+}

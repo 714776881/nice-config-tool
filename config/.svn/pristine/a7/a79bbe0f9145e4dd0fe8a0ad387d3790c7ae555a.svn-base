@@ -1,0 +1,289 @@
+{
+  "columnConfig": [
+    {
+      "title": "切面",
+      "key": "PLANECODE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "切面",
+		  "style": "width:200px",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择切面"
+          }
+        ],
+        "defaultValue": ""
+      },
+	  "dicSql": "select code value,name label from T_IMAGE_PLANEDEFINE"
+    },
+    {
+      "title": "评分项名称",
+      "key": "NAME",
+      "width": 200,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "评分项名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入评分项名称"
+          }
+        ]
+      }
+    },
+    {
+      "title": "评分项索引",
+      "key": "INDEXNUMBER",
+	  "width": 150,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "评分项索引"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入评分项索引"
+          }
+        ]
+      }
+    },
+	{
+      "title": "AI解剖结构",
+      "key": "STRUCTURELINK",
+	  "width": 150,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "AI解剖结构",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择AI解剖结构"
+          }
+        ],
+        "defaultValue": ""
+      },
+	  "dicSql": "select name label,code value from t_ai_anatomical_structure where hospitalid='{GLOBAL}{HOSPITALID}' and departmentid = '{GLOBAL}{DEPARTMENTID}'"
+    },
+	{
+      "title": "评分项描述",
+      "key": "DESCRIPTION",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 250,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "评分项描述"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入评分项描述"
+          }
+        ],
+		"span":"24"
+      }
+    },
+	{
+      "title": "权重",
+      "key": "WEIGHT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "评分方案"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入评分方案"
+          }
+        ]
+      }
+    },
+    {
+      "title": "计算规则",
+      "key": "CALCRULE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择计算规则",
+          "options": [
+            {
+              "label": "加分",
+              "value": "0"
+            },
+            {
+              "label": "减分",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择计算规则"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "颜色",
+      "key": "COLOR",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "red green blue #777",
+		  "options": [
+            {
+              "label": "黄色",
+              "value": "#FFFF1C"
+            },
+			{
+              "label": "红色",
+              "value": "#FF2121"
+            },
+	        {
+              "label": "橘黄色",
+              "value": "#FF9500"
+            },
+			{
+              "label": "紫色",
+              "value": "#9D00C6"
+            },
+			{
+              "label": "浅紫色",
+              "value": "#FF62ED"
+            },
+			{
+              "label": "蓝色",
+              "value": "#4642FF"
+            },
+			{
+              "label": "浅蓝色",
+              "value": "#7099FF"
+            },
+			{
+              "label": "青色",
+              "value": "#00E6D6"
+            },
+			{
+              "label": "深青色",
+              "value": "#009389"
+            },
+			{
+              "label": "绿色",
+              "value": "#00FF19"
+            },
+			{
+              "label": "深绿色",
+              "value": "#31A800"
+            },
+            {
+              "label": "粉红色",
+              "value": "#FF6B6B"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入颜色"
+          }
+        ]
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_Image_Planeitemdefine",
+    "insert": "insert into t_Image_Planeitemdefine(ID,Planecode,Name,Indexnumber,Weight,Calcrule,Color,Description) values('{ID}','{PLANECODE}','{NAME}','{INDEXNUMBER}','{WEIGHT}','{CALCRULE}','{COLOR}','DESCRIPTION')",
+    "update": "update t_Image_Planeitemdefine t set t.planecode='{PLANECODE}',t.name='{NAME}',t.indexnumber='{INDEXNUMBER}',t.weight='{WEIGHT}',t.calcrule='{CALCRULE}',t.color='{COLOR}',t.Description='{DESCRIPTION}' where t.id='{ID}'",
+    "setState": "update t_Image_Planeitemdefine set deleted = '{DELETED}' where id = '{ID}'",
+	"delete": "delete from t_Image_Planeitemdefine where id = '{ID}'",
+	"setSequence":"update t_Image_Planeitemdefine set sequence = '{SEQUENCE}' where id = '{ID}'",
+    "exportData": "select * from t_Image_Planeitemdefine"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": false,
+	"setStateToDelete": true,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  }
+}

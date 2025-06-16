@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Attention" xml:space="preserve">
+    <value>注意事项：</value>
+  </data>
+  <data name="AttentionCommonDetail" xml:space="preserve">
+    <value>1.本服务仅支持windows操作系统；
+2.如果服务器上开启了防火墙，需要在防火墙中设置允许本服务访问网络，否则可能会导致客户端无法正常连接本服务；
+3.如果客户端是silverlight版，则本服务的端口需要在4502到4534之间；
+4.如果客户端是silverlight版，则需搭配策略服务使用，否则客户端将无法连接本服务。</value>
+  </data>
+  <data name="AttentionLicenseDetail" xml:space="preserve">
+    <value>5.运行本服务时需要提供正确的许可文件lic.lic，否则将无法启动本服务；</value>
+  </data>
+  <data name="BalanceServiceConfigReadFail" xml:space="preserve">
+    <value>负载均衡读取配置文件失败，请关闭程序后检查配置文件是否存在或配置是否正确，确认正确后再重启程序！错误原因：</value>
+  </data>
+  <data name="BalanceServiceDescription" xml:space="preserve">
+    <value>通过一定的调度算法向终端提供可用的PDV服务，以便终端总是可以使用某一个PDV服务</value>
+  </data>
+  <data name="BalanceServiceTitle" xml:space="preserve">
+    <value>PACS-负载均衡服务</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="CannotFindAvailablePDV" xml:space="preserve">
+    <value>找不到可用的PDV服务</value>
+  </data>
+  <data name="CannotOpenLogFile" xml:space="preserve">
+    <value>无法打开日志文件</value>
+  </data>
+  <data name="ClickServiceRestartButton" xml:space="preserve">
+    <value>点击服务重启按钮</value>
+  </data>
+  <data name="ClientLinkTimeOut" xml:space="preserve">
+    <value>客户端连接超时</value>
+  </data>
+  <data name="Colon" xml:space="preserve">
+    <value>:</value>
+  </data>
+  <data name="Config" xml:space="preserve">
+    <value>配置</value>
+  </data>
+  <data name="ConfigLoadFail" xml:space="preserve">
+    <value>配置文件加载失败</value>
+  </data>
+  <data name="ConfigServiceDescription" xml:space="preserve">
+    <value>管理所有客户端的配置,给客户端提供获取和保存配置的功能</value>
+  </data>
+  <data name="ConfigServiceTitle" xml:space="preserve">
+    <value>PACS-配置服务</value>
+  </data>
+  <data name="CreatePoliceResponseThreadException" xml:space="preserve">
+    <value>创建policy响应线程时发生异常:</value>
+  </data>
+  <data name="CreateScanTimerException" xml:space="preserve">
+    <value>创建扫描定时器时发生异常:</value>
+  </data>
+  <data name="CreateStateThreadException" xml:space="preserve">
+    <value>创建状态报告线程时发生异常:</value>
+  </data>
+  <data name="DemoVersion" xml:space="preserve">
+    <value>试用版</value>
+  </data>
+  <data name="Domain" xml:space="preserve">
+    <value>域名</value>
+  </data>
+  <data name="DotNetLimit" xml:space="preserve">
+    <value>.本服务是基于.net framework4.0的，所以需要在运行的主机上安装.net framework</value>
+  </data>
+  <data name="EnterListenState" xml:space="preserve">
+    <value>进入监听状态</value>
+  </data>
+  <data name="ExceptionDetail" xml:space="preserve">
+    <value>异常类型:{0}
+异常消息:{1}
+异常信息:{2}
+</value>
+  </data>
+  <data name="ExcuteStateThreadException" xml:space="preserve">
+    <value>执行状态报告线程时发生异常:</value>
+  </data>
+  <data name="ExitProcessNormal" xml:space="preserve">
+    <value>正常退出程序</value>
+  </data>
+  <data name="ExpiredTime" xml:space="preserve">
+    <value>截止时间  </value>
+  </data>
+  <data name="Firewall" xml:space="preserve">
+    <value>.如果服务器上开启了防火墙，需要在防火墙中设置允许本服务访问网络，否则可能会导致终端无法正常连接本服务;</value>
+  </data>
+  <data name="FunctionDescription" xml:space="preserve">
+    <value>功能说明：</value>
+  </data>
+  <data name="languageSpace" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="LogFileOpenFail" xml:space="preserve">
+    <value>日志文件打开失败</value>
+  </data>
+  <data name="LogServiceAddress" xml:space="preserve">
+    <value>日志服务器地址</value>
+  </data>
+  <data name="LogServiceDescription" xml:space="preserve">
+    <value>本服务接收并保存来自终端、缓存服务及更新客户端的日志</value>
+  </data>
+  <data name="LogServicePort" xml:space="preserve">
+    <value>日志服务器端口</value>
+  </data>
+  <data name="LogServiceTitle" xml:space="preserve">
+    <value>PACS-日志服务</value>
+  </data>
+  <data name="MonitorServiceDescription" xml:space="preserve">
+    <value>本服务负责监控指定的进程，如果进程没有启动则自动启动被监控进程，如果进程已经停止了响应将重启被监控的进程。</value>
+  </data>
+  <data name="MonitorServiceFinishStart" xml:space="preserve">
+    <value>监控服务启动完成</value>
+  </data>
+  <data name="MonitorServiceProcessHandle" xml:space="preserve">
+    <value>.需要增减被监控的进程，则请修改配置文件MonitorService_config.xml；</value>
+  </data>
+  <data name="MonitorServiceTakeAffectWarning" xml:space="preserve">
+    <value>.修改本服务的配置文件MonitorService_config.xml后需要重启本服务才会让新的配置生效。</value>
+  </data>
+  <data name="MonitorServiceTitle" xml:space="preserve">
+    <value>PACS-进程监控服务</value>
+  </data>
+  <data name="NormalVersion" xml:space="preserve">
+    <value>完全版</value>
+  </data>
+  <data name="NotStartPDVManually" xml:space="preserve">
+    <value>.开启了本服务之后，不要手动启动PDV服务，否则无法完成监控。</value>
+  </data>
+  <data name="NotSupportConfig" xml:space="preserve">
+    <value>不支持的配置项，请确认拼写是否正确！</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="OnlyRunOnWindows" xml:space="preserve">
+    <value>.本服务仅能在windows操作系统上正常使用；</value>
+  </data>
+  <data name="ParseConfigError" xml:space="preserve">
+    <value>解析配置文件错误:</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>路径</value>
+  </data>
+  <data name="PolicyProcessStartFinish" xml:space="preserve">
+    <value>策略服务启动完成</value>
+  </data>
+  <data name="PolicyRequest" xml:space="preserve">
+    <value>的策略请求</value>
+  </data>
+  <data name="PolicyServiceDescription" xml:space="preserve">
+    <value>本服务供使用silver light开发的客户端在于服务器进行业务通信时获取策略描述用</value>
+  </data>
+  <data name="PolicyServiceTitle" xml:space="preserve">
+    <value>PACS-策略服务</value>
+  </data>
+  <data name="PortMustBiggerThan" xml:space="preserve">
+    <value>4, 端口必须大于</value>
+  </data>
+  <data name="ReadConfigFileFail" xml:space="preserve">
+    <value>配置文件读取失败，请关闭程序后检查配置文件是否存在或配置是否正确，确认正确后再重启程序！错误原因：</value>
+  </data>
+  <data name="ReceiveLogSeviceQuery" xml:space="preserve">
+    <value>1, 接收日志服务查询,为终端提供日志服务器的地址和端口</value>
+  </data>
+  <data name="ReceiveOneRequestFrom" xml:space="preserve">
+    <value>收到一个来自:</value>
+  </data>
+  <data name="ReceiveUpdateQuery" xml:space="preserve">
+    <value>2, 接收升级查询,为终端提供升级包地址和访问授权信息</value>
+  </data>
+  <data name="Restart" xml:space="preserve">
+    <value>重启</value>
+  </data>
+  <data name="RestartObjectCreateFinish" xml:space="preserve">
+    <value>定时重启对象创建完毕</value>
+  </data>
+  <data name="RestartServiceToTakeAffect" xml:space="preserve">
+    <value>5, 更改配置后必须重启服务才能生效</value>
+  </data>
+  <data name="ScanObjectCreateFinish" xml:space="preserve">
+    <value>扫描对象创建完毕</value>
+  </data>
+  <data name="SendDataToBalanceException" xml:space="preserve">
+    <value>往负载均衡服务器发送数据时发生异常:</value>
+  </data>
+  <data name="ServiceErrorPleaseRestart" xml:space="preserve">
+    <value>服务出错,等待重启</value>
+  </data>
+  <data name="ServiceProxyFunctionDetail1" xml:space="preserve">
+    <value>.负责启动PDV服务和监控PDV服务运行状态，如果PDV出现死机，则自动重启PDV服务；</value>
+  </data>
+  <data name="ServiceProxyTitle" xml:space="preserve">
+    <value>PACS-服务代理</value>
+  </data>
+  <data name="ServiceRunWithPDV" xml:space="preserve">
+    <value>.本服务需要和PDV服务运行在同一台物理服务器上；</value>
+  </data>
+  <data name="ServiceStop" xml:space="preserve">
+    <value>服务停止</value>
+  </data>
+  <data name="SilverlightPortLimit" xml:space="preserve">
+    <value>.如果客户端是silverlight版，则本服务的端口需要在4502到4534之间；</value>
+  </data>
+  <data name="SilverlightWithPolice" xml:space="preserve">
+    <value>.如果客户端是silverlight版，则需搭配策略服务使用，否则客户端将无法连接本服务。</value>
+  </data>
+  <data name="StackInfo" xml:space="preserve">
+    <value>Application unhandledException:{0};
+堆栈信息:{1}</value>
+  </data>
+  <data name="StartMonitorClientPoliceRequest" xml:space="preserve">
+    <value>开始监听来自客户端的策略请求</value>
+  </data>
+  <data name="StartRun" xml:space="preserve">
+    <value>开始运行</value>
+  </data>
+  <data name="StartServiceTheadException" xml:space="preserve">
+    <value>启动服务线程异常</value>
+  </data>
+  <data name="StopServiceTheadException" xml:space="preserve">
+    <value>停止服务线程异常</value>
+  </data>
+  <data name="ThreadError" xml:space="preserve">
+    <value>应用程序线程错误:{0}</value>
+  </data>
+  <data name="TigerObjectCreateFinish" xml:space="preserve">
+    <value>心跳检测对象创建完毕</value>
+  </data>
+  <data name="UIUnhandleExceptionOccur" xml:space="preserve">
+    <value>出现应用程序未处理UI异常:</value>
+  </data>
+  <data name="UnhandleExceptionOccur" xml:space="preserve">
+    <value>出现应用程序未处理非UI异常:</value>
+  </data>
+  <data name="UpdateForAllClients" xml:space="preserve">
+    <value>为所有终端提供升级服务</value>
+  </data>
+  <data name="UpdateListenPort" xml:space="preserve">
+    <value>升级服务监听端口</value>
+  </data>
+  <data name="UpdateListenPortBiggerThan" xml:space="preserve">
+    <value>1, 升级服务监听端口设置必须大于</value>
+  </data>
+  <data name="UpdatePackagePathSet" xml:space="preserve">
+    <value>2, 升级包路径需要设置为共享目录下的路径</value>
+  </data>
+  <data name="UpdateServiceDemainAddress" xml:space="preserve">
+    <value>3, 如果共享升级包所在服务器没加入域，域名应该填写服务器的IP地址</value>
+  </data>
+  <data name="UpdateServiceTitle" xml:space="preserve">
+    <value>PACS-升级服务</value>
+  </data>
+  <data name="UpdateServiceTitleLinkString" xml:space="preserve">
+    <value> - </value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="ExceptionWhenHandlePolicy" xml:space="preserve">
+    <value>处理policy请求时发生异常:</value>
+  </data>
+  <data name="ServiceProxyFunctionDetail2" xml:space="preserve">
+    <value>.向负载均衡服务报告PDV服务的状态变化。</value>
+  </data>
+  <data name="AuthorityCount" xml:space="preserve">
+    <value>   授权点数   </value>
+  </data>
+  <data name="AuthorityNotRight" xml:space="preserve">
+    <value>授权不正确！</value>
+  </data>
+  <data name="AuthorityServiceDescription" xml:space="preserve">
+    <value>本服务负责给客户端提供授权,任何客户端在正常使用之前都需取得对应的授权</value>
+  </data>
+  <data name="AuthorityServiceTitle" xml:space="preserve">
+    <value>PACS-授权服务</value>
+  </data>
+  <data name="ServiceRunBeforServiceProxy" xml:space="preserve">
+    <value>.要想使用本服务，必须保证本服务在服务代理服务前启动</value>
+  </data>
+  <data name="ServiceUseWithServiceProxy" xml:space="preserve">
+    <value>.本服务需要配合服务代理使用；</value>
+  </data>
+</root>

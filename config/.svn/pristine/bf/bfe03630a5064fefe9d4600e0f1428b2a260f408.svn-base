@@ -1,0 +1,383 @@
+{
+  "columnConfig": [
+    {
+      "title": "公式名称",
+      "key": "FORMULANAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 120,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "公式名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入公式名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "公式ID",
+      "key": "FORMULAID",
+      "width": 230,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "公式ID"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入公式ID"
+          }
+        ]
+      }
+    },
+    {
+      "title": "公式作者",
+      "key": "AUTHORNAME",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "公式作者"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入公式作者"
+          }
+        ]
+      }
+    },
+	{
+      "title": "公式类型",
+      "key": "FORMULATYPE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择公式类型",
+          "options": [
+            {
+              "label": "GA公式",
+              "value": "0"
+            },
+            {
+              "label": "FG公式",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择公式类型"
+          }
+        ]
+      }
+    },
+	{
+      "title": "偏差类型",
+      "key": "SDTYPE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择偏差类型",
+          "options": [
+            {
+              "label": "无",
+              "value": "0"
+            },
+            {
+              "label": "±1SD",
+              "value": "1"
+            },
+            {
+              "label": "±2SD",
+              "value": "2"
+            },
+            {
+              "label": "3%~97%",
+              "value": "3"
+            },
+            {
+              "label": "5%~95%",
+              "value": "4"
+            },
+            {
+              "label": "10%~90%",
+              "value": "5"
+            },
+            {
+              "label": "2.5%~97.5%",
+              "value": "6"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择偏差类型"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "孕龄单位",
+      "key": "GAUNIT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择孕龄单位",
+          "options": [
+            {
+              "label": "天",
+              "value": "d"
+            },
+            {
+              "label": "周",
+              "value": "w"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择孕龄单位"
+          }
+        ],
+        "defaultValue": "d"
+      }
+    },
+    
+    {
+      "title": "测量项",
+      "key": "MEASURECODE",
+      "width": "200px",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "lx-select",
+        "props": {
+		  "mode": "multiple",
+          "placeholder": "请选择测量项",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入测量项"
+          }
+        ],
+		"span": "24"
+      },
+      "dicSql": "select m.itemname label,m.code value from t_measure_template_item m where m.deleted =0 "
+    },
+    {
+      "title": "测量项单位",
+      "key": "MEASUREUNIT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "测量项单位"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入测量项单位"
+          }
+        ]
+      }
+    },
+    
+    {
+      "title": "默认公式",
+      "key": "ISDEFAULT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "",
+          "options": [
+            {
+              "label": "是",
+              "value": "1"
+            },
+            {
+              "label": "否",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择默认公式"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "自定义公式",
+      "key": "CUSTOM",
+	  "width": "120px",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择自定义公式",
+          "options": [
+            {
+              "label": "是",
+              "value": "1"
+            },
+            {
+              "label": "否",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择自定义公式"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select o.*,o.formulaseq id from t_ob_formula o",
+    "insert": "insert into t_ob_formula(formulaseq,formulaid,formulaname,authorname,gaunit,sdtype,measurecode,measureunit,formulatype,regionid,hospitalid,departmentid,deleted,isdefault,custom)values('{ID}','{FORMULAID}','{FORMULANAME}','{AUTHORNAME}','{GAUNIT}','{SDTYPE}','{MEASURECODE}','{MEASUREUNIT}','{FORMULATYPE}','{REGIONID}','{HOSPITALID}','{DEPARTMENTID}','{DELETED}','{ISDEFAULT}','{CUSTOM}')",
+    "update": "update t_ob_formula set formulaid = '{FORMULAID}',formulaname = '{FORMULANAME}',formulatype = '{FORMULATYPE}',authorname = '{AUTHORNAME}',gaunit = '{GAUNIT}',sdtype = '{SDTYPE}',measurecode = '{MEASURECODE}',measureunit = '{MEASUREUNIT}' where formulaseq = '{ID}'",
+    "setState": "update t_ob_formula set deleted = '{DELETED}' where formulaseq = '{ID}'",
+	"delete": "delete from t_ob_formula where formulaseq = '{ID}'",
+	"setSequence":"update t_ob_formula set sequence = '{SEQUENCE}' where formulaseq = '{ID}'",
+    "exportData": "select o.*,o.formulaseq id from t_ob_formula o"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  },
+  "addedButtons":[
+	{
+	   "name": "公式数据",
+	   "defaultShowText":"",
+	   "width":1000,
+	   "exeSql":"",
+	   "isBetch": ""
+	}
+  ]
+}

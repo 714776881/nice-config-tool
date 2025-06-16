@@ -1,0 +1,16 @@
+<script lang="ts" setup>
+import { useTheme } from '@/stores/theme'
+import { computed, ref } from 'vue'
+
+const theme = useTheme();
+
+const configFileName = computed(() => {
+    console.log("获取文件" + theme.currentMenuItem.fileName)
+    return theme.currentMenuItem.fileName
+})
+
+</script>
+<template>
+    <lxDict :key="configFileName" :configFileName="configFileName"></lxDict>
+</template>
+<style></style>

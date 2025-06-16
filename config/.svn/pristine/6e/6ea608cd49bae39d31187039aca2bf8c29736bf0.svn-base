@@ -1,0 +1,180 @@
+{
+  "columnConfig": [
+    {
+      "title": "孕龄名称",
+      "key": "ITEMNAME",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "孕龄名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入孕龄名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "孕龄编码",
+      "key": "ITEMCODE",
+      "width": 200,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "孕龄编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入孕龄编码"
+          }
+        ]
+      }
+    },
+    {
+      "title": "孕龄类型",
+      "key": "DICCATEGORY",
+	  "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择孕龄类型",
+          "options": [
+            {
+              "label": "超声孕龄",
+              "value": "5003"
+            },
+            {
+              "label": "临床孕龄",
+              "value": "5002"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择孕龄类型"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_dictionary d where (d.diccategory = '5003' or d.diccategory = '5002')"
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select d.*,d.dictionaryid id from t_dictionary d where (d.diccategory = '5003' or d.diccategory = '5002')",
+    "insert": "insert into t_dictionary(dictionaryid,diccategory,itemcode,itemname,deleted,sequence) values('{ID}','{DICCATEGORY}','{ITEMCODE}','{ITEMNAME}','{DELETED}','{SEQUENCE}')",
+    "update": "update t_dictionary d set d.diccategory = '{DICCATEGORY}',d.itemcode = '{ITEMCODE}',d.itemname = '{ITEMNAME}',d.sequence = '{SEQUENCE}' where d.dictionaryid = '{ID}'",
+    "setState": "update t_dictionary set deleted = '{DELETED}' where dictionaryid = '{ID}'",
+	"delete": "delete from t_dictionary where dictionaryid = '{ID}'",
+	"setSequence":"update t_dictionary set sequence = '{SEQUENCE}' where dictionaryid = '{ID}'",
+    "exportData": "select d.*,d.dictionaryid id from t_dictionary d where (d.diccategory = '5003' or d.diccategory = '5002')"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  }
+}

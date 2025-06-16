@@ -1,0 +1,209 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "最大胎儿数量",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='MaxFetalCount']"
+		},
+		{
+			"name": "解剖结构正常内容，多值英文分号分隔",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='AnatomyNormalContent']"
+		},
+		{
+			"name": "解剖结构默认值，0 空，1 第一个候选项",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='AnatomyDefault']"
+		},
+		{
+			"name": "测量值偏差显示方式 0 不显示，1 显示标准差，2 显示百分比",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='DeviationType']"
+		},
+		{
+			"name": "显示测量值偏差的公式",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='DeviationFormula']"
+		},
+		{
+			"name": "测量值小数位数的设置",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='DecimalPrecision']"
+		},
+		{
+			"name": "切面质量|评价标准",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='PlaneQualityStandard']"
+		},
+		{
+			"name": "报告生成时是否需要弹预览窗口确认， 0 不弹出，1 弹出",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='ReportConfirm']"
+		},
+		{
+			"name": "激活切面缩略的检查类型（A20接入时），默认激活 发育曲线",
+			"filePath":"General/ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='ActivatePlaneQualityList']"
+		}
+	],
+	"keyLabelMap":[
+		{
+			"key": "Name",
+			"label" : "名称"
+		},
+		{
+			"key": "Max",
+			"label" : "最大值"
+		},
+		{
+			"key": "Min",
+			"label" : "最小值"
+		},
+		{
+			"key": "Default",
+			"label" : "默认"
+		},
+		{
+			"key": "SpecialUnit",
+			"label" : "按单位指定"
+		},
+		{
+			"key": "Unit",
+			"label" : "单位"
+		},
+		{
+			"key": "Precision",
+			"label" : "位数"
+		},
+		{
+			"key": "SpecialMeasure",
+			"label" : "特殊测量值"
+		},
+		{
+			"key": "Code",
+			"label" : "测量值"
+		}
+	],
+	"inputConfig":[
+		{
+			"key": "DeviationFormula",
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择测量值偏差公式！",
+					"style": "width:300px"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请输入内容！"
+					}
+				],
+				"defaultValue": ""
+			},
+			"dicSql": "select t.formulaname||' '||t.formulaid as label,t.formulaid value from t_ob_formula t"
+		},
+		{
+			"key": "AnatomyDefault",
+			"component": {
+				"name": "a-radio-group",
+				"props": {
+					"placeholder": "请输入内容！",
+					"options": [
+						{
+							"label": "第一个候选项",
+							"value": "1"
+						},
+						{
+							"label": "空值",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择孕龄单位"
+					}
+				],
+				"defaultValue": ""
+			}
+		},
+		{
+			"key": "DeviationType",
+			"component": {
+				"name": "a-radio-group",
+				"props": {
+					"placeholder": "请输入内容！",
+					"options": [
+						{
+							"label": "不显示",
+							"value": "0"
+						},
+						{
+							"label": "标准差",
+							"value": "1"
+						},
+						{
+							"label": "百分比",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请输入测量值偏差显示方式"
+					}
+				],
+				"defaultValue": ""
+			}
+		},
+		{
+			"key": "Code",
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择测量值！",
+					"style": "width:200px",
+					"show-search": true,
+					"option-filter-prop": "label"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择测量项"
+					}
+				],
+				"defaultValue": ""
+			},
+			"dicSql": "select m.itemname as label,m.code value from t_measure_template_item m"
+		},
+		{
+			"key": "Precision",
+			"component": {
+				"name": "a-input-number",
+				"props": {
+					"placeholder": "请输入！"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请输入！"
+					}
+				],
+				"defaultValue": ""
+			}
+		}
+	]
+}

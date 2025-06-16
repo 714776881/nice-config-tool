@@ -1,0 +1,179 @@
+{
+  "columnConfig": [
+    {
+      "title": "角色名称",
+      "key": "USERACTORNAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "角色名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择角色名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "角色编号",
+      "key": "USERACTORCODE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "角色编号",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入角色编号"
+          }
+        ],
+        "defaultValueBySql": "select '8' ||  LPAD(COUNT(*) , 3, '0') AS value from t_useractor where modality like 'GM%'"
+      }
+    },
+	{
+      "title": "默认权限",
+      "key": "DEFAULTROLE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 500,
+      "component": {
+        "name": "lx-select",
+        "props": {
+		  "mode": "multiple",
+          "placeholder": "请选择默认权限",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择默认权限"
+          }
+        ],
+        "defaultValueBySql": ""
+      },
+	  "dicSql": "select distinct u.userrolecode value,g.rolegroup || '-' || u.userrolename label from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label"
+    },
+	{
+      "title": "排斥的角色",
+      "key": "RESTRICTACTOR",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+      "width": 150,
+      "component": {
+        "name": "lx-select",
+        "props": {
+		  "mode": "multiple",
+          "placeholder": "请选择角色",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入角色"
+          }
+        ],
+        "defaultValue": ""
+      },
+	  "dicSql": "select distinct r.useractorcode value,r.useractorname label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'"
+    },
+	{
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%'",
+    "insert": "insert into t_useractor(useractorid,useractorcode,useractorname,defaultrole,restrictactor,deleted,modality) values('{ID}','{USERACTORCODE}','{USERACTORNAME}','{DEFAULTROLE}','{RESTRICTACTOR}','{DELETED}','GM')",
+    "update": "update t_useractor set useractorid='{ID}',useractorcode='{USERACTORCODE}',useractorname='{USERACTORNAME}',defaultrole='{DEFAULTROLE}',restrictactor='{RESTRICTACTOR}',deleted='{DELETED}',modality='GM' where useractorid = '{ID}'",
+    "setState": "update t_useractor set deleted = '{DELETED}' where useractorid = '{ID}'",
+	"delete": "delete from t_useractor where useractorid = '{ID}'",
+	"setSequence":"update t_useractor set sequence = '{SEQUENCE}' where useractorid = '{ID}'",
+    "exportData": "select e.*,e.useractorid id from t_useractor e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  }
+}

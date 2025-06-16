@@ -1,0 +1,43 @@
+﻿<config>
+	<item name="RegionConfiguration">
+		<!-- RegionCategory: 区域类别 0：内部模式（淳安区域模式） 1：平台模式（东阳区域模式） 2:云PACS方式会诊 3:XDR模式会诊 -->
+		<item name="RegionCategoryMapping">
+			<item name="default" value="0"/>
+			<item name="HospitalMapping">
+				<!-- 社区医院104 和 杭州会诊医院111 之间的会诊模式2 -->
+				<item name="104-111" value="2"/>
+				
+			</item>
+		</item>
+		<!--区域中心类型（1：区域中心（会诊端）   2：区域提交端）-->
+		<item name="RegionCentralCategory" value="2"/>
+		
+		<!-- 区域代理的ip和端口 -->
+		<item name="RegionProxyIP" value="192.168.1.60"/>
+		<item name="RegionProxyPort" value="5903"/>
+		
+		<!-- RegionWritePostback: 区域书写任务回传  0：书写完成后    1：审核完成后 -->
+		<item name="RegionWritePostback" value="1"/>
+		
+		<!-- 是否弹出会诊消息-->
+		<item name="IsShowRefreshConsultMessage" value="0"/>
+		
+		<!-- 消息中心的提醒-->
+		<!-- 会诊消息提醒 0：不提醒  1：提醒等待会诊  2：提醒回退会诊  3：提醒完成会诊。配置多个使用英文分号隔开  -->
+		<item name="RegionReminderMessage" value="0"/>
+		<!-- 弹出会诊消息 间隔  单位 秒 -->
+		<item name="RefreshConsultTimer" value="30"/>
+		<!-- 危急值消息提醒 0：不提醒  1：发送成功提醒  2：超时确认提醒  3：HIS确认提醒。配置多个使用英文分号隔开  -->
+		<item name="EmergencyReminderMessage" value="0"/>
+		
+		<!--区域会诊管理 支持的类型   0：不显示   1：显示  -->
+		<item name="RegionTaskManagerClassification">
+			<item name="Consultation" value="1"/>
+			<item name="Write" value="1"/>
+			<item name="Verify" value="1"/>
+			<item name="USConsultation" value="0"/>
+		</item>
+		<!-- 是否自动启动超声会诊客户端  0:不启动   1：启动-->
+		<item name="StartUSConsultClient" value="0"/>
+	</item>
+</config>

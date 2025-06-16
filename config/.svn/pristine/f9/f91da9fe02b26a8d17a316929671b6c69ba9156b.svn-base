@@ -1,0 +1,169 @@
+{
+  "columnConfig": [
+	{
+      "title": "切面名称",
+      "key": "NAME",
+      "width": 150,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "切面名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入切面名称"
+          }
+        ]
+      }
+    },
+	{
+      "title": "切面编码",
+      "key": "CODE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 120,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "切面编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入切面编码"
+          }
+        ],
+        "defaultValue": "OBMATE.PL."
+      }
+    },
+    
+	{
+      "title": "切面所属的组",
+      "key": "GROUPNUMBER",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "A20分组"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入评分方案"
+          }
+        ]
+      }
+    },
+    {
+      "title": "切面索引",
+      "key": "INDEXNUMBER",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "A20索引"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入切面索引"
+          }
+        ]
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from T_IMAGE_PLANEDEFINE",
+    "insert": "insert into T_IMAGE_PLANEDEFINE(ID,Code,Name,Indexnumber,Groupnumber,Departmentid,Hospitalid,Deleted) values('{ID}','{CODE}','{NAME}','{INDEXNUMBER}','{GROUPNUMBER}','{DEPARTMENTID}','{HOSPITALID}','{DELETED}')",
+    "update": "update T_IMAGE_PLANEDEFINE t set t.code='{CODE}',t.name='{NAME}',t.indexnumber='{INDEXNUMBER}',t.groupnumber='{GROUPNUMBER}',t.departmentid='{DEPARTMENTID}',t.hospitalid='{HOSPITALID}',t.deleted='{DELETED}' where t.id='{ID}'",
+    "setState": "update T_IMAGE_PLANEDEFINE set deleted = '{DELETED}' where id = '{ID}'",
+	"delete": "delete from T_IMAGE_PLANEDEFINE where id = '{ID}'",
+	"setSequence":"update T_IMAGE_PLANEDEFINE set sequence = '{SEQUENCE}' where id = '{ID}'",
+    "exportData": "select * from T_IMAGE_PLANEDEFINE"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"20"
+  }
+}

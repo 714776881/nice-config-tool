@@ -1,0 +1,138 @@
+{
+  "columnConfig": [
+     {
+      "title": "检查项目",
+      "key": "BODYPARTID",
+      "width": 200,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "项目编码",
+		  "style":"width:200px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入项目编码"
+          }
+        ]
+      },
+	  "dicSql":"select g.itemcode value,g.itemname label from t_gm_examitem g where g.deleted = '0'"
+    },
+    {
+      "title": "模板类型名称",
+      "key": "CATEGORY",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "模板类型"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入模板类型"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select r.*,r.categoryid id from t_repttempcategory r,t_gm_examitem g where g.itemcode = r.bodypartid and r.categorytype = '1002' and g.hospitalcode = '0' and r.ownerid is not null",
+    "insert": "insert into t_examitem(examitemid,examitemcode,examitem,obexamtype,bodypartid,deleted) values('{ID}','{EXAMITEMCODE}','{EXAMITEM}','{OBEXAMTYPE}','b0950274-cb6c-4aad-bab5-9747015fe153','0')",
+    "update": "update t_examitem e set e.examitemcode = '{EXAMITEMCODE}',e.examitem = '{EXAMITEM}',e.obexamtype = '{OBEXAMTYPE}',e.deleted = '{DELETED}' where e.examitemid = '{ID}'",
+    "setState": "update t_examitem set deleted = '{DELETED}' where examitemid = '{ID}'",
+	"delete": "delete from t_examitem where examitemid = '{ID}'",
+	"setSequence":"update t_examitem set sequence = '{SEQUENCE}' where examitemid = '{ID}'",
+    "exportData": "select e.*,e.examitemid id from t_examitem e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"50"
+  },
+  "addedButtons":[
+	{
+	   "name": "添加模板",
+	   "defaultShowText":"",
+	   "width":1000,
+	   "exeSql":"",
+	   "isBetch": ""
+	}
+  ]
+}

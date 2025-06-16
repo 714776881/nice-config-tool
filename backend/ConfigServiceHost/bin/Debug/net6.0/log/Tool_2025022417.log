@@ -1,0 +1,472 @@
+创建日志:2025/2/24 17:16:45
+2025/2/24 17:16:45  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:16:45  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:16:45  Info-[RESULT]：16个
+
+2025/2/24 17:16:45  Info-[RESULT]：16个
+2025/2/24 17:16:45  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:16:46  Info-[RESULT]：51个
+2025/2/24 17:16:46  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:16:46  Info-[RESULT]：227个
+2025/2/24 17:16:46  Info-[RESULT]：51个
+2025/2/24 17:16:46  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+e rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:16:46  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:16:46  Info-[RESULT]：16个
+2025/2/24 17:16:46  Info-[RESULT]：16个
+2025/2/24 17:16:46  Info-[RESULT]：227个
+2025/2/24 17:16:46  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:16:46  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:16:46  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:16:46  Info-[RESULT]：16个
+2025/2/24 17:16:46  Info-[RESULT]：227个
+2025/2/24 17:16:47  Info-[RESULT]：34个
+2025/2/24 17:16:50  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:16:50  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and DELETED like '0%' 
+2025/2/24 17:16:50  Info-[RESULT]：51个
+2025/2/24 17:16:50  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:16:51  Info-[RESULT]：227个
+2025/2/24 17:16:51  Info-[RESULT]：51个
+2025/2/24 17:16:51  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:16:51  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:16:51  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:16:51  Info-[RESULT]：16个
+2025/2/24 17:16:51  Info-[RESULT]：16个
+2025/2/24 17:16:51  Info-[RESULT]：227个
+2025/2/24 17:16:55  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+e rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:16:55  Info-[RESULT]：227个
+2025/2/24 17:16:55  Info-[RESULT]：16个
+2025/2/24 17:18:25  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:18:25  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:18:25  Info-[RESULT]：16个
+2025/2/24 17:18:25  Info-[RESULT]：227个
+2025/2/24 17:18:25  Info-[RESULT]：34个
+2025/2/24 17:18:26  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:18:26  Info-[RESULT]：227个
+2025/2/24 17:18:26  Info-[RESULT]：16个
+2025/2/24 17:18:26  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:18:26  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and DELETED like '0%' 
+2025/2/24 17:18:26  Info-[RESULT]：51个
+2025/2/24 17:18:26  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:18:26  Info-[RESULT]：227个
+2025/2/24 17:18:26  Info-[RESULT]：51个
+2025/2/24 17:21:55  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:21:55  Info-[RESULT]：9个
+2025/2/24 17:21:56  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:21:56  Info-[RESULT]：24个
+2025/2/24 17:22:07  Info-[BatchExeSql]：update t_dictionary set sequence = '1001' where dictionaryid = '11021';update t_dictionary set sequence = '1001' where dictionaryid = '11004'
+2025/2/24 17:22:07  Info-[RESULT]：True
+2025/2/24 17:22:08  Info-[BatchExeSql]：update t_dictionary set sequence = '1001' where dictionaryid = '11021';update t_dictionary set sequence = '1001' where dictionaryid = '11004'
+2025/2/24 17:22:08  Info-[RESULT]：True
+2025/2/24 17:22:09  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:09  Info-[RESULT]：9个
+2025/2/24 17:22:10  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:10  Info-[RESULT]：50个
+2025/2/24 17:22:11  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:11  Info-[RESULT]：10个
+2025/2/24 17:22:12  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:12  Info-[RESULT]：270个
+2025/2/24 17:22:13  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:13  Info-[RESULT]：9个
+2025/2/24 17:22:13  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:13  Info-[RESULT]：24个
+2025/2/24 17:22:14  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:14  Info-[RESULT]：17个
+2025/2/24 17:22:14  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:14  Info-[RESULT]：6个
+2025/2/24 17:22:15  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:15  Info-[RESULT]：28个
+2025/2/24 17:22:16  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:16  Info-[RESULT]：42个
+2025/2/24 17:22:16  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1012') where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:16  Info-[RESULT]：4个
+2025/2/24 17:22:17  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:17  Info-[RESULT]：28个
+2025/2/24 17:22:17  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:17  Info-[RESULT]：6个
+2025/2/24 17:22:17  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:18  Info-[RESULT]：17个
+2025/2/24 17:22:56  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:56  Info-[RESULT]：10个
+2025/2/24 17:22:57  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:22:57  Info-[RESULT]：50个
+2025/2/24 17:23:13  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:23:13  Info-[RESULT]：10个
+2025/2/24 17:23:16  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:23:16  Info-[RESULT]：50个
+2025/2/24 17:23:22  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:23:22  Info-[RESULT]：9个
+2025/2/24 17:23:25  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:23:25  Info-[RESULT]：24个
+2025/2/24 17:23:30  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:23:30  Info-[RESULT]：17个
+2025/2/24 17:23:31  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:23:31  Info-[RESULT]：6个
+2025/2/24 17:23:31  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:23:31  Info-[RESULT]：28个
+2025/2/24 17:23:55  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:23:55  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:23:56  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:23:56  Info-[RESULT]：16个
+2025/2/24 17:23:56  Info-[RESULT]：227个
+2025/2/24 17:23:56  Info-[RESULT]：16个
+2025/2/24 17:23:57  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:23:57  Info-[RESULT]：51个
+2025/2/24 17:23:57  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:23:57  Info-[RESULT]：227个
+2025/2/24 17:23:57  Info-[RESULT]：51个
+2025/2/24 17:23:59  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:23:59  Info-[RESULT]：51个
+2025/2/24 17:24:01  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:24:01  Info-[RESULT]：51个
+2025/2/24 17:24:03  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:24:03  Info-[RESULT]：51个
+2025/2/24 17:24:06  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:24:06  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:24:06  Info-[RESULT]：16个
+2025/2/24 17:24:06  Info-[RESULT]：227个
+2025/2/24 17:24:06  Info-[RESULT]：34个
+2025/2/24 17:24:07  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:24:07  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:24:07  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:24:07  Info-[RESULT]：16个
+2025/2/24 17:24:07  Info-[RESULT]：227个
+2025/2/24 17:24:07  Info-[RESULT]：16个
+2025/2/24 17:24:09  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+e rol                                                                                                                                                                            2025/2/24 17:24:09  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:24:09  Info-[RESULT]：16个
+2025/2/24 17:24:09  Info-[RESULT]：227个
+2025/2/24 17:24:09  Info-[RESULT]：34个
+2025/2/24 17:24:10  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:24:10  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:24:10  Info-[RESULT]：16个
+2025/2/24 17:24:10  Info-[RESULT]：227个
+2025/2/24 17:24:29  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:24:29  Info-[RESULT]：50个
+2025/2/24 17:24:51  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:24:51  Info-[RESULT]：10个
+2025/2/24 17:24:59  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/24 17:24:59  Info-[RESULT]：270个
+2025/2/24 17:25:03  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:03  Info-[RESULT]：24个
+2025/2/24 17:25:07  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:07  Info-[RESULT]：6个
+2025/2/24 17:25:08  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:08  Info-[RESULT]：17个
+2025/2/24 17:25:12  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:12  Info-[RESULT]：6个
+2025/2/24 17:25:19  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:19  Info-[RESULT]：28个
+2025/2/24 17:25:19  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:19  Info-[RESULT]：42个
+2025/2/24 17:25:20  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1012') where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:20  Info-[RESULT]：4个
+2025/2/24 17:25:21  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:21  Info-[RESULT]：42个
+2025/2/24 17:25:24  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:25:24  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:25:24  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:24  Info-[RESULT]：16个
+2025/2/24 17:25:24  Info-[RESULT]：227个
+2025/2/24 17:25:24  Info-[RESULT]：34个
+2025/2/24 17:25:27  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:25:27  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:27  Info-[RESULT]：16个
+2025/2/24 17:25:27  Info-[RESULT]：227个
+2025/2/24 17:25:27  Info-[RESULT]：16个
+2025/2/24 17:25:30  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:25:30  Info-[RESULT]：51个
+2025/2/24 17:25:30  Info-[RESULT]：227个
+2025/2/24 17:25:30  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:25:30  Info-[RESULT]：51个
+2025/2/24 17:25:49  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:49  Info-[RESULT]：24个
+2025/2/24 17:25:53  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:53  Info-[RESULT]：10个
+2025/2/24 17:25:56  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:25:56  Info-[RESULT]：28个
+2025/2/24 17:26:56  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:26:56  Info-[RESULT]：9个
+2025/2/24 17:26:57  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:26:57  Info-[RESULT]：24个
+2025/2/24 17:26:58  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:26:58  Info-[RESULT]：6个
+2025/2/24 17:26:59  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:26:59  Info-[RESULT]：28个
+2025/2/24 17:27:00  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:27:00  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:27:00  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:27:00  Info-[RESULT]：16个
+2025/2/24 17:27:00  Info-[RESULT]：227个
+2025/2/24 17:27:00  Info-[RESULT]：34个
+2025/2/24 17:27:00  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:27:00  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:27:00  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:27:00  Info-[RESULT]：227个
+2025/2/24 17:27:00  Info-[RESULT]：16个
+2025/2/24 17:27:00  Info-[RESULT]：16个
+2025/2/24 17:27:01  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:27:01  Info-[RESULT]：51个
+2025/2/24 17:27:01  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:27:01  Info-[RESULT]：227个
+2025/2/24 17:27:01  Info-[RESULT]：51个
+2025/2/24 17:27:38  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:27:39  Info-[RESULT]：9个
+2025/2/24 17:27:54  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:27:54  Info-[RESULT]：24个
+2025/2/24 17:28:02  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '1%' 
+2025/2/24 17:28:02  Info-[RESULT]：2个
+2025/2/24 17:28:08  Info-[BatchExeSql]：delete from t_dictionary where dictionaryid = 'c866ba5a-24d2-463d-92a0-aebe0099e521'
+2025/2/24 17:28:08  Info-[RESULT]：True
+2025/2/24 17:28:08  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '1%' 
+2025/2/24 17:28:08  Info-[RESULT]：1个
+2025/2/24 17:28:10  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:10  Info-[RESULT]：24个
+2025/2/24 17:28:10  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '1%' 
+2025/2/24 17:28:11  Info-[RESULT]：1个
+2025/2/24 17:28:13  Info-[BatchExeSql]：delete from t_dictionary where dictionaryid = 'e6199ea4-0444-4e75-8898-a73900f3f3ce'
+2025/2/24 17:28:14  Info-[RESULT]：True
+2025/2/24 17:28:14  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '1%' 
+2025/2/24 17:28:14  Info-[RESULT]：0个
+2025/2/24 17:28:15  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:15  Info-[RESULT]：24个
+2025/2/24 17:28:15  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '1%' 
+2025/2/24 17:28:15  Info-[RESULT]：0个
+2025/2/24 17:28:16  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:16  Info-[RESULT]：24个
+2025/2/24 17:28:20  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1017%'  and DELETED like '0%' 
+2025/2/24 17:28:20  Info-[RESULT]：6个
+2025/2/24 17:28:20  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1002%'  and DELETED like '0%' 
+2025/2/24 17:28:20  Info-[RESULT]：7个
+2025/2/24 17:28:20  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1003%'  and DELETED like '0%' 
+2025/2/24 17:28:20  Info-[RESULT]：6个
+2025/2/24 17:28:21  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1005%'  and DELETED like '0%' 
+2025/2/24 17:28:21  Info-[RESULT]：1个
+2025/2/24 17:28:21  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1014%'  and DELETED like '0%' 
+2025/2/24 17:28:21  Info-[RESULT]：3个
+2025/2/24 17:28:22  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1005%'  and DELETED like '0%' 
+2025/2/24 17:28:22  Info-[RESULT]：1个
+2025/2/24 17:28:22  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1004%'  and DELETED like '0%' 
+2025/2/24 17:28:22  Info-[RESULT]：1个
+2025/2/24 17:28:22  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1002%'  and DELETED like '0%' 
+2025/2/24 17:28:22  Info-[RESULT]：7个
+2025/2/24 17:28:23  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1017%'  and DELETED like '0%' 
+2025/2/24 17:28:23  Info-[RESULT]：6个
+2025/2/24 17:28:24  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1002%'  and DELETED like '0%' 
+2025/2/24 17:28:24  Info-[RESULT]：7个
+2025/2/24 17:28:24  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1003%'  and DELETED like '0%' 
+2025/2/24 17:28:24  Info-[RESULT]：6个
+2025/2/24 17:28:25  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1004%'  and DELETED like '0%' 
+2025/2/24 17:28:25  Info-[RESULT]：1个
+2025/2/24 17:28:25  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1005%'  and DELETED like '0%' 
+2025/2/24 17:28:25  Info-[RESULT]：1个
+2025/2/24 17:28:25  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1014%'  and DELETED like '0%' 
+2025/2/24 17:28:25  Info-[RESULT]：3个
+2025/2/24 17:28:26  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1017%'  and DELETED like '0%' 
+2025/2/24 17:28:26  Info-[RESULT]：6个
+2025/2/24 17:28:26  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1002%'  and DELETED like '0%' 
+2025/2/24 17:28:26  Info-[RESULT]：7个
+2025/2/24 17:28:27  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1003%'  and DELETED like '0%' 
+2025/2/24 17:28:27  Info-[RESULT]：6个
+2025/2/24 17:28:27  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1004%'  and DELETED like '0%' 
+2025/2/24 17:28:27  Info-[RESULT]：1个
+2025/2/24 17:28:27  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1014%'  and DELETED like '0%' 
+2025/2/24 17:28:27  Info-[RESULT]：3个
+2025/2/24 17:28:28  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1005%'  and DELETED like '0%' 
+2025/2/24 17:28:28  Info-[RESULT]：1个
+2025/2/24 17:28:28  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1004%'  and DELETED like '0%' 
+2025/2/24 17:28:29  Info-[RESULT]：1个
+2025/2/24 17:28:29  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1003%'  and DELETED like '0%' 
+2025/2/24 17:28:29  Info-[RESULT]：6个
+2025/2/24 17:28:29  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1002%'  and DELETED like '0%' 
+2025/2/24 17:28:29  Info-[RESULT]：7个
+2025/2/24 17:28:29  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1017%'  and DELETED like '0%' 
+2025/2/24 17:28:29  Info-[RESULT]：6个
+2025/2/24 17:28:31  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:32  Info-[RESULT]：9个
+2025/2/24 17:28:35  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:35  Info-[RESULT]：50个
+2025/2/24 17:28:41  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:41  Info-[RESULT]：10个
+2025/2/24 17:28:45  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:45  Info-[RESULT]：270个
+2025/2/24 17:28:48  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:48  Info-[RESULT]：17个
+2025/2/24 17:28:52  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:52  Info-[RESULT]：6个
+2025/2/24 17:28:55  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:55  Info-[RESULT]：28个
+2025/2/24 17:28:55  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:28:55  Info-[RESULT]：42个
+2025/2/24 17:29:00  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1012') where 1=1 and DELETED like '0%' 
+2025/2/24 17:29:00  Info-[RESULT]：4个
+2025/2/24 17:29:00  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+                                                                                                                                                                  2025/2/24 17:29:00  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:29:00  Info-[RESULT]：16个
+2025/2/24 17:29:00  Info-[RESULT]：227个
+2025/2/24 17:29:00  Info-[RESULT]：34个
+2025/2/24 17:29:02  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:29:02  Info-[RESULT]：16个
+2025/2/24 17:29:02  Info-[RESULT]：227个
+2025/2/24 17:29:06  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+e rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:29:06  Info-[RESULT]：16个
+2025/2/24 17:29:06  Info-[RESULT]：227个
+2025/2/24 17:29:11  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:29:11  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:29:11  Info-[RESULT]：16个
+2025/2/24 17:29:11  Info-[RESULT]：227个
+2025/2/24 17:29:34  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:29:34  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:29:34  Info-[RESULT]：16个
+2025/2/24 17:29:34  Info-[RESULT]：227个
+2025/2/24 17:29:34  Info-[RESULT]：16个
+2025/2/24 17:29:36  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+e rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:29:36  Info-[RESULT]：227个
+2025/2/24 17:29:36  Info-[RESULT]：16个
+2025/2/24 17:29:41  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:29:41  Info-[RESULT]：227个
+2025/2/24 17:29:41  Info-[RESULT]：16个
+2025/2/24 17:29:49  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and DELETED like '0%' 
+
+2025/2/24 17:29:49  Info-[RESULT]：227个
+2025/2/24 17:29:49  Info-[RESULT]：51个
+2025/2/24 17:29:49  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:29:49  Info-[RESULT]：51个
+2025/2/24 17:30:25  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:26  Info-[RESULT]：24个
+2025/2/24 17:30:28  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:28  Info-[RESULT]：9个
+2025/2/24 17:30:28  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:28  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:28  Info-[RESULT]：50个
+2025/2/24 17:30:28  Info-[RESULT]：10个
+2025/2/24 17:30:29  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:29  Info-[RESULT]：270个
+2025/2/24 17:30:30  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:30  Info-[RESULT]：6个
+2025/2/24 17:30:31  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:31  Info-[RESULT]：17个
+2025/2/24 17:30:32  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:32  Info-[RESULT]：28个
+2025/2/24 17:30:32  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:32  Info-[RESULT]：42个
+2025/2/24 17:30:32  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1012') where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:32  Info-[RESULT]：4个
+2025/2/24 17:30:33  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:33  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:30:33  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:30:33  Info-[RESULT]：16个
+2025/2/24 17:30:33  Info-[RESULT]：227个
+2025/2/24 17:30:34  Info-[RESULT]：34个
+2025/2/24 17:30:34  Info-[Select]：select * from (select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%') where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:34  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:30:34  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:30:34  Info-[RESULT]：16个
+2025/2/24 17:30:34  Info-[RESULT]：16个
+2025/2/24 17:30:34  Info-[RESULT]：227个
+2025/2/24 17:30:34  Info-[Select]：select * from (select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0') where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:34  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:30:34  Info-[RESULT]：227个
+2025/2/24 17:30:34  Info-[RESULT]：51个
+2025/2/24 17:30:34  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:30:34  Info-[RESULT]：51个
+2025/2/24 17:30:36  Info-[Select]：select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value 
+2025/2/24 17:30:36  Info-[RESULT]：51个
+2025/2/24 17:30:38  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:30:38  Info-[RESULT]：50个
+2025/2/24 17:32:08  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:32:09  Info-[RESULT]：24个
+2025/2/24 17:32:10  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:32:10  Info-[RESULT]：28个
+2025/2/24 17:32:10  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:32:10  Info-[RESULT]：6个
+2025/2/24 17:32:11  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:32:11  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:32:11  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:32:11  Info-[RESULT]：16个
+2025/2/24 17:32:11  Info-[RESULT]：227个
+2025/2/24 17:32:12  Info-[RESULT]：34个
+2025/2/24 17:32:12  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+e rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:32:13  Info-[RESULT]：16个
+2025/2/24 17:32:13  Info-[RESULT]：16个
+2025/2/24 17:32:13  Info-[RESULT]：227个
+2025/2/24 17:32:13  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:32:14  Info-[RESULT]：28个
+2025/2/24 17:32:14  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:32:14  Info-[RESULT]：42个
+2025/2/24 17:32:14  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1012') where 1=1 and DELETED like '0%' 
+2025/2/24 17:32:14  Info-[RESULT]：4个
+2025/2/24 17:33:36  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:33:36  Info-[RESULT]：28个
+2025/2/24 17:33:38  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:33:38  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:33:38  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:33:38  Info-[RESULT]：227个
+2025/2/24 17:33:38  Info-[RESULT]：16个
+2025/2/24 17:33:38  Info-[RESULT]：34个
+2025/2/24 17:37:11  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:11  Info-[RESULT]：6个
+2025/2/24 17:37:25  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:25  Info-[RESULT]：17个
+2025/2/24 17:37:26  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1023' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:26  Info-[RESULT]：6个
+2025/2/24 17:37:27  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1011') where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:27  Info-[RESULT]：28个
+2025/2/24 17:37:27  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:27  Info-[RESULT]：42个
+2025/2/24 17:37:28  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1012') where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:28  Info-[RESULT]：4个
+2025/2/24 17:37:33  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:33  Info-[RESULT]：24个
+2025/2/24 17:37:34  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:34  Info-[RESULT]：9个
+2025/2/24 17:37:34  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:34  Info-[RESULT]：50个
+2025/2/24 17:37:35  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:35  Info-[RESULT]：10个
+2025/2/24 17:37:35  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:35  Info-[RESULT]：270个
+2025/2/24 17:37:36  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:36  Info-[RESULT]：42个
+2025/2/24 17:37:37  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1012') where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:37  Info-[RESULT]：4个
+2025/2/24 17:37:38  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013') where 1=1 and DELETED like '0%' 
+2025/2/24 17:37:38  Info-[RESULT]：42个
+2025/2/24 17:38:52  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:38:52  Info-[RESULT]：24个
+2025/2/24 17:39:47  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1017%'  and DELETED like '0%' 
+2025/2/24 17:39:47  Info-[RESULT]：6个
+2025/2/24 17:39:48  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1002%'  and DELETED like '0%' 
+2025/2/24 17:39:48  Info-[RESULT]：7个
+2025/2/24 17:39:48  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1003%'  and DELETED like '0%' 
+2025/2/24 17:39:48  Info-[RESULT]：6个
+2025/2/24 17:39:49  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1004%'  and DELETED like '0%' 
+2025/2/24 17:39:49  Info-[RESULT]：1个
+2025/2/24 17:39:49  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1005%'  and DELETED like '0%' 
+2025/2/24 17:39:49  Info-[RESULT]：1个
+2025/2/24 17:39:49  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1014%'  and DELETED like '0%' 
+2025/2/24 17:39:49  Info-[RESULT]：3个
+2025/2/24 17:39:50  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DICCATEGORY like '1017%'  and DELETED like '0%' 
+2025/2/24 17:39:50  Info-[RESULT]：6个
+2025/2/24 17:39:51  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:39:51  Info-[RESULT]：9个
+2025/2/24 17:39:52  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '1%' 
+2025/2/24 17:39:52  Info-[RESULT]：7个
+2025/2/24 17:39:52  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:39:52  Info-[RESULT]：9个
+2025/2/24 17:39:53  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/24 17:39:53  Info-[RESULT]：50个
+2025/2/24 17:47:16  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:47:16  Info-[Select]：select * from (select u.*,u.userid id from t_user u where u.departmentid = '102' order by u.username) where 1=1 and DELETED like '0%' 
+2025/2/24 17:47:16  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:47:16  Info-[RESULT]：227个
+2025/2/24 17:47:16  Info-[RESULT]：16个
+2025/2/24 17:47:16  Info-[RESULT]：34个
+2025/2/24 17:47:18  Info-[Select]：select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label
+2025/2/24 17:47:18  Info-[Select]：select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'
+2025/2/24 17:47:18  Info-[RESULT]：16个
+2025/2/24 17:47:18  Info-[RESULT]：227个

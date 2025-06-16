@@ -1,0 +1,53 @@
+创建日志:2025/2/21 11:04:05
+2025/2/21 11:04:05  Info-[Select]：select * from (select t.*,t.bodyid id from T_GM_DeliverPart t where t.materialtype='1000' and t.isbig = '0' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:06  Info-[RESULT]：9个
+2025/2/21 11:04:07  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:08  Info-[RESULT]：22个
+2025/2/21 11:04:09  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:09  Info-[RESULT]：8个
+2025/2/21 11:04:09  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:10  Info-[RESULT]：15个
+2025/2/21 11:04:10  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:10  Info-[RESULT]：8个
+2025/2/21 11:04:10  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:10  Info-[RESULT]：22个
+2025/2/21 11:04:11  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:11  Info-[RESULT]：8个
+2025/2/21 11:04:11  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:11  Info-[RESULT]：15个
+2025/2/21 11:04:12  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:12  Info-[RESULT]：1个
+2025/2/21 11:04:13  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:13  Info-[RESULT]：2个
+2025/2/21 11:04:14  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:14  Info-[RESULT]：1个
+2025/2/21 11:04:14  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:14  Info-[RESULT]：15个
+2025/2/21 11:04:14  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:15  Info-[RESULT]：8个
+2025/2/21 11:04:15  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:15  Info-[RESULT]：22个
+2025/2/21 11:04:16  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:16  Info-[RESULT]：8个
+2025/2/21 11:04:19  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:19  Info-[RESULT]：15个
+2025/2/21 11:04:27  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:27  Info-[RESULT]：22个
+2025/2/21 11:04:30  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:31  Info-[RESULT]：1个
+2025/2/21 11:04:47  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:47  Info-[RESULT]：15个
+2025/2/21 11:04:48  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1007' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:48  Info-[RESULT]：8个
+2025/2/21 11:04:51  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:51  Info-[RESULT]：22个
+2025/2/21 11:04:54  Info-[Select]：select * from (select t.*,t.itemid id from t_gm_examitem t order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:54  Info-[RESULT]：15个
+2025/2/21 11:04:54  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '2832' order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:54  Info-[RESULT]：1个
+2025/2/21 11:04:58  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015') where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:58  Info-[RESULT]：2个
+2025/2/21 11:04:59  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1089') where 1=1 and DELETED like '0%' 
+2025/2/21 11:04:59  Info-[RESULT]：1个
+2025/2/21 11:08:50  Info-[Select]：select * from (select d.*,d.dictionaryid id from t_dictionary d where d.diccategory in ('1002','1003','1004','1005','1014','1017') order by sequence) where 1=1 and DELETED like '0%' 
+2025/2/21 11:08:51  Info-[RESULT]：22个

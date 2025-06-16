@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "l9FtOI8aWwo1gdptWwDY3ZfAp42n/grZSrOdEb1Swn0=",
+  "Source": "ConfigServiceHost",
+  "BasePath": "_content/ConfigServiceHost",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
