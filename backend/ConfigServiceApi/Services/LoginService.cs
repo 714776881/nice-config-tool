@@ -13,9 +13,31 @@ namespace ConfigServiceApi
     public class LoginService
     {
         private readonly UserRepository userRepository;
+        private readonly ScopeRepository scopeRepository;
         public LoginService() { 
             userRepository = new UserRepository();
+            scopeRepository = new ScopeRepository();
         }
+
+        public bool VerifyUser(string userCode, string password)
+        {
+            var users = userRepository.GetUsersByUserCode(userCode);
+
+            if(users.Count == 0)
+            {
+                return false;
+            }
+            var user = users[0];
+            if (user.UserPassword == password)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public LoginVO GetUserInfo(LoginForm loginModel)
         {
             // 解析口令
@@ -34,25 +56,47 @@ namespace ConfigServiceApi
             }
 
             // 验证用户
-            var users = userRepository.GetUsers(userid);
-            if (users.Count == 0)
+            var userInfo = GetUserInfo(userid);
+            if (userInfo == null)
             {
                 throw new Exception("未发现该用户");
             }
-            var user = users[0];
+
+            Logger.LogError($"[登录] userid = {userid},username = {userInfo.userName}");
+            Logger.LogError($"[登录] regionid = {regionid},hospitalid = {hospitalid},departmentid='{departmentid}'");
+            return userInfo;
+        }
+
+        public LoginVO GetUserInfo(string userId)
+        {
+            var user = userRepository.GetUserById(userId);
+            if (user == null)
+            {
+                throw new Exception("未发现该用户");
+            }
             var userInfo = new LoginVO();
             userInfo.userCode = user.UserCode;
             userInfo.userId = user.UserId;
             userInfo.userName = user.UserName;
             userInfo.userActor = user.UserActor;
             userInfo.userRole = user.UserRole;
+            userInfo.password = user.UserPassword;
 
-            userInfo.regionId = regionid;
-            userInfo.hospitalId = hospitalid;
-            userInfo.departmentId = departmentid;
+            userInfo.departmentId = user.DepartmentId;
 
-            Logger.LogError($"[登录] userid = {userid},username = {userInfo.userName}");
-            Logger.LogError($"[登录] regionid = {regionid},hospitalid = {hospitalid},departmentid='{departmentid}'");
+            var scopes = scopeRepository.GetAll();
+
+            var scope = scopes.Find((item) =>
+            {
+                return item.DepartmentCode == user.DepartmentId;
+            });
+
+            if (scope != null)
+            {
+                userInfo.regionId = scope.RegionCode;
+                userInfo.hospitalId = scope.HospitalCode;
+                userInfo.departmentId = scope.DepartmentCode;
+            }
             return userInfo;
         }
 

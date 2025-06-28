@@ -213,7 +213,7 @@ namespace ConfigServiceApi.Services
                 entity.RegionId = state.RegionId;
                 entity.HospitalId = state.HospitalId;
                 entity.DepartmentId = state.DepartmentId;
-                entity.Sequence = _categoryRepository.GetMaxCount().ToString();
+                entity.Sequence = _categoryRepository.GetMaxCount();
                 entity.Deleted = "0";
                 _categoryRepository.Add(entity);
             }

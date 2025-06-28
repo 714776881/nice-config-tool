@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj": {}
+    "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj": {}
   },
   "projects": {
-    "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj": {
+    "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
+        "projectUniqueName": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
         "projectName": "ConfigService",
-        "projectPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
+        "projectPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
         "packagesPath": "C:\\Users\\刘贤\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\obj\\",
+        "outputPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\刘贤\\AppData\\Roaming\\NuGet\\NuGet.Config",

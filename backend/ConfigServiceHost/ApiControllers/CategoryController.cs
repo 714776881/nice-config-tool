@@ -27,12 +27,11 @@ namespace ConfigServiceHost.ApiControllers
                 }
 
                 var examItemCategory = _service.GetExamItemCategory(modality, state, isPublic);
-
                 var result = examItemCategory.Select(x => x.ExamitemId).ToList();
 
                 res.data = result;
                 res.code = ApiResponse.Success;
-            } 
+            }
             catch (Exception ex)
             {
                 res.code = ApiResponse.Error;

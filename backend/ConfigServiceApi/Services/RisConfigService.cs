@@ -18,13 +18,30 @@ namespace ConfigServiceApi.Services
             return path;
         }
 
-        private static string GetRisConfig(string filePath)
+
+        public static string GetFullFilePath(string filePath)
         {
-            var fullFilePath = GetRisConfigRootPath() + filePath;
+            var fullFilePath = string.Empty;
+            if (File.Exists(filePath))
+            {
+                fullFilePath = filePath;
+            }
+            else
+            {
+                fullFilePath = GetRisConfigRootPath() + filePath;
+            }
+            return fullFilePath;
+        }
+
+
+        private static string GetRisConfig(string fullFilePath)
+        {
+
             if (File.Exists(fullFilePath) == false)
             {
                 throw new Exception("文件不存在！，" + fullFilePath);
             }
+
             var fileContent = File.ReadAllText(fullFilePath);
             if(string.IsNullOrEmpty(fileContent))
             {
@@ -35,7 +52,8 @@ namespace ConfigServiceApi.Services
 
         public static string GetFileNodeValue(string filePath,string nodePath)
         {
-            var fileContent = GetRisConfig(filePath);
+            var fullFilePath = GetFullFilePath(filePath);
+            var fileContent = GetRisConfig(fullFilePath);
             // 获取文件中的节点
             var nodeValue = XmlTool.GetOutNode(fileContent, nodePath);
             nodeValue = XmlTool.ToFormatXmlString(nodeValue);
@@ -45,9 +63,10 @@ namespace ConfigServiceApi.Services
 
         public static bool PostFileNodeValue(string  filePath,string nodePath,string nodeValue)
         {
-            var fileContent = GetRisConfig(filePath);
+            var fullFilePath = GetFullFilePath(filePath);
+            var fileContent = GetRisConfig(fullFilePath);
             fileContent = XmlTool.ReplaceNode(fileContent, nodePath, nodeValue);
-            return FileTool.SaveToFile(GetRisConfigRootPath() + filePath, XmlTool.ToFormatXmlString(fileContent));
+            return FileTool.SaveToFile(fullFilePath, XmlTool.ToFormatXmlString(fileContent));
         }
 
 
@@ -55,17 +74,16 @@ namespace ConfigServiceApi.Services
         public static string GetDbConnection(out DBType dbType)
         {
             var dbTypeStr = ConfigHelper.GetSetting("DBType", "");
-            if (dbTypeStr == "ORACLE") 
-            {
+            if (dbTypeStr == "ORACLE") {
                 dbType = DBType.ORACLE;
             }
             else if(dbTypeStr == "ODBC")
             {
                 dbType = DBType.ODBC;
             }
-            else if(dbTypeStr == "MYSQL")
+            else if(dbTypeStr == "NPGSQL")
             {
-                dbType = DBType.MYSQL;
+                dbType = DBType.NPGSQL;
             }
             else
             {

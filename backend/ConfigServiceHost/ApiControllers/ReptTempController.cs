@@ -43,6 +43,7 @@ namespace ConfigServiceHost.ApiControllers
                     reptTemp = entity.ReptTemp,
                     studyResult = entity.CStudyResult == null ? entity.StudyResult : entity.CStudyResult,
                     diagResult = entity.CDiagResult == null ? entity.DiagResult : entity.CDiagResult,
+                    isAbnormal = entity.IsAbnormal,
                     isPublic = string.IsNullOrEmpty(entity.OwnerId) ? true : false,
                     modifyDT = entity.ModifyDT
                 };

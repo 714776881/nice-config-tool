@@ -18,6 +18,9 @@ namespace ConfigServiceApi.Models
         // 检查诊断
         public string? DiagResult { get; set; }
         public string? CDiagResult { get; set; }
+
+        // 阴阳性
+        public int? IsAbnormal { get; set; }
         public bool IsPublic { get; set; }
         // 区域ID
         public string? RegionId { get; set; }
@@ -35,6 +38,9 @@ namespace ConfigServiceApi.Models
         public string? reptTemp { get; set; }
         public string? studyResult { get; set; }
         public string? diagResult { get; set; }
+
+        // 阴阳性
+        public int? isAbnormal { get; set; }
         // 是否公有
         public bool isPublic { get; set; }
         // 更新时间
@@ -56,6 +62,9 @@ namespace ConfigServiceApi.Models
         public string? CStudyResult { get; set; }
         public string? CDiagResult { get; set; }
 
+        // 阴阳性
+        public int? IsAbnormal { get; set; }
+
         // 用户ID，空时表示公有
         public string? OwnerId { get; set; }
         // 删除表示
@@ -68,7 +77,7 @@ namespace ConfigServiceApi.Models
         public string? HospitalId { get; set; }
         // 科室ID
         public string? DepartmentId { get; set; }
-        // 最后修改时间
+        // 最后一次修改时间
         public string? ModifyDT { get; set; }
     }
 }

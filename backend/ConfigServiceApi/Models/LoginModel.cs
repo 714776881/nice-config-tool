@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConfigServiceApi.Models
 {
+
     public class LoginForm
     {
         public string? loginToken { get; set; }
@@ -22,6 +23,7 @@ namespace ConfigServiceApi.Models
         public string? regionId { get; set; }
         public string? hospitalId { get; set; }
         public string? departmentId { get; set; }
+        public string? password { get; set; }
     }
 
     public class TUserEntity
@@ -160,6 +162,6 @@ namespace ConfigServiceApi.Models
 
         // 用户锁定时间
         public string? LockedDt { get; set; }
-    }
 
+    }
 }

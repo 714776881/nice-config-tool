@@ -338,20 +338,39 @@
         }
       }
     },
-    "/Api/Crud": {
-      "get": {
+    "/Api/Crud/Select": {
+      "post": {
         "tags": [
           "Crud"
         ],
-        "parameters": [
-          {
-            "name": "sql",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sql": {
+                    "type": "string"
+                  },
+                  "values": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "sql": {
+                  "style": "form"
+                },
+                "values": {
+                  "style": "form"
+                }
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -381,15 +400,34 @@
         "tags": [
           "Crud"
         ],
-        "parameters": [
-          {
-            "name": "sql",
-            "in": "query",
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "sql": {
+                    "type": "string"
+                  },
+                  "values": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "encoding": {
+                "sql": {
+                  "style": "form"
+                },
+                "values": {
+                  "style": "form"
+                }
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -462,10 +500,10 @@
         }
       }
     },
-    "/Api/Dal": {
+    "/Api/Data": {
       "get": {
         "tags": [
-          "Dal"
+          "Data"
         ],
         "requestBody": {
           "content": {
@@ -513,7 +551,7 @@
     "/Api/Dal/ExeSql": {
       "post": {
         "tags": [
-          "Dal"
+          "Data"
         ],
         "requestBody": {
           "content": {
@@ -561,7 +599,7 @@
     "/Api/Dal/ExeBatchSql": {
       "post": {
         "tags": [
-          "Dal"
+          "Data"
         ],
         "requestBody": {
           "content": {
@@ -722,6 +760,49 @@
       }
     },
     "/Api/Login": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "parameters": [
+          {
+            "name": "userCode",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          }
+        }
+      },
       "post": {
         "tags": [
           "Login"
@@ -745,6 +826,35 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Api/Lagout": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -1176,6 +1286,35 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Api/Scope": {
+      "get": {
+        "tags": [
+          "Scope"
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -1654,6 +1793,11 @@
             "type": "string",
             "nullable": true
           },
+          "IsAbnormal": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
           "IsPublic": {
             "type": "boolean"
           },
@@ -1701,6 +1845,11 @@
           },
           "CDiagResult": {
             "type": "string",
+            "nullable": true
+          },
+          "IsAbnormal": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           },
           "OwnerId": {

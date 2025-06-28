@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Code\\ConfigTool\\backend\\",
+  "WorkspaceRootPath": "C:\\MyData\\project\\config-tool\\src\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|f:\\code\\configtool\\backend\\configservicehost\\apicontrollers\\crudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|c:\\mydata\\project\\config-tool\\src\\backend\\configservicehost\\apicontrollers\\crudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|solutionrelative:configservicehost\\apicontrollers\\crudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,13 +20,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CrudController.cs",
-              "DocumentMoniker": "F:\\Code\\ConfigTool\\backend\\ConfigServiceHost\\ApiControllers\\CrudController.cs",
+              "DocumentMoniker": "C:\\MyData\\project\\config-tool\\src\\backend\\ConfigServiceHost\\ApiControllers\\CrudController.cs",
               "RelativeDocumentMoniker": "ConfigServiceHost\\ApiControllers\\CrudController.cs",
-              "ToolTip": "F:\\Code\\ConfigTool\\backend\\ConfigServiceHost\\ApiControllers\\CrudController.cs",
+              "ToolTip": "C:\\MyData\\project\\config-tool\\src\\backend\\ConfigServiceHost\\ApiControllers\\CrudController.cs",
               "RelativeToolTip": "ConfigServiceHost\\ApiControllers\\CrudController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwA8AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T10:03:06.784Z",
+              "WhenOpened": "2025-06-12T01:35:34.512Z",
               "EditorCaption": ""
             }
           ]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "enkUndoFRysYJJbpqkHefZVCbKLciYC67sIFb/E38hm7qijrpfO9uRejwEo8Ld41C7lvkukHGlAL22Zv36h6kg==",
+  "dgSpecHash": "q51VPUB6CCJaxaog+dtmbrZ5LaXgy48g/E6jr4EfVKLgoXHQ4empVgPYARLcSNE8bulA0jpwSmL70ztM/LXTtg==",
   "success": true,
-  "projectFilePath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
+  "projectFilePath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\刘贤\\.nuget\\packages\\log4net\\2.0.15\\log4net.2.0.15.nupkg.sha512",
     "C:\\Users\\刘贤\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
@@ -26,8 +26,8 @@
     "C:\\Users\\刘贤\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512",
     "C:\\Users\\刘贤\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
     "C:\\Users\\刘贤\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
-    "C:\\Users\\刘贤\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
     "C:\\Users\\刘贤\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.25\\microsoft.netcore.app.ref.6.0.25.nupkg.sha512",
+    "C:\\Users\\刘贤\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.25\\microsoft.windowsdesktop.app.ref.6.0.25.nupkg.sha512",
     "C:\\Users\\刘贤\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.25\\microsoft.aspnetcore.app.ref.6.0.25.nupkg.sha512"
   ],
   "logs": []

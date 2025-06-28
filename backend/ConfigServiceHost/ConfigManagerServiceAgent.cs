@@ -116,7 +116,6 @@ namespace ConfigServiceHost
             {
                 LogManager.WriteLog("", E_LogType.E_LogError, "Service", string.Format("启动Socket接口服务时发生异常：{0}", e.Message));
             }
-
             return ret;
         }
 

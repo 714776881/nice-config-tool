@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "ibtSELHLsO+XGCsV78epf+gt7khKJ7iMCyn4EIQMYeM=",
+  "Hash": "l9FtOI8aWwo1gdptWwDY3ZfAp42n/grZSrOdEb1Swn0=",
   "Source": "ConfigServiceHost",
   "BasePath": "_content/ConfigServiceHost",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

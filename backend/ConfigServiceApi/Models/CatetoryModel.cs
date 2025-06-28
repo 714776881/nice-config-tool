@@ -29,7 +29,7 @@ namespace ConfigServiceApi.Models
         // 删除表示
         public string? Deleted { get; set; }
         // 排序
-        public string? Sequence { get; set; }
+        public int? Sequence { get; set; }
         // 区域ID
         public string? RegionId { get; set; }
         // 院区ID

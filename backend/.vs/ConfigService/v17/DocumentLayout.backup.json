@@ -1,21 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Code\\ConfigTool\\backend\\",
+  "WorkspaceRootPath": "C:\\MyData\\project\\config-tool\\src\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|f:\\code\\configtool\\backend\\configservicehost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|c:\\mydata\\project\\config-tool\\src\\backend\\configservicehost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|solutionrelative:configservicehost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A437E7E-A909-4D9E-8595-0E0EA0851F17}|ConfigServiceApi\\ConfigServiceApi.csproj|f:\\code\\configtool\\backend\\configserviceapi\\configserviceapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8A437E7E-A909-4D9E-8595-0E0EA0851F17}|ConfigServiceApi\\ConfigServiceApi.csproj|solutionrelative:configserviceapi\\configserviceapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|f:\\code\\configtool\\backend\\configservicehost\\tool\\confighelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|solutionrelative:configservicehost\\tool\\confighelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|f:\\code\\configtool\\backend\\configservicehost\\apicontrollers\\crudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|c:\\mydata\\project\\config-tool\\src\\backend\\configservicehost\\apicontrollers\\crudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8259C9B1-7549-4DFF-9EF9-3079D8511393}|ConfigServiceHost\\ConfigServiceHost.csproj|solutionrelative:configservicehost\\apicontrollers\\crudcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,53 +24,26 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\Code\\ConfigTool\\backend\\ConfigServiceHost\\appsettings.json",
+              "DocumentMoniker": "C:\\MyData\\project\\config-tool\\src\\backend\\ConfigServiceHost\\appsettings.json",
               "RelativeDocumentMoniker": "ConfigServiceHost\\appsettings.json",
-              "ToolTip": "F:\\Code\\ConfigTool\\backend\\ConfigServiceHost\\appsettings.json",
+              "ToolTip": "C:\\MyData\\project\\config-tool\\src\\backend\\ConfigServiceHost\\appsettings.json",
               "RelativeToolTip": "ConfigServiceHost\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-24T05:56:18.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConfigHelper.cs",
-              "DocumentMoniker": "F:\\Code\\ConfigTool\\backend\\ConfigServiceHost\\Tool\\ConfigHelper.cs",
-              "RelativeDocumentMoniker": "ConfigServiceHost\\Tool\\ConfigHelper.cs",
-              "ToolTip": "F:\\Code\\ConfigTool\\backend\\ConfigServiceHost\\Tool\\ConfigHelper.cs",
-              "RelativeToolTip": "ConfigServiceHost\\Tool\\ConfigHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T06:01:30.917Z",
+              "WhenOpened": "2025-06-12T09:32:17.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConfigServiceApi",
-              "DocumentMoniker": "F:\\Code\\ConfigTool\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
-              "RelativeDocumentMoniker": "ConfigServiceApi\\ConfigServiceApi.csproj",
-              "ToolTip": "F:\\Code\\ConfigTool\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
-              "RelativeToolTip": "ConfigServiceApi\\ConfigServiceApi.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvw8AAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-24T03:22:53.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CrudController.cs",
-              "DocumentMoniker": "F:\\Code\\ConfigTool\\backend\\ConfigServiceHost\\ApiControllers\\CrudController.cs",
+              "DocumentMoniker": "C:\\MyData\\project\\config-tool\\src\\backend\\ConfigServiceHost\\ApiControllers\\CrudController.cs",
               "RelativeDocumentMoniker": "ConfigServiceHost\\ApiControllers\\CrudController.cs",
-              "ToolTip": "F:\\Code\\ConfigTool\\backend\\ConfigServiceHost\\ApiControllers\\CrudController.cs",
+              "ToolTip": "C:\\MyData\\project\\config-tool\\src\\backend\\ConfigServiceHost\\ApiControllers\\CrudController.cs",
               "RelativeToolTip": "ConfigServiceHost\\ApiControllers\\CrudController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwDIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T03:10:06.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-12T01:35:34.512Z"
             }
           ]
         }

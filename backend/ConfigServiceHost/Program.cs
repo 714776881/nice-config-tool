@@ -19,7 +19,7 @@ using System.Text.Json.Serialization;
 using System.Text.Unicode;
 using Tool;
 using XService;
-using static System.Net.Mime.MediaTypeNames;
+using static System.Net.Mime.MediaTypeNames;  
 
 namespace ConfigServiceHost
 {
@@ -74,7 +74,8 @@ namespace ConfigServiceHost
             {
                 options.AddPolicy("Cors", p =>
                 {
-                    p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+                    p.SetIsOriginAllowed(origin => origin.StartsWith("http://localhost:")).AllowCredentials().AllowAnyMethod().AllowAnyHeader();
+                    //p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
                 });
             });
 
@@ -92,11 +93,15 @@ namespace ConfigServiceHost
                 options.Limits.MaxRequestBufferSize = int.MaxValue;
             });
 
-            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddDistributedMemoryCache();// 使用内存缓存存储 Session 数据
+
             builder.Services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(60); // 会话超时
                 options.Cookie.HttpOnly = true; // 防止客户端访问会话
+                options.Cookie.SameSite = SameSiteMode.None;
+                options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+                options.Cookie.Name = "ConfigService.Session"; // 自定义 Cookie 名称
             });
 
             var app = builder.Build();
@@ -116,9 +121,14 @@ namespace ConfigServiceHost
             //app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            //使用跨域策略
+            app.UseCors("Cors");
+            
+
             app.UseAuthorization();
 
-            // 启用会话中间件
+
             app.UseSession();
 
             app.MapControllers();
@@ -129,9 +139,6 @@ namespace ConfigServiceHost
             //        pattern: "LoginManagerService/{controller}/{action}/{id}");
             //});
 
-
-            //使用跨域策略
-            app.UseCors("Cors");
             app.Run();
             LogAdapter.LogInfo("配置管理服务成功启动！");
         }

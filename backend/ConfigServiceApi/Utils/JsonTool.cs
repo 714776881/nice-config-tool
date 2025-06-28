@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace ConfigServiceApi.Utils
 {
-    class JsonTool
+    public class JsonTool
     {
         // 深度克隆对象
         public static T Clone<T>(object obj)

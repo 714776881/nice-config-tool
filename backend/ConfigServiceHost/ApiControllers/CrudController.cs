@@ -10,9 +10,19 @@ using System.Drawing;
 using ConfigServiceApi.Utils;
 using ConfigServiceApi.Models;
 using ConfigServiceApi.Services;
+using Tool;
+using Microsoft.AspNetCore.Server.HttpSys;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ConfigServiceHost.ApiControllers
 {
+    public class CrudReqVO
+    {
+        public string sql {get;set;}
+        public Dictionary<string,string> values { get; set; }
+    }
+
+
     [ApiController]
     public class CrudController : ControllerBase
     {
@@ -23,15 +33,16 @@ namespace ConfigServiceHost.ApiControllers
             _DalService = new DalService();
         }
 
-        [HttpGet]
-        [Route("Api/Crud")]
-        public ApiResponse Select(string sql)
+        [HttpPost]
+        [Route("Api/Crud/Select")]
+        public ApiResponse Select([FromForm] CrudReqVO req)
         {
             ApiResponse res = new ApiResponse();
             try
             {
                 var result = new DbDataModel();
-                result.data = _DalService.Select(sql);
+
+                result.data = _DalService.Select(req.sql, req.values);
 
                 res.code = ApiResponse.Success;
                 res.data = result;
@@ -40,26 +51,32 @@ namespace ConfigServiceHost.ApiControllers
             {
                 res.code = ApiResponse.Error;
                 res.message = ex.Message;
+                Logger.LogError("[Select]" + ex.Message);
             }
             return res;
         }
 
         [HttpPost]
         [Route("Api/Crud/ExeSql")]
-        public ApiResponse ExeSql(string sql)
-        {
+        public ApiResponse ExeSql([FromForm] CrudReqVO req)
+        { 
             ApiResponse res = new ApiResponse();
             try
             {
-                var result = _DalService.ExeSql(sql);
+                if(string.IsNullOrEmpty(req.sql))
+                {
+                    res.code = ApiResponse.Error;
+                    res.message = "SQL为空！";
+                }
 
+                res.data = _DalService.ExeSql(req.sql, req.values);
                 res.code = ApiResponse.Success;
-                res.data = result;
             }
             catch (Exception ex)
             {
                 res.code = ApiResponse.Error;
                 res.message = ex.Message;
+                Logger.LogError("[ExeSql]" + ex.Message);
             }
             return res;
         }
@@ -90,6 +107,7 @@ namespace ConfigServiceHost.ApiControllers
             {
                 res.code = ApiResponse.Error;
                 res.message = ex.Message;
+                Logger.LogError("[ExeBatchSql]" + ex.Message);
             }
             return res;
         }

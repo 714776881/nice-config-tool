@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj": {}
+    "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj": {}
   },
   "projects": {
-    "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj": {
+    "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
+        "projectUniqueName": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
         "projectName": "ConfigServiceApi",
-        "projectPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
+        "projectPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
         "packagesPath": "C:\\Users\\刘贤\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\obj\\",
+        "outputPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\刘贤\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,13 +56,13 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[9.2.0, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",

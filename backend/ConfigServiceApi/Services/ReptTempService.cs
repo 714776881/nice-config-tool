@@ -48,6 +48,7 @@ namespace ConfigServiceApi.Services
             {
                 entity.CDiagResult = form.CDiagResult;
             }
+            entity.IsAbnormal = form.IsAbnormal;
             entity.ModifyDT = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             return repttempRepository.Update(entity);
         }

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ConfigService
-build_property.ProjectDir = F:\project\nice-config-tool\src\backend\ConfigService\
+build_property.ProjectDir = F:\project\nice-peoject\nice-config-tool\src\backend\ConfigService\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -10,6 +10,7 @@ using System.Drawing;
 using ConfigServiceApi.Utils;
 using ConfigServiceApi.Models;
 using ConfigServiceApi.Services;
+using Tool;
 
 namespace ConfigServiceHost.ApiControllers
 {
@@ -25,6 +26,11 @@ namespace ConfigServiceHost.ApiControllers
             try
             {
                 var fileContent = ConfigFileService.GetConfig(fileName);
+
+                if(string.IsNullOrEmpty(fileContent))
+                {
+                    throw new Exception("文件不存在");
+                }
 
                 res.code = ApiResponse.Success;
                 res.data = fileContent;
@@ -56,6 +62,5 @@ namespace ConfigServiceHost.ApiControllers
             }
             return res;
         }
-
     }
 }

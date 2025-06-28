@@ -166,32 +166,6 @@
   },
   {
     "ContainingType": "ConfigServiceHost.ApiControllers.CrudController",
-    "Method": "Select",
-    "RelativePath": "Api/Crud",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "sql",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ConfigServiceApi.Models.ApiResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ConfigServiceHost.ApiControllers.CrudController",
     "Method": "ExeBatchSql",
     "RelativePath": "Api/Crud/ExeBatchSql",
     "HttpMethod": "POST",
@@ -228,6 +202,11 @@
         "Name": "sql",
         "Type": "System.String",
         "IsRequired": false
+      },
+      {
+        "Name": "values",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -243,17 +222,22 @@
     ]
   },
   {
-    "ContainingType": "ConfigServiceHost.ApiControllers.DalController",
+    "ContainingType": "ConfigServiceHost.ApiControllers.CrudController",
     "Method": "Select",
-    "RelativePath": "Api/Dal",
-    "HttpMethod": "GET",
+    "RelativePath": "Api/Crud/Select",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "form",
-        "Type": "ConfigServiceApi.Models.DalForm",
-        "IsRequired": true
+        "Name": "sql",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "values",
+        "Type": "System.Collections.Generic.Dictionary\u00602[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -269,7 +253,7 @@
     ]
   },
   {
-    "ContainingType": "ConfigServiceHost.ApiControllers.DalController",
+    "ContainingType": "ConfigServiceHost.ApiControllers.DataController",
     "Method": "ExeBatchSql",
     "RelativePath": "Api/Dal/ExeBatchSql",
     "HttpMethod": "POST",
@@ -295,10 +279,36 @@
     ]
   },
   {
-    "ContainingType": "ConfigServiceHost.ApiControllers.DalController",
+    "ContainingType": "ConfigServiceHost.ApiControllers.DataController",
     "Method": "ExeSql",
     "RelativePath": "Api/Dal/ExeSql",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "form",
+        "Type": "ConfigServiceApi.Models.DalForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.DataController",
+    "Method": "Select",
+    "RelativePath": "Api/Data",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -383,6 +393,57 @@
     "ReturnTypes": [
       {
         "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.LoginController",
+    "Method": "Post",
+    "RelativePath": "Api/Lagout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.LoginController",
+    "Method": "Get",
+    "RelativePath": "Api/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -645,6 +706,26 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "ConfigServiceApi.Models.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ConfigServiceHost.ApiControllers.ScopeController",
+    "Method": "GetAll",
+    "RelativePath": "Api/Scope",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "ConfigServiceApi.Models.ApiResponse",

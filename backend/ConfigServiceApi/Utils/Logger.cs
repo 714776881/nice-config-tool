@@ -36,9 +36,9 @@ namespace ConfigServiceApi.Utils
             string dicPath = ConfigHelper.GetSetting("LogPath","");
             if (string.IsNullOrEmpty(dicPath))
             {
-                dicPath = System.AppDomain.CurrentDomain.BaseDirectory + "/Log";
+                dicPath = System.AppDomain.CurrentDomain.BaseDirectory + "/log";
             }
-            string fileName = string.Format(@"\Tool_{0}.log", DateTime.Now.ToString("yyyyMMddHH"));
+            string fileName = string.Format(@"/{0}.log", DateTime.Now.ToString("yyyyMMddHH"));
             logPath = string.Format(@"{0}{1}", dicPath, fileName);
             if (!Directory.Exists(dicPath))
             {
@@ -176,4 +176,5 @@ namespace ConfigServiceApi.Utils
 
         #endregion
     }
+
 }

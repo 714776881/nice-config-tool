@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceHost\\ConfigServiceHost.csproj": {}
+    "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceHost\\ConfigServiceHost.csproj": {}
   },
   "projects": {
-    "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj": {
+    "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
+        "projectUniqueName": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
         "projectName": "ConfigServiceApi",
-        "projectPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
+        "projectPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj",
         "packagesPath": "C:\\Users\\刘贤\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\obj\\",
+        "outputPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\刘贤\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,13 +56,13 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[9.2.0, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             },
             "Oracle.ManagedDataAccess.Core": {
               "target": "Package",
@@ -107,14 +107,14 @@
         }
       }
     },
-    "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceHost\\ConfigServiceHost.csproj": {
+    "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceHost\\ConfigServiceHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceHost\\ConfigServiceHost.csproj",
+        "projectUniqueName": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceHost\\ConfigServiceHost.csproj",
         "projectName": "ConfigServiceHost",
-        "projectPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceHost\\ConfigServiceHost.csproj",
+        "projectPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceHost\\ConfigServiceHost.csproj",
         "packagesPath": "C:\\Users\\刘贤\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceHost\\obj\\",
+        "outputPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceHost\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\刘贤\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -131,11 +131,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj": {
-                "projectPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj"
+              "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj": {
+                "projectPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigServiceApi\\ConfigServiceApi.csproj"
               },
-              "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj": {
-                "projectPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj"
+              "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj": {
+                "projectPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj"
               }
             }
           }
@@ -154,6 +154,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.6.1, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.5, )"
@@ -161,6 +165,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.6.1, )"
             }
           },
           "imports": [
@@ -204,14 +212,14 @@
         }
       }
     },
-    "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj": {
+    "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
+        "projectUniqueName": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
         "projectName": "ConfigService",
-        "projectPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
+        "projectPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\ConfigService.csproj",
         "packagesPath": "C:\\Users\\刘贤\\.nuget\\packages\\",
-        "outputPath": "F:\\project\\nice-config-tool\\src\\backend\\ConfigService\\obj\\",
+        "outputPath": "F:\\project\\nice-peoject\\nice-config-tool\\src\\backend\\ConfigService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\刘贤\\AppData\\Roaming\\NuGet\\NuGet.Config",
