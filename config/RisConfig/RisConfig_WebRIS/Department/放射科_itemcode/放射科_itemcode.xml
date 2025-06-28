@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<item name="RegisterConfiguration">
+		<!-- 可用模态 -->
+		<item name="UsableModalities" value="CT,DR,CR,DX,XA"/>
+		<!-- 缺省模态 -->
+		<item name="DefaultModality" value="CT"/>
+		<!-- 可用病人类型 -->
+		<item name="UsablePatientType" value="O,I,E,P"/>
+		<!-- 缺省病人类型, O=门诊病人, I=住院病人, E=急诊病人, P=体检病人, F=复查病人, W=外院病人 -->
+		<item name="DefaultPatientType" value="O"/>
+	</item>
+	
+</config>

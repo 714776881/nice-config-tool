@@ -1,0 +1,207 @@
+{
+  "columnConfig": [
+    {
+      "title": "模板名称",
+      "key": "TEMPLATENAME",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "模板名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入模板名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "默认条件",
+      "key": "DEFAULTCONDITION",
+      "width": 200,
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "默认条件"
+        }
+      },
+      "formItem": {
+	    "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "显示配置",
+      "key": "CONFIG",
+      "width": 200,
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "显示配置"
+        }
+      },
+      "formItem": {
+	    "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "关联项目",
+      "key": "EXAMITEMID",
+      "width": 200,
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "显示配置"
+        }
+      },
+      "formItem": {
+	    "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            },
+            {
+              "label": "全部",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select COUNT(*) value from T_REPORTREMARK t"
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_measure_template t where t.modality='US' and t.departmentid='102'",
+    "insert": "insert into T_REPORTREMARK(remarkid,REMARKNAME,REMARKCODE,REMARKSRM,DELETED,SEQUENCE,UPNODEID) values('{ID}','{REMARKNAME}','{REMARKCODE}','','{DELETED}','{SEQUENCE}','')",
+    "update": "update t_reportremark set remarkname='{REMARKNAME}',remarkcode='{REMARKCODE}' where remarkid='{ID}'",
+    "setState": "update t_reportremark set deleted = '{DELETED}' where remarkid = '{ID}'",
+	"delete": "delete from t_reportremark where remarkid = '{ID}'",
+	"setSequence":"update t_reportremark set sequence = '{SEQUENCE}' where remarkid = '{ID}'",
+    "exportData": "select t.remarkid id,t.*  from T_REPORTREMARK t"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "addedButtons":[
+	{
+	   "name": "测量项列表",
+	   "defaultShowText":"",
+	   "width":1200,
+	   "exeSql":"",
+	   "isBetch": ""
+	}
+  ]
+}

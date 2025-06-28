@@ -1,0 +1,296 @@
+<config versiontag="root">
+  <item name="RegisterConfiguration" versiontag="202006.206">
+    <!-- 登记窗口 -->
+    <item name="frmRISRegister" versiontag="202006.207">
+      <!-- 登记窗口，门诊病人 -->
+      <item name="O" versiontag="202006.208">
+        <item name="lblModality" versiontag="202006.209">
+          <item name="Desc" value="检查类型" versiontag="202006.210" />
+        </item>
+        <item name="comboModality" versiontag="202006.211">
+          <item name="Desc" value="检查类型" versiontag="202006.212" />
+          <item name="Enabled" value="True" versiontag="202006.213" />
+          <item name="Essential" value="1" versiontag="202006.214" />
+        </item>
+        <item name="lblPatType" versiontag="202006.215">
+          <item name="Desc" value="病人类型" versiontag="202006.216" />
+        </item>
+        <item name="comboPatType" versiontag="202006.217">
+          <item name="Desc" value="病人类型" versiontag="202006.218" />
+          <item name="Enabled" value="True" versiontag="202006.219" />
+          <item name="Essential" value="1" versiontag="202006.220" />
+        </item>
+        <item name="lblMedicalID" versiontag="202006.221">
+          <item name="Desc" value="就诊卡号" versiontag="202006.222" />
+        </item>
+        <item name="txtMedicalID" versiontag="202006.223">
+          <item name="Desc" value="就诊卡号" versiontag="202006.224" />
+          <item name="Enabled" value="True" versiontag="202006.225" />
+          <item name="Essential" value="1" versiontag="202006.226" />
+        </item>
+        <item name="lblInpatientID" versiontag="202006.227">
+          <item name="Desc" value="门诊号" versiontag="202006.228" />
+        </item>
+        <item name="txtInpatientID" versiontag="202006.229">
+          <item name="Desc" value="门诊号" versiontag="202006.230" />
+          <item name="Enabled" value="True" versiontag="202006.231" />
+          <item name="Essential" value="1" versiontag="202006.232" />
+        </item>
+        <item name="lblPatientID" versiontag="202006.233">
+          <item name="Desc" value="影像号" versiontag="202006.234" />
+        </item>
+        <item name="txtPatientID" versiontag="202006.235">
+          <item name="Desc" value="影像号" versiontag="202006.236" />
+          <item name="Enabled" value="True" versiontag="202006.237" />
+          <item name="Essential" value="1" versiontag="202006.238" />
+        </item>
+        <item name="lblModalityID" versiontag="202006.239">
+          <item name="Desc" value="模态号" versiontag="202006.240" />
+        </item>
+        <item name="txtModalityID" versiontag="202006.241">
+          <item name="Desc" value="模态号" versiontag="202006.242" />
+          <item name="Enabled" value="True" versiontag="202006.243" />
+          <item name="Essential" value="1" versiontag="202006.244" />
+        </item>
+        <item name="lblPatName" versiontag="202006.245">
+          <item name="Desc" value="姓名" versiontag="202006.246" />
+        </item>
+        <item name="txtPatName" versiontag="202006.247">
+          <item name="Desc" value="姓名" versiontag="202006.248" />
+          <item name="Enabled" value="True" versiontag="202006.249" />
+          <item name="Essential" value="1" versiontag="202006.250" />
+        </item>
+        <item name="lblPatNameEn" versiontag="202006.251">
+          <item name="Desc" value="拼音" versiontag="202006.252" />
+        </item>
+        <item name="txtPatNameEn" versiontag="202006.253">
+          <item name="Desc" value="拼音" versiontag="202006.254" />
+          <item name="Enabled" value="True" versiontag="202006.255" />
+          <item name="Essential" value="1" versiontag="202006.256" />
+        </item>
+        <item name="lblPatSex" versiontag="202006.257">
+          <item name="Desc" value="性别" versiontag="202006.258" />
+        </item>
+        <item name="comboPatSex" versiontag="202006.259">
+          <item name="Desc" value="性别" versiontag="202006.260" />
+          <item name="Enabled" value="True" versiontag="202006.261" />
+          <item name="Essential" value="1" versiontag="202006.262" />
+        </item>
+        <item name="lblPatAge" versiontag="202006.263">
+          <item name="Desc" value="年龄" versiontag="202006.264" />
+        </item>
+        <item name="txtPatAge" versiontag="202006.265">
+          <item name="Desc" value="年龄" versiontag="202006.266" />
+          <item name="Enabled" value="True" versiontag="202006.267" />
+          <item name="Essential" value="1" versiontag="202006.268" />
+        </item>
+        <item name="lblBirthday" versiontag="202006.269">
+          <item name="Desc" value="出生日期" versiontag="202006.270" />
+        </item>
+        <item name="dtpBirthday" versiontag="202006.271">
+          <item name="Desc" value="出生日期" versiontag="202006.272" />
+          <item name="Enabled" value="True" versiontag="202006.273" />
+          <item name="Essential" value="1" versiontag="202006.274" />
+        </item>
+      </item>
+      <!-- 登记窗口，住院病人 -->
+      <item name="I" versiontag="202006.275">
+        <item name="lblModality" versiontag="202006.276">
+          <item name="Desc" value="检查类型" versiontag="202006.277" />
+        </item>
+        <item name="comboModality" versiontag="202006.278">
+          <item name="Desc" value="检查类型" versiontag="202006.279" />
+          <item name="Enabled" value="True" versiontag="202006.280" />
+          <item name="Essential" value="1" versiontag="202006.281" />
+        </item>
+        <item name="lblPatType" versiontag="202006.282">
+          <item name="Desc" value="病人类型" versiontag="202006.283" />
+        </item>
+        <item name="comboPatType" versiontag="202006.284">
+          <item name="Desc" value="病人类型" versiontag="202006.285" />
+          <item name="Enabled" value="True" versiontag="202006.286" />
+          <item name="Essential" value="1" versiontag="202006.287" />
+        </item>
+        <item name="lblMedicalID" versiontag="202006.288">
+          <item name="Desc" value="就诊卡号" versiontag="202006.289" />
+        </item>
+        <item name="txtMedicalID" versiontag="202006.290">
+          <item name="Desc" value="就诊卡号" versiontag="202006.291" />
+          <item name="Enabled" value="True" versiontag="202006.292" />
+          <item name="Essential" value="1" versiontag="202006.293" />
+        </item>
+        <item name="lblInpatientID" versiontag="202006.294">
+          <item name="Desc" value="住院号" versiontag="202006.295" />
+        </item>
+        <item name="txtInpatientID" versiontag="202006.296">
+          <item name="Desc" value="住院号" versiontag="202006.297" />
+          <item name="Enabled" value="True" versiontag="202006.298" />
+          <item name="Essential" value="1" versiontag="202006.299" />
+        </item>
+        <item name="lblPatientID" versiontag="202006.300">
+          <item name="Desc" value="影像号" versiontag="202006.301" />
+        </item>
+        <item name="txtPatientID" versiontag="202006.302">
+          <item name="Desc" value="影像号" versiontag="202006.303" />
+          <item name="Enabled" value="True" versiontag="202006.304" />
+          <item name="Essential" value="1" versiontag="202006.305" />
+        </item>
+        <item name="lblModalityID" versiontag="202006.306">
+          <item name="Desc" value="模态号" versiontag="202006.307" />
+        </item>
+        <item name="txtModalityID" versiontag="202006.308">
+          <item name="Desc" value="模态号" versiontag="202006.309" />
+          <item name="Enabled" value="True" versiontag="202006.310" />
+          <item name="Essential" value="1" versiontag="202006.311" />
+        </item>
+        <item name="lblPatName" versiontag="202006.312">
+          <item name="Desc" value="姓名" versiontag="202006.313" />
+        </item>
+        <item name="txtPatName" versiontag="202006.314">
+          <item name="Desc" value="姓名" versiontag="202006.315" />
+          <item name="Enabled" value="True" versiontag="202006.316" />
+          <item name="Essential" value="1" versiontag="202006.317" />
+        </item>
+        <item name="lblPatNameEn" versiontag="202006.318">
+          <item name="Desc" value="拼音" versiontag="202006.319" />
+        </item>
+        <item name="txtPatNameEn" versiontag="202006.320">
+          <item name="Desc" value="拼音" versiontag="202006.321" />
+          <item name="Enabled" value="True" versiontag="202006.322" />
+          <item name="Essential" value="1" versiontag="202006.323" />
+        </item>
+        <item name="lblPatSex" versiontag="202006.324">
+          <item name="Desc" value="性别" versiontag="202006.325" />
+        </item>
+        <item name="comboPatSex" versiontag="202006.326">
+          <item name="Desc" value="性别" versiontag="202006.327" />
+          <item name="Enabled" value="True" versiontag="202006.328" />
+          <item name="Essential" value="1" versiontag="202006.329" />
+        </item>
+        <item name="lblPatAge" versiontag="202006.330">
+          <item name="Desc" value="年龄" versiontag="202006.331" />
+        </item>
+        <item name="txtPatAge" versiontag="202006.332">
+          <item name="Desc" value="年龄" versiontag="202006.333" />
+          <item name="Enabled" value="True" versiontag="202006.334" />
+          <item name="Essential" value="1" versiontag="202006.335" />
+        </item>
+        <item name="lblBirthday" versiontag="202006.336">
+          <item name="Desc" value="出生日期" versiontag="202006.337" />
+        </item>
+        <item name="dtpBirthday" versiontag="202006.338">
+          <item name="Desc" value="出生日期" versiontag="202006.339" />
+          <item name="Enabled" value="True" versiontag="202006.340" />
+          <item name="Essential" value="1" versiontag="202006.341" />
+        </item>
+      </item>
+      <!-- 登记窗口，急诊病人 -->
+      <item name="E" versiontag="202006.342">
+        <item name="lblModality" versiontag="202006.343">
+          <item name="Desc" value="检查类型" versiontag="202006.344" />
+        </item>
+        <item name="comboModality" versiontag="202006.345">
+          <item name="Desc" value="检查类型" versiontag="202006.346" />
+          <item name="Enabled" value="True" versiontag="202006.347" />
+          <item name="Essential" value="1" versiontag="202006.348" />
+        </item>
+        <item name="lblPatType" versiontag="202006.349">
+          <item name="Desc" value="病人类型" versiontag="202006.350" />
+        </item>
+        <item name="comboPatType" versiontag="202006.351">
+          <item name="Desc" value="病人类型" versiontag="202006.352" />
+          <item name="Enabled" value="True" versiontag="202006.353" />
+          <item name="Essential" value="1" versiontag="202006.354" />
+        </item>
+        <item name="lblMedicalID" versiontag="202006.355">
+          <item name="Desc" value="就诊卡号" versiontag="202006.356" />
+        </item>
+        <item name="txtMedicalID" versiontag="202006.357">
+          <item name="Desc" value="就诊卡号" versiontag="202006.358" />
+          <item name="Enabled" value="True" versiontag="202006.359" />
+          <item name="Essential" value="1" versiontag="202006.360" />
+        </item>
+        <item name="lblInpatientID" versiontag="202006.361">
+          <item name="Desc" value="门诊号" versiontag="202006.362" />
+        </item>
+        <item name="txtInpatientID" versiontag="202006.363">
+          <item name="Desc" value="门诊号" versiontag="202006.364" />
+          <item name="Enabled" value="True" versiontag="202006.365" />
+          <item name="Essential" value="1" versiontag="202006.366" />
+        </item>
+        <item name="lblPatientID" versiontag="202006.367">
+          <item name="Desc" value="影像号" versiontag="202006.368" />
+        </item>
+        <item name="txtPatientID" versiontag="202006.369">
+          <item name="Desc" value="影像号" versiontag="202006.370" />
+          <item name="Enabled" value="True" versiontag="202006.371" />
+          <item name="Essential" value="1" versiontag="202006.372" />
+        </item>
+        <item name="lblModalityID" versiontag="202006.373">
+          <item name="Desc" value="模态号" versiontag="202006.374" />
+        </item>
+        <item name="txtModalityID" versiontag="202006.375">
+          <item name="Desc" value="模态号" versiontag="202006.376" />
+          <item name="Enabled" value="True" versiontag="202006.377" />
+          <item name="Essential" value="1" versiontag="202006.378" />
+        </item>
+        <item name="lblPatName" versiontag="202006.379">
+          <item name="Desc" value="姓名" versiontag="202006.380" />
+        </item>
+        <item name="txtPatName" versiontag="202006.381">
+          <item name="Desc" value="姓名" versiontag="202006.382" />
+          <item name="Enabled" value="True" versiontag="202006.383" />
+          <item name="Essential" value="1" versiontag="202006.384" />
+        </item>
+        <item name="lblPatNameEn" versiontag="202006.385">
+          <item name="Desc" value="拼音" versiontag="202006.386" />
+        </item>
+        <item name="txtPatNameEn" versiontag="202006.387">
+          <item name="Desc" value="拼音" versiontag="202006.388" />
+          <item name="Enabled" value="True" versiontag="202006.389" />
+          <item name="Essential" value="1" versiontag="202006.390" />
+        </item>
+        <item name="lblPatSex" versiontag="202006.391">
+          <item name="Desc" value="性别" versiontag="202006.392" />
+        </item>
+        <item name="comboPatSex" versiontag="202006.393">
+          <item name="Desc" value="性别" versiontag="202006.394" />
+          <item name="Enabled" value="True" versiontag="202006.395" />
+          <item name="Essential" value="1" versiontag="202006.396" />
+        </item>
+        <item name="lblPatAge" versiontag="202006.397">
+          <item name="Desc" value="年龄" versiontag="202006.398" />
+        </item>
+        <item name="txtPatAge" versiontag="202006.399">
+          <item name="Desc" value="年龄" versiontag="202006.400" />
+          <item name="Enabled" value="True" versiontag="202006.401" />
+          <item name="Essential" value="1" versiontag="202006.402" />
+        </item>
+        <item name="lblBirthday" versiontag="202006.403">
+          <item name="Desc" value="出生日期" versiontag="202006.404" />
+        </item>
+        <item name="dtpBirthday" versiontag="202006.405">
+          <item name="Desc" value="出生日期" versiontag="202006.406" />
+          <item name="Enabled" value="True" versiontag="202006.407" />
+          <item name="Essential" value="1" versiontag="202006.408" />
+        </item>
+      </item>
+    </item>
+    <!--- 登记完成后，页面挑战逻辑, 0: 继续登记，1：跳转到worklist  2：跳转到书写报告-->
+    <item name="RegisterCompletedAction" value="2" versiontag="202012.100" />
+    <!--- 是否启用HIS接口, 0: 不启用HIS服务，手工单登记，1：启用HIS服务登记-->
+    <item name="UseHISInterface" value="0" versiontag="202211.32" />
+    <!-- 同一个HISID的申请单是否同时登记  0：不同时   1：同时  -->
+    <item name="RegisterOrderByHISID" value="1" versiontag="202211.33" />
+    <!-- 同一个HISID的申请单是否同时删除  0：不同时   1：同时  -->
+    <item name="DeleteOrderByHISID" value="1" versiontag="202211.34" />
+    <!-- 可用模态 -->
+    <item name="UsableModalities" value="US,CT,DX,CR" versiontag="202211.35" />
+    <!-- 缺省模态 -->
+    <item name="DefaultModality" value="US" versiontag="202211.36" />
+    <!-- 可用病人类型 -->
+    <item name="UsablePatientType" value="O,I,E" versiontag="202211.37" />
+    <!-- 缺省病人类型, O=门诊病人, I=住院病人, E=急诊病人, P=体检病人, F=复查病人, W=外院病人 -->
+    <item name="DefaultPatientType" value="O" versiontag="202211.38" />
+  </item>
+</config>

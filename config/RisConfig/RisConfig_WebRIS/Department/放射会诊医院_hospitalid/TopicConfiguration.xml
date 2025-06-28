@@ -1,0 +1,32 @@
+﻿<config>
+	<item name="TopicConfiguration">
+		<item name="QueryGridConfig">
+			<item name="Worklist">
+				<!--RightClickMenuConfig配置右键菜单显示的内容，value参考RisGeneral_Config.xml中PreDefineConfiguration/OperationPreDefine的子节点名称-->
+				<!--右键菜单有分组的功能，目前有3组，可根据需要增加或移除组，也可以在每个组里增加或移除菜单项-->
+				<item name="RightClickMenuConfig" value="#Array">
+					<item value="#Array">
+						<item value="ShowImage"/>
+						<item value="ShowRequisition"/>
+						<item value="ViewOrderComment"/>
+						<item value="ScanOrderPaper"/>
+						<item value="PrintOrderPaper"/>
+					</item>
+					<item value="#Array">
+						<item value="DeleteOrder"/>
+						<item value="ModifyOrder"/>
+						<item value="RecoverOrder"/>
+					</item>
+					<item value="#Array">
+						<item value="ExportOrder"/>
+						<item value="ExportSelectedOrders"/>
+					</item>
+					<!-- 区域版 -->
+					<item value="#Array">
+						<item value="AreaConsult"/>
+					</item> 
+				</item>
+			</item>
+		</item>
+	</item>
+</config>

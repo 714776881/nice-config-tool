@@ -1,0 +1,10 @@
+<config versiontag="root">
+  <item name="UserPowerGroupDefineConfiguraion" versiontag="201812.3249">
+    <item name="All" value="0" versiontag="201812.3250" />
+    <item name="Register" value="1" versiontag="201812.3251" />
+    <item name="Pathology" value="2" versiontag="201812.3252" />
+    <item name="Report" value="0" versiontag="201812.3253" />
+    <item name="Statistics" value="6" versiontag="201812.3254" />
+    <item name="Config" value="9" versiontag="201812.3255" />
+  </item>
+</config>

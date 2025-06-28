@@ -1,0 +1,253 @@
+<config versiontag="root">
+<item name="WaitingList">
+<item name="序  号" value="QUEUECODE"/>
+</item>
+<!-- 呼叫界面各列表配置: -->
+<!-- Name: 列头显示([PID]为特殊值,程序会根据配置和队列类型自动替换为影像号/模态号/CT号/X线号)-->
+<!-- DataSource: 待呼/已呼/已诊/挂起/弃号对应ViewQueue视图的字段名, 未匹配/等待QA列表是ViewOrderList视图的字段名-->
+<!-- Width: 列宽.只是一个权重,并非实际宽度,系统会根据各列宽度和内容自动平衡-->
+<!-- MinWidth: 最小宽度,系统调整的时候不会小于这个值-->
+<!-- AutoSize: None/Fill/AllCells/AllCellsExceptHeader/DisplayedCells/DisplayedCellsExceptHeader/ColumnHeader-->
+<item name="ColumnSetting">
+	<item name="WaitingList">
+		<item name="序  号" datasource="QueueCode" width="40"/>
+		<item name="队列名称" datasource="QueueName" width="100" minwidth="100"/>
+		<item name="状态" datasource="PatientTypeAndState" width="40" minwidth="60"/>
+		<item name="呼叫次数" datasource="CallTimes" width="100"/>
+		<!-- <item name="图文报告" datasource="GRAPHICREPORT" width="40"/> -->
+		<item name="[PID]" datasource="PatientID" width="70"/>
+		<!-- <item name="检查号" datasource="EXAMNO" width="70"/> -->
+		<item name="病案号" datasource="MedicareId" width="70"/>
+		<item name="病人姓名" datasource="PatientName" width="80" minwidth="60"/>
+		<item name="性别" datasource="PatientSexName" width="60"/>
+		<!-- <item name="年龄" datasource="PatientAge" width="60" minwidth="60"/> -->
+		<item name="病人类型" datasource="PatientTypeName1" width="80" minwidth="50"/>
+		<item name="检查项目" datasource="Examitem" width="200" minwidth="150" autosize="fill"/>
+		<item name="AccNO" datasource="Accno" width="120"/>
+		<!-- <item name="登记时间" datasource="RECORDDT" width="190" minwidth="190"/> -->
+		<!-- <item name="请检科室" datasource="CLINIC" width="150" minwidth="150"/> -->
+	</item>
+	
+	<item name="CalledList">
+		<item name="序  号" datasource="QueueCode" width="10"/>
+		<item name="[PID]" datasource="PatientID" width="70"/>
+		<item name="病案号" datasource="MedicareId" width="70"/>
+		<item name="病人姓名" datasource="PatientName" width="200" minwidth="60"/>
+		<item name="性别" datasource="PatientSexName" width="60"/>
+		<item name="年龄" datasource="PatientAge" width="60" minwidth="60"/>
+		<item name="病人类型" datasource="PatientTypeName1" width="80" minwidth="50"/>
+		<item name="检查项目" datasource="Examitem" width="200" minwidth="150" autosize="fill"/>
+		<item name="AccNO" datasource="Accno" width="200"/>
+		<item name="呼叫时间" datasource="CallTime" width="50"/>
+		<item name="呼叫次数" datasource="CallTimes" width="100"/>
+		<item name="检查房间" datasource="Examroom" width="120"/>
+		<item name="备注" datasource="Remark" width="120"/>
+	</item>
+	
+	<item name="AbandonList">
+		<item name="序  号" datasource="QueueCode" width="40"/>
+		<item name="[PID]" datasource="PatientID" width="70"/>
+		<item name="病案号" datasource="MedicareId" width="70"/>
+		<item name="病人姓名" datasource="PatientName" width="80" minwidth="60"/>
+		<item name="检查房间" datasource="Examroom" width="120"/>
+		<item name="检查类别" datasource="Modality" width="120"/>
+		<item name="检查项目" datasource="Examitem" width="200" minwidth="150" autosize="fill"/>
+		<item name="备注" datasource="Remark" width="120"/>
+	</item>
+	
+	
+</item>
+<!-- ********************基本配置******************** -->
+<!-- 显示到哪个屏幕： 0 第1屏 1第二屏-->
+<item name="CallWinUIDisplaySereen" value="0"/>
+<!-- 是否有副台：0 没有，1 有-->
+<item name="EnableAssistant" value="0"/>
+<!-- 可用模态, 英文逗号分隔 -->
+<item name="UsableModalities" value="CR,CT,MR"/>
+<!-- 可用模态, 英文逗号分隔 -->
+<item name="MatchUsableModalities" value="CR,CT,MR"/>
+<item name="SamePatSeqMatch" value="1"/>
+<item name="ViewerUrl" value="http://192.168.1.94/WebViewer/WebViewer.html?"/>
+<!-- 是否需要用户验证（省人民呼叫直接跟技师）-->
+<item name="IsNeedVaildUser" value="1"/>
+<item name="DepartmentID" value="101"/>
+<!-- 关注队列的院区ID，多值英文分号分隔-->
+<item name="HospitalID" value="101;"/>
+<!-- 第二技师描述, 为空则不显示在登陆界面上 -->
+<item name="SecondUserTitle" value="1"/>
+<!-- 第三技师描述, 为空则不显示在登陆界面上 -->
+<item name="ThirdUserTitle" value="1"/>
+
+<!-- ********************列表显示配置******************** -->
+<!-- 列表字体大小 -->
+<item name="QueueFontSize" value="12"/>
+<!-- 呼叫列表刷新间隔（秒），设为0不刷新-->
+<item name="QueueInterval" value="15" />
+<!-- 检查和QA列表刷新间隔（秒），设为0不刷新-->
+<item name="OrderInterval" value="30" />
+<!-- 显示统一队列 0:显示单独队列 1:只显示统一队列 2:显示统一队列和单独队列 -->
+<item name="DisplayUnionQueue" value="2"/>
+<!-- 是否合并已呼和待呼队列,合并后使用WaitingList列配置 0 不合并, 1 合并 -->
+<item name="CombineCalledList" value="0"/>
+<!-- 待呼列表是否显示未签到检查 0 不显示，1 显示-->
+<item name="WaitListDisplayUnchecked" value="0"/>
+<!-- 待呼列表是否显示待准备检查 0 不显示，1 显示-->
+<item name="WaitListDisplayUnprepared" value="0"/>
+<!-- 启用QA列表 -->
+<item name="EnableQAList" value="1"/>
+<!-- PatientID显示为: 0:影像号, 1:模态号-->
+<item name="PatientIDTitle" value="1"/>
+<!-- 一个号多个申请单是否换行显示 -->
+<item name="MultiOrderWrap" value="1"/>
+<!-- 当前呼叫病人使用哪个ID展示，0 PatientID， 1 MedicalRecordID -->
+<item name="DisplayID" value="1"/>
+<!-- 是否关联登录的科室和院区的全部队列: 0 不关联，1 关联 -->
+<item name="EnableAllQueue" value="0"/>
+<!-- 已呼号码是否限制只显示本呼叫站呼叫的: 0 不限制，1 限制 -->
+<item name="CalledFilter" value="1"/>
+<!--默认队列或默认队列中的已呼记录，按照呼叫时间排序，最早呼的排在最前面-->
+<item name="CalledListSortByRealCallTimeAsc" value="0"/>
+<!-- ********************操作配置******************** -->
+<!-- 双击行为. 空 无行为, 1 复制单元格, 2 选呼 -->
+<item name="DoubleClickAction" value="1"/>
+<!-- 是否开启呼叫列表点击列头排序 0:不开启, 1:开启-->
+<item name="QueueListManualSort" value="0"/>
+<!-- 开启病人校验功能: 0:关闭, 1: 开启, 2: 自动弹出 -->
+<item name="EnablePatientVerify" value="1"/>
+<item name="VerifyName" value="门诊/住院号"/>
+<!-- 检查状态控制按钮-->
+<item name="UseStartExam" value="1"/>
+<item name="UseFinishExam" value="1"/>
+<!-- 通知HIS检查状态 -->
+<item name="NotifyHisExamStatus" value="0"/>
+<!-- 更改ORDER状态 -->
+<item name="UpdateOrderStatus" value="1"/>
+<!-- 呼叫和查看申请单时如果有备注，是否自动打开备注窗口 -->
+<item name="AutoShowComment" value="1"/>
+<!-- 图像里的patientid对应的登记信息：0 patid，1 modalityid，2 medicalrecordid-->
+<item name="PatientIDSource" value="2"/>
+
+<!-- ********************呼叫配置******************** -->
+<!-- 喝水指令, 为空不显示喝水按钮-->
+<item name="DrinkWaterCommand" value="请[QUEUECODE]号[PATNAME]喝水"/>
+<!-- 打针指令, 为空不显示打针按钮-->
+<item name="InjectCommand" value="请[QUEUECODE]号[PATNAME]打针"/>
+<!-- 选呼是否支持呼叫已经呼过的病人 0 不支持, 1 支持 -->
+<item name="AllowSelectReCall" value="0"/>
+<!-- 复呼次数, 复呼几次后变为扔回. 0为不变为扔回 -->
+<item name="RepeatCallLimit" value="2"/>
+<!-- 一次推迟几个号 -->
+<item name="DelayQueueNumber" value="3"/>
+<!-- 召回后是否自动推迟 0 不推迟 1 推迟  -->
+<item name="BackAutoDelay" value="1"/>
+<!-- 呼叫人写入到那个字段: 0:TECHNICIAN, 1: EXAMDR -->
+<item name="KeyNameOfCaller" value="0"/>
+<!-- 呼叫后显示同病人其他未检查号 0 不显示，1 显示-->
+<item name="NotifyPatientOtherExam" value="0"/>
+
+<!-- ********************提醒配置******************** -->
+<!-- 未匹配申请单自动提醒-->
+<item name="UnmatchNotify" value="0"/>
+<!-- 自动提醒检测日期范围, 以呼叫时间为准. 0表示当天0点开始, 1表示1天前0点开始-->
+<item name="NotifyDayRange" value="1"/>
+<!-- 自动提醒延迟的分钟数, 15表示呼叫后15分钟未匹配则提醒-->
+<item name="NotifyDelayMinute" value="15"/>
+<!-- 提醒列表内容-->
+<item name="NotifyContent" value="[patname]([patid])的[examitem]检查"/>
+<!-- 默认队列有病人等待，在其他队列呼叫的时候的提醒信息是否启用，1表示启用，0表示禁用。默认是1，正常提示。-->
+<item name="NotifyDefaultHaveWaiter" value="1"/>
+<!-- ********************申请单配置******************** -->
+<!-- 是否开启申请单-->
+<item name="IsOpenMapping" value="1"/>
+<!-- 呼叫后是否自动弹出申请单-->
+<item name="AutoShowOrder" value="0"/>
+<!-- 放射图文报告贴图时后JPEG图像文件存储主路径 -->
+<item name="ReportImageStorage" value="\\192.9.200.1\ris\opimage"/>
+<!-- 放射图文报告贴图时后JPEG图像文件存储主路径访问用户名(仅针对网络路径有效) -->
+<item name="ReportISAccessUser" value="pacs"/>
+<!-- 放射图文报告贴图时后JPEG图像文件存储主路径访问密码(仅针对网络路径有效) -->
+<item name="ReportISAccessPwd" value="ris"/>
+<item name="OrderImageAutoCloseTime" value="15"/>
+<!-- 查看电子申请单时缺省使用缩放的百分比 0=25%，1=50%，2=75%，3=100%，4=150%，5=200%，缺省为1 -->
+<item name="ShowImageZoomType" value="0"/>
+<!-- 拍摄后上传到服务器端路径 -->
+<item name="OPImageStorage" value="\\10.24.3.59\ris\orderimage"/>
+
+<!-- ********************PACS数据库相关参数******************** -->
+<item name="PACSDBName" value="RIS"/>
+<item name="PACSDBUser" value="PACS"/>
+<item name="PACSDBPassword" value="maro"/>
+
+<!-- ********************RIS数据库相关参数******************** -->
+<item name="RISDBServer" value="192.9.200.1"/>
+<item name="RISDBType" value="3"/>
+<item name="RISDBName" value="RIS"/>
+<item name="RISDBUser" value="RIS"/>
+<item name="RISDBPassword" value="maroland"/>
+<item name="RISConnectionTimeOut" value="500"/>
+<item name="RISSQLTimeOut" value="2"/>
+
+<!-- ********************HIS接口相关参数******************** -->
+<item name="UseHISInterface" value="1"/>
+<item name="HISDBType" value="0"/>
+<item name="HISDBServer" value="168.0.0.1"/>
+<item name="HISDBName" value="hnrmyy"/>
+<item name="HISDBUser" value="ssa"/>
+<item name="HISDBPassword" value="20031118"/>
+<item name="HISConnectionTimeOut" value="500"/>
+<item name="HISSQLTimeOut" value="2"/>
+<item name="UseOutPatientList" value="1"/>
+<item name="UseInpatientList" value="1"/>
+<item name="UsePhysicalList" value="1"/>
+<item name="UseEmergencyList" value="1"/>
+<item name="PacsImagePath" value=""/>
+<item name="PacsImagePath" value="D:\maroland\m-Viewer_3d\mvmain.exe"/>
+<item name="PacsImageParameter" value="-D pacs -U RT -P 2003 -A [AccNo]"/>
+
+<!-- ********************其他配置******************** -->
+<!--  浙二 查看本院就诊记录/全景视图 -->
+<item name="CDIVEnable" value="0"/>
+<!--  CDIV模式: 0 查看本院就诊记录, 1 全景视图, 2 儿保360全景视图, 3 调用接口调用第三方全景视图 -->
+<item name="CDIVMode" value="1"/>
+<item name="CDIVBrowserPath" value="http://129.120.129.29:3001/clini/"/>
+<item name="CDIVModuleCode" value="701"/>
+<item name="CDIVModuleName" value="GELINLD"/>
+<item name="CDIVModulePWD" value="123456"/>
+<item name="CDIVWebServices" value="http://192.168.254.242:57772/csp/zemjz/WebApp.TYGLService.CLS"/>
+<item name="CDIVUrlSuffix" value=""/>
+
+<!-- 外部程序 -->
+<!-- ExProgramTitle是右键菜单中的显示内容-->
+<item name="ExProgramTitle" value=""/>
+<!-- 是否需要预先启动常驻后台 -->
+<item name="ExProgramPermanent" value="0"/>
+<item name="ExProgramPath" value="f:\GL_RIS\7-TechWorkStation\1-Code\过敏史程序\OutShow.exe"/>
+<item name="ExProgramArguments" value="&quot;[patid]^[patname]^[inpatientid]^[username]^[usercode]^[depid]^0^[patsrc]^[outpatientid]^[admissiondt]^[winhnd]&quot;"/>
+
+<!-- 外部服务 -->
+<!-- ExWebServiceTitle是右键菜单中的显示内容, 为空则不会显示-->
+<item name="ExWebServiceTitle" value=""/>
+<item name="ExWebServicePath" value="http://192.168.254.57:8086/PatientJoinForm.aspx"/>
+<item name="ExExWebServiceArguments" value="patientid=[病人ID]&amp;series=[住院号]&amp;ward=[科室代码]&amp;usercode=[用户工号]"/>
+<!--省儿保扫码转换-->
+<item name="ScanNoTranslator" value="ERBAO"/>
+
+<!--HIS连接字符串(造影剂用)-->
+<item name="HISConnectStr" value=""/>
+<item name="ClientSettingsProvider.ServiceUri" value=""/>
+<!-- log4net config file... -->
+<item name="log4net-config-file" value="log4net.config"/>
+<!--签到相关配置-->
+<!--是否支持签到功能，1开启-->
+<item name="isSupportCheckIn" value=""/>
+<!--签到终端类型-->
+<item name="TerminalType" value=""/>
+<!-- 是否启用强制签到功能，值域: 1: 开启，0: 关闭-->
+<item name="IsUseForceCheckIn" value=""/>
+<!--导诊链接-->
+<item name="GuidingUrl" value="https://192.168.1.67:8080/ThirdWebPage/patientGuiding"/>
+<!--操作日志链接-->
+<item name="OperationLogUrl" value="http://localhost:2029"/>
+<!--ip地址前缀-->
+<item name="IpPrefix" value="192." width="10."/>
+</config>

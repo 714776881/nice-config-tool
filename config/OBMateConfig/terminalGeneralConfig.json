@@ -1,0 +1,9 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "终端通用配置",
+			"filePath":"Terminal\\RisTerminalGeneral_Config.xml",
+			"nodePath":"/config/item[@name='TerminalConfiguration']"
+		}
+	]
+}

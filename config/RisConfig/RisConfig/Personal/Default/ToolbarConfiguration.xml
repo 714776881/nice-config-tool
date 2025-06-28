@@ -1,0 +1,518 @@
+<config versiontag="root">
+  <!--工具栏配置,RAD对应放射科，US对应超声科，ES对应内镜科-->
+  <item name="ToolbarConfiguration" versiontag="201812.3527">
+    <!--Worklist配置对应科室下的Worklist界面的工具栏-->
+    <!--Report配置对应科室下的报告界面的工具栏-->
+    <item name="RAD" versiontag="201812.3528">
+      <item name="Worklist" value="#Array" versiontag="201812.3529">
+        <item value="#Array" versiontag="201812.3530">
+          <item versiontag="201812.3531">
+            <item name="Name" value="WriteReport" versiontag="201812.3532" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3533">
+          <item versiontag="201812.3534">
+            <item name="Name" value="ModifyReport" versiontag="201812.3535" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3536">
+          <item versiontag="201812.3537">
+            <item name="Name" value="ShowReport" versiontag="201812.3538" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3539">
+          <item versiontag="201812.3540">
+            <item name="Name" value="PrintReport" versiontag="201812.3541" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3542">
+          <item versiontag="201812.3543">
+            <item name="Name" value="ShowImage" versiontag="201812.3544" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3545">
+          <item versiontag="201812.3546">
+            <item name="Name" value="ShowRequisition" versiontag="201812.3547" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3548">
+          <item versiontag="201812.3549">
+            <item name="Name" value="ViewOrderComment" versiontag="201812.3550" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3551">
+          <item versiontag="201812.3552">
+            <item name="Name" value="FollowUp" versiontag="201812.3553" />
+          </item>
+        </item>
+        <!-- 区域版 -->
+        <!-- <item value="#Array">
+          <item>
+            <item name="Name" value="AreaConsult"/>
+          </item>
+        </item>
+        <item value="#Array">
+          <item>
+            <item name="Name" value="ManageConsult"/>
+          </item>
+        </item>  -->
+      </item>
+      <item name="Report" value="#Array" versiontag="201812.3554">
+        <item value="#Array" versiontag="201812.3555">
+          <item versiontag="201812.3556">
+            <item name="Name" value="ShowRequisition" versiontag="201812.3557" />
+          </item>
+          <item versiontag="201812.3558">
+            <item name="Name" value="ShowLabResult" versiontag="201812.3559" />
+          </item>
+          <item versiontag="201812.3560">
+            <item name="Name" value="TechnicalReport" versiontag="201812.3561" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3562">
+          <item versiontag="201812.3563">
+            <item name="Name" value="SaveReport" versiontag="201812.3564" />
+          </item>
+          <item versiontag="201812.3565">
+            <item name="Name" value="VerifyReport" versiontag="201812.3566" />
+          </item>
+          <item versiontag="201812.3567">
+            <item name="Name" value="PrintReport" versiontag="201812.3568" />
+          </item>
+          <item versiontag="201812.3569">
+            <item name="Items" value="#Array" versiontag="201812.3570">
+              <item versiontag="201812.3571">
+                <item name="Name" value="SuspendReport" versiontag="201812.3572" />
+              </item>
+              <item versiontag="201812.3573">
+                <item name="Name" value="ReportBack" versiontag="201812.3574" />
+              </item>
+              <item versiontag="201812.3575">
+                <item name="Name" value="PrintPreview" versiontag="201812.3576" />
+              </item>
+            </item>
+          </item>
+          <item versiontag="201812.3577">
+            <!--这是一组按钮，默认是上下排布，不展开的，可以配置展开的级别-->
+            <!--若需要分辨率大于1280时展开，ExpandLevel对应的值设为2-->
+            <!--当需要分辨率大于1024，小于1280时展开，ExpandLevel对应的值设为1-->
+            <!--若不需要展开，将ExpandLevel这个节点删除即可-->
+            <item name="ExpandLevel" value="1" versiontag="201812.3578" />
+            <item name="Items" value="#Array" versiontag="201812.3579">
+              <item versiontag="201812.3580">
+                <item name="Name" value="SaveReportTemplate" versiontag="201812.3581" />
+              </item>
+              <item versiontag="201812.3582">
+                <item name="Name" value="CopyImage" versiontag="201812.3583" />
+              </item>
+            </item>
+          </item>
+          <item versiontag="201812.3584">
+            <item name="Items" value="#Array" versiontag="201812.3585">
+              <item versiontag="201812.3586">
+                <item name="Name" value="ReportTemplate" versiontag="201812.3587" />
+              </item>
+            </item>
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3588">
+          <item versiontag="201812.3589">
+            <item name="ExpandLevel" value="2" versiontag="201812.3590" />
+            <item name="Items" value="#Array" versiontag="201812.3591">
+              <item versiontag="201812.3592">
+                <item name="Name" value="CopyReport" versiontag="201812.3593" />
+              </item>
+              <item versiontag="201812.3594">
+                <item name="Name" value="PasteReport" versiontag="201812.3595" />
+              </item>
+              <item versiontag="201812.3596">
+                <item name="Name" value="ClearReport" versiontag="201812.3597" />
+              </item>
+            </item>
+          </item>
+          <item versiontag="201812.3598">
+            <item name="Name" value="SendMessage" versiontag="201812.3599" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3600">
+          <item versiontag="201812.3601">
+            <item name="Name" value="ShowImage" versiontag="201812.3602" />
+          </item>
+          <item versiontag="201812.3603">
+            <item name="ExpandLevel" value="2" versiontag="201812.3604" />
+            <item name="Items" value="#Array" versiontag="201812.3605">
+              <item versiontag="201812.3606">
+                <item name="Name" value="ViewOrderComment" versiontag="201812.3607" />
+              </item>
+              <item versiontag="201812.3608">
+                <item name="Name" value="ShowDtOrder" versiontag="201812.3609" />
+              </item>
+              <item versiontag="201812.3610">
+                <item name="Name" value="ShowEMR" versiontag="201812.3611" />
+              </item>
+            </item>
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3612">
+          <item versiontag="201812.3613">
+            <item name="ExpandLevel" value="2" versiontag="201812.3614" />
+            <item name="Items" value="#Array" versiontag="201812.3615">
+              <item versiontag="201812.3616">
+                <item name="Name" value="QualityScore" versiontag="201812.3617" />
+              </item>
+              <item versiontag="201812.3618">
+                <item name="Name" value="CTInterTherapy" versiontag="201812.3619" />
+              </item>
+              <item versiontag="201812.3620">
+                <item name="Name" value="AddFavorite" versiontag="201812.3621" />
+              </item>
+            </item>
+          </item>
+          <item versiontag="201812.3622">
+            <item name="Items" value="#Array" versiontag="201812.3623">
+              <item versiontag="201812.3624">
+                <item name="Name" value="AutoRefresh" versiontag="201812.3625" />
+              </item>
+              <item versiontag="201812.3626">
+                <item name="Name" value="AutoOrderPaper" versiontag="201812.3627" />
+              </item>
+              <item versiontag="201812.3628">
+                <item name="Name" value="ShowQueue" versiontag="201812.3629" />
+              </item>
+            </item>
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3630">
+          <item versiontag="201812.3631">
+            <item name="Name" value="SendSMS" versiontag="201812.3632" />
+          </item>
+        </item>
+      </item>
+      <item name="Card" value="#Array" versiontag="202401.630">
+        <item name="Name" value="WriteReport" versiontag="202401.631" />
+        <item name="Name" value="ModifyReport" versiontag="202401.632" />
+        <item name="Name" value="ShowImage" versiontag="202401.633" />
+        <item name="Name" value="ViewOrderComment" versiontag="202401.634" />
+      </item>
+    </item>
+    <item name="US" versiontag="201812.3633">
+      <item name="Worklist" value="#Array" versiontag="201812.3634">
+        <item value="#Array" versiontag="201812.3635">
+          <item versiontag="201812.3636">
+            <item name="Name" value="WriteReport" versiontag="201812.3637" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3638">
+          <item versiontag="201812.3639">
+            <item name="Name" value="ModifyReport" versiontag="201812.3640" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3641">
+          <item versiontag="201812.3642">
+            <item name="Name" value="ShowReport" versiontag="201812.3643" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3644">
+          <item versiontag="201812.3645">
+            <item name="Name" value="PrintReport" versiontag="201812.3646" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3647">
+          <item versiontag="201812.3648">
+            <item name="Name" value="ShowImage" versiontag="201812.3649" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3650">
+          <item versiontag="201812.3651">
+            <item name="Name" value="ShowRequisition" versiontag="201812.3652" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3653">
+          <item versiontag="201812.3654">
+            <item name="Name" value="ViewOrderComment" versiontag="201812.3655" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3656">
+          <item versiontag="201812.3657">
+            <item name="Name" value="FollowUp" versiontag="201812.3658" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="202109.151">
+          <item versiontag="202109.152">
+            <item name="Name" value="ShowFollowUp" versiontag="202109.153" />
+          </item>
+        </item>
+        <!-- 区域版 -->
+        <!-- <item value="#Array">
+          <item>
+            <item name="Name" value="AreaConsult"/>
+          </item>
+        </item>
+        <item value="#Array">
+          <item>
+            <item name="Name" value="ManageConsult"/>
+          </item>
+        </item>  -->
+      </item>
+      <item name="Report" value="#Array" versiontag="201812.3659">
+        <item value="#Array" versiontag="201812.3660">
+          <item versiontag="201812.3661">
+            <item name="Name" value="ShowRequisition" versiontag="201812.3662" />
+          </item>
+          <item versiontag="201812.3663">
+            <item name="Name" value="InterTherapy" versiontag="201812.3664" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3665">
+          <item versiontag="201812.3666">
+            <item name="Name" value="SaveReport" versiontag="201812.3667" />
+          </item>
+          <item versiontag="201812.3668">
+            <item name="Name" value="SaveVerifyReport" versiontag="201812.3669" />
+          </item>
+          <item versiontag="201812.3670">
+            <item name="ExpandLevel" value="1" versiontag="201812.3671" />
+            <item name="Items" value="#Array" versiontag="201812.3672">
+              <item versiontag="201812.3673">
+                <item name="Name" value="SuspendReport" versiontag="201812.3674" />
+              </item>
+              <item versiontag="201812.3675">
+                <item name="Name" value="PrintReport" versiontag="201812.3676" />
+              </item>
+              <item versiontag="201812.3677">
+                <item name="Name" value="PrintPreview" versiontag="201812.3678" />
+              </item>
+            </item>
+          </item>
+          <item versiontag="202109.154">
+            <item name="Name" value="ResetReportTemplate" versiontag="202109.155" />
+          </item>
+          <item versiontag="201812.3679">
+            <item name="Name" value="SaveReportTemplate" versiontag="201812.3680" />
+          </item>
+          <item versiontag="201812.3681">
+            <item name="Items" value="#Array" versiontag="201812.3682">
+              <item versiontag="201812.3683">
+                <item name="Name" value="ReportTemplate" versiontag="201812.3684" />
+              </item>
+            </item>
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3685">
+          <item versiontag="201812.3686">
+            <item name="ExpandLevel" value="2" versiontag="201812.3687" />
+            <item name="Items" value="#Array" versiontag="201812.3688">
+              <item versiontag="201812.3689">
+                <item name="Name" value="CopyReport" versiontag="201812.3690" />
+              </item>
+              <item versiontag="201812.3691">
+                <item name="Name" value="PasteReport" versiontag="201812.3692" />
+              </item>
+              <item versiontag="201812.3693">
+                <item name="Name" value="ClearReport" versiontag="201812.3694" />
+              </item>
+            </item>
+          </item>
+          <item versiontag="201812.3695">
+            <item name="Name" value="SendMessage" versiontag="201812.3696" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3697">
+          <item versiontag="201812.3698">
+            <item name="Name" value="AddFavorite" versiontag="201812.3699" />
+          </item>
+          <item versiontag="201812.3700">
+            <item name="Items" value="#Array" versiontag="201812.3701">
+              <item versiontag="201812.3702">
+                <item name="Name" value="AutoRefresh" versiontag="201812.3703" />
+              </item>
+              <item versiontag="201812.3704">
+                <item name="Name" value="AutoOrderPaper" versiontag="201812.3705" />
+              </item>
+              <item versiontag="201812.3706">
+                <item name="Name" value="ShowQueue" versiontag="201812.3707" />
+              </item>
+            </item>
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3708">
+          <item versiontag="201812.3709">
+            <item name="Name" value="RealTimeVideo" versiontag="201812.3710" />
+          </item>
+        </item>
+      </item>
+      <item name="Card" value="#Array">
+        <item name="Name" value="WriteReport"/>
+        <item name="Name" value="ModifyReport"/>
+        <item name="Name" value="ShowImage"/>
+        <item name="Name" value="ViewOrderComment"/>
+      </item>
+    </item>
+    <item name="ES" versiontag="201812.3713">
+      <item name="Worklist" value="#Array" versiontag="201812.3714">
+        <item value="#Array" versiontag="201812.3715">
+          <item versiontag="201812.3716">
+            <item name="Name" value="WriteReport" versiontag="201812.3717" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3718">
+          <item versiontag="201812.3719">
+            <item name="Name" value="ModifyReport" versiontag="201812.3720" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3721">
+          <item versiontag="201812.3722">
+            <item name="Name" value="ShowReport" versiontag="201812.3723" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3724">
+          <item versiontag="201812.3725">
+            <item name="Name" value="PrintReport" versiontag="201812.3726" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3727">
+          <item versiontag="201812.3728">
+            <item name="Name" value="ShowImage" versiontag="201812.3729" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3730">
+          <item versiontag="201812.3731">
+            <item name="Name" value="ShowRequisition" versiontag="201812.3732" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3733">
+          <item versiontag="201812.3734">
+            <item name="Name" value="ViewOrderComment" versiontag="201812.3735" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3736">
+          <item versiontag="201812.3737">
+            <item name="Name" value="FollowUp" versiontag="201812.3738" />
+          </item>
+        </item>
+        <!-- 区域版 -->
+        <!-- <item value="#Array">
+          <item>
+            <item name="Name" value="AreaConsult"/>
+          </item>
+        </item>
+        <item value="#Array">
+          <item>
+            <item name="Name" value="ManageConsult"/>
+          </item>
+        </item>  -->
+      </item>
+      <item name="Report" value="#Array" versiontag="201812.3739">
+        <item value="#Array" versiontag="201812.3740">
+          <item versiontag="201812.3741">
+            <item name="Name" value="ShowRequisition" versiontag="201812.3742" />
+          </item>
+          <!--<item versiontag="201812.3743">
+            <item name="Name" value="ShowLabResult" versiontag="201812.3744" />
+          </item>-->
+        </item>
+        <item value="#Array" versiontag="201812.3745">
+          <item versiontag="201812.3746">
+            <item name="Name" value="SaveReport" versiontag="201812.3747" />
+          </item>
+          <item versiontag="201812.3748">
+            <item name="Name" value="SaveVerifyReport" versiontag="201812.3749" />
+          </item>
+          <item versiontag="201812.3750">
+            <item name="ExpandLevel" value="1" versiontag="201812.3751" />
+            <item name="Items" value="#Array" versiontag="201812.3752">
+              <item versiontag="201812.3753">
+                <item name="Name" value="SuspendReport" versiontag="201812.3754" />
+              </item>
+              <item versiontag="201812.3755">
+                <item name="Name" value="PrintReport" versiontag="201812.3756" />
+              </item>
+              <item versiontag="201812.3757">
+                <item name="Name" value="PrintPreview" versiontag="201812.3758" />
+              </item>
+            </item>
+          </item>
+          <item versiontag="201812.3759">
+            <item name="Name" value="SaveReportTemplate" versiontag="201812.3760" />
+          </item>
+          <item versiontag="201812.3761">
+            <item name="Items" value="#Array" versiontag="201812.3762">
+              <item versiontag="201812.3763">
+                <item name="Name" value="ReportTemplate" versiontag="201812.3764" />
+              </item>
+            </item>
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3765">
+          <item versiontag="201812.3766">
+            <item name="ExpandLevel" value="2" versiontag="201812.3767" />
+            <item name="Items" value="#Array" versiontag="201812.3768">
+              <item versiontag="201812.3769">
+                <item name="Name" value="CopyReport" versiontag="201812.3770" />
+              </item>
+              <item versiontag="201812.3771">
+                <item name="Name" value="PasteReport" versiontag="201812.3772" />
+              </item>
+              <item versiontag="201812.3773">
+                <item name="Name" value="ClearReport" versiontag="201812.3774" />
+              </item>
+            </item>
+          </item>
+          <item versiontag="201812.3775">
+            <item name="Name" value="SendMessage" versiontag="201812.3776" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3777">
+          <item versiontag="201812.3778">
+            <item name="Name" value="ImageProcessing" versiontag="201812.3779" />
+          </item>
+          <item versiontag="201812.3780">
+            <item name="ExpandLevel" value="1" versiontag="201812.3781" />
+            <item name="Items" value="#Array" versiontag="201812.3782">
+              <item versiontag="201812.3783">
+                <item name="Name" value="ViewOrderComment" versiontag="201812.3784" />
+              </item>
+              <item versiontag="201812.3785">
+                <item name="Name" value="ShowEMR" versiontag="201812.3786" />
+              </item>
+            </item>
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3787">
+          <item versiontag="201812.3788">
+            <item name="Name" value="AddFavorite" versiontag="201812.3789" />
+          </item>
+          <item versiontag="201812.3790">
+            <item name="Name" value="RealTimeVideo" versiontag="201812.3791" />
+          </item>
+          <item versiontag="201812.3792">
+            <item name="Items" value="#Array" versiontag="201812.3793">
+              <item versiontag="201812.3794">
+                <item name="Name" value="AutoRefresh" versiontag="201812.3795" />
+              </item>
+              <item versiontag="201812.3796">
+                <item name="Name" value="AutoOrderPaper" versiontag="201812.3797" />
+              </item>
+            </item>
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3801">
+          <item versiontag="201812.3802">
+            <item name="Name" value="PrintPathology" versiontag="201812.3803" />
+          </item>
+        </item>
+        <item value="#Array" versiontag="201812.3804">
+          <item versiontag="201812.3805">
+            <item name="Name" value="MirrorSetting" versiontag="201812.3806" />
+          </item>
+        </item>
+      </item>
+      <item name="Card" value="#Array">
+        <item name="Name" value="WriteReport"/>
+        <item name="Name" value="ModifyReport"/>
+        <item name="Name" value="ShowImage"/>
+        <item name="Name" value="ViewOrderComment"/>
+      </item>
+    </item>
+  </item>
+</config>

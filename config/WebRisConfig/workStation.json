@@ -1,0 +1,233 @@
+{
+  "columnConfig": [
+  	{
+      "title": "工作站名称",
+      "key": "NAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请选择"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "工作站编码",
+      "key": "CODE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "工作站编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入工作站编码"
+          }
+        ],
+
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "工作站描述",
+      "key": "REMARK",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 180,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "工作站编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入工作站编码"
+          }
+        ],
+		"span": "24",
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "默认设备",
+      "key": "DEPTCODE",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "模板名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入模板名称"
+          }
+        ],
+        "defaultValue": ""
+      },
+	  "dicSql":"select distinct equipmentid as value,equipment as label from t_equipment where deleted='0' and departmentid='{GLOBAL}{DEPARTMENTID}'"
+    },
+	{
+      "title": "默认工作站",
+      "key": "ISDEFAULT",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "是/否",
+		  "options": [
+			{ "label": "是", "value": "1" },
+			{ "label": "否", "value": "0" }
+		  ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入病人类型"
+          }
+        ],
+		"defaultValue":"否"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_style"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_workstationconfig t where t.departmentid='{GLOBAL}{DEPARTMENTID}' order by sequence",
+    "insert": "insert into t_workstationconfig (name, code, remark, departmentid, hospitalid, regionid, isdefault, deleted, id) values ('{NAME}', '{CODE}', '{REMARK}', '{GLOBAL}{DEPARTMENTID}', '{GLOBAL}{HOSPITALID}', '{GLOBAL}{REGIONID}', '{ISDEFAULT}', '0', '{ID}')",
+    "update": "update t_workstationconfig set name = '{NAME}', code = '{CODE}', remark = '{REMARK}', isdefault = '{ISDEFAULT}' where id = '{ID}' ",
+    "setState": "update t_workstationconfig set deleted = '{DELETED}' where id = '{ID}'",
+	"delete": "delete from t_workstationconfig where id = '{ID}'",
+	"setSequence":"update t_workstationconfig set sequence = '{SEQUENCE}' where id = '{ID}'",
+    "exportData": "select * from t_workstationconfig t where t.departmentid='{GLOBAL}{DEPARTMENTID}' order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"20"
+  },
+  "scopeConfig":{
+	  "isShow": true,
+	  "level": 2
+  }
+}

@@ -1,0 +1,128 @@
+﻿<config>
+
+	<!--检查列表、历史检查、同名检查、申请单列表里的配置-->
+	<item name="TopicConfiguration">
+		<!--检查列表的配置，分为Worklist和Report模式-->
+		<!--AutoSort配置自动排序的列，使用升序还是降序-->
+		<!--PaginationConfig中配置是否开启分页功能，及超过多少条数据时使用分页功能-->
+		<!--AutoRefresh中配置是否开启自动刷新功能，及每隔多少秒进行一次自动刷新-->
+		<!--ToolbarConfig中配置列表右上角的工具栏,Default中配置通用的，US中配置超声独有的按钮，ES中配置内镜独有的按钮-->
+		<item name="QueryGridConfig">
+			<item name="Worklist"><!--GridResultConfig配置显示的结果列，value参考RisGeneral_Config.xml中PreDefineConfiguration/WorkListGridPreDefine的子节点名称-->
+				<item name="GridResultConfig" value="#Array">
+				  <item>
+					<item name="Name" value="OrderDate" />
+				  </item>
+				  <item>
+					<item name="Name" value="Examno" />
+				  </item>
+				  <item>
+					<item name="Name" value="ObExamType" />
+				  </item>
+				  <item>
+					<item name="Name" value="Examitem" />
+				  </item>
+				  <item>
+					<item name="Name" value="OrderStatus" />
+				  </item>
+				  <item>
+					<item name="Name" value="PatientName" />
+				  </item>
+				  <item>
+					<item name="Name" value="PatientAge" />
+				  </item>
+				  <item>
+					<item name="Name" value="PatientID" />
+				  </item>
+				  <item>
+					<item name="Name" value="Examdt" />
+				  </item>
+				  <item>
+					<item name="Name" value="Reportdr" />
+				  </item>
+				  <item>
+					<item name="Name" value="Reportdt" />
+				  </item>
+				  <item>
+					<item name="Name" value="OrderComment" />
+				  </item>
+				  <item>
+					<item name="Name" value="ExternalExamNo" />
+				  </item>
+				  <item>
+					<item name="Name" value="PatientInstanceUID" />
+				  </item>
+				</item>
+				<!--RightClickMenuConfig配置右键菜单显示的内容，value参考RisGeneral_Config.xml中PreDefineConfiguration/OperationPreDefine的子节点名称-->
+				<!--右键菜单有分组的功能，目前有3组，可根据需要增加或移除组，也可以在每个组里增加或移除菜单项-->
+				<item name="RightClickMenuConfig" value="#Array">
+				  <item value="#Array" >
+					<item value="WriteReport" />
+					<item value="ModifyReport" />
+					<item value="ShowReport" />
+					<item value="ViewOrderComment" />
+				  </item>
+				</item>
+				<!--TipsConfig配置Tips中显示的内容,value参考RisGeneral_Config.xml中PreDefineConfiguration/ResultGridTipPreDefine的子节点名称-->
+				<item name="TipsConfig" value="#Array">
+					<!--tips有多行，每行可以配显示多个信息，如一行可以显示PatientName,PatientSex,PatientAge-->
+				  <item value="#Array">
+					<item value="WriteReport" />
+					<item value="ModifyReport" />
+					<item value="ShowReport" />
+				  </item><item value="#Array">
+					<item value="PatientID"/>
+				  </item>
+				  <item value="#Array">
+					<item value="PatientName" />
+					<item value="PatientSex"/>
+					<item value="PatientAge"/>
+				  </item>
+				  <item value="#Array">
+					<item value="Examitem" />
+				  </item>
+				  <item value="#Array">
+					<item value="ExamDr" />
+					<item value="Examdt" />
+				  </item>
+				  <item value="#Array">
+					<item value="StudyResult" />
+				  </item>
+				  <item value="#Array">
+					<item value="DiagResult" />
+				  </item>
+				  <item value="#Array">
+					<item value="Reportdr" />
+					<item value="Reportdt" />
+				  </item>
+				  <item value="#Array">
+					<item value="VerifyDr" />
+					<item value="Verifydt" />
+				  </item>
+				</item>
+				<!--表格查询到的数据是否自动排序，如果不需要排序，直接删除AutoSort这个节点-->
+				<!--Name对应的value，参考RisGeneral_Config.xml中PreDefineConfiguration/GridResultSortRule的子节点名称-->
+				<!--Order代表排序，A是升序，D是降序-->
+				<item name="AutoSort" value="#Array">
+					<item>
+						<item name="Name" value="OrderDate"/>
+						<item name="Order" value="D"/>
+					</item>
+				</item>
+				<item name="AutoRefresh">
+					<item name="Enable" value="false"/>
+					<item name="Interval" value="300"/>
+				</item>
+				<item name="DoubleClick">
+					<item name="Enable" value="true"/>
+				</item>
+				<!--分页配置，Switch中为true表示启用分页功能，为false表示不启用分页功能，当Switch为true时，查询到的数据超过MaxSize的值时，使用分页功能-->
+				<item name="PaginationConfig">
+					<item name="Switch" value="true"/>
+					<item name="MaxSize" value="2000"/>
+					<item name="IsDisplay" value="true"/>
+				</item>
+			</item>
+		</item>
+	</item>
+</config>

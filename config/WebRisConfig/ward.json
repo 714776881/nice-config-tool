@@ -44,7 +44,30 @@
             "message": "请输入编码"
           }
         ],
-		"defaultValueBySql":"select '1' || LPAD(COUNT(*) , 3, '0') value from t_dictionary d where (d.diccategory = '1013')"
+		"defaultValueBySql":"select generate_code('t_dictionary.dictionaryid','{GLOBAL}{HOSPITALID}','3') value from dual"
+      }
+    },
+	{
+      "title": "输入码",
+      "key": "SRM",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "病区"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "病区"
+          }
+        ],
+        "defaultValue": ""
       }
     },
     {
@@ -101,11 +124,35 @@
           }
         ]
       }
-    }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_dictionary d where d.diccategory = '1013'"
+      }
+	}
   ],
   "sqlTemplates": {
-    "select": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013'",
-    "insert": "insert into t_dictionary(dictionaryid,diccategory,itemcode,itemname,deleted) values('{ID}','1013','{ITEMCODE}','{ITEMNAME}','{DELETED}')",
+    "select": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1013' and d.hospitalid='{GLOBAL}{HOSPITALID}' order by sequence",
+    "insert": "insert into t_dictionary(dictionaryid,diccategory,itemcode,itemname,deleted,hospitalid,sequence) values('{ID}','1013','{ITEMCODE}','{ITEMNAME}','0','{GLOBAL}{HOSPITALID}','{SEQUENCE')",
     "update": "update t_dictionary d set d.diccategory = '1013',d.itemcode = '{ITEMCODE}',d.itemname = '{ITEMNAME}' where d.dictionaryid = '{ID}'",
     "setState": "update t_dictionary set deleted = '{DELETED}' where dictionaryid = '{ID}'",
 	"delete": "delete from t_dictionary where dictionaryid = '{ID}'",
@@ -121,5 +168,9 @@
 	"setSequence": true,
 	"exportData": true,
 	"importData": true
+  },
+  "scopeConfig":{
+	  "isShow": true,
+	  "level": 1
   }
 }

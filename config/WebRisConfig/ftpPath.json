@@ -1,0 +1,270 @@
+{
+  "columnConfig": [
+  	{
+      "title": "IP地址",
+      "key": "IPADDRESS",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "端口号",
+      "key": "PORT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 180,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "用户名",
+      "key": "FTPUSER",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "密码",
+      "key": "FTPPASSWORD",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 180,
+      "component": {
+        "name": "a-input-password",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "虚拟路径",
+      "key": "VIRTUALPATH",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+		"span": "24",
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "是否当前路径",
+      "key": "CURRENTROOT",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "是/否",
+		  "options": [
+			{ "label": "是", "value": "1" },
+			{ "label": "否", "value": "0" }
+		  ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入病人类型"
+          }
+        ],
+		"defaultValue":"0"
+      }
+    },
+	{
+      "title": "索引值",
+      "key": "ROOTINDEX",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 180,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "存储类型",
+      "key": "ROOTTYPE",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择",
+		  "style": "width:160px",
+          "options": [
+            {
+              "label": "TX报告",
+              "value": "1"
+            },
+            {
+              "label": "拍摄单",
+              "value": "2"
+            },
+            {
+              "label": "采集图像",
+              "value": "3"
+            },
+            {
+              "label": "报告贴图",
+              "value": "4"
+            },
+            {
+              "label": "内镜定位图",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "1"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_rootlist t where t.regionid='{GLOBAL}{REGIONID}'",
+    "insert": "insert into t_rootlist (id, ipaddress, port, ftpuser, ftppassword, virtualpath, currentroot, rootindex, roottype, regionid) values (nvl((select max(id) + 1 from t_rootlist),0), '{IPADDRESS}', TO_NUMBER('{PORT}'), '{FTPUSER}', '{FTPPASSWORD}', '{VIRTUALPATH}', TO_NUMBER('{CURRENTROOT}'), TO_NUMBER('{ROOTINDEX}'), TO_NUMBER('{ROOTTYPE}'), '{GLOBAL}{REGIONID}')",
+    "update": "update t_rootlist set ipaddress = '{IPADDRESS}', port = TO_NUMBER('{PORT}'), ftpuser = '{FTPUSER}', ftppassword = '{FTPPASSWORD}', virtualpath = '{VIRTUALPATH}', currentroot = TO_NUMBER('{CURRENTROOT}'), rootindex = TO_NUMBER('{ROOTINDEX}'), roottype = TO_NUMBER('{ROOTTYPE}') where id = '{ID}'",
+    "setState": "update t_rootlist set deleted = '{DELETED}' where id = '{ID}'",
+	"delete": "delete from t_rootlist where id = '{ID}'",
+	"setSequence":"update t_rootlist set sequence = '{SEQUENCE}' where id = '{ID}'",
+    "exportData": "select * from t_rootlist t where t.regionid='{GLOBAL}{REGIONID}'"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": false,
+	"setStateToDelete": true,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"20"
+  },
+  "scopeConfig":{
+	  "isShow": true,
+	  "level": 0
+  }
+}

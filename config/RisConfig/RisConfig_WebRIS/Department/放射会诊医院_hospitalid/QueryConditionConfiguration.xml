@@ -1,0 +1,14 @@
+﻿<config>
+	<item name="QueryConditionConfiguration">
+		<item name="Basic" value="#Array">
+			<item value="DateTimeCondtion"/>
+			<item value="PatientName"/>
+			<item value="VariableID"/>
+			<item value="Hospital"/>
+			<item value="Modality"/>
+			<item value="ExamStatus"/>
+			<item value="ReportStatus"/>
+			<item value="Accno"/>
+		</item>
+	</item>
+</config>

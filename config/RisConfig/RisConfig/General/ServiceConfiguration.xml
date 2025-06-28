@@ -1,0 +1,88 @@
+<config versiontag="root">
+  <item name="ServiceConfiguration" versiontag="201812.2707">
+    <!--工作列表-->
+    <item name="WorklistAddress" value="http://10.24.2.164:9988/WebWorklist.aspx?" versiontag="201812.2708" />
+    <!--单独关联检查列表-->
+    <item name="AssociatedExamAddress" value="http://10.24.2.164:9988/WebAssociatedExam.aspx" versiontag="202012.101" />
+    <!--导航栏-->
+    <item name="NavigationAddress" value="http://10.24.2.164:9988/WebNavigationBar.aspx?" versiontag="201812.2710" />
+    <!--工具栏-->
+    <item name="ToolbarAddress" value="http://10.24.2.164:9988/WebToolbar.aspx?" versiontag="201812.2711" />
+    <!--质控评分页面-->
+    <item name="QualityControlAddress" value="http://10.24.1.67:9001/WebQualityControl.aspx" versiontag="202110.102" />
+    <!--登记页面-->
+    <item name="RegisterAddress" value="" versiontag="202111.42" />
+    <!--相似报告页面-->
+    <item name="SimilarReportAddress" value="http://10.24.1.67:9001/WebSimilarReport.aspx" />
+    <!--集成网页-->
+    <item name="ContainerAddress" value="http://10.24.1.67:9001/WebFrameContainer.aspx" versiontag="202110.103" />
+    <!--造影剂-->
+    <item name="ContrastAddress" value="http://10.24.1.111:9002/RecordContrastAgent.aspx" versiontag="201912.255" />
+    <!--检验结果-->
+    <item name="LabResultAddress" value="http://10.24.2.244/ViewLabResult?outpatient_id=[OutPatientID]&amp;inpatient_id=[InPatientID]&amp;patient_id=[PatID]" versiontag="201812.2712" />
+    <!--超声采图列表-->
+    <item name="USListPath" value="http://10.24.2.164:8007/USList.aspx" versiontag="201812.2713" />
+    <!--超声采图大图-->
+    <item name="AmplifyImageUrl" value="http://10.24.2.164:8007/AmplifyImage.aspx" versiontag="201812.2716" />
+    <!--病理结果-->
+    <item name="OTDiagResultView" value="http://127.0.0.1/bingli/pisview.aspx?id=[ID]" versiontag="201812.2717" />
+    <!-- 单点登录 
+    <item name="SingleSignOn" value="1-http://10.24.2.170:34567/WebService1.asmx"/>-->
+    <!-- 检查管理服务 EMS -->
+    <item name="ExamServiceAddress" value="http://10.24.2.164:8878" versiontag="201812.2718" />
+    <!-- 通讯录服务 -->
+    <item name="AddressListService" value="10.24.2.164:8899" versiontag="201812.2719" />
+    <!-- 队列服务，填写queueservice的监听IP及端口，如:http://10.24.2.164:8007 -->
+    <item name="QueueService" value="" versiontag="201812.2720" />
+    <!-- 聊天室 -->
+    <item name="ChatRoomIISUri" value="10.24.2.164:8072" versiontag="201812.2721" />
+    <!-- iScanHelper -->
+    <item name="iScanHelperAddress" value="http://10.24.2.164:9011/iscanhelperview.aspx" versiontag="201812.2722" />
+    <!-- iScanHelper KeyCode -->
+    <item name="iScanHelperKeyCode" value="123456789" versiontag="202006.409" />
+    <!--预约页面-->
+    <item name="BookingUrl" value="http://localhost:48861/WebAppointment.aspx?hisorderid=[HisID]&amp;patid=[PatientID]&amp;patname=[PatientName]&amp;jzkh=[OutPatientID]&amp;Modality=[Modality]&amp;examitem=[Examitem]&amp;patientType=[PatientType]&amp;orderseq=[OrderSequence]" versiontag="201812.2723" />
+    <!--号源查询页面-->
+    <item name="BookingQueryUrl" value="http://localhost:48861/WebQueueInfoSearch.aspx?deptid=[DepartmentID]" versiontag="201812.2724" />
+    <!--桌面版Viewer地址-->
+    <item name="DesktopViewerUrl" value="" versiontag="201906.178" />
+    <!--HtmlViewer地址-->
+    <item name="HtmlViewerUrl" value="" versiontag="201906.179" />
+    <!--自动阅片地址-->
+    <!--<item name="AutoViewerUrl" value="http://10.24.1.67:9088/StartViewer.aspx?orderseq=[OrderSequence]&amp;datasourcename=[DataSourceName]&amp;userid=[UserID]"/>-->
+    <!--选择阅片地址-->
+    <!--<item name="SelectViewerUrl" value="http://10.24.1.67:9088/SelectViewer.aspx?orderseq=[OrderSequence]&amp;datasourcename=[DataSourceName]&amp;userid=[UserID]"/>-->
+    <!-- ImageService IP  Port -->
+    <item name="ImageServiceIP" value="10.24.3.53" versiontag="201812.2725" />
+    <item name="ImageServicePort" value="6004" versiontag="201812.2726" />
+    <!-- 血管描迹 -->
+    <item name="TraceBloodAddress" value="http://10.24.3.56:8089/TraceBlood.htm" versiontag="202103.80" />
+    <!-- 报告管理服务 ReportManagerService -->
+    <item name="ReportManagerService" value="http://10.24.1.44:8080/ReportManagerService" versiontag="202210.11" />
+    <!-- Web统计 -->
+    <item name="StatWebAddress" value="http://localhost:28012/Default.aspx" versiontag="202306.50" />
+    <!-- PDU的IP -->
+    <item name="PduIP" value="10.24.10.4" versiontag="202401.612" />
+    <!-- PDU的端口 -->
+    <item name="PduPort" value="4513" versiontag="202401.613" />
+    <!--每个item的name对应OperationPreDefine里的操作的name, 如果在ExtraUrl有, 则优先采用网页打开方式-->
+    <!--简单模式value直接配置url,点击后直接通过新窗口打开-->
+    <!--复杂模式value支持多个属性-->
+    <!--  OpenType: window 打开新窗口(默认), popup 在弹出iframe中打开，single每次在单一页面打开-->
+    <!--  Url: 打开的地址-->
+    <!--  Position: popup模式下,打开的iframe位置. center 居中(默认), mouse 跟随鼠标-->
+    <!--  Width,Height: popup模式下, 打开的iframe大小-->
+    <item name="ExtraUrl" versiontag="201812.2727">
+      <!--<item name="ShowImage" value="http://10.24.2.164:8078/Webviewer.aspx?{cnt=1&amp;jcbh=[Accno]&amp;querymode=localhidden&amp;region=放射科590}"/>-->
+      <!--<item name="BrowseImage" value="http://10.24.2.164:8078/Webviewer.aspx?{cnt=1&amp;jcbh=[Accno]&amp;querymode=localhidden&amp;region=放射科590}"/>-->
+      <!--<item name="ShowReport" value="http://10.24.2.164:8079/WebPDFViewer.aspx?jzkh=[Accno]"/>-->
+      <item name="SelectViewer" versiontag="202207.26">
+        <item name="OpenType" value="popup" versiontag="202207.27" />
+        <item name="Url" value="http://10.24.1.67:9088/SelectViewer.aspx?orderseq=[OrderSequence]&amp;datasourcename=[DataSourceName]" versiontag="202207.28" />
+        <item name="Position" value="mouse" versiontag="202207.29" />
+        <item name="Width" value="168" versiontag="202207.30" />
+        <item name="Height" value="94" versiontag="202207.31" />
+      </item>
+    </item>
+  </item>
+</config>

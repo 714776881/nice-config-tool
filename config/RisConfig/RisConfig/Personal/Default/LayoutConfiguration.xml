@@ -1,0 +1,34 @@
+<config versiontag="root">
+  <item name="LayoutConfiguration" versiontag="201812.3259">
+    <!-- 完整列表模式下检查列表占比百分数. 注意:过小过大时可能不生效,因为表格有最小高度-->
+    <item name="GeneralWorklistPercent" value="50" versiontag="201812.3260" />
+    <!-- 完整列表模式下是否显示当前查询项目条 -->
+    <item name="QueryBarDisplay" value="1" versiontag="201812.3262" />
+    <!-- 报告模式下查询条件显示方式 0 隐藏, 1 显示 -->
+    <item name="ReportQueryDisplay" value="1" versiontag="202306.51" />
+    <!-- 报告模式下检查列表显示方式 0 隐藏, 1 显示 -->
+    <item name="ReportWorklistDisplay" value="1" versiontag="201812.3261" />
+    <!-- 报告模式下病人信息显示方式 0 隐藏, 1 单行, 2 多行 -->
+    <item name="PatientInfoBoard" value="2" versiontag="201812.3264" />
+    <!-- 报告模式下关联检查列表显示方式 0 隐藏, 1 显示 -->
+    <item name="ReportAssociatedDisplay" value="1" versiontag="202012.111" />
+    <!-- 报告模式下历史和同名列表显示方式 0 IEIS底部, 1 miniWorklist底部, 2 都不显示 -->
+    <item name="ReportHistoryDisplay" value="0" versiontag="202012.112" />
+    <!-- 报告模式下检查列表占比百分数. 注意:过小过大时可能不生效,因为表格有最小高度-->
+    <item name="ReportWorklistPercent" value="30" versiontag="201812.3263" />
+    <!-- 报告模式下关联检查列表占下部两表的比百分数. 注意:过小过大时可能不生效,因为表格有最小高度 -->
+    <item name="AssociatedExamPercent" value="60" versiontag="201812.3265" />
+    <!-- 关闭所有诊断报告时是否跳转到worklist界面 -->
+    <item name="AutoJumpToWorkList" value="0" versiontag="201812.3266" />
+    <!--报告编辑界面知识库模板预览界面控件高度配置，默认30-->
+    <item name="TxtShowHeight" value="30" versiontag="202006.432" />
+    <!-- 关联检查是否置顶  0 不置顶, 1 置顶 -->
+    <item name="AssociationExamOnTop" value="0" versiontag="202012.113" />
+    <!-- 报告编辑的布局 0：默认布局 1：浙二布局(关联检查在顶部，工具栏在右侧)-->
+    <item name="ReportEditorLayout" value="0" versiontag="202306.52" />
+    <!--浙二报告界面布局DockPanel共享 0：用户细分 ;1(默认)：同终端共享	-->
+    <item name="ReportDockPanelShare" value="1" versiontag="202306.53" />
+    <!-- 移动版是否显示收藏夹 0:不显示，1:显示-->
+    <item name="MobileShowFavarite" value="1" versiontag="202401.624" />
+  </item>
+</config>

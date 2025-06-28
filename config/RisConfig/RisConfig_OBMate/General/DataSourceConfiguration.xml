@@ -1,0 +1,47 @@
+﻿<config>
+  <item name="DataSourceConfiguration">
+    <item name="DataBaseFactory">
+      <item name="DataBases">
+        <item name="db">
+          <item name="type" value="RIS" />
+          <item name="insName" value="OBMate" />
+          <item name="userName" value="ris" />
+          <item name="password" value="maroland" />
+          <item name="passwordEncrypt" value="1oLUGQDS3rlZRjDAzjy8Sw==" />
+          <item name="ip" value="10.24.226.2" />
+          <item name="port" value="1521" />
+          <item name="maxRetNum" value="1000" />
+          <item name="dataServRootPath" value="" />
+          <item name="dataServName" value="" />
+          <item name="dataServPassword" value="" />
+          <item name="FormateDate" value="false" />
+        </item>
+      </item>
+    </item>
+    <item name="DataSourceFactory">
+      <item name="default" value="浙江大学医医院附属妇产科医院" />
+      <item name="filterByHospitalId" value="false" />
+      <item name="defaultWithAll" value="false" />
+      <item name="DataSources"   value="#Array">
+        <item name="浙江大学医医院附属妇产科医院">
+          <item name="dbName" value="db" />
+          <item name="HospitalID" value="72" />
+          <item name="HospitalName" value="浙江大学医医院附属妇产科医院" />
+          <item name="DepartmentName" value="超声科" />
+        </item>
+      </item>
+    </item>
+    <item name="ExternalDataSourceFactory">
+      <item name="default" value="北大国际" />
+      <item name="DataSources">
+        <item name="北大国际PACS">
+          <item name="dbName" value="db" />
+          <item name="Type" value="pacs" />
+          <item name="HospitalID" value="104" />
+          <item name="HospitalName" value="北大国际" />
+          <item name="DepartmentName" value="超声科" />
+        </item>
+      </item>
+    </item>
+  </item>
+</config>

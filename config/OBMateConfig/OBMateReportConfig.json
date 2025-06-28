@@ -1,0 +1,203 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "检查模式",
+			"filePath":"General\\ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='ObMateReportEditTemplate']"
+		}
+	],
+	"keyLabelMap":[
+		{
+			"key": "FetalMeasurementList",
+			"label" : "测量值列表"
+		},
+		{
+			"key": "Group",
+			"label" : "组"
+		},
+		{
+			"key": "Measurements",
+			"label" : "测量值"
+		},
+		{
+			"key": "AnatomicalStructure",
+			"label" : "解剖结构列表"
+		},
+		{
+			"key": "StructureList",
+			"label" : "解剖结构"
+		},
+		{
+			"key": "ReportGraph",
+			"label" : "生成生长曲线的测量值列表"
+		},
+		{
+			"key": "USGestatinalAge",
+			"label" : "计算妊娠年龄的测量值列表"
+		},
+		{
+			"key": "OtherAnatomicalTemplate",
+			"label" : "其他提示模板"
+		},
+		{
+			"key": "StudyResultTemplate",
+			"label" : "检查所见提示模板"
+		},
+		{
+			"key": "DiagResultTemplate",
+			"label" : "检查结果提示模板"
+		},
+		{
+			"key": "ImagePlane",
+			"label" : "图像切面"
+		},
+		{
+			"key": "Serialization",
+			"label" : "报告序列化"
+		},
+		{
+			"key": "Measurement",
+			"label" : "测量值序列化模板"
+		},
+		{
+			"key": "StudyResult",
+			"label" : "检查所见序列化模板"
+		},
+		{
+			"key": "DiagResult",
+			"label" : "检查诊断序列化模板"
+		}
+	],
+	"inputConfig":[
+		{
+			"key": "Measurements;ReportGraph;USGestatinalAge",
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择测量值！",
+					"style": "width:200px",
+					"show-search": true,
+					"option-filter-prop": "label"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择测量项"
+					}
+				],
+				"defaultValue": ""
+			},
+			"dicSql": "select m.itemname as label,m.code value from t_measure_template_item m"
+		},
+		{
+			"key": "StructureList",
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择解剖结构！",
+					"style": "width:200px",
+					"show-search": true,
+					"option-filter-prop": "label"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择解剖结构！"
+					}
+				],
+				"defaultValue": ""
+			},
+			"dicSql": "select name as label,code value from t_anatomical_structure_define"
+		},
+		{
+			"key": "OtherAnatomicalTemplate;StudyResultTemplate;DiagResultTemplate",
+			"component": {
+				"name": "a-input",
+				"props": {
+					"placeholder": "请选择内容！",
+					"style": "width:900px"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择内容！"
+					}
+				],
+				"defaultValue": ""
+			}
+		},
+		{
+			"key": "Measurement;StudyResult;DiagResult",
+			"component": {
+				"name": "a-input",
+				"props": {
+					"placeholder": "请选择内容！",
+					"style": "width:900px"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择内容！"
+					}
+				],
+				"defaultValue": ""
+			}
+		},
+		{
+			"key": "ImagePlane",
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择切面部位！",
+					"style": "width:200px",
+					"show-search": true,
+					"option-filter-prop": "label"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择切面部位！"
+					}
+				],
+				"defaultValue": ""
+			},
+			"dicSql": "select name as label,code value from T_IMAGE_PLANEDEFINE"
+		},
+		{
+			"key": "ExamMode",
+			"isShow": false,
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择检查模式！",
+					"style": "width:200px"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择检查模式！"
+					}
+				],
+				"defaultValue": "OB"
+			},
+			"dicSql": "select d.itemname as label,d.itemcode value from t_dictionary d where d.diccategory = '5001' and d.deleted = '0' order by d.sequence"
+		}
+	],
+	"arrayConfig":[
+		{
+			"key":"FetalMeasurementList;AnatomicalStructure"
+		}
+	]
+}

@@ -1,0 +1,36 @@
+1 设置测量按钮在工具栏显示
+2 
+button：单独显示出来的;
+DropdownButton：合并成下拉菜单的；
+3 
+配置的顺序表示显示的顺序；其中DropdownButton中第一项将作为默认显示项
+4 
+button 和 DropdownButton 可以不配置，表示不需要；也就是说可以只使用一种显示方式；
+5 示例
+		<item name="MeasureButtonConfig">
+		  <item name="CT;MR">
+			<item name="button" value="MeasureDistance;MeasureAngle;Density;Annotation;ArrowMark;AddKeyImage"/>
+			<item name="DropdownButton" value="MeasureCTR;OvalROI;RecROI;Circle;RecHistogram;MeasureTrace;MeasureBezierTrace;MeasureCloseTrace;MeasureCloseBezierTrace;MeasureCobb;MeasureAcetabular;MeasureMiddleLine;MeasureParallelLine;MeasureAdjust"/>
+		  </item>
+		  <item name="DentalSingleSlice">
+			<item name="button" value="MeasureDistance;MeasureAngle;Density;Annotation;ArrowMark;AddKeyImage"/>
+			<item name="DropdownButton" value="MeasureCTR;DentalSingleSliceMeasure;OvalROI;RecROI;Circle;RecHistogram;MeasureTrace;MeasureBezierTrace;MeasureCloseTrace;MeasureCloseBezierTrace;MeasureCobb;MeasureAcetabular;MeasureMiddleLine;MeasureParallelLine;MeasureAdjust"/>
+		  </item>
+		  <item name="DentalConsequentSlice">
+			<item name="DropdownButton" value="DentalConsequentSliceMeasure;MeasureDistance;MeasureAngle;OvalROI;RecROI;Circle;Density;MeasureCTR;RecHistogram;MeasureTrace;MeasureBezierTrace;MeasureCloseTrace;MeasureCloseBezierTrace;Annotation;ArrowMark;MeasureAdjust"/>
+		  </item>
+		  <item name="DCMMULTIFRAME">
+			<item name="button" value="MeasureDistance;MeasureAngle;" />
+		  </item>
+		</item>
+		
+6 
+<item name="CT;MR">
+<item name="DentalSingleSlice">
+1）类似这样的节点中内容，可以支持的字符串有：
+modality:CT;MR;DR;DX;CR;PX;MG;RF;XA;OT;等等
+展示类型：DentalSingleSlice;DentalConsequentSlice;MPR;CMPR;VR;DCMMULTIFRAME;
+
+2）多值使用分号；分隔开；
+
+7 没有配置对应项目时，使用代码中默认项目，同当前显示效果；

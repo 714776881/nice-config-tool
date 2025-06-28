@@ -1,0 +1,604 @@
+{
+  "columnConfig": [
+	{
+      "title": "检查名称",
+      "key": "EXAMITEM",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 300,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "项目编码",
+      "key": "EXAMITEMCODE",
+      "width": 200,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入",
+		  "disabled": "false",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+		"defaultValueBySql":"select generate_code('t_examitem.examitemcode','0','6') value from t_examitem"
+      }
+    },
+	{
+      "title": "输入码",
+      "key": "SRM",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": ""
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "英文名称",
+      "key": "EXAMITEMENG",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": ""
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "HIS编码",
+      "key": "HIS_EXAMITEMID",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": ""
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "收费金额",
+      "key": "PRICE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "",
+		  "min":"0",
+		  "step":"0.01",
+		  "string-mode": "true",
+		  "width":"120px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "",
+      "key": "a-divider",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-divider",
+        "props": {
+          "placeholder": "",
+		  "style":"height: 0px;margin:0px 0px;",
+		  "orientation": "center",
+		  "label": "工作量参数"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+		"span": "24",
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "登记员得分",
+      "key": "REGISTER_FACTOR",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "",
+		  "min":"0",
+		  "width":"120px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "技师得分",
+      "key": "TECH_FACTOR",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "",
+		  "min":"0",
+		  "width":"120px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "报告医生得分",
+      "key": "REPORT_FACTOR",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "",
+		  "min":"0",
+		  "width":"120px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "审核医生得分",
+      "key": "FACTOR1",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "",
+		  "min":"0",
+		  "width":"120px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "报告+审核得分",
+      "key": "REPORTVERIFY_FACTOR",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "",
+		  "min":"0",
+		  "width":"120px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "",
+      "key": "a-divider",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-divider",
+        "props": {
+          "placeholder": "",
+		  "style":"height: 0px;margin:0px 0px;",
+		  "orientation": "center",
+		  "label": "工作量参数"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+		"span": "24",
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "允许预约",
+      "key": "BOOKING",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "否",
+              "value": "0   "
+            },
+            {
+              "label": "是",
+              "value": "1   "
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+		"span": "24",
+        "defaultValue": "0   "
+      }
+    },
+	{
+      "title": "允许上午预约",
+      "key": "BOOKING_AM",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "否",
+              "value": "0"
+            },
+            {
+              "label": "是",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "每日上午可约数",
+      "key": "BOOKING_LIMIT_AM",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "",
+		  "min":"0",
+		  "width":"120px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "允许下午预约",
+      "key": "BOOKING_PM",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "否",
+              "value": "0"
+            },
+            {
+              "label": "是",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "每日下午可约数",
+      "key": "BOOKING_LIMIT_PM",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "",
+		  "min":"0",
+		  "width":"120px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+	{
+      "title": "默认设备",
+      "key": "EQUIPMENTID",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": ""
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      },
+	  "dicSql":"select t.equipmentid as value,t.equipment as label from t_equipment t where t.deleted='0' and t.modality='{MODALITY}' and t.departmentid='{GLOBAL}{DEPARTMENTID}'"
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            },
+            {
+              "label": "全部",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select COUNT(*) value from t_examitem b "
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select t.examitemid id,t.*,b.modality,e.equipmentid,his.his_examitemid from t_examitem t inner join t_bodypart b on t.bodypartid=b.bodypartid left join t_examitemlink e on e.examitemid=t.examitemid left join t_his_examitemlink his on his.ris_examitemid=t.examitemid where t.departmentid = '{GLOBAL}{DEPARTMENTID}' and t.bodypartid = '{SUPER}{ID}' order by t.sequence",
+    "insert": "insert into t_examitem (examitemid, examitem, examitemcode, srm, examitemeng, price, register_factor, tech_factor, report_factor, factor1, reportverify_factor, booking, booking_am, booking_limit_am, booking_pm, booking_limit_pm, deleted, sequence, bodypartid, departmentid,hospitalcode,regionid) values ('{ID}', '{EXAMITEM}', '{EXAMITEMCODE}', '{SRM}', '{EXAMITEMENG}', '{PRICE}', '{REGISTER_FACTOR}', '{TECH_FACTOR}', '{REPORT_FACTOR}', '{FACTOR1}', '{REPORTVERIFY_FACTOR}', '{BOOKING}', '{BOOKING_AM}', '{BOOKING_LIMIT_AM}', '{BOOKING_PM}', '{BOOKING_LIMIT_PM}', '0', '{SEQUENCE}', '{SUPER}{ID}', '{GLOBAL}{DEPARTMENTID}', '{GLOBAL}{HOSPITALID}', '{GLOBAL}{REGIONID}')[;]insert into t_his_examitemlink(link_id,ris_examitemid,his_examitemid,hospitalid) values ('{ID}', '{ID}', '{HIS_EXAMITEMID}', '{GLOBAL}{HOSPITALID}')[;]insert into t_examitemlink(linkseq,examitemid,equipmentid,dflag) values ('{ID}', '{ID}', '{EQUIPMENTID}', '1')",
+    "update": "update t_examitem set examitem = '{EXAMITEM}', examitemcode = '{EXAMITEMCODE}', srm = '{SRM}', examitemeng = '{EXAMITEMENG}', price = '{PRICE}', register_factor = '{REGISTER_FACTOR}', tech_factor = '{TECH_FACTOR}', report_factor = '{REPORT_FACTOR}', factor1 = '{FACTOR1}', reportverify_factor = '{REPORTVERIFY_FACTOR}', booking = '{BOOKING}', booking_am = '{BOOKING_AM}', booking_limit_am = '{BOOKING_LIMIT_AM}', booking_pm = '{BOOKING_PM}', booking_limit_pm = '{BOOKING_LIMIT_PM}' where examitemid = '{ID}'[;]update t_his_examitemlink set ris_examitemid = '{ID}', his_examitemid = '{HIS_EXAMITEMID}' where  link_id = '{ID}' or ris_examitemid = '{ID}' [;] update t_examitemlink set equipmentid = '{EQUIPMENTID}' where examitemid = '{ID}' or linkseq = '{ID}'",
+    "setState": "update t_examitem set deleted = '{DELETED}' where examitemid = '{ID}'",
+	"delete": "delete from t_examitem where examitemid = '{ID}'",
+	"setSequence":"update t_examitem set sequence = '{SEQUENCE}' where examitemid = '{ID}'",
+    "exportData": "select t.examitemid id,t.*,b.modality from t_examitem t,t_bodypart b where t.bodypartid=b.bodypartid and t.departmentid = '{GLOBAL}{DEPARTMENTID}' and t.bodypartid = '{SUPER}{ID}' order by t.sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": false,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  }
+}

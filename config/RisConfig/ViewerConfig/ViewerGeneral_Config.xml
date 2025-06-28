@@ -1,0 +1,3053 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <item name="Manufacturer" value="迈瑞"/>
+  <!--item name="LogoFileName" value="GL_logo_white.png"/-->
+  <item name="loadbalanceserver">
+    <item name="ip" value="10.24.2.244" />
+    <item name="port" value="4507" />
+  </item>
+  <item name="reportserver">
+    <item name="ip" value="10.24.2.244" />
+    <item name="port" value="4504" />
+  </item>
+  <item name="logserver">
+    <item name="ip" value="10.24.2.244" />
+    <item name="port" value="4509" />
+  </item>
+  <item name="pduserver">
+    <item name="ip" value="10.24.2.244" />
+    <item name="port" value="4513" />
+  </item>
+  <item name="dicomstorageserver">
+    <item name="放射科99">
+	  <item name="ip" value="10.24.2.99" />
+	  <item name="port" value="1111" />
+	  <item name="aetitle" value="MAROTECH" />
+	</item>
+    <item name="放射科57">
+	  <item name="ip" value="10.24.3.57" />
+	  <item name="port" value="1111" />
+	  <item name="aetitle" value="MAROTECH" />
+	</item>
+    <item name="放射科64">
+	  <item name="ip" value="10.24.3.64" />
+	  <item name="port" value="1111" />
+	  <item name="aetitle" value="MAROTECH" />
+	</item>
+    <item name="超声科99">
+	  <item name="ip" value="10.24.2.99" />
+	  <item name="port" value="1111" />
+	  <item name="aetitle" value="MAROTECH" />
+	</item>
+    <item name="超声科57">
+	  <item name="ip" value="10.24.3.64" />
+	  <item name="port" value="1111" />
+	  <item name="aetitle" value="MAROTECH" />
+	</item>
+    <item name="超声科64">
+	  <item name="ip" value="10.24.3.64" />
+	  <item name="port" value="1111" />
+	  <item name="aetitle" value="MAROTECH" />
+	</item>
+  </item>
+  <item name="netsetting">
+    <item name="timeout" value="60000" />
+	<item name="timeoutforexportservice" value="1000" />
+    <item name="receivebufsize" value="16384" />
+    <!--web版与导出服务交互的socket缓存大小设置。-->
+    <item name="receivebufsizeexportservice" value="16384" />
+    <item name="autosearch" value="0" />
+    <item name="exportserviceversion" value="01.00.00.21058" />
+  </item>
+  <item name="dicom">
+    <item name="pdusize" value="16384" />
+    <item name="timeout" value="30" />
+  </item>
+  <item name="player">
+    <item name="ocxversion" value="1.0.0.21062" />
+    <item name="playerversion" value="1.0.0.21413" />
+  </item>
+  <item name="ReprocessingLesionService">
+    <item name="Url" value="http://10.24.1.94:6789/ReprocessingLesionService.asmx" />
+    <item name="Enable" value="false" />
+  </item>
+  <!--DisplayProtocol字段是用来配置显示协议。-->
+  <item name="DisplayProtocol">
+    <!--ScreenBoxNumber表示对应不同数量逻辑屏幕的多套显示协议配置-->
+    <!--具体的显示协议配置。其中前面部分是匹配条件，包括Modality和检查部位，以及ExamNumber（应用于的检查数量），符合匹配条件即可以使用下面部分对应的具体显示的设置。-->
+    <!--ExamNumber用来表示应用此显示协议传入的检查个数。此处主要用于追加对比的情况-->
+    <!--DisplayAreaDP字段表示显示区域分组。每一个子项表示一个可以使用mode控制的集合，其中可以设置多个逻辑屏幕用于显示-->
+    <!--mode目前有三种。0：统一平铺（多个逻辑屏显示部分只有一个序列窗口）；1：统一序列；3：分屏不对称。-->
+    <!--ScreenBoxDP子项用来表示每个逻辑屏幕的显示配置。ScreenBoxIndex表示所在的逻辑屏幕的索引值。Layout表示布局。SeriesDP子项表示各个序列窗口的数据绑定信息-->
+    <!--SeriesDP子项中，Index表示当前逻辑屏幕上序列窗口的索引值；Property表示用于绑定的条件；SeriesIndex表示按照骨架信息中顺序的序列索引值；PropertySeriesIndex满足条件的序列索引值-->
+    <!--ImageIndex表示显示绑定序列中的图像索引值；ImageProperty表示显示绑定序列中满足特定条件的图像，目前此定义同序列绑定属性 -->
+    <!--SeriesParamDP表示应用于此窗口的显示参数，包括图像窗口布局，窗宽窗位等-->
+    <item name="ScreenBoxNumber">
+      <item name="ScreenBoxNumber1" value="1">
+        <item name="CT序列模式">
+          <item name="Modality">
+            <item value="CT" />
+            <item value="PT" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MR序列模式">
+          <item name="Modality">
+            <item value="MR" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MG-绑定序列属性">
+          <item name="Modality">
+            <item value="MG" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="currentMGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="currentMGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="currentMGRLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="currentMGLLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="平片">
+          <item name="Modality">
+            <item value="CR" />
+            <item value="DX" />
+            <item value="DR" />
+            <item value="XA" />
+            <item value="RF" />
+            <item value="US" />
+            <item value="NM" />
+            <item value="ES" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="CTMR对比2检查">
+          <item name="Modality">
+            <item value="CT" />
+            <item value="MR" />
+            <item value="PT" />
+          </item>
+          <item name="ExamNumber" value="2" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="平片对比2检查">
+          <item name="Modality">
+            <item value="CR" />
+            <item value="DX" />
+            <item value="DR" />
+            <item value="XA" />
+            <item value="RF" />
+            <item value="US" />
+            <item value="NM" />
+            <item value="ES" />
+          </item>
+          <item name="ExamNumber" value="2" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MG对比2检查">
+          <item name="Modality">
+            <item value="MG" />
+          </item>
+          <item name="ExamNumber" value="2" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="currentMGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="currentMGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="history1MGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="history1MGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="CTMR对比3检查">
+          <item name="Modality">
+            <item value="CT" />
+            <item value="MR" />
+            <item value="PT" />
+          </item>
+          <item name="ExamNumber" value="3" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="3X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP5">
+                      <item name="Index" value="4" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP6">
+                      <item name="Index" value="5" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="平片对比3检查">
+          <item name="Modality">
+            <item value="CR" />
+            <item value="DX" />
+            <item value="DR" />
+            <item value="XA" />
+            <item value="RF" />
+            <item value="US" />
+            <item value="NM" />
+            <item value="ES" />
+          </item>
+          <item name="ExamNumber" value="3" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="3X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MG对比3检查">
+          <item name="Modality">
+            <item value="MG" />
+          </item>
+          <item name="ExamNumber" value="3" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="3X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="currentMGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="currentMGLOP" />
+                      <item name="PropertySeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="history1MGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="history1MGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP5">
+                      <item name="Index" value="4" />
+                      <item name="Property" value="history2MGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP6">
+                      <item name="Index" value="5" />
+                      <item name="Property" value="history2MGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MR序列模式-HEAD">
+          <item name="Modality">
+            <item value="MR" />
+          </item>
+          <item name="ExamPart">
+            <item value="HEAD" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X3" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP5">
+                      <item name="Index" value="4" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="4" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP6">
+                      <item name="Index" value="5" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="5" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MR序列模式-TSPINE">
+          <item name="Modality">
+            <item value="MR" />
+          </item>
+          <item name="ExamPart">
+            <item value="TSPINE" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="3X3" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP5">
+                      <item name="Index" value="4" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="4" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP6">
+                      <item name="Index" value="5" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="5" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP7">
+                      <item name="Index" value="6" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="6" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP8">
+                      <item name="Index" value="7" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="7" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP9">
+                      <item name="Index" value="8" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="8" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MR序列模式-KNEE">
+          <item name="Modality">
+            <item value="MR" />
+          </item>
+          <item name="ExamPart">
+            <item value="KNEE" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="ScreenBoxNumber2" value="2">
+        <item name="CT双屏-序列模式">
+          <item name="Modality">
+            <item value="CT" />
+            <item value="PT" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MR双屏-序列模式">
+          <item name="Modality">
+            <item value="MR" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="平片双屏">
+          <item name="Modality">
+            <item value="CR" />
+            <item value="DX" />
+            <item value="DR" />
+            <item value="XA" />
+            <item value="RF" />
+            <item value="US" />
+            <item value="NM" />
+            <item value="ES" />
+            <item value="GM" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MG双屏-绑定序列属性">
+          <item name="Modality">
+            <item value="MG" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="1X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="currentMGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="currentMGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="1X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="currentMGRLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="currentMGLLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="CTMR对比2检查双屏">
+          <item name="Modality">
+            <item value="CT" />
+            <item value="MR" />
+            <item value="PT" />
+          </item>
+          <item name="ExamNumber" value="2" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="平片对比2检查双屏">
+          <item name="Modality">
+            <item value="CR" />
+            <item value="DX" />
+            <item value="DR" />
+            <item value="XA" />
+            <item value="RF" />
+            <item value="US" />
+            <item value="NM" />
+            <item value="ES" />
+          </item>
+          <item name="ExamNumber" value="2" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MG对比2检查">
+          <item name="Modality">
+            <item value="MG" />
+          </item>
+          <item name="ExamNumber" value="2" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="currentMGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="currentMGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="currentMGRLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="currentMGLLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="4" />
+                      <item name="Property" value="history1MGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="5" />
+                      <item name="Property" value="history1MGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="6" />
+                      <item name="Property" value="history1MGRLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="7" />
+                      <item name="Property" value="history1MGLLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="CTMR对比3检查双屏">
+          <item name="Modality">
+            <item value="CT" />
+            <item value="MR" />
+            <item value="PT" />
+          </item>
+          <item name="ExamNumber" value="3" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="平片对比3检查双屏">
+          <item name="Modality">
+            <item value="CR" />
+            <item value="DX" />
+            <item value="DR" />
+            <item value="XA" />
+            <item value="RF" />
+            <item value="US" />
+            <item value="NM" />
+            <item value="ES" />
+          </item>
+          <item name="ExamNumber" value="3" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MG对比3检查">
+          <item name="Modality">
+            <item value="MG" />
+          </item>
+          <item name="ExamNumber" value="3" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="currentMGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="currentMGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="currentMGRLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="currentMGLLP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="4" />
+                      <item name="Property" value="history1MGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="5" />
+                      <item name="Property" value="history1MGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="6" />
+                      <item name="Property" value="history2MGROP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="7" />
+                      <item name="Property" value="history2MGLOP" />
+                      <item name="PropertySeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MR双屏-HEAD">
+          <item name="Modality">
+            <item value="MR" />
+          </item>
+          <item name="ExamPart">
+            <item value="HEAD" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="4" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="4" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="5" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="5" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="6" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="6" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="7" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="7" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="ScreenBoxNumber3" value="3">
+        <item name="CTMR三屏">
+          <item name="Modality">
+            <item value="CT" />
+            <item value="MR" />
+            <item value="PT" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="1" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP3">
+                  <item name="ScreenBoxIndex" value="2" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="4" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="4" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="5" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="5" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="MR平铺三屏">
+          <item name="Modality">
+            <item value="MR" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="0" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="2X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="2X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP3">
+                  <item name="ScreenBoxIndex" value="2" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="2X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="DR堆叠三屏">
+          <item name="Modality">
+            <item value="CR" />
+            <item value="DX" />
+            <item value="DR" />
+            <item value="XA" />
+            <item value="RF" />
+            <item value="US" />
+            <item value="NM" />
+            <item value="ES" />
+          </item>
+          <item name="ExamNumber" value="1" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP3">
+                  <item name="ScreenBoxIndex" value="2" />
+                  <item name="Layout" value="1X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="-100" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="对比2检查三屏">
+          <item name="Modality">
+            <item value="All" />
+          </item>
+          <item name="ExamNumber" value="2" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="2" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="3" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP3">
+                  <item name="ScreenBoxIndex" value="2" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="对比3检查三屏">
+          <item name="Modality">
+            <item value="All" />
+          </item>
+          <item name="ExamNumber" value="3" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP3">
+                  <item name="ScreenBoxIndex" value="2" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+        <item name="对比4检查三屏">
+          <item name="Modality">
+            <item value="All" />
+          </item>
+          <item name="ExamNumber" value="4" />
+          <item name="DisplayAreaDP">
+            <item name="DisplayAreaDP1">
+              <item name="Mode" value="3" />
+              <item name="ScreenBoxDP">
+                <item name="ScreenBoxDP1">
+                  <item name="ScreenBoxIndex" value="0" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP2">
+                  <item name="ScreenBoxIndex" value="1" />
+                  <item name="Layout" value="2X1" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history1" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="current" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+                <item name="ScreenBoxDP3">
+                  <item name="ScreenBoxIndex" value="2" />
+                  <item name="Layout" value="2X2" />
+                  <item name="SeriesDP">
+                    <item name="SeriesDP1">
+                      <item name="Index" value="0" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP2">
+                      <item name="Index" value="1" />
+                      <item name="Property" value="history2" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP3">
+                      <item name="Index" value="2" />
+                      <item name="Property" value="history3" />
+                      <item name="SeriesIndex" value="0" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                    <item name="SeriesDP4">
+                      <item name="Index" value="3" />
+                      <item name="Property" value="history3" />
+                      <item name="SeriesIndex" value="1" />
+                      <item name="SeriesParamDP">
+                        <item name="Layout" value="1X1" />
+                      </item>
+                    </item>
+                  </item>
+                </item>
+              </item>
+            </item>
+          </item>
+        </item>
+      </item>
+    </item>
+    <!--SeriesBindingProperty用来配置绑定的数据属性。对于每一种类型的属性，需要满足SeriesBindingPropertyUnit中的所有子项目(目前代码中还存在一些问题)-->
+    <!--SeriesBindingPropertyUnit子项中Key=0：STUDY_INSTANCE_UID；1：MODALITY；2：IMAGE_TYPE；-->
+    <!--3:view position;4:Image Laterality-->
+    <!--Relation=0：Same；1：Contain；-->
+    <!--Value定义内容。其中value属性表示类型，目前有0：当前检查；1：当前modality；2；指定数据；3：历史检查。-->
+    <!--而子项目中表示=2:指定数据时，具体的数据参数;=3:历史检查时，具体的历史检查索引数值。比如指定图像类型的参数，"ORIGINAL\\PRIMARY\\AXIAL"。-->
+    <!--各个子项目是或的关系，即只要满足一个子项目即可-->
+    <item name="SeriesBindingProperty">
+      <item name="current">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+        </item>
+      </item>
+      <item name="currentAXIAL">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="2" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="ORIGINAL\PRIMARY\AXIAL" />
+              <item name="Value" value="ORIGINAL\SECONDARY\AXIAL" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentLOCALIZER">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="2" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="ORIGINAL\PRIMARY\LOCALIZER" />
+              <item name="Value" value="ORIGINAL\SECONDARY\LOCALIZER" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history1">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="1" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history2">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="2" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history3">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="3" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentXLayerOP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="PA" />
+              <item name="Value" value="AP" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentXLayerLP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="LL" />
+              <item name="Value" value="RL" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentMGROP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="R" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit4">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="CC" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentMGLOP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="L" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit4">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="CC" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentMGRLP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="R" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit4">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="MLO" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentMGLLP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="L" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit4">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="MLO" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentXLayerLateralityL">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="L" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="currentXLayerLateralityR">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="0" />
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="1" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="1" />
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="R" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history1MGROP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="1" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="R" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="CC" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history1MGLOP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="1" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="L" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="CC" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history2MGROP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="2" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="R" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="CC" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history2MGLOP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="2" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="L" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="CC" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history1MGRLP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="1" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="R" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="MLO" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item name="history1MGLLP">
+        <item name="SeriesBindingPropertyUnit">
+          <item name="SeriesBindingPropertyUnit1">
+            <item name="Key" value="0" />
+            <item name="Relation" value="0" />
+            <item name="Value" value="3">
+              <item name="Value" value="1" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit2">
+            <item name="Key" value="4" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="L" />
+            </item>
+          </item>
+          <item name="SeriesBindingPropertyUnit3">
+            <item name="Key" value="3" />
+            <item name="Relation" value="1" />
+            <item name="Value" value="2">
+              <item name="Value" value="MLO" />
+            </item>
+          </item>
+        </item>
+      </item>
+    </item>
+  </item>
+  <!--其他功能配置内容，放置在other部分-->
+  <item name="Other">
+    <!--ScreenBox表示逻辑屏，此字段是用来配置逻辑屏数量，以及每个逻辑屏幕对应显示的显示器位置。此字段必须设置，否则无法正常显示。-->
+    <!--MonitorIndex用来配置逻辑屏幕所在的物理显示器的索引值 -->
+    <!--MonitorBegin用来配置逻辑屏幕在物理显示器上的起始位置，目前使用比例实现。比如设置成0.5，就是从所在物理屏中间部分开始显示 -->
+    <!--MonitorSize用来配置逻辑屏幕在物理显示器上的大小，目前使用比例实现。比如设置成0.5，就是占用所在物理屏一半大小 -->
+    <!--DisplayViewer用来配置是否在逻辑屏上显示阅片界面 -->
+    <item name="ScreenBox">
+      <item name="ScreenBox1">
+        <item name="MonitorIndex" value="0" />
+        <item name="MonitorBegin" value="0" />
+        <item name="MonitorSize" value="1" />
+        <item name="DisplayViewer" value="False" />
+		<item name="IconLocation" value="Left" />
+      </item>
+      <item name="ScreenBox2">
+        <item name="MonitorIndex" value="1" />
+        <item name="MonitorBegin" value="0" />
+        <item name="MonitorSize" value="1" />
+        <item name="DisplayViewer" value="True" />
+		<item name="IconLocation" value="Left" />
+      </item>
+      <item name="ScreenBox3">
+        <item name="MonitorIndex" value="2" />
+        <item name="MonitorBegin" value="0" />
+        <item name="MonitorSize" value="1" />
+        <item name="DisplayViewer" value="True" />
+		<item name="IconLocation" value="Left" />
+      </item>
+    </item>
+    <!--设置本地查询界面是否显示-->
+    <item name="LocalSearchDisplay" value="true" />
+    <!--设置区域查询界面是否显示-->
+    <item name="RegionSearchDisplay" value="true" />
+    <!--设置Q/R查询界面是否显示-->
+    <item name="QRSearchDisplay" value="true" />
+    <!--设置是否应用本地查询默认数据-->
+    <item name="DisplayLocalSearchDefault" value="true" />
+    <!--设置本地查询界面中数据源的下拉项目-->
+    <item name="DataSource">
+      <item name="放射科99" />
+      <item name="放射科57" />
+      <item name="放射科64" />
+      <item name="超声科99" />
+      <item name="超声科57" />
+      <item name="超声科64" />
+    </item>
+    <!--设置状态栏信息显示的深度，也就是状态信息下拉框的最大项目数-->
+    <item name="StatusMessageHistoryDepth" value="100" />
+    <!--设置导出图像的配置, 目前非远程导出的设置放置在个人通用配置中-->
+    <item name="ExportImageConfig">
+      <item name="RemotePath" value="\\10.24.2.170\ExportTest" />
+      <item name="RemoteUser" value="Administrator" />
+      <item name="RemotePassword" value="mindray99!" />
+      <!-- 映射驱动器时，请不要在驱动器后面添加斜杠，如下不要写成R:\，否则映射会失败，文件会导出到本地-->
+      <item name="MapDriver" value="R:" />
+	  <!-- 临床版本是否允许导出dcm 原始图像-->
+      <item name="WebExportDCMOrigi" value="false" />
+	  <!-- 临床版本是否允许导出jpg,avi 图像-->
+      <item name="WebExportJPGAVI" value="false" />
+    </item>
+    <item name="PreRemoteConnectList">
+      <item name="item1" RemoteAddress="\\10.24.2.99\PACS\SHT" User="Administrator" Password="mindray99!" />
+      <item name="item2" RemoteAddress="\\10.24.3.57\pacs\sht" User="Administrator" Password="mindray99!"/>
+      <item name="item3" RemoteAddress="\\10.24.3.59\pacs0\sht" User="Administrator" Password="mindray99!"/>
+    </item>
+    <!--设置调用下载检查请求时，每个序列先下载的图像数目-->
+    <item name="PreLoadImageCountPerSeries" value="5" />
+    <!--设置预下载的图像数目-->
+    <item name="PreLoadWindow" value="5" />
+    <!--设置显示序列选择窗口弹出时，用于判断的图像数目-->
+    <item name="SelectDownLoadSeriesThreshold" value="2000" />
+    <!--设置是否打开向聊天室发送图像数据功能-->
+    <item name="SendStudyToChatRoom" value="false" />
+    <!--设置四角信息显示相关配置-->
+    <item name="CornerInformation">
+      <!-- FixValue 定义固定显示的四角信息-->
+      <item name="HospitalName" IsDisplay="false" ItemPos="LeftTop" DisplayName="HospitalName" FixValue="省第一医院"/>
+      <item name="PatientID" IsDisplay="true" ItemPos="LeftTop" DisplayName="PID" />
+      <item name="Modality" IsDisplay="false" ItemPos="LeftTop" DisplayName="Modality" />
+      <!-- PatientName表明PatientName优先从RIS中获取，如果为空，则从图像中取-->
+      <item name="PatientName" IsDisplay="true" ItemPos="LeftTop" DisplayName="PatientName" />
+      <!-- PatientName_Ris表明PatientName从RIS中获取-->
+      <item name="PatientName_Ris" IsDisplay="false" ItemPos="LeftTop" DisplayName="PatientName_Ris" />
+      <!-- PatientName_Dcm表明PatientName从图像中获取-->
+      <item name="PatientName_Dcm" IsDisplay="false" ItemPos="LeftTop" DisplayName="PatientName_Dcm" />	
+      <item name="ModalityID" IsDisplay="false" ItemPos="LeftTop" DisplayName="ModalityID" />
+      <item name="InPatientID" IsDisplay="true" ItemPos="LeftTop" DisplayName="InPatientID" />
+      <item name="OutPatientID" IsDisplay="false" ItemPos="LeftTop" DisplayName="OutPatientID" />
+      <item name="StudyACNumber" IsDisplay="true" ItemPos="LeftTop" DisplayName="AccessionNum" />
+	  <item name="ExamNO" IsDisplay="false" ItemPos="LeftTop" DisplayName="ExamNO" />
+	  <item name="ImageStudyID" IsDisplay="true" ItemPos="LeftTop" DisplayName="" />
+      <item name="PatientSex" IsDisplay="true" ItemPos="LeftTop" DisplayName="Sex" />
+      <item name="PatientAge" IsDisplay="true" ItemPos="LeftTop" DisplayName="Age" />
+      <item name="PatientDob" IsDisplay="true" ItemPos="LeftTop" DisplayName="Dob" />
+      <item name="SerialNumber" IsDisplay="true" ItemPos="LeftTop" DisplayName="Se" />
+      <item name="ImageNumber" IsDisplay="true" ItemPos="LeftTop" DisplayName="Im" />
+      <item name="FrameNumber" IsDisplay="true" ItemPos="LeftTop" DisplayName="Fm" />
+      <item name="PatientPosition" IsDisplay="true" ItemPos="LeftTop" DisplayName="Patient Pos" />
+      <item name="ViewPosition" IsDisplay="true" ItemPos="LeftTop" DisplayName="View Pos" />
+      <item name="ImageLaterality" IsDisplay="true" ItemPos="LeftTop" DisplayName="Lat" />
+      <item name="ContrastBolusAgent" IsDisplay="true" ItemPos="LeftTop" DisplayName="C" />
+      <item name="PresentationState" IsDisplay="true" ItemPos="LeftTop" DisplayName="PS" />
+      <item name="InstitutionName" IsDisplay="true" ItemPos="RightTop" DisplayName="Institution" />
+      <item name="Manufacturer" IsDisplay="true" ItemPos="RightTop" DisplayName="Manufacturer" />
+      <item name="ManufacturerModelName" IsDisplay="true" ItemPos="RightTop" DisplayName="ManufacturerModelName"/>
+      <item name="SourceDevice" IsDisplay="true" ItemPos="RightTop" DisplayName="SourceDevice" />
+	  <item name="StudyDate" IsDisplay="true" ItemPos="RightTop" DisplayName="" />
+      <item name="StudyTime" IsDisplay="true" ItemPos="RightTop" DisplayName="Study Tm" />
+	  <item name="AcquisitionDate" IsDisplay="true" ItemPos="RightTop" DisplayName="" />
+      <item name="AcquisitionTime" IsDisplay="true" ItemPos="RightTop" DisplayName="Acq Tm" />
+	  <item name="ImageDate" IsDisplay="false" ItemPos="RightTop" DisplayName="" />
+	  <item name="ImageTime" IsDisplay="false" ItemPos="RightTop" DisplayName="Im Tm" />
+      <!-- NotDisplayModality用于定义那些模块不显示该字段，多模块不显示时以逗号隔开，如"MG,RF"  -->
+      <item name="SeriesTime" IsDisplay="true" ItemPos="RightTop" DisplayName="SeriesTime" NotDisplayModality="MG" />
+      <item name="SeriesDescription" IsDisplay="true" ItemPos="RightTop" DisplayName="SeriesDescription" />
+	  <item name="BodyPartExamined" IsDisplay="true" ItemPos="RightTop" DisplayName="" />
+      <item name="SliceLocation" IsDisplay="true" ItemPos="RightTop" DisplayName="SL" />
+      <item name="SliceThickness" IsDisplay="true" ItemPos="RightTop" DisplayName="ST" />
+      <item name="ScaleRatio" IsDisplay="true" ItemPos="RightTop" DisplayName="Z" />
+      <item name="KVP" IsDisplay="true" ItemPos="LeftBottom" DisplayName="KVP" />
+      <item name="Exposure" IsDisplay="true" ItemPos="LeftBottom" DisplayName="Exposure" />
+      <item name="XrayTubeCurrent" IsDisplay="true" ItemPos="LeftBottom" DisplayName="X-ray Tube Current" />
+      <item name="ScanningSequence" IsDisplay="true" ItemPos="LeftBottom" DisplayName="ScanningSequence" />
+      <item name="RepetitionTime" IsDisplay="true" ItemPos="LeftBottom" DisplayName="TR" />
+      <item name="EchoTime" IsDisplay="true" ItemPos="LeftBottom" DisplayName="TE" />
+      <item name="ReceivingCoil" IsDisplay="true" ItemPos="LeftBottom" DisplayName="ReceivingCoil" />
+      <item name="ImageComment" IsDisplay="true" ItemPos="LeftBottom" DisplayName="ImageComment" />
+      <item name="StudyComment" IsDisplay="true" ItemPos="LeftBottom" DisplayName="StudyComment" />
+      <item name="StudyDescription" IsDisplay="true" ItemPos="LeftBottom" DisplayName="StudyDescription" />
+      <item name="WindowsWidth" IsDisplay="true" ItemPos="RightBottom" DisplayName="W" />
+      <item name="WindowsLevel" IsDisplay="true" ItemPos="RightBottom" DisplayName="L" />
+	  <item name="DiffusionBValue" IsDisplay="false" ItemPos="LeftBottom" DisplayName="DiffusionBValue" />
+	  <item name="ConvolutionKernel" IsDisplay="true" ItemPos="LeftBottom" DisplayName="" />
+    </item>
+    <item name="QRServerList" CurrentServerIndex="1">
+      <item name="Server2" IP="10.24.3.54" AETitle="AE2" Port="5334" />
+      <item name="Server1" IP="10.24.3.58" AETitle="AE1" Port="5333" />
+    </item>
+    <!--设置自动加载历史检查信息-->
+    <item name="HistoryExamAutoLoad" value="true">
+      <!--Timefrom表示查询历史检查的起点，例如3表示3年前的数据；Timeto表示查询历史检查的终点，例如0表示0年前也就是现在的数据。时间以年为单位-->
+      <!--Times表示进行查询的次数。-->
+      <item name="HistoryExamLoadTime" Timefrom="3" Timeto="0" Times="1" />
+      <!--判断历史检查的条件-->
+      <item name="HistoryExamLoadCondition">
+		<!--CanBeNull表示此字段是否可以为空，也就是说为空的情况下认为匹配；Check表示需要检验这一项 -->
+        <!--注：下面项目有2处使用：查询历史检查时需要发送的信息数据，以及缩略图后增加的检查如何分组显示 -->
+		<!--注：查询历史检查时需要发送的信息数据：可使用PatientID、PatientName、AccessionNum、HisOrderID -->
+		<!--注：缩略图后增加的检查如何分组显示：可使用Region、PatientID、PatientName、PatientSex、PatientBirthDate -->
+		<item name="Region" CanBeNull="true" Check="false" />
+        <item name="PatientID" CanBeNull="false" Check="true" />
+        <item name="PatientName" CanBeNull="false" Check="true" />
+        <item name="PatientSex" CanBeNull="true" Check="false" />
+        <item name="PatientBirthDate" CanBeNull="true" Check="false" />
+        <item name="AccessionNum" CanBeNull="false" Check="true" />
+        <item name="HisOrderID" CanBeNull="false" Check="true" />
+      </item>
+    </item>
+    <!--设置查询界面，设备类型列表配置，用户自定义需要显示的配置项，配置项不存在或display为非true时，将不显示-->
+    <item name="SearchModalityItems">
+	<item name="CR" IsDisplay="true"/>
+	<item name="DX" IsDisplay="true"/>
+	<item name="DR" IsDisplay="true"/>
+	<item name="CT" IsDisplay="true"/>
+	<item name="MR" IsDisplay="true"/>
+	<item name="MG" IsDisplay="true"/>
+	<item name="XA" IsDisplay="true"/>
+	<item name="RF" IsDisplay="true"/>
+	<item name="NM" IsDisplay="true"/>
+	<item name="PT" IsDisplay="true"/>
+	<item name="BD" IsDisplay="true"/>
+	<item name="SC" IsDisplay="true"/>
+	<item name="US" IsDisplay="true"/>
+	<item name="ES" IsDisplay="true"/>
+	<item name="GM" IsDisplay="true"/>
+    </item>
+    <item name="DisplayImageLoadProgress" value="false" />
+    <!--缩略图是否通过双击展开-->
+    <item name="IconExpandOnDoubleClick" value="false" />
+    <!--是否提供当选中缩略图时显示图像到选择窗口的功能-->
+    <item name="DisplayImageWhenSelectIcon" value="true" />
+    <!--是否在图像下载时就对图像进行解压的配置-->
+    <item name="UncompressWhenLoading" value="true" />
+    <!--设置打印配置-->
+    <item name="PrintConfiguration">
+      <!--打印布局配置-->
+      <item name="LayoutConfiguration">
+        <item name="PredefinedLayout">
+          <item name="1X1" Row="1" Col="1" />
+          <item name="1X2" Row="1" Col="2" />
+          <item name="2X1" Row="2" Col="1" />
+          <item name="2X2" Row="2" Col="2" />
+          <item name="2X3" Row="2" Col="3" />
+          <item name="3X2" Row="3" Col="2" />
+          <item name="3X3" Row="3" Col="3" />
+          <item name="3X4" Row="3" Col="4" />
+          <item name="4X3" Row="4" Col="3" />
+          <item name="4X4" Row="4" Col="4" />
+          <item name="4X5" Row="4" Col="5" />
+          <item name="5X4" Row="5" Col="4" />
+          <item name="5X5" Row="5" Col="5" />
+          <item name="8X8" Row="8" Col="8" />
+          <item name="Custom 01">
+            <item name="Rect" X="0" Y="0" Width="0.5" Height="0.5" />
+            <item name="Rect" X="0" Y="0.5" Width="0.5" Height="0.5" />
+            <item name="Rect" X="0.5" Y="0" Width="0.5" Height="1" />
+          </item>
+          <item name="Custom 02">
+            <item name="Rect" X="0" Y="0" Width="1" Height="0.5" />
+            <item name="Rect" X="0" Y="0.5" Width="0.5" Height="0.5" />
+            <item name="Rect" X="0.5" Y="0.5" Width="0.5" Height="0.25" />
+            <item name="Rect" X="0.5" Y="0.75" Width="0.5" Height="0.25" />
+          </item>
+        </item>
+      </item>
+      <!--打印页面配置-->
+      <item name="PageConfiguration" PointsPerInch="200" />
+      <!--打印文本配置-->
+      <item name="TextInfomationConfiguration">
+        <item name="Style" InfoFilter="14" Culture="zh-CHS" Font="Arial">
+        	<item name="Size">
+        	 <item name="ct" value="50"/>
+        	 <item name="dr" value="50"/>
+        	</item>
+         </item>
+		<item name="Header" value="PatientNameDB_PatientSex_PatientID" Height="20" Culture="zh-CHS" Font="Arial" Enable="true"/>
+        <item name="CornerInfomation">
+          <item name="PatientName" Position="LeftTop" Personal="True" />
+          <item name="PatientSex_Age_DateofBirth" Position="LeftTop" Personal="False" />
+          <item name="Modality" Position="LeftTop" Personal="False" />
+          <item name="PatientID" Position="LeftTop" Personal="False" />
+          <item name="Modality_PatientID" Position="LeftTop" Personal="False" />
+          <item name="StudyACNumber" Position="LeftTop" Personal="False" />
+		  <item name="ExamNO" Position="Unknown" Personal="False" />
+		  <item name="ImageStudyID" Position="LeftTop" Personal="False" />
+          <item name="SeriesNumber" Position="LeftTop" Personal="False" />
+          <item name="InstanceNumber" Position="LeftTop" Personal="False" />
+          <item name="FrameNumber" Position="LeftTop" Personal="False" />
+          <item name="PatientPosition" Position="LeftTop" Personal="False" />
+          <item name="ViewPosition" Position="LeftTop" Personal="False" />
+          <item name="ImageLaterality" Position="LeftTop" Personal="False" />
+          <item name="InstitutionName" Position="RightTop" Personal="False" />
+          <item name="Manufacturer" Position="RightTop" Personal="False" />
+          <item name="ManufacturerModelName" Position="RightTop" Personal="False" />
+          <item name="StudyDate" Position="RightTop" Personal="False" />
+		  <item name="StudyTime" Position="RightTop" Personal="False" />
+          <item name="AcquisitionDate" Position="RightTop" Personal="False" />
+		  <item name="AcquisitionTime" Position="RightTop" Personal="False" />
+          <item name="SeriesTime" Position="RightTop" Personal="False" NotDisplayModality="MG" />
+          <item name="SeriesDescription" Position="RightTop" Personal="False" />
+		  <item name="BodyPartExamined" Position="RightTop" Personal="False" />
+          <item name="ReunionMode3D" Position="RightTop" Personal="False" />
+          <item name="SliceThickness" Position="RightTop" Personal="False" />
+          <item name="SliceLocation" Position="RightTop" Personal="False" />
+          <item name="ScaleRatio" Position="RightTop" Personal="False" />
+          <item name="KVP" Position="LeftBottom" Personal="False" />
+          <item name="Exposure" Position="LeftBottom" Personal="False" />
+          <item name="XrayTubeCurrent" Position="LeftBottom" Personal="False" />
+          <item name="ScanningSequence" Position="LeftBottom" Personal="False" />
+          <item name="RepetitionTime" Position="LeftBottom" Personal="False" />
+          <item name="EchoTime" Position="LeftBottom" Personal="False" />
+          <item name="ReceivingCoil" Position="LeftBottom" Personal="False" />
+          <item name="ImageComment" Position="LeftBottom" Personal="False" />
+          <item name="StudyComment" Position="LeftBottom" Personal="False" />
+          <item name="StudyDescription" Position="LeftBottom" Personal="False" />
+		  <item name="ConvolutionKernel" Position="LeftBottom" Personal="False" />
+          <item name="WindowWidth" Position="RightBottom" Personal="False" />
+          <item name="WindowCenter" Position="RightBottom" Personal="False" />
+          <item name="HospitalName" Position="Unknown" Personal="False" FixValue="XXX医院" />
+          <item name="PatientNameDB" Position="Unknown" Personal="True" />
+          <item name="PatientNameDcm" Position="Unknown" Personal="True" />
+		  <item name="DiffusionBValue" Position="Unknown" Personal="False" />
+		  <item name="ImageDate" Position="Unknown" Personal="False" />
+		  <item name="ImageTime" Position="Unknown" Personal="False" />
+        </item>
+      </item>
+      <!--打印OverLay配置-->
+      <item name="PrintOverlayConfiguration">
+		<item name="PrintFlag" Font="Cambria" Scale="0.8">
+          <item name="L" />
+          <item name="R" />
+          <item name="PA" />
+          <item name="AP" />
+        </item>
+      </item>
+      <!--打印机配置-->
+      <item name="PrinterConfiguration">
+        <item name="CurrentPrinter" value="0" />
+        <item name="AvailablePrinter">
+		  <!--对于纸质打印机name必须设为系统"打印机和传真"中看到的打印机名-->
+		  <!--Border没有设置的时候,使用打印机的可打印范围自动最大填充-->
+		  <!--Border的设置顺序是纸张竖向放置的左上右下, 顺序和Orientation无关, 单位是CM-->
+                    <item name="Local CQ Printer" Ip="127.0.0.1" AETitle="CQ" Port="5678" Type="DicomPrinter" MediumType="MAMMO CLEAR FILM" FilmDestination="PROCESSOR" MagnificationType="BILINEAR" Photometric="MONOCHROME2" Trim="True" Orientation="LANDSCAPE" MaxDensity="300" MinDensity="0" ConfigurationInfo="">
+            <item name="FilmSize" value="8INX10IN" />
+            <item name="FilmSize" value="8_5INX11IN" />
+            <item name="FilmSize" value="10INX12IN" />
+            <item name="FilmSize" value="10INX14IN" />
+            <item name="FilmSize" value="11INX14IN" />
+            <item name="FilmSize" value="11INX17IN" />
+            <item name="FilmSize" value="14INX14IN" />
+            <item name="FilmSize" value="14INX17IN" />
+            <item name="FilmSize" value="24CMX24CM" />
+            <item name="FilmSize" value="24CMX30CM" />
+          </item>
+          <item name="Local CQ Printer Landscope" Ip="127.0.0.1" AETitle="CQ" Port="5678" Type="DicomPrinter" MediumType="BLUE FILM" FilmDestination="MAGAZINE" MagnificationType="NONE" Photometric="MONOCHROME2" Trim="False" Orientation="LANDSCAPE" MaxDensity="300" MinDensity="0" ConfigurationInfo="">
+            <item name="FilmSize" value="11INX17IN" />
+            <item name="FilmSize" value="14INX14IN" />
+            <item name="FilmSize" value="14INX17IN" />
+            <item name="FilmSize" value="24CMX24CM" />
+            <item name="FilmSize" value="24CMX30CM" />
+          </item>
+          <item name="Local CQ Printer RGB" Ip="127.0.0.1" AETitle="CQ" Port="5678" Type="DicomPrinter" MediumType="BLUE FILM" FilmDestination="MAGAZINE" MagnificationType="NONE" Photometric="RGB" Trim="False" Orientation="PORTRAIT" MaxDensity="300" MinDensity="0" ConfigurationInfo="">
+            <item name="FilmSize" value="11INX17IN" />
+            <item name="FilmSize" value="14INX14IN" />
+            <item name="FilmSize" value="14INX17IN" />
+            <item name="FilmSize" value="24CMX24CM" />
+            <item name="FilmSize" value="24CMX30CM" />
+          </item>
+          <item name="FX DocuCentre-IV C2265 PCL 6" Type="PaperPrinter" Photometric="MONOCHROME2" Border="1,2.5,3,4"  Orientation="PORTRAIT">
+            <item name="FilmSize" value="A4" />
+            <item name="FilmSize" value="A3" />
+          </item>
+          <item name="Foxit Reader PDF Printer" Type="PaperPrinter" Photometric="RGB" Orientation="PORTRAIT">
+            <item name="FilmSize" value="A4" />
+            <item name="FilmSize" value="A3" />
+			<item name="FilmSize" value="8INX10IN" />
+          </item>
+        </item>
+      </item>
+    </item>
+    <item name="chatroomIISUri" value="10.24.2.170:8082" />
+    <!--配置测量标注相关线条颜色和线宽.线宽可以配置1,2,3,表示像素为单位的宽度；颜色可以配置成white（白）,yellow（黄）,red（红）,green（绿）,blue（蓝）,black(黑)-->
+    <item name="LineColorLight" value="yellow" />
+    <item name="LineColorDark" value="blue" />
+    <!--缩略图选择颜色配置，可以进行彩色及灰色设置，分别为Colorful及Gray-->
+    <item name="SelectIconItemColor" value="Gray" />
+    <item name="CustomProgressDisplay" value="false" />
+    <!--ImageType或者SeriesTime,AcquisitionTime,ImageTime,TriggerTime,diffutionBValue-->
+    <item name="AutoSplitSeriesTag" value="ImageType" />
+    <item name="IsNeedAutoSplitSeries" value="false" />
+    <!--日期格式定义， 格式中yyyy为年份标示符，MM为月份标示符，dd为日期标示符，用户可定义年月日显示顺序及分割符-->
+    <item name="DateFormat" value="yyyy-MM-dd" />
+    <!--时间格式定义， 格式中hh为小时标示符，mm为分钟标示符，ss为秒标示符，用户可定义时分秒显示顺序及分割符-->
+    <item name="TimeFormat" value="hh:mm:ss" />	
+    <!--DICOM存储SCP列表-->
+    <item name="DicomStorageSCPList">
+      <item name="DVT" Ip="127.0.0.1" AETitle="DVT" Port="104" />
+      <item name="ACQManager" Ip="10.24.2.99" AETitle="MAROTECH" Port="1111" />
+      <item name="工作站" Ip="10.24.2.111" AETitle="STATION" Port="3456" />
+    </item>
+	<!--是否允许访问指定的图像, True表示允许, False表示不允许-->
+	<item name="SpecifiedImageAccess">
+	  <item name="DesktopViewer" value="True"/>
+	  <item name="WebViewer" value="False"/>
+	</item>
+	<item name="InformationUrl" value="http://10.24.2.244:8085/Introduction.aspx" />
+	<item name="SeriesBoxUpperBorderDisplay" value="true" />
+	<item name="FTPPathList">
+			<!--ftp格式：ftp://用户名：密码@路径-->
+      <item name="\\10.24.2.99\pacs3\sht" value="ftp://mViewer:mindray99!@10.24.2.99" />
+      <item name="\\10.24.3.57\pacs" value="ftp://10.24.3.57" />
+    </item>
+    <item name="HTTPPathList">
+      <!--HTTP格式：HTTP://用户名：密码@路径-->
+      <!--HTTP文件访问，参考 图像数据访问部署注意事项.txt 文件进行配合部署-->
+      <item name="\\10.24.3.59\" value="http://10.24.3.59:8012/" />
+    </item>
+  <!--avi是否使用远程路径直接打开, True表示直接在线播放, False表示下载到本地播放-->
+  <item name="AVIUseFTPPath" value="True"/>
+  <item name="SeriesParamUseSeriesDescription"  value="True"/>
+  <item name="AutoCheckImageLeftOrRightToScalebarModality"  value="MG,CR"/>
+  
+    <!--查询界面：目前写死了2行（后续有需求再做扩展），列没有限制，需要配置每一列的宽度-->
+    <item name="SearchAreaRowColumnConfig">
+      <item name="Row" value="50,50" />
+      <item name="Column" value="20,115,60,122,50,125,60,125,50,125,122" />
+    </item>
+    <!--查询界面配置;-->
+	<!--外层name= 定义的tag字符串；需要与代码中定义一致;-->
+	<!--row，column：表示在上述配置的网格中的位置；从1开始计数；;-->
+    <item name="SearchAreaConfig">
+	  <item name="label">
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="1" />
+		<item name="Text" value="从" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+		
+	  </item>
+      <item name="From">
+		<item name="CtrlType" value="DateTimePicker" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="2" />
+		<item name="width" value="110" />
+		<item name="height" value="30" />
+		
+	  </item>
+	  <item name="label">
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="1" />
+		<item name="Text" value="至" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+		
+	  </item>
+	  <item name="To">
+		<item name="CtrlType" value="DateTimePicker" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="2" />
+		<item name="width" value="110" />
+		<item name="height" value="30" />
+		
+	  </item>
+	  <item name="label">
+	    <item name="display" value="1" />
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="3" />
+		<item name="Text" value="病人姓名" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+		
+	  </item>
+	  <item name="PatientName">
+	    <item name="display" value="1" />
+		<item name="CtrlType" value="EditText" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="4" />
+		<item name="width" value="120" />
+		<item name="height" value="30" />
+		
+	  </item>
+	  <item name="label">
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="3" />
+		<item name="Text" value="设备类型" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="Modality">
+		<item name="CtrlType" value="CheckComboBox" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="4" />
+		<item name="width" value="120" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="label">
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="5" />
+		<item name="Text" value="病人ID" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="Pid">
+		<item name="CtrlType" value="EditText" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="6" />
+		<item name="width" value="120" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="label">
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="5" />
+		<item name="Text" value="性别" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="Sex">
+		<item name="CtrlType" value="CheckComboBox" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="6" />
+		<item name="width" value="120" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="label">
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="7" />
+		<item name="Text" value="检查状态" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="OrderStatus">
+		<item name="CtrlType" value="CheckComboBox" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="8" />
+		<item name="width" value="120" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="label">
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="7" />
+		<item name="Text" value="关键字" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="SearchKey">
+		<item name="CtrlType" value="ComboBox" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="8" />
+		<item name="width" value="120" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="label">
+		<item name="CtrlType" value="Label" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="9" />
+		<item name="Text" value="数据源" />
+		<item name="width" value="100" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="DataSource">
+		<item name="CtrlType" value="CheckComboBox" />
+		<item name="Enable" value="1" />
+		<item name="row" value="1" />
+		<item name="column" value="10" />
+		<item name="width" value="120" />
+		<item name="height" value="30" />
+	  </item>
+	  <item name="SearchWord">
+		<item name="CtrlType" value="EditText" />
+		<item name="Enable" value="1" />
+		<item name="row" value="2" />
+		<item name="column" value="9" />
+		<item name="columnSpan" value="2" />
+		<item name="width" value="163" />
+		<item name="height" value="30" />
+	  </item> 
+    </item>
+	
+	<!--查询界面：病人类型配置;value中记录对应的字母表示方式-->
+    <item name="PatientTypeForSearch">
+      <item name="门诊病人" value="O" display="true"/>
+      <item name="住院病人" value="I" display="true"/>
+	  <item name="住院急诊病人" value="N" display="true"/>
+	  <item name="急诊病人" value="E" display="true"/>
+	  <item name="体检病人" value="P" display="true"/>
+	  <item name="复查病人" value="F" display="true"/>
+	  <item name="外院病人" value="W" display="true"/>
+    </item>
+	<!--是否查询非上述配置类型之外的病人类型，比如未匹配空类型-->
+	<item name="StrictVerifPatientTypeForSearch" value="true" ></item>
+	<!--查询界面：胶片类型：-->
+    <item name="FilmTypeForSearch">
+      <item name="原始胶片" value="1" />
+      <item name="电子胶片" value="2" />
+	  <item name="电子+云" value="3" />
+	  <item name="无" value="0" />
+	  <item name="未知" value="-1" />
+    </item>
+	<!--查询界面：检查类型：-->
+    <item name="ExamStatusForSearch">
+      <item name="检查完成" value="1100" />
+      <item name="书写中" value="1110" />
+	  <item name="报告挂起" value="1120" />
+	  <item name="报告回退" value="1130" />
+	  <item name="实习报告" value="1140" />
+	  <item name="临时报告" value="1145" />
+      <item name="临时报告已打印" value="1148" />
+	  <item name="报告已书写" value="1150" />
+	  <item name="报告已审核" value="1170" />
+	  <item name="报告已打印" value="1180" />
+	  <!--item name="未匹配" value="N" /-->
+    </item>
+	<!--可以进行查询显示的最小的code，大于等于此值的可以显示出来；不需要限制配置成空-->
+	<item name="ExamStatusMinValueForSearch" value="1100" ></item>
+	<!--不进行过滤的类型；-->
+	<item name="ExamStatusNoFilterModality">
+	  <item name="US" />
+	  <item name="ES" />
+	</item>
+	<!--查询时使用的字段：pid,inpatientid,outpatientid,modalityid-->
+	<item name="PIDTagForSearch" value="pid" ></item>
+	<!--调窗方式：当图像较小时，使用全部调窗方式，图像刷新速度快，但是耗费内存-->
+	<!--当图像较大时，使用优化调窗方式，节省内存，但是图像刷新速度慢-->
+	<!--配置阈值：宽或者高大于阈值时，使用优化调窗方式-->
+	<item name="ImageWindowModeThre" value="5000" ></item>
+	<!--acq节点配置的machine名称；当配置之后，则认为是华西超声科调用方式：相符的检查可以导出，否则不可以导出-->
+	<!--如果不配置，或者配置的内容为空，则不进行处理；命名中大小写不敏感。-->
+	<!--item name="NeedExportMachineName" value="test;test1;test2" ></item-->
+	<item name="NeedExportMachineName" value="" ></item>
+	<!--导入图像上传新建序列时，使用的查询类型。不配置此项目或者配置为0，表示使用查询检查；配置为1，表示使用查询病人方式，可以查询到未匹配检查数据-->
+	<item name="ImportUploadCheckMode" value="0" ></item>
+	
+  </item>
+</config>

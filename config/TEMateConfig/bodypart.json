@@ -1,0 +1,162 @@
+{
+  "columnConfig": [
+    {
+      "title": "检查部位",
+      "key": "BODYPART",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "检查部位"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入检查部位"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "编码",
+      "key": "BODYPARTCODE",
+      "width": 200,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "编码",
+		  "disabled": "false"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入编码"
+          }
+        ],
+		"defaultValueBySql":"select LPAD(COUNT(*) , 5, '0')  value from t_bodypart b where b.modality = 'US' and b.deptcode = '102'"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            },
+            {
+              "label": "全部",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select COUNT(*) value from t_bodypart b where b.modality = 'US' and b.deptcode = '102'"
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select b.bodypartid id,b.* from t_bodypart b where b.modality like '%US%' and b.deptcode = '102' order by b.sequence",
+    "insert": "insert into t_bodypart(bodypartid,bodypartcode,bodypart,modality,deptcode,deleted,sequence) values('{ID}','{BODYPARTCODE}','{BODYPART}','US','102','0','{SEQUENCE}')",
+    "update": "update t_bodypart set bodypart='{BODYPART}',bodypartcode='{BODYPARTCODE}' where bodypartid='{ID}'",
+    "setState": "update t_bodypart set deleted = '{DELETED}' where bodypartid = '{ID}'",
+	"delete": "delete from t_bodypart where bodypartid = '{ID}'",
+	"setSequence":"update t_bodypart set sequence = '{SEQUENCE}' where bodypartid = '{ID}'",
+    "exportData": "select * from t_bodypart b where b.modality like '%US%' and b.deptcode = '102' order by b.sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": false,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "addedButtons":[
+	{
+	   "name": "检查项目列表",
+	   "defaultShowText":"",
+	   "width":1000,
+	   "exeSql":"",
+	   "isBetch": ""
+	}
+  ]
+}

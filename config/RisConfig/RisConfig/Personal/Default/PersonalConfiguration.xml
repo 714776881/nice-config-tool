@@ -1,0 +1,9 @@
+<config versiontag="root">
+  <!--用于替换GeneralConfig里QueryValueRestrict中的同名项目, 同时会被TerminalConfiguration的同名项目替代-->
+  <item name="PersonalConfiguration" versiontag="201812.3267">
+    <item name="QueryValueRestrict" versiontag="201812.3268">
+    </item>
+    <item name="MiscellaneousConfiguration" versiontag="202405.60">
+    </item>
+  </item>
+</config>

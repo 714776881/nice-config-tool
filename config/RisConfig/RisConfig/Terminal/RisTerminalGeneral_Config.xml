@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config versiontag="root">
+  <item name="TerminalConfiguration" versiontag="201812.4263">
+    <!-- *********   根据模态选择是否 合并登记（多选用逗号分隔）   ************  -->
+    <!--<item name="RegisterMerge_Modality" value="US"/>-->
+    <!-- *********   合并登记下不同方式合并申请单号  0: 表示一次只能登记一个申请单，把这一个申请单检查项目合并到一起合并到一起*****  -->
+    <!-- *********   '1:表示一次登记多个申请单，每个申请单的检查项目分别合并在一起************  -->
+    <!-- *********   2:表示一次登记多个申请单，所有的申请单下的检查项目都合并都一起，申请单号也合并到一起************  -->
+    <item name="HisIDMergeType" value="0" versiontag="202109.165" />
+    <!-- 报告保存的时候, 是否必须确认危急值. 为1的情况下, 取消危急值则报告不会保存 -->
+    <item name="MustConfirmEmergencyBeforeVerify" value="0" versiontag="201812.4264" />
+    <!-- 是否开启 Hook.dll  用于输入法的切换   0:不开启   1:开启   -->
+    <item name="OpenHook" value="0" versiontag="201812.4265" />
+    <!-- 是否开启 离线测量  0:不开启  1:开启 -->
+    <item name="OfflineMeasure" value="0" versiontag="201812.4266" />
+    <!-- 超声缩略图的视图模式  0:通用模式  1:贴图模式 -->
+    <item name="USListViewMode" value="0" versiontag="202103.84" />
+    <!-- 区域任务提醒检查周期, 单位(秒). 0为不检测 -->
+    <item name="RegionCheckTime" value="30" versiontag="201812.4267" />
+    <!-- 终端的缓存目录  所有缓存的根目录 -->
+    <item name="CacheDirectory" value="C:\CacheDir" versiontag="201812.4268" />
+    <!-- 从worklist启动网页时使用的浏览器，主要用于调用阅片 配置浏览器所在路径，如果不配置使用默认浏览器 -->
+    <item name="WorklistStartBrowser" value="" versiontag="202212.35" />
+    <!-- FTP工作模式 0:主动模式  1:被动模式 -->
+    <item name="FTPUsePassive" value="1" versiontag="201812.4269" />
+    <!-- 是否开启区域任务管理 0:不开启 1:开启 -->
+    <item name="RegionTaskManager" value="0" versiontag="201812.4270" />
+    <!-- 区域任务管理查询天数 -->
+    <item name="RegionCheckDays" value="7" versiontag="201812.4272" />
+    <!-- 自动切换采集点的状态  （OrderStatus） -->
+    <item name="AutoCheckForCatch" value="1120" versiontag="201812.4273" />
+    <!-- 显示到第几个显示器 ... -->
+    <item name="ScreenShowOn" value="1" versiontag="201812.4274" />
+    <!--省人民内镜开始书写报告时需要强制输入镜子型号 -->
+    <item name="ESMirrorSetting" value="0" versiontag="201906.212" />
+    <!-- OrderDR为空时, 发送危急值前是否从HIS接口取OrderDR ... -->
+    <item name="GetOrderDrFromHisInterface" value="0" versiontag="201812.4276" />
+    <!-- 历史列表 Tips消息, 停留时间（鼠标移开后的消失时间），单位：ms, 默认是500ms -->
+    <item name="HistoryToolTipsInterval" value="500" versiontag="202012.115" />
+    <!-- 是否开启EO控件的eowp.exe  -->
+    <item name="EOEnableLargeAddressSpace" value="1" versiontag="202012.116" />
+    <!--CA服务全局开关 0或者空：关闭CA，其他：开启CA。默认关闭-->
+    <item name="CAConfig" value="0" versiontag="202110.216" />
+    <!--审核报告是否弹出提醒框,1: 需要提醒， 其他:不提醒，默认不提醒 -->
+    <item name="VerifyReportRemind" value="0" versiontag="202110.217" />
+    <!-- 程序版本号判断开关，0为关闭，默认为0 ；配置其他：比较t_appversioncontrol表中的Apptype相同的对比版本号 -->
+    <item name="StationApptype" value="0" versiontag="20221216.9" />
+    <!--书写报告时是否弹出验证病案号窗口，用于验证当前书写的检查和实际病人小票信息是否一致，配置为1时需要弹框验证-->
+    <item name="ValidateInPatientId" value="" versiontag="20221216.10" />
+    <!--登记时候是否按照his的急诊登记匹配病人类型，1是，0否-->
+    <item name="MapPatientTypeOnRegisterByOrderLevel" value="0" versiontag="202304.141" />
+    <!--医院电子病历配置，优先读取服务端配置，服务端为空的时候读取终端配置 配置说明：value为RUIAN，支持参数Inpatietnid，medicareid；等-->
+    <item name="ElectronicMedicalHospital" value="" versiontag="202401.731" />
+    <!--放射科知识库模板配置界面树结构是否显示检查项目节点 1 显示 其他:不显示-->
+    <item name="ShowExamRepttemp" value="" versiontag="202401.732" />
+    <!--科室名称定义，RAD中配置使用放射界面的科室名，US中配置使用超声界面的科室名，ES中配置使用内镜界面的科室名-->
+    <!--RAD，US，ES这三个英文不要修改-->
+    <item name="DepartmentDefineConfiguraion" versiontag="201812.4277">
+      <item name="RAD" value="#Array" versiontag="201812.4278">
+        <item value="放射科" versiontag="201812.4279" />
+      </item>
+      <item name="US" value="#Array" versiontag="201812.4280">
+        <item value="超声科" versiontag="201812.4281" />
+      </item>
+      <item name="ES" value="#Array" versiontag="201812.4282">
+        <item value="内窥镜" versiontag="201812.4283" />
+        <item value="内镜科" versiontag="201812.4284" />
+      </item>
+    </item>
+    <!-- 超声报告  哪些模态可以启用超声报告的功能 默认US、ES -->
+    <item name="USReportModality" value="US,ES" versiontag="201912.293" />
+    <!--默认启动模块  0:工作列表  1:登记 -->
+    <item name="StartupModule" value="0" versiontag="201912.294" />
+    <item name="MiscellaneousConfiguration" value="" versiontag="201812.4285">
+      <!-- 如果配置值为0，则认为是不限制关联检查的时间，如果是5，就是查最近5天的关联检查  -->
+      <item name="QueryAssociatedExamsDays" value="5" versiontag="201812.4286" />
+      <!-- 如果配置值为0，则认为关联检查的时间截止到今天，如果是2，就是查未来2天内的关联检查  -->
+      <item name="QueryAssociatedExamsNextDays" value="0" versiontag="201812.4287" />
+      <!--是否默认显示为呼叫列表-->
+      <item name="DefaultShowQueue" value="0" versiontag="201812.4288" />
+      <!--呼叫上下午分界时间, 可以13\13:30\13:15:30这几种写法-->
+      <item name="NoonTime" value="13" versiontag="201812.4290" />
+      <!--默认呼叫队列查询的呼叫状态, 逗号分隔。0等待，1已呼，2弃号，3挂起，4已诊，5确约，6废号，7预约，8已重用，9未确约，10等待和确约. -->
+      <!--***注意.第一个状态将作为召回时恢复的状态***-->
+      <item name="DefaultQueueState" value="0,5,1,3" versiontag="201812.4291" />
+      <!--全部队列设置 0 不显示全部队列, 1 只显示全部队列, 2 全部队列在第一个, 3全部队列在最后，4 多选模式-->
+      <item name="DefaultAllQueue" value="3" versiontag="202012.118" />
+      <!-- 需要隐藏的数据字段，Condition表示条件，满足条件就会把Property中配置的属性值替换为横线-->
+      <item name="HideDataConfig" value="#Array" versiontag="202209.32">
+        <!-- 未审核的病理报告，隐藏所见和诊断-->
+        <!--<item>
+          <item name="Condition" value="#Array">
+            <item>
+              <item name="Modality" value="#Array">
+                <item value="GM"/>
+              </item>
+              <item name="OrderStatus" value="#Array">
+                <item value="1110"/>
+                <item value="1150"/>
+                <item value="1160"/>
+              </item>
+            </item>
+          </item>
+          <item name="Column" value="#Array">
+            <item value="StudyResult"/>
+            <item value="DiagResult"/>
+          </item>
+        </item>-->
+        <!-- 未呼叫的检查，隐藏检查项目和病人姓名 -->
+        <!--<item>
+          <item name="Condition" value="#Array">
+            <item>
+              <item name="QueueState" value="#Array">
+                <item value="0"/>
+                <item value="5"/>
+                <item value="7"/>
+              </item>
+            </item>
+          </item>
+          <item name="Column" value="#Array">
+            <item value="Examitem"/>
+            <item value="PatientName"/>
+          </item>
+        </item>-->
+      </item>
+    </item>
+    <!--worklist查看报告的方式：配置0时，在工作列表查看；配置为1时，在报告编辑界面查看；默认在工作列表查看-->
+    <item name="ViewReportLayout" value="1" versiontag="202103.85" />
+    <!--多个检查项目，需要提醒医生勾选需要合并的检查，1：提醒；0：不提醒，默认为0-->
+    <item name="MultiExamWarning" value="0" versiontag="202106.11" />
+    <!--worklist列表界面是否打印PDF报告，1：打印；其他：打印tx报告，默认为空-->
+    <item name="PrintPDFReport" value="" versiontag="202106.12" />
+    <!--浙二/儿保/温州质评中报告评分是否允许多选 0: 不允许 1: 允许. 默认不允许 -->
+    <item name="ReportQualityMuitiSelect" value="0" versiontag="202106.13" />
+    <!--修改报告时是否判断报告归档状态，0：不判断 1：判断 默认为0-->
+    <item name="ArchiveStatusConfig" value="0" versiontag="202109.166" />
+    <!--报告测量值显示方案：测量值项目加粗：FUBAO；测量值数值加粗：配置为空，默认为空-->
+    <item name="MeasureTableConfig" value="" versiontag="202109.167" />
+    <!--当客户端配置缺省模态为US时，是否显示所见和提示两个单独的tab页-->
+    <item name="ShowStudyAndDiag" value="1" versiontag="202109.168" />
+    <!--浙二单位提醒，开启单位提醒功能-->
+    <!--item name="RemindKeyWord" value="m,mm" /-->
+    <!--修改签名弹出框是否显示实习医生下拉框 1:开启显示-->
+    <item name="ShowMedicDoctor" value="0" versiontag="202203.43" />
+    <!--修改签名弹出框是否显示记录员下拉框 1:开启显示-->
+    <item name="ShowRecordDoctor" value="0" versiontag="202203.44" />
+    <!--修改签名界面是否显示麻醉医生选项 1:开启显示 -->
+    <item name="ShowNumbDoctor" value="0" versiontag="202209.33" />
+    <!--修改签名界面是否可以修改报告医生 0:不能修改显示灰色；其他可以修改，默认可以修改 -->
+    <item name="EnableReportDoctor" value="" versiontag="202306.100" />
+    <!--测量值导入时超出范围提醒, 不配或者配置为空:不提醒; 0：提醒后让用户选择是否导入; 1： 不允许导入-->
+    <item name="OutRangeReminder" value="" versiontag="202211.39" />
+    <!--测量值计算结果精确到几位小数，必须配置自然数-->
+    <item name="MeasureValueFraction" value="" versiontag="202405.61" />
+    <!--测量值计算结果小数点补0 配置格式为0.00-->
+    <item name="MeasureAddtion" value="" versiontag="202405.62" />
+    <!--登录/退出模块：是否启用设备维护信息记录功能。0 不启用，1 启用，默认值为0-->
+    <item name="IsUseEquipmentMaintainRecord" value="0" versiontag="202205.88" />
+    <!--登录/退出模块：是否提示未书写报告（未书写【1100】未审核【1150】）  其他 不提示； 1：开启（配合t_configitem表中RemainReport的value值使用）-->
+    <item name="ExitProcessReminder" value="" versiontag="202401.733" />
+    <!--用户登录认证接口开关。0 不使用登录认证接口，1 使用登录认证接口，默认值为0-->
+    <item name="UseLoginInterface" value="0" versiontag="202207.33" />
+    <!--登录模块：是否显示设备维护按钮。0 不显示，1 显示，默认值为0-->
+    <item name="IsShowEquipmentMaintainBtn" value="0" versiontag="202309.133" />
+    <!--登录认证接口名称-->
+    <item name="LoginInterface" value="" versiontag="202207.34" />
+    <!--双击知识库时，检查所见是否插入到光标中间， 0:插入到结尾，1： 插入到中间，默认结尾-->
+    <item name="StudyAddEnd" value="0" versiontag="202207.35" />
+    <!--双击知识库时，检查诊断是否插入到光标中间， 0:插入到结尾，1： 插入到中间，默认结尾-->
+    <item name="DiagAddEnd" value="0" versiontag="202207.36" />
+    <!-- 登记模块：是否使用登录科室过滤可登记的设备（影响影像设备下拉控件、已选择检查列表->鼠标右键-设备菜单绑定的可选设备）。0 不启用，1 启用，默认值为0-->
+    <item name="IsUsedLoginDepFilterRegisterEquipment" value="" versiontag="202207.37" />
+    <!-- 登记模块：指定可登记的影像设备id集合，多值用英文分号分隔。默认值为空
+		 备注：当DesignatedRegisterEquipmentids配置的值不为空时，登记界面只能登记和指定设备绑定的检查项目，不受其他配置项影响-->
+    <item name="DesignatedRegisterEquipmentids" value="" versiontag="202207.38" />
+    <!--登记模块：已选择检查列表->鼠标右键-设备菜单按钮内容格式类型。0 设备名称，1 机房名称_设备名称，默认值为0-->
+    <item name="RegisterEquipmentMenuTextFormatType" value="0" versiontag="202207.39" />
+    <!--登记界面修改设备是否过滤和当前检查项目绑定的机器设备，配置空或0为不过滤，1为过滤，默认不过滤-->
+    <item name="FilterEquipmentByExamitem" value="0" versiontag="202309.118" />
+    <!--登记时候是否按照his提供的院区id匹配执行院区，1是，0否-->
+    <item name="MapHospitalOnRegisterByHopitalID" value="0" versiontag="202311.21" />
+    <!--浙二审核报告时触发智能检测会诊医生时， 有些急诊和住院的终端不需要检测， 默认为空，需要检测；配置为0时不检测-->
+    <item name="ShowInternalConsult" value="" versiontag="202207.40" />
+    <!--锁屏时间配置 时间单位（分钟）默认配置10分钟没有操作锁屏，如果配置为空或者不配置读取终端配置-->
+    <item name="LockProcessTime" value="10" versiontag="202208.97" />
+    <!--报告模块：保存，审核，审核并保存，打印前进行校验 viewer图像病人与当前操作时校验报告和图像是否同一人  0:不校验  1:校验-->
+    <item name="CheckReportImage" value="" versiontag="202211.40" />
+    <!--是否采用新的机房设备更新路径。0 不启用，1 启用，默认值为0-->
+    <item name="IsUseNewDeviceUpdatePath" value="0" versiontag="202211.41" />
+    <!--报告编辑界面TX工具栏配置，不配置保持默认，可以配置FontNameComboBox,FontSizeComboBox,Separator,FontItalicButton,FontUnderlineButton,ListNumberedButton等-->
+    <item name="ButtonPositionConfig" value="" versiontag="202212.36" />
+    <!--肺结核病人在报告界面上增加提醒信息 value中写入需要显示的文字-->
+    <item name="TuberculosisTip" value="结核及疑似结核患者，请到感染科结核门诊（3号楼一楼）进一步诊治。" versiontag="202405.63" />
+    <!-- 用户登录配置 -->
+    <item name="UserLoginConfiguration" versiontag="201912.295">
+      <!--密码复杂度校验   0：不验证  1：验证 -->
+      <item name="PasswordVerify" value="0" versiontag="201912.296" />
+      <!--密码有效期  0：不设置有效期  10：十天 -->
+      <item name="PasswordValidityPeriod" value="60" versiontag="201912.297" />
+      <!--锁定用户的次数： 输错几次密码 锁定用户-->
+      <item name="PasswordErrorLock" value="5" versiontag="201912.298" />
+    </item>
+    <item name="LayoutConfiguration" versiontag="201812.4292">
+      <!-- 是否显示视图tab栏 0 隐藏，1 显示-->
+      <item name="WorklistViewTabDisplay" value="0" versiontag="202103.86" />
+    </item>
+    <item name="QueryValueRestrict" versiontag="201812.4294">
+      <item name="CallTerminalID" value="#Array" versiontag="201812.4295">
+        <item value="false" versiontag="201812.4296" />
+        <item value="true" versiontag="201812.4297" />
+        <item value="1" versiontag="201812.4298" />
+        <item value="10" versiontag="201812.4299" />
+        <item value="6" versiontag="201812.4300" />
+        <item value="8" versiontag="201812.4301" />
+      </item>
+      <item name="ModalityExpand" value="#Array" versiontag="201812.4302">
+        <item value="MR" versiontag="201812.4303" />
+        <item value="CT" versiontag="201812.4304" />
+        <item value="CR" versiontag="201812.4305" />
+        <item value="DX" versiontag="201912.299" />
+        <item value="US" versiontag="201812.4306" />
+        <item value="ES" versiontag="201812.4307" />
+      </item>
+      <item name="ExamStatus" value="#Array" versiontag="201912.300">
+        <item value="1010" versiontag="201912.301" />
+        <item value="1020" versiontag="201912.302" />
+        <item value="1100" versiontag="201912.303" />
+        <item value="1110" versiontag="201912.304" />
+        <item value="1120" versiontag="201912.305" />
+        <item value="1130" versiontag="201912.306" />
+        <item value="1140" versiontag="201912.307" />
+        <item value="1145" versiontag="201912.308" />
+        <item value="1148" versiontag="201912.309" />
+        <item value="1150" versiontag="201912.310" />
+        <item value="1160" versiontag="201912.311" />
+        <item value="1170" versiontag="201912.312" />
+        <item value="1180" versiontag="201912.313" />
+      </item>
+      <item name="VariableIDName" value="#Array" versiontag="201912.314">
+        <item value="PatientID" versiontag="201912.315" />
+        <item value="ModalityID" versiontag="201912.316" />
+        <item value="InPatientID" versiontag="201912.317" />
+        <item value="OutPatientID" versiontag="201912.318" />
+        <item value="MedicalRecordID" versiontag="201912.319" />
+      </item>
+    </item>
+    <!--<item name="TerminalQueryPreDefine" value="#Array">
+      <item>
+        <item name="Name" value="US已登记" />
+        <item name="QuerySet" value="#Array">
+          <item>
+            <item name="Param" value="DateType" />
+            <item name="Value" value="#Array">
+              <item value="R" />
+            </item>
+          </item>
+          <item>
+            <item name="Param" value="DateRange" />
+            <item name="Value" value="#Array">
+              <item value="今天" />
+            </item>
+          </item>
+          <item>
+            <item name="Param" value="PatientType" />
+            <item name="Value" value="#Array">
+              <item value="E" />
+            </item>
+          </item>
+          <item>
+            <item name="Param" value="Modality" />
+            <item name="Value" value="#Array">
+              <item value="US  " />
+            </item>
+          </item>
+          <item>
+            <item name="Param" value="ExamStatus" />
+            <item name="Value" value="#Array">
+              <item value="1020" />
+            </item>
+          </item>
+        </item>
+      </item>
+    </item>-->
+    <item name="DefaultQueryPredefine" versiontag="201812.4308">
+      <item name="UseDefault" value="true" versiontag="201812.4309" />
+      <item name="QuerySet" value="#Array" versiontag="201812.4310">
+        <item versiontag="201812.4311">
+          <!--Param里的值参考QueryConditionPreDefine中的定义-->
+          <item name="Param" value="DateRange" versiontag="201812.4312" />
+          <item name="Value" value="#Array" versiontag="201812.4313">
+            <item value="今天" versiontag="201812.4314" />
+          </item>
+        </item>
+        <item versiontag="201812.4315">
+          <item name="Param" value="DateType" versiontag="201812.4316" />
+          <item name="Value" value="#Array" versiontag="201812.4317">
+            <item value="R" versiontag="201812.4318" />
+          </item>
+        </item>
+        <item versiontag="201812.4319">
+          <item name="Param" value="CallTerminalID" versiontag="201812.4320" />
+          <item name="Value" value="#Array" versiontag="201812.4321">
+            <item value="false" versiontag="201812.4322" />
+          </item>
+        </item>
+      </item>
+    </item>
+	<!--登录：是否启用工作班次信息记录功能。0 不启用，1 启用，默认值为0-->
+	<item name="IsUseWorkShiftRecord" value="0" />
+  </item>
+</config>

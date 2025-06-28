@@ -1,0 +1,51 @@
+﻿<config>
+	<item name="DataSourceConfiguration">
+		<item name="DataBaseFactory">
+			<item name="DataBases">
+				<item name="db14">
+					<item name="type" value="ris"/>
+					<item name="insName" value="ris14"/>
+					<item name="userName" value="ris"/>
+					<item name="password" value="maroland"/>
+					<item name="passwordEncrypt" value="1oLUGQDS3rlZRjDAzjy8Sw=="/>
+					<item name="ip" value="192.168.1.60"/>
+					<item name="port" value="1521"/>
+				</item>
+			</item>
+		</item>
+		<item name="DataSourceFactory">
+			<item name="default" value="滨江院区"/>
+			<item name="DataSources">
+				<item name="滨江院区">
+					<item name="HospitalID" value="102"/>
+					<item name="HospitalName" value="滨江院区"/>
+					<item name="dbName" value="db14"/>
+				</item>
+				<item name="社区医院">
+					<item name="HospitalID" value="104"/>
+					<item name="HospitalName" value="社区医院"/>
+					<item name="dbName" value="db14"/>
+				</item>
+
+				<item name="杭州会诊医院">
+					<item name="HospitalID" value="111"/>
+					<item name="HospitalName" value="杭州会诊医院"/>
+					<item name="WithPlatform" value="1"/>
+					<item name="dbName" value="db14"/>
+				</item>
+				<item name="滨江会诊医院">
+					<item name="HospitalID" value="110"/>
+					<item name="HospitalName" value="滨江会诊医院"/>
+					<!-- <item name="WithPlatform" value="1" /> -->
+					<item name="dbName" value="db14"/>
+				</item>
+				<item name="区域会诊数据">
+					<item name="HospitalID" value="8888"/>
+					<item name="HospitalName" value="区域会诊数据"/>
+					<item name="dbName" value="db14"/>
+					<item name="Type" value="Platform"/>
+				</item>
+			</item>
+		</item>
+	</item>
+</config>

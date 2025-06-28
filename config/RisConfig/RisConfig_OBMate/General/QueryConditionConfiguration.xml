@@ -1,0 +1,16 @@
+﻿<config>
+	<!--查询区域使用哪些查询条件,Basic中配置基本查询界面，Advanced中配置高级查询界面，Report中配置报告界面-->
+	<!--value里的值，参考RisGeneral_Config.xml文件中PreDefineConfiguration/QueryConditionPreDefine的子节点名-->
+	<item name="QueryConditionConfiguration">
+		<item name="Basic" value="#Array">
+	        <item value="DateTimeCondtion"/>
+	        <item value="ObExamType"/>
+	        <item value="ExamStatus"/>
+	        <item value="PatientName"/>
+	        <item value="Examno"/>
+	        <item value="PatientIDReport"/>
+	        <item value="ExternalExamNo"/>
+	        <item value="PatientInstanceUID"/>
+		</item>
+	</item>
+</config>

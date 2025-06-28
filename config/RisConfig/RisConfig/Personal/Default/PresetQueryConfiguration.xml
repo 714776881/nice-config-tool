@@ -1,0 +1,289 @@
+<config versiontag="root">
+  <!--快捷查询的配置-->
+  <item name="PresetQueryConfiguration" versiontag="201812.3269">
+    <!--PresetQueries中配置显示哪些快捷查询,可以显示公有快捷查询和私有快捷查询-->
+    <!--公有快捷查询参考RisGeneral_Config.xml文件中PreDefineConfiguration/PublicQueryPreDefine每个子节点中Name对应的值-->
+    <!--私有快捷查询参考本文件PrivatePresetQuery每个子节点中Name对应的value-->
+    <item name="PresetQueries" value="#Array" versiontag="201812.3270">
+      <item value="急诊" versiontag="201812.3271" />
+      <item value="已登记" versiontag="201812.3272" />
+      <item value="已呼" versiontag="201812.3273" />
+      <item value="心超" versiontag="201812.3274" />
+      <item value="妇科" versiontag="201812.3275" />
+    </item>
+    <!--个人快捷查询的配置-->
+    <item name="PrivatePresetQuery" value="#Array" versiontag="201812.3276">
+      <item versiontag="201812.3277">
+        <item name="Name" value="急诊" versiontag="201812.3278" />
+        <item name="QuerySet" value="#Array" versiontag="201812.3279">
+          <item versiontag="201812.3280">
+            <item name="Param" value="DateType" versiontag="201812.3281" />
+            <item name="Value" value="#Array" versiontag="201812.3282">
+              <item value="R" versiontag="201812.3283" />
+            </item>
+          </item>
+          <item versiontag="201812.3284">
+            <item name="Param" value="DateRange" versiontag="201812.3285" />
+            <item name="Value" value="#Array" versiontag="201812.3286">
+              <item value="今天" versiontag="201812.3287" />
+            </item>
+          </item>
+          <item versiontag="201812.3288">
+            <item name="Param" value="PatientType" versiontag="201812.3289" />
+            <item name="Value" value="#Array" versiontag="201812.3290">
+              <item value="E" versiontag="201812.3291" />
+            </item>
+          </item>
+          <item versiontag="201812.3292">
+            <item name="Param" value="Modality" versiontag="201812.3293" />
+            <item name="Value" value="#Array" versiontag="201812.3294">
+              <item value="US  " versiontag="201812.3295" />
+            </item>
+          </item>
+          <item versiontag="201812.3296">
+            <item name="Param" value="ExamStatus" versiontag="201812.3297" />
+            <item name="Value" value="#Array" versiontag="201812.3298">
+              <item value="1020" versiontag="201812.3299" />
+            </item>
+          </item>
+          <item versiontag="201812.3300">
+            <item name="Param" value="CallTerminalID" versiontag="201812.3301" />
+            <item name="Value" value="#Array" versiontag="201812.3302">
+              <item value="false" versiontag="201812.3303" />
+            </item>
+          </item>
+          <item versiontag="201812.3304">
+            <item name="Param" value="EquipmentSelect" versiontag="201812.3305" />
+            <item name="Value" value="#Array" versiontag="201812.3306">
+              <item value="R" versiontag="201812.3307" />
+            </item>
+          </item>
+          <item versiontag="201812.3308">
+            <item name="Param" value="DoseCondition" versiontag="201812.3309" />
+            <item name="Value" value="#Array" versiontag="201812.3310">
+              <item value="A" versiontag="201812.3311" />
+            </item>
+          </item>
+          <item versiontag="201812.3312">
+            <item name="Param" value="Deleted" versiontag="201812.3313" />
+            <item name="Value" value="#Array" versiontag="201812.3314">
+              <item value="false" versiontag="201812.3315" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item versiontag="201812.3316">
+        <item name="Name" value="已登记" versiontag="201812.3317" />
+        <item name="QuerySet" value="#Array" versiontag="201812.3318">
+          <item versiontag="201812.3319">
+            <item name="Param" value="DateType" versiontag="201812.3320" />
+            <item name="Value" value="#Array" versiontag="201812.3321">
+              <item value="R" versiontag="201812.3322" />
+            </item>
+          </item>
+          <item versiontag="201812.3323">
+            <item name="Param" value="DateRange" versiontag="201812.3324" />
+            <item name="Value" value="#Array" versiontag="201812.3325">
+              <item value="今天" versiontag="201812.3326" />
+            </item>
+          </item>
+          <item versiontag="201812.3327">
+            <item name="Param" value="Modality" versiontag="201812.3328" />
+            <item name="Value" value="#Array" versiontag="201812.3329">
+              <item value="US  " versiontag="201812.3330" />
+            </item>
+          </item>
+          <item versiontag="201812.3331">
+            <item name="Param" value="ExamStatus" versiontag="201812.3332" />
+            <item name="Value" value="#Array" versiontag="201812.3333">
+              <item value="1020" versiontag="201812.3334" />
+            </item>
+          </item>
+          <item versiontag="201812.3335">
+            <item name="Param" value="CallTerminalID" versiontag="201812.3336" />
+            <item name="Value" value="#Array" versiontag="201812.3337">
+              <item value="false" versiontag="201812.3338" />
+            </item>
+          </item>
+          <item versiontag="201812.3339">
+            <item name="Param" value="EquipmentSelect" versiontag="201812.3340" />
+            <item name="Value" value="#Array" versiontag="201812.3341">
+              <item value="R" versiontag="201812.3342" />
+            </item>
+          </item>
+          <item versiontag="201812.3343">
+            <item name="Param" value="DoseCondition" versiontag="201812.3344" />
+            <item name="Value" value="#Array" versiontag="201812.3345">
+              <item value="A" versiontag="201812.3346" />
+            </item>
+          </item>
+          <item versiontag="201812.3347">
+            <item name="Param" value="Deleted" versiontag="201812.3348" />
+            <item name="Value" value="#Array" versiontag="201812.3349">
+              <item value="false" versiontag="201812.3350" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item versiontag="201812.3351">
+        <item name="Name" value="已呼" versiontag="201812.3352" />
+        <item name="QuerySet" value="#Array" versiontag="201812.3353">
+          <item versiontag="201812.3354">
+            <item name="Param" value="DateType" versiontag="201812.3355" />
+            <item name="Value" value="#Array" versiontag="201812.3356">
+              <item value="R" versiontag="201812.3357" />
+            </item>
+          </item>
+          <item versiontag="201812.3358">
+            <item name="Param" value="DateRange" versiontag="201812.3359" />
+            <item name="Value" value="#Array" versiontag="201812.3360">
+              <item value="今天" versiontag="201812.3361" />
+            </item>
+          </item>
+          <item versiontag="201812.3362">
+            <item name="Param" value="Modality" versiontag="201812.3363" />
+            <item name="Value" value="#Array" versiontag="201812.3364">
+              <item value="US  " versiontag="201812.3365" />
+            </item>
+          </item>
+          <item versiontag="201812.3366">
+            <item name="Param" value="ExamStatus" versiontag="201812.3367" />
+            <item name="Value" value="#Array" versiontag="201812.3368">
+              <item value="1020" versiontag="201812.3369" />
+            </item>
+          </item>
+          <item versiontag="201812.3370">
+            <item name="Param" value="CallTerminalID" versiontag="201812.3371" />
+            <item name="Value" value="#Array" versiontag="201812.3372">
+              <item value="true" versiontag="201812.3373" />
+            </item>
+          </item>
+          <item versiontag="201812.3374">
+            <item name="Param" value="EquipmentSelect" versiontag="201812.3375" />
+            <item name="Value" value="#Array" versiontag="201812.3376">
+              <item value="R" versiontag="201812.3377" />
+            </item>
+          </item>
+          <item versiontag="201812.3378">
+            <item name="Param" value="DoseCondition" versiontag="201812.3379" />
+            <item name="Value" value="#Array" versiontag="201812.3380">
+              <item value="A" versiontag="201812.3381" />
+            </item>
+          </item>
+          <item versiontag="201812.3382">
+            <item name="Param" value="Deleted" versiontag="201812.3383" />
+            <item name="Value" value="#Array" versiontag="201812.3384">
+              <item value="false" versiontag="201812.3385" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item versiontag="201812.3386">
+        <item name="Name" value="心超" versiontag="201812.3387" />
+        <item name="QuerySet" value="#Array" versiontag="201812.3388">
+          <item versiontag="201812.3389">
+            <item name="Param" value="DateType" versiontag="201812.3390" />
+            <item name="Value" value="#Array" versiontag="201812.3391">
+              <item value="R" versiontag="201812.3392" />
+            </item>
+          </item>
+          <item versiontag="201812.3393">
+            <item name="Param" value="DateRange" versiontag="201812.3394" />
+            <item name="Value" value="#Array" versiontag="201812.3395">
+              <item value="今天" versiontag="201812.3396" />
+            </item>
+          </item>
+          <item versiontag="201812.3397">
+            <item name="Param" value="Modality" versiontag="201812.3398" />
+            <item name="Value" value="#Array" versiontag="201812.3399">
+              <item value="US  " versiontag="201812.3400" />
+            </item>
+          </item>
+          <item versiontag="201812.3401">
+            <item name="Param" value="BodyPart" versiontag="201812.3402" />
+            <item name="Value" value="#Array" versiontag="201812.3403">
+              <item value="72773" versiontag="201812.3404" />
+            </item>
+          </item>
+          <item versiontag="201812.3405">
+            <item name="Param" value="CallTerminalID" versiontag="201812.3406" />
+            <item name="Value" value="#Array" versiontag="201812.3407">
+              <item value="false" versiontag="201812.3408" />
+            </item>
+          </item>
+          <item versiontag="201812.3409">
+            <item name="Param" value="EquipmentSelect" versiontag="201812.3410" />
+            <item name="Value" value="#Array" versiontag="201812.3411">
+              <item value="R" versiontag="201812.3412" />
+            </item>
+          </item>
+          <item versiontag="201812.3413">
+            <item name="Param" value="DoseCondition" versiontag="201812.3414" />
+            <item name="Value" value="#Array" versiontag="201812.3415">
+              <item value="A" versiontag="201812.3416" />
+            </item>
+          </item>
+          <item versiontag="201812.3417">
+            <item name="Param" value="Deleted" versiontag="201812.3418" />
+            <item name="Value" value="#Array" versiontag="201812.3419">
+              <item value="false" versiontag="201812.3420" />
+            </item>
+          </item>
+        </item>
+      </item>
+      <item versiontag="201812.3421">
+        <item name="Name" value="妇科" versiontag="201812.3422" />
+        <item name="QuerySet" value="#Array" versiontag="201812.3423">
+          <item versiontag="201812.3424">
+            <item name="Param" value="DateType" versiontag="201812.3425" />
+            <item name="Value" value="#Array" versiontag="201812.3426">
+              <item value="R" versiontag="201812.3427" />
+            </item>
+          </item>
+          <item versiontag="201812.3428">
+            <item name="Param" value="DateRange" versiontag="201812.3429" />
+            <item name="Value" value="#Array" versiontag="201812.3430">
+              <item value="今天" versiontag="201812.3431" />
+            </item>
+          </item>
+          <item versiontag="201812.3432">
+            <item name="Param" value="Modality" versiontag="201812.3433" />
+            <item name="Value" value="#Array" versiontag="201812.3434">
+              <item value="US  " versiontag="201812.3435" />
+            </item>
+          </item>
+          <item versiontag="201812.3436">
+            <item name="Param" value="BodyPart" versiontag="201812.3437" />
+            <item name="Value" value="#Array" versiontag="201812.3438">
+              <item value="33222" versiontag="201812.3439" />
+            </item>
+          </item>
+          <item versiontag="201812.3440">
+            <item name="Param" value="CallTerminalID" versiontag="201812.3441" />
+            <item name="Value" value="#Array" versiontag="201812.3442">
+              <item value="false" versiontag="201812.3443" />
+            </item>
+          </item>
+          <item versiontag="201812.3444">
+            <item name="Param" value="EquipmentSelect" versiontag="201812.3445" />
+            <item name="Value" value="#Array" versiontag="201812.3446">
+              <item value="R" versiontag="201812.3447" />
+            </item>
+          </item>
+          <item versiontag="201812.3448">
+            <item name="Param" value="DoseCondition" versiontag="201812.3449" />
+            <item name="Value" value="#Array" versiontag="201812.3450">
+              <item value="A" versiontag="201812.3451" />
+            </item>
+          </item>
+          <item versiontag="201812.3452">
+            <item name="Param" value="Deleted" versiontag="201812.3453" />
+            <item name="Value" value="#Array" versiontag="201812.3454">
+              <item value="false" versiontag="201812.3455" />
+            </item>
+          </item>
+        </item>
+      </item>
+    </item>
+  </item>
+</config>

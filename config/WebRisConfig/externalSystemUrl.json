@@ -1,0 +1,231 @@
+{
+  "columnConfig": [
+  	{
+      "title": "模态",
+      "key": "MODALITY",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "不限制",
+		  "style": "width:180px",
+		  "show-search": true,
+		  "option-filter-prop": "label",
+		  "allowClear": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择模态"
+          }
+        ],
+		"span": 24,
+        "defaultValue": ""
+      },
+	  "dicSql":" select distinct m.MODALITY as value ,m.MODALITYNAME as label from T_MODALITY_CONFIG m"
+    },
+    {
+      "title": "名称",
+      "key": "CITEM_ALIAS",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "内部名称",
+      "key": "CITEM_KEY",
+      "width": 200,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ]
+      }
+    },
+	{
+      "title": "描述",
+      "key": "CITEM_DESC",
+      "width": 200,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+		"span": 24
+      }
+    },
+	{
+      "title": "",
+      "key": "CITEM_VALUE",
+      "width": 200,
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "external-url",
+        "props": {
+          "placeholder": "编码",
+		  "disabled":"true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入编码"
+          }
+        ],
+		"span": 24
+      }
+    },
+	{
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            },
+            {
+              "label": "全部",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_configItem t where t.citem_category='ExternalSystemUrl'"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select t.citem_id id,t.* from t_configItem t where t.citem_category='ExternalSystemUrl' and t.deptid='{GLOBAL}{DEPARTMENTID}'",
+    "insert": "insert into t_configItem (citem_id, modality, citem_alias, citem_key, citem_desc, citem_value, deptid, citem_category, citem_level) values (nvl((select max(citem_id) + 1 from t_configItem),0), '{MODALITY}', '{CITEM_ALIAS}', '{CITEM_KEY}', '{CITEM_DESC}', '{CITEM_VALUE}', '{GLOBAL}{DEPARTMENTID}', 'ExternalSystemUrl', 'G')",
+    "update": "update t_configItem set modality = '{MODALITY}', citem_alias = '{CITEM_ALIAS}', citem_key = '{CITEM_KEY}', citem_desc = '{CITEM_DESC}', citem_value = '{CITEM_VALUE}' where citem_id = '{ID}'",
+    "setState": "update t_configItem set deleted = '{DELETED}' where citem_id = '{ID}'",
+	"delete": "delete from t_configItem where citem_id = '{ID}'",
+	"setSequence":"update t_configItem set sequence = '{SEQUENCE}' where citem_id = '{ID}'",
+    "exportData": "select t.citem_id id,t.* from t_configItem t where t.citem_category='ExternalSystemUrl' and t.deptid='{GLOBAL}{DEPARTMENTID}'"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": false,
+	"setStateToDelete": true,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  },
+  "scopeConfig":{
+	  "isShow": true,
+	  "level": 2
+  }
+}

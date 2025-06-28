@@ -95,7 +95,7 @@
         "defaultValue": "",
 		"span":"24"
       },
-	  "dicSql": "select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'"
+	  "dicSql": "select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0'"
     },
 	{
       "title": "权限",
@@ -123,7 +123,7 @@
         "defaultValue": "",
 		"span":"24"
       },
-	  "dicSql": "select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label"
+	  "dicSql": "select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup != '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label"
     },
 	{
       "title": "最新更改时间",

@@ -1,0 +1,113 @@
+﻿<config>
+	<!--查询区域使用哪些查询条件,Basic中配置基本查询界面，Advanced中配置高级查询界面，Report中配置报告界面-->
+	<!--value里的值，参考RisGeneral_Config.xml文件中PreDefineConfiguration/QueryConditionPreDefine的子节点名-->
+	<item name="QueryConditionConfiguration">
+		<!--进入到Worklist界面后，是否开启自动查询，使用默认的查询条件-->
+		<item name="AutoWorklistQuery" value="true"/>
+		<!--当高级查询窗口收起后, 高级查询条件是否还生效-->
+		<item name="ClosedAdvancedQuery" value="true"/>
+		<item name="Basic" value="#Array">
+			<item value="DateTimeCondtion"/>
+			<item value="PatientName"/>
+			<item value="VariableID"/>
+			<item value="Hospital"/>
+			<item value="Modality"/>
+			<item value="ExamStatus"/>
+			<item value="PatientType"/>
+			<item value="Accno"/>
+		</item>
+		<item name="Advanced" value="#Array">
+			<!--高级查询中，主要分3块区域，在每块区域的Content中增加或移除查询条件-->
+			<!--第1块区域中放与病人基本信息相关的查询条件-->
+			<!--第2块区域中放与请检信息相关的查询条件-->
+			<!--第3块区域中放与报告信息相关的查询条件-->
+			<item>
+				<item name="Title" value="病人基本信息"/>
+				<item name="Content" value="#Array">
+					<item value="PatientSex"/>
+					<item value="PatientAge"/>
+					<!-- <item value="PatientNameEng"/> -->
+					
+					<!--           <item value="JobDoctor"/> -->
+					<!--           <item value="OutPatientID"/> -->
+					<!--         <item value="InPatientID"/> -->
+					<item value="MedicareID"/>
+					<item value="Ward"/>
+					<item value="BodyPart"/>
+					<item value="ExamItems"/>
+					<item value="Charge"/>
+					<item value="CallTerminalID"/>
+					<item value="LocalConsult"/>
+					<!-- 	        <item value="PhysicalExamID"/> -->
+					<item value="IDCardNumber"/>
+					<item value="ReportStatus"/>
+				</item>
+			</item>
+			<item>
+				<item name="Title" value="请检信息"/>
+				<item name="Content" value="#Array">
+					<item value="OrderType"/>
+					<item value="Equipment"/>
+					<!--           <item value="Clinic"/>
+          <item value="OrderDoctor"/>
+          <item value="Technician"/> -->
+					<item value="RegDoctor"/>
+					<item value="ExamRoom"/>
+					<!--  <item value="Dose"/> -->
+					<item value="Disease"/>
+					<item value="Remark"/>
+				</item>
+			</item>
+			<item>
+				<item name="Title" value="报告信息"/>
+				<item name="Content" value="#Array">
+					<item value="ReportDoctor"/>
+					<item value="VerifyDoctor"/>
+					<item value="ConsultDoctor"/>
+					<item value="ReportRemark"/>
+					<!--  <item value="ConincidenceRate"/> -->
+					<!--    <item value="ImageShowType"/> -->
+					<!--    <item value="KeyWord"/> -->
+					<!--     <item value="ReportRemark"/> -->
+					<!--           <item value="ReportList"/> -->
+					<item value="PositiveResult"/>
+					<item value="MotionImage"/>
+					<item value="Tuberculosis"/>
+					<item value="ExamFinding"/>
+					<item value="DiagnoseResult"/>
+					<!--           <item value="PathologyResult"/> -->
+				</item>
+			</item>
+			<item>
+				<item name="Title" value="已删除"/>
+				<item name="Content" value="#Array">
+					<item value="Deleted"/>
+				</item>
+			</item>
+		</item>
+		<item name="Report" value="#Array">
+			<item value="ModalityIDReport"/>
+			<item value="PatientName"/>
+			<item value="PatientIDReport"/>
+			<item value="OutPatientID"/>
+			<item value="InPatientID"/>
+			<item value="Accno"/>
+		</item>
+	</item>
+	<!--质控查询使用哪些查询条件。Basic中配置基本查询，General配置质控查询的条件，Random配置随机查询的条件-->
+	<!--value里的值，参考PreDefineConfiguration/QueryConditionPreDefine的子节点名-->
+	<item name="QualityConditionConfiguration">
+		<item name="Basic" value="#Array">
+			<item value="DateTimeCondtion"/>
+			<item value="ModalityExpand"/>
+			<item value="Hospital"/>
+		</item>
+		<item name="General" value="#Array">
+			<item value="QualityDoctor"/>
+			<item value="QualityLevel"/>
+		</item>
+		<item name="Random" value="#Array">
+			<item value="RandomCount"/>
+		</item>
+	</item>
+</config>

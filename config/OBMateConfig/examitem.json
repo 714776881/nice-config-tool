@@ -1,0 +1,178 @@
+{
+  "columnConfig": [
+      {
+      "title": "检查类型",
+      "key": "OBEXAMTYPE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择检查类型",
+		  "style": "width:180px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择检查类型"
+          }
+        ],
+        "defaultValue": ""
+      },
+	  "dicSql":"select d.itemcode value,d.itemname as label from t_dictionary d where d.diccategory = '5001' and d.deleted=0 "
+    },
+    {
+      "title": "检查项目",
+      "key": "EXAMITEM",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "检查项目"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入检查项目"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "编码",
+      "key": "EXAMITEMCODE",
+      "width": 150,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "编码",
+		  "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入编码"
+          }
+        ],
+		"defaultValueBySql":"select generate_code('t_examitem.examitemcode','',6) value from dual"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_examitem"
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select e.*,e.examitemid id from t_examitem e where OBEXAMTYPE = '{OBEXAMTYPE}' and 1=1 order by sequence",
+    "insert": "insert into t_examitem(examitemid,examitemcode,examitem,obexamtype,bodypartid,deleted,sequence,regionid,hospitalcode,departmentid) values('{ID}','{EXAMITEMCODE}','{EXAMITEM}','{OBEXAMTYPE}','b0950274-cb6c-4aad-bab5-9747015fe153','0','{SEQUENCE}','{GLOBAL}{REGIONID}','{GLOBAL}{HOSPITALID}','{GLOBAL}{DEPARTMENTID}')",
+    "update": "update t_examitem e set e.examitemcode = '{EXAMITEMCODE}',e.examitem = '{EXAMITEM}',e.obexamtype = '{OBEXAMTYPE}',e.deleted = '{DELETED}',e.sequence = '{SEQUENCE}' where e.examitemid = '{ID}'",
+    "setState": "update t_examitem set deleted = '{DELETED}' where examitemid = '{ID}'",
+	"delete": "delete from t_examitem where examitemid = '{ID}'",
+	"setSequence":"update t_examitem set sequence = '{SEQUENCE}' where examitemid = '{ID}'",
+    "exportData": "select e.*,e.examitemid id from t_examitem e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": false,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"20"
+  }
+}

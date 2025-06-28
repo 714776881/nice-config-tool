@@ -1,0 +1,9 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "通用报告参数",
+			"filePath":"General\\ReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ReportConfiguration']"
+		}
+	]
+}

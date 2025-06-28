@@ -1,0 +1,35 @@
+<config versiontag="root">
+  <item name="DataSourceConfiguration" versiontag="201812.6">
+    <item name="DataBaseFactory" versiontag="201812.7">
+      <item name="DataBases" versiontag="201812.8">
+        <item name="db" versiontag="201812.9">
+          <item name="type" value="ris" versiontag="201812.10" />
+          <item name="insName" value="ris" versiontag="201812.11" />
+          <item name="userName" value="ris" versiontag="201812.12" />
+          <item name="password" value="maroland" versiontag="201812.13" />
+          <item name="ip" value="10.24.3.59" versiontag="201812.14" />
+          <item name="port" value="1521" versiontag="201812.15" />
+          <item name="tnsName" value="ris" versiontag="202006.1" />
+        </item>
+      </item>
+    </item>
+    <item name="DataSourceFactory" versiontag="201812.23">
+      <item name="default" value="浙江省人民医院" versiontag="201812.24" />
+      <item name="DataSources" versiontag="201812.25">
+        <item name="浙江省人民医院" versiontag="201812.26">
+          <item name="HospitalID" value="00" versiontag="201812.27" />
+          <item name="HospitalName" value="浙江省人民医院" versiontag="201812.28" />
+          <item name="dbName" value="db" versiontag="201812.29" />
+          <item name="ImageStorage" value="" versiontag="201812.30" />
+          <item name="ImageStorageUser" value="" versiontag="201812.31" />
+          <item name="ImageStoragePassWord" value="" versiontag="201812.32" />
+          <item name="TextStorage" value="" versiontag="201812.33" />
+          <item name="TextStorageUser" value="" versiontag="201812.34" />
+          <item name="TextStoragePassWord" value="" versiontag="201812.35" />
+          <item name="ConsultTemplate" value="0" versiontag="201812.36" />
+          <item name="Category" value="0" versiontag="201912.1" />
+        </item>
+      </item>
+    </item>
+  </item>
+</config>

@@ -1,0 +1,408 @@
+[
+    {
+        "label": "院区/科室",
+        "key": "dept",
+        "icon": "PartitionOutlined",
+        "children": [
+		    {
+                "label": "区域管理",
+                "key": "region",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "region.json"
+            },
+			{
+                "label": "院区管理",
+                "key": "hospital",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "hospital.json"
+            },
+            {
+                "label": "科室管理",
+                "key": "department",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "department.json"
+            }
+        ]
+    },
+    {
+        "label": "基础数据",
+        "key": "base",
+        "icon": "AppstoreOutlined",
+        "children": [
+            {
+                "label": "数据字典",
+                "key": "dictionary",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "dictionary.json"
+            },
+			{
+                "label": "检查类型",
+                "key": "modality",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "modality.json"
+            },
+            {
+                "label": "病人类型",
+                "key": "patType",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "patType.json"
+            },
+			{
+                "label": "请检信息",
+                "key": "qingjian",
+                "icon": "",
+				"children": [
+					{
+						"label": "检查医师",
+						"key": "jianchaDoctor",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "clinicalDept.json"
+					},
+					{
+						"label": "后处理医师",
+						"key": "handleDoctor",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "doctor.json"
+					},
+					{
+						"label": "登记员",
+						"key": "registar",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "registar.json"
+					},
+				    {
+						"label": "请检科室",
+						"key": "clinicalDept",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "clinicalDept.json"
+					},
+					{
+						"label": "请检医师",
+						"key": "doctor",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "doctor.json"
+					}
+				]
+            },
+			{
+                "label": "病区/病房",
+                "key": "wardRoom",
+                "icon": "",
+				"children": [
+				    {
+						"label": "病区",
+						"key": "ward",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "ward.json"
+					},
+					{
+						"label": "病房",
+						"key": "sickroom",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "sickroom.json"
+					}
+				]
+            },
+			{
+				"label": "机房/设备",
+				"key": "room",
+				"icon": "",
+				"children": [
+					{
+						"label": "机房",
+						"key": "examRoom",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "examRoom.json"
+					},
+					{
+						"label": "设备",
+						"key": "equipmentManager",
+						"icon": "",
+						"path": "/common/urlLink",
+						"fileName": "Others/Equipment?userId=9011"
+					}
+				]
+			}
+        ]
+    },
+    {
+        "label": "用户/角色",
+        "key": "user",
+        "icon": "TeamOutlined",
+        "children": [
+		    {
+                "label": "个人信息",
+                "key": "userDetail",
+                "icon": "",
+                "path": "/common/urlLink",
+                "fileName": "Home/UserDetail"
+            },
+            {
+                "label": "用户管理",
+                "key": "userManager",
+                "icon": "",
+                "path": "/common/urlLink",
+                "fileName": "Home/User"
+            },
+            {
+                "label": "角色管理",
+                "key": "userActor",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "userActor.json"
+            },
+            {
+                "label": "权限管理",
+                "key": "userRole",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "userRole.json"
+            }
+        ]
+    },
+    {
+        "label": "部位/项目",
+        "key": "check",
+        "icon": "BorderOutlined",
+        "children": [
+            {
+                "label": "检查部位",
+                "key": "bodypart",
+                "icon": "",
+                "path": "/temate/bodypart",
+                "fileName": "bodypart.json"
+            },
+            {
+                "label": "检查项目",
+                "key": "examitem",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "examitem.json"
+            },
+			{
+                "label": "关联设备",
+                "key": "epuipmentLink",
+                "icon": "",
+				"path": "/common/urlLink",
+                "fileName": "epuipmentLink.json"
+            }
+        ]
+    },
+	{
+        "label": "知识库",
+        "key": "reportLibrary",
+        "icon": "ZhihuOutlined",
+        "path": "/reportLibrary",
+        "fileName": "reportLibrary.json"
+    },
+	{
+        "label": "模板管理",
+        "key": "templateManager",
+        "icon": "ContainerOutlined",
+        "children": [
+			{
+				"label": "知识库(共享)",
+				"key": "templateShare",
+				"icon": "",
+				"children": [
+					{
+						"label": "模板类别",
+						"key": "tempType",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "temp1.json"
+					},
+					{
+						"label": "报告模板",
+						"key": "template",
+						"icon": "",
+						"path": "/webgm/crud",
+						"fileName": "temp2.json"
+					},
+					{
+						"label": "共享复制",
+						"key": "copyTemplate",
+						"icon": "",
+						"path": "/webgm/crud",
+						"fileName": "copyTemplate.json"
+					},
+					{
+						"label": "共享分发",
+						"key": "shareTemplate",
+						"icon": "",
+						"path": "/common/crud",
+						"fileName": "shareTemplate.json"
+					}
+				]
+			},
+			{
+                "label": "打印模板",
+                "key": "styleTemp",
+                "icon": "",
+                "children": [
+                    {
+                        "label": "打印模板类别",
+                        "key": "styleTempType",
+                        "icon": "",
+                        "path": "/webris/style-type",
+                        "fileName": "styleTempType.json"
+                    },
+                    {
+                        "label": "打印模板",
+                        "key": "styleTemplate",
+                        "icon": "",
+                        "path": "/common/crud",
+                        "fileName": "styleTemplate.json"
+                    }
+                ]
+            }
+        ]
+    },
+	{
+        "label": "报告测量值",
+        "key": "measurement",
+        "icon": "GatewayOutlined",
+        "children": [
+            {
+                "label": "测量项管理",
+                "key": "measurementItem",
+                "icon": "",
+                "path": "/common/urlLink",
+                "fileName": "Others/MeasureTemplate"
+            }
+        ]
+    },
+	{
+        "label": "报告智能检测",
+        "key": "rule",
+        "icon": "BorderlessTableOutlined",
+        "children": [
+            {
+                "label": "检测规则管理",
+                "key": "reportRule",
+                "icon": "",
+                "path": "/common/urlLink",
+                "fileName": "Others/DetectionRule"
+            },
+			{
+                "label": "规则共享分发",
+                "key": "reportRuleShare",
+                "icon": "",
+                "path": "/common/urlLink",
+                "fileName": "Others/DetectionRuleShare"
+            }
+        ]
+    },
+	{
+        "label": "质评管理",
+        "key": "qualityControlManager",
+        "icon": "SecurityScanOutlined",
+        "children": [
+            {
+                "label": "质评项管理",
+                "key": "qualityControlItem",
+                "icon": "",
+                "path": "/common/urlLink",
+                "fileName": "Others/QualityScore"
+            }
+        ]
+    },
+	{
+        "label": "其他",
+        "key": "other",
+        "icon": "BuildOutlined",
+        "children": [
+            {
+                "label": "工作站管理",
+                "key": "workStation",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "workStation.json"
+            },
+			{
+                "label": "超声探头",
+                "key": "tantou",
+                "icon": "",
+                "path": "/common/urlLink",
+                "fileName": "Others/USTransducer"
+            },
+			{
+                "label": "FTP路径管理",
+                "key": "ftpPath",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "ftpPath.json"
+            },
+			{
+                "label": "外部系统调用地址",
+                "key": "systemUrl",
+                "icon": "",
+                "path": "/common/crud",
+                "fileName": "systemUrl.json"
+            }
+        ]
+    },
+    {
+        "label": "配置文件",
+        "key": "system",
+        "icon": "SettingOutlined",
+        "children": [
+            {
+                "label": "统计配置管理",
+                "key": "statistics",
+                "icon": "",
+                "children": [
+                    {
+                        "label": "主题配置",
+                        "key": "statisticsTheme",
+                        "icon": "",
+                        "path": "/common/dict",
+                        "fileName": "statisticsTheme.json"
+                    },
+                    {
+                        "label": "主题分组配置",
+                        "key": "topicalgroups",
+                        "icon": "",
+                        "path": "/common/dict",
+                        "fileName": "topicalgroups.json"
+                    },
+                    {
+                        "label": "参数配置",
+                        "key": "themeParams",
+                        "icon": "",
+                        "path": "/common/dict",
+                        "fileName": "themeParams.json"
+                    }
+                ]
+            },
+			{
+                "label": "预定义配置管理",
+                "key": "preDefineConfig",
+                "icon": "",
+                "children": [
+                    {
+                        "label": "导航预定义元素",
+                        "key": "themePreDefineConfiguration",
+                        "icon": "",
+                        "path": "/common/dict",
+                        "fileName": "themePreDefineConfiguration.json"
+                    }
+                ]
+            }
+        ]
+    }
+]

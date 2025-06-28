@@ -1,0 +1,125 @@
+<config versiontag="root">
+  <!--查询区域使用哪些查询条件,Basic中配置基本查询界面，Advanced中配置高级查询界面，Report中配置报告界面-->
+  <!--value里的值，参考RisGeneral_Config.xml文件中PreDefineConfiguration/QueryConditionPreDefine的子节点名-->
+  <item name="QueryConditionConfiguration" versiontag="201812.3456">
+    <!--进入到Worklist界面后，是否开启自动查询，使用默认的查询条件-->
+    <item name="AutoWorklistQuery" value="true" versiontag="201812.3457" />
+    <!--当高级查询窗口收起后, 高级查询条件是否还生效-->
+    <item name="ClosedAdvancedQuery" value="false" versiontag="201812.3458" />
+    <item name="Basic" value="#Array" versiontag="201812.3459">
+      <item value="DateTimeCondtion" versiontag="201812.3460" />
+      <item value="PatientName" versiontag="201812.3462" />
+      <item value="VariableID" versiontag="201912.278" />
+      <item value="Hospital" versiontag="201912.279" />
+      <item value="PatientType" versiontag="201812.3463" />
+      <item value="ModalityExpand" versiontag="201812.3464" />
+      <item value="ExamStatus" versiontag="201812.3465" />
+      <item value="Department" versiontag="201912.280" />
+    </item>
+    <item name="Advanced" value="#Array" versiontag="201812.3468">
+      <!--高级查询中，主要分3块区域，在每块区域的Content中增加或移除查询条件-->
+      <!--第1块区域中放与病人基本信息相关的查询条件-->
+      <!--第2块区域中放与请检信息相关的查询条件-->
+      <!--第3块区域中放与报告信息相关的查询条件-->
+      <item versiontag="201812.3469">
+        <item name="Title" value="病人基本信息" versiontag="201812.3470" />
+        <item name="Content" value="#Array" versiontag="201812.3471">
+          <item value="PatientSex" versiontag="201812.3472" />
+          <item value="PatientAge" versiontag="201812.3473" />
+          <!--<item value="ModalityID" versiontag="201812.3474" />
+          <item value="OutPatientID" versiontag="201812.3475" />
+          <item value="InPatientID" versiontag="201812.3476" />
+          <item value="MedicareID" versiontag="201812.3477" />-->
+          <item value="Ward" versiontag="201812.3478" />
+          <item value="BodyPart" versiontag="201812.3479" />
+          <item value="ExamItems" versiontag="201812.3480" />
+          <item value="Charge" versiontag="201812.3481" />
+          <item value="CallTerminalID" versiontag="201812.3482" />
+          <item value="Accno" versiontag="201912.281" />
+          <item value="Examno" versiontag="202308.32" />
+          <item value="FollowUpStatus" versiontag="201912.282" />
+          <item value="FollowUpCommiter" versiontag="201912.283" />
+          <item value="WorkPositionID" versiontag="201912.284" />
+          <item value="JobDoctor" versiontag="201912.285" />
+          <item value="JobCategory" versiontag="201912.286" />
+          <item value="JobStatus" versiontag="201912.287" />
+        </item>
+      </item>
+      <item versiontag="201812.3483">
+        <item name="Title" value="请检信息" versiontag="201812.3484" />
+        <item name="Content" value="#Array" versiontag="201812.3485">
+          <item value="OrderType" versiontag="201812.3486" />
+          <item value="Equipment" versiontag="201812.3487" />
+          <item value="Clinic" versiontag="201812.3488" />
+          <item value="OrderDoctor" versiontag="201812.3489" />
+          <item value="Technician" versiontag="201812.3490" />
+          <item value="RegDoctor" versiontag="201812.3491" />
+          <item value="ExamRoom" versiontag="201812.3492" />
+          <item value="Dose" versiontag="201812.3493" />
+          <item value="Disease" versiontag="201812.3494" />
+          <item value="Remark" versiontag="201812.3495" />
+        </item>
+      </item>
+      <item versiontag="201812.3496">
+        <item name="Title" value="报告信息" versiontag="201812.3497" />
+        <item name="Content" value="#Array" versiontag="201812.3498">
+          <item value="ReportDoctor" versiontag="201812.3499" />
+          <item value="VerifyDoctor" versiontag="201812.3500" />
+          <item value="ConsultDoctor" versiontag="201812.3501" />
+          <item value="ReportRemark" versiontag="201812.3502" />
+          <item value="ConincidenceRate" versiontag="201812.3503" />
+          <item value="ImageShowType" versiontag="201812.3504" />
+          <item value="KeyWord" versiontag="201812.3505" />
+          <item value="ReportList" versiontag="201812.3507" />
+          <item value="PositiveResult" versiontag="201812.3508" />
+          <item value="MotionImage" versiontag="201812.3509" />
+          <item value="Tuberculosis" versiontag="201812.3510" />
+          <item value="ExamFinding" versiontag="201812.3511" />
+          <item value="DiagnoseResult" versiontag="201812.3512" />
+          <item value="PathologyResult" versiontag="201812.3513" />
+          <item value="ReportClassification" versiontag="202308.33" />
+        </item>
+      </item>
+      <item versiontag="201812.3514">
+        <item name="Title" value="已删除" versiontag="201812.3515" />
+        <item name="Content" value="#Array" versiontag="201812.3516">
+          <item value="Deleted" versiontag="201812.3517" />
+        </item>
+      </item>
+    </item>
+    <item name="Report" value="#Array" versiontag="201812.3518">
+      <item value="PatientName" versiontag="201812.3519" />
+      <item value="PatientIDReport" versiontag="201812.3520" />
+      <item value="OutPatientIDReport" versiontag="201812.3521" />
+      <item value="InPatientIDReport" versiontag="201812.3522" />
+      <item value="PhysicalExamIDReport" versiontag="202205.87" />
+      <item value="Accno" versiontag="201812.3523" />
+    </item>
+  </item>
+  <!--质控查询使用哪些查询条件。Basic中配置基本查询，General配置质控查询的条件，Random配置随机查询的条件-->
+  <!--value里的值，参考PreDefineConfiguration/QueryConditionPreDefine的子节点名-->
+  <item name="QualityConditionConfiguration" versiontag="202110.113">
+    <item name="Basic" value="#Array" versiontag="202110.114">
+      <item value="QualityType" versiontag="202304.126" />
+      <item value="DateTimeCondtion" versiontag="202110.115" />
+      <item value="ModalityExpand" versiontag="202110.116" />
+      <item value="Hospital" versiontag="202110.117" />
+    </item>
+    <item name="General" value="#Array" versiontag="202110.118">
+      <item value="QualityDoctor" versiontag="202110.119" />
+      <item value="QualityLevel" versiontag="202110.120" />
+      <item value="QualityResult" versiontag="202304.127" />
+    </item>
+    <item name="Random" value="#Array" versiontag="202110.121">
+      <item value="RandomCount" versiontag="202110.122" />
+    </item>
+  </item>
+  <!--相似报告查询使用哪些查询条件，不能增加-->
+  <item name="SimilarReportConditionConfiguration" versiontag="202401.625">
+    <item name="Basic" value="#Array" versiontag="202401.626">
+      <item value="DateTimeCondtion" versiontag="202401.627" />
+      <item value="ModalityExpand" versiontag="202401.628" />
+      <item value="Hospital" versiontag="202401.629" />
+    </item>
+  </item>
+</config>

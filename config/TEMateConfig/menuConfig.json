@@ -1,0 +1,58 @@
+[
+  {
+    "label": "人员管理",
+    "key": "user",
+    "icon": "TeamOutlined",
+    "children": [
+      {
+        "label": "管理员",
+        "key": "adminManager",
+        "icon": "UserOutlined",
+		"path": "/common/crud",
+		"fileName":"adminManager.json"
+      },
+      {  
+		"label": "医生", 
+		"key": "userManager", 
+	    "icon": "UserOutlined",         
+		"path": "/common/crud",
+		"fileName":"userManager.json"
+	  }
+    ]
+  },
+  {
+    "label": "基础数据",
+    "key": "base",
+    "icon": "SettingOutlined",
+    "children": [
+	  {
+        "label": "检查部位",
+        "key": "bodypart",
+        "icon": "SnippetsOutlined",
+		"path": "/temate/bodypart",
+		"fileName":"bodypart.json"
+      },
+	  {
+        "label": "检查项目",
+        "key": "examitem",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"examitem.json"
+      },
+	  {
+        "label": "测量项模板",
+        "key": "measurementTemp",
+        "icon": "SnippetsOutlined",
+		"path": "/temate/measurementTemp",
+		"fileName":"measurementTemp.json"
+      },
+	  {
+        "label": "标签字典",
+        "key": "tagDictionary",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"tagDictionary.json"
+      }
+    ]
+  }
+]

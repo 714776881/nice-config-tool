@@ -1,0 +1,78 @@
+<config versiontag="root">
+  <item name="ReportConfiguration" versiontag="201906.189">
+    <!--书写和修改报告时是否自动打开viewer查看图像， 0:不自动打开  1:自动打开桌面Viewer  2:自动打开WebViewer -->
+    <item name="ViewExamImage" value="1" versiontag="201906.190" />
+    <!--个人相关的报告配置 胶片质评配置 A:优 B:良 C:中 D:差 不填默认为空-->
+    <item name="FilmAssessConfig" value="" versiontag="201906.191" />
+    <!--保存或审核后，是否自动打开下一份待处理报告进行处理, 0 不自动打开，1 自动打开-->
+    <item name="AutoNextReport" value="0" versiontag="202109.133" />
+    <!-- 报告界面是否锁定布局, 0 不锁定，1 锁定-->
+    <item name="LockReportLayout" value="0" versiontag="202109.134" />
+    <!--自动打开申请单的病人类型-->
+    <item name="AutoOpenAppOrderPatientType" value="I,O" versiontag="202109.135" />
+    <!-- 报告编辑框的模式  tx:TX编辑框     h5：H5编辑框 -->
+    <item name="ReportEditorPattern" value="tx" versiontag="202109.136" />
+    <!-- 放射科报告贴图（0：不显示图像列表  1：显示图像列表）  -->
+    <item name="RADReportImage" value="0" versiontag="202304.128" />
+    <!-- 迈瑞手柄按键配置,只用于webris -->
+    <item name="MindrayGamepadConfiguration" versiontag="202109.137">
+      <item name="ShotImage" value="A" versiontag="202109.138" />
+      <item name="StartRecord" value="B" versiontag="202109.139" />
+      <item name="StopRecord" value="C" versiontag="202109.140" />
+    </item>
+    <!-- 采集快捷键配置（脚踏也用这套快捷键，只用于webris） -->
+    <item name="ShotcutKeyConfiguration" versiontag="202109.141">
+      <item name="ShotImage" value="A" versiontag="202109.142" />
+      <item name="StartRecord" value="B" versiontag="202109.143" />
+      <item name="StopRecord" value="C" versiontag="202109.144" />
+    </item>
+    <!-- 修改审核医生  修改报告医生  1:修改  0：不修改 （只用于webris）-->
+    <item name="ModifyVerifyDoctor" value="1" versiontag="202109.145" />
+    <item name="ModifyReportDoctor" value="1" versiontag="202109.146" />
+    <!-- 报告电子签名  0：不显示签名   1：显示文字  2：显示电子签名图片 （只用于webris）-->
+    <item name="VerifyDrSignature" value="1" versiontag="202109.147" />
+    <item name="ReportDrSignature" value="1" versiontag="202109.148" />
+    <!--是否在报告上启用首次审核医生和首次审核时间，如果配置为1， 则修改已审核报告时不修改tx文件中的审核医生，只修改数据库里面的审核医生,默认是修改审核医生 1开启 0关闭 （只用于webris）-->
+    <item name="FirstVerify" value="0" versiontag="202109.149" />
+    <!-- 审核报告的动作  0：只审核报告   1：审核后打印报告 -->
+    <item name="VerifyAction" value="1" versiontag="202109.150" />
+    <!--查看报告是否启用修订模式，配置为1启用，比对最后一次审核之前的报告和最后一次审核的报告，显示修订内容，配置其他不启用，默认不启用-->
+    <item name="RevisionConfig" value="0" versiontag="202201.3" />
+    <!-- 超声缩略图 尺寸（指清晰度，配置数值越大占用内存越高，一般配置1500可以达到现场需求） -->
+    <item name="USThumbnailSize" value="200" versiontag="202203.41" />
+    <!-- 报告贴图 尺寸（指清晰度，配置数值越大占用内存越高，一般配置1500可以达到现场需求） -->
+    <item name="ReportImageSize" value="500" versiontag="202203.42" />
+    <!-- 大图预览 尺寸（配置对应图像高度，宽度按照图像比例缩放；对于原图像尺寸小于1024*1204的大图查看，预览大小和原图像一致；对于原图像尺寸大于1024*1024的大图查看，预览大小读取配置BigImageSize的大小） -->
+    <item name="BigImageSize" value="600" versiontag="202205.86" />
+    <!--报告编辑界面是否只能打开一份报告进行编辑, 1:只能打开一份， 0:不限制-->
+    <item name="SingleReportConfig" value="0" versiontag="202207.32" />
+    <!-- 自动申请单功能 控制进入报告界面自动申请单选项是否勾选上 默认取值为1 -->
+    <item name="AutoOrderPaper" value="1" versiontag="202308.34" />
+	
+	<!-- //追加结构化报告的图像
+        //   0：结构化图像  需要更新，以结构化图像类型贴图 
+        //   1：结构化图像  不更新，以普通图像贴图     --> 
+	<item name="AppendReportStructureImage" value="0"/>
+    <!-- 结构化模板映射-->
+    <item name="ReportStructureTemplateMapping" value="#Array" versiontag="202210.15">
+      <item versiontag="202210.16">
+        <item name="ID" value="RectalCancerMRI154689494" versiontag="202210.17" />
+        <item name="Name" value="直肠癌MRI结构式报告（初诊）" versiontag="202210.18" />
+        <item name="Category" value="Report" versiontag="202210.19" />
+        <item name="Modality" value="" versiontag="202210.20" />
+        <item name="PatType" value="" versiontag="202210.21" />
+        <item name="ExamItem" value="" versiontag="202210.22" />
+        <item name="Location" value="http://10.24.1.44:8006/Template/直肠癌MRI结构式报告（初诊）.htm" versiontag="202210.23" />
+      </item>
+      <item versiontag="202210.24">
+        <item name="ID" value="RectalCancerMRI15468949498" versiontag="202210.25" />
+        <item name="Name" value="直肠癌MRI结构式报告（复诊）" versiontag="202210.26" />
+        <item name="Category" value="Report" versiontag="202210.27" />
+        <item name="Modality" value="" versiontag="202210.28" />
+        <item name="PatType" value="" versiontag="202210.29" />
+        <item name="ExamItem" value="" versiontag="202210.30" />
+        <item name="Location" value="http://10.24.1.44:8006/Template/直肠癌MRI结构式报告（复诊）.htm" versiontag="202210.31" />
+      </item>
+    </item>
+  </item>
+</config>

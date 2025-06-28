@@ -1,0 +1,285 @@
+<config>
+	<!--快捷查询的配置-->
+	<item name="PresetQueryConfiguration">
+		<!--PresetQueries中配置显示哪些快捷查询,可以显示公有快捷查询和私有快捷查询-->
+		<!--公有快捷查询参考RisGeneral_Config.xml文件中PreDefineConfiguration/PublicQueryPreDefine每个子节点中Name对应的值-->
+		<!--私有快捷查询参考本文件PrivatePresetQuery每个子节点中Name对应的value-->
+		<item name="PresetQueries" value="#Array">
+      
+    </item>
+		<!--个人快捷查询的配置-->
+		<item name="PrivatePresetQuery" value="#Array">
+			<item>
+				<item name="Name" value="急诊"/>
+				<item name="QuerySet" value="#Array">
+					<item>
+						<item name="Param" value="DateType"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DateRange"/>
+						<item name="Value" value="#Array">
+							<item value="今天"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="PatientType"/>
+						<item name="Value" value="#Array">
+							<item value="E"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Modality"/>
+						<item name="Value" value="#Array">
+							<item value="US  "/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="ExamStatus"/>
+						<item name="Value" value="#Array">
+							<item value="1020"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="CallTerminalID"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="EquipmentSelect"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DoseCondition"/>
+						<item name="Value" value="#Array">
+							<item value="A"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Deleted"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item>
+				<item name="Name" value="已登记"/>
+				<item name="QuerySet" value="#Array">
+					<item>
+						<item name="Param" value="DateType"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DateRange"/>
+						<item name="Value" value="#Array">
+							<item value="今天"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Modality"/>
+						<item name="Value" value="#Array">
+							<item value="US  "/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="ExamStatus"/>
+						<item name="Value" value="#Array">
+							<item value="1020"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="CallTerminalID"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="EquipmentSelect"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DoseCondition"/>
+						<item name="Value" value="#Array">
+							<item value="A"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Deleted"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item>
+				<item name="Name" value="已呼"/>
+				<item name="QuerySet" value="#Array">
+					<item>
+						<item name="Param" value="DateType"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DateRange"/>
+						<item name="Value" value="#Array">
+							<item value="今天"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Modality"/>
+						<item name="Value" value="#Array">
+							<item value="US  "/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="ExamStatus"/>
+						<item name="Value" value="#Array">
+							<item value="1020"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="CallTerminalID"/>
+						<item name="Value" value="#Array">
+							<item value="true"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="EquipmentSelect"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DoseCondition"/>
+						<item name="Value" value="#Array">
+							<item value="A"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Deleted"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item>
+				<item name="Name" value="心超"/>
+				<item name="QuerySet" value="#Array">
+					<item>
+						<item name="Param" value="DateType"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DateRange"/>
+						<item name="Value" value="#Array">
+							<item value="今天"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Modality"/>
+						<item name="Value" value="#Array">
+							<item value="US  "/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="BodyPart"/>
+						<item name="Value" value="#Array">
+							<item value="72773"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="CallTerminalID"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="EquipmentSelect"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DoseCondition"/>
+						<item name="Value" value="#Array">
+							<item value="A"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Deleted"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item>
+				<item name="Name" value="妇科"/>
+				<item name="QuerySet" value="#Array">
+					<item>
+						<item name="Param" value="DateType"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DateRange"/>
+						<item name="Value" value="#Array">
+							<item value="今天"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Modality"/>
+						<item name="Value" value="#Array">
+							<item value="US  "/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="BodyPart"/>
+						<item name="Value" value="#Array">
+							<item value="33222"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="CallTerminalID"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="EquipmentSelect"/>
+						<item name="Value" value="#Array">
+							<item value="R"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="DoseCondition"/>
+						<item name="Value" value="#Array">
+							<item value="A"/>
+						</item>
+					</item>
+					<item>
+						<item name="Param" value="Deleted"/>
+						<item name="Value" value="#Array">
+							<item value="false"/>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+</config>

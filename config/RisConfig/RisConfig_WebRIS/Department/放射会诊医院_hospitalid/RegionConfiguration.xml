@@ -1,0 +1,12 @@
+﻿<config>
+	<item name="RegionConfiguration">
+		
+		<!--区域中心类型（1：区域中心（会诊端）   2：区域提交端）-->
+		<item name="RegionCentralCategory" value="1"/>
+		
+		<!-- 消息中心的提醒-->
+		<!-- 会诊消息提醒 0：不提醒  1：提醒等待会诊  2：提醒回退会诊  3：提醒完成会诊。配置多个使用英文分号隔开  -->
+		<item name="RegionReminderMessage" value="1;2;3"/>
+
+	</item>
+</config>

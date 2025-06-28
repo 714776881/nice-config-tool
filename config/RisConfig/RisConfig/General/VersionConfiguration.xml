@@ -1,0 +1,8 @@
+<config versiontag="root">
+  <item name="VersionConfiguration" versiontag="201812.3256">
+    <!-- 设置IEIS的语言   ZH 中文   EN  英文 -->
+    <item name="Language" value="ZH" versiontag="201812.3257" />
+    <!-- 工作站的名字，单机版的需求 添加在每个模块的名字前缀 （格林蓝德工作站-工作列表） -->
+    <item name="WorkStationName" value="" versiontag="201912.277" />
+  </item>
+</config>

@@ -1,4 +1,5 @@
 {
-	"isLoadExamItem":true,
-	"adminRoles":["9011","9012"]
+	"isLoadExamItem":false,
+	"adminRoles":["9011","9012"],
+	"modality":"GM"
 }

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<item name="PersonalConfiguration">
+		<item name="QueryValueRestrict">
+			<item name="Hospital" value="#Array">
+				<item value="会诊医院名称"/>
+			</item>
+		</item>
+	</item>
+	<item name="ReportConfiguration">
+		<!--会诊模板 0:会诊医院的模板（当前登录医院）   1:检查的hospitalid对应的模板-->
+		<item name="ConsultTemplate" value="0"/>
+		<!-- 报告标记菜单 -->
+		<item name="ReportRemarkTool" value="#Array">
+			<item>
+				<item name="ID" value="MainReport_CacheReport"/>
+				<item name="Data" value="CacheReport"/>
+				<item name="Title" value="缓存报告"/>
+				<item name="ControlType" value="button"/>
+				<item name="Style" value=""/>
+			</item>
+			<item>
+				<item name="ID" value="MainReport_ClearEdit"/>
+				<item name="Data" value="ClearEdit"/>
+				<item name="Title" value="清空编辑"/>
+				<item name="ControlType" value="button"/>
+				<item name="Style" value=""/>
+			</item>
+		</item>
+	</item>
+	<item name="RegionConfiguration">
+		<!--区域会诊管理 支持的类型   0：不显示   1：显示  -->
+		<item name="RegionTaskManagerClassification">
+			<item name="Consultation" value="0"/>
+			<item name="Write" value="0"/>
+			<item name="Verify" value="0"/>
+			<item name="USConsultation" value="1"/>
+		</item>
+		<!--区域中心类型（1：区域中心   2：区域提交端）-->
+		<item name="RegionCentralCategory" value="1"/>
+	</item>
+	<item name="QueryConditionConfiguration">
+		<item name="Basic" value="#Array">
+			<item value="DateTimeCondtion"/>
+			<item value="PatientName"/>
+			<item value="VariableID"/>
+			<item value="Hospital"/>
+			<item value="Modality"/>
+			<item value="ExamStatus"/>
+			<item value="ReportStatus"/>
+			<item value="Accno"/>
+		</item>
+	</item>
+	<item name="MiscellaneousConfiguration">
+		<!--历史查询使用的参数开关, 0 不使用, 1 使用-->
+		<item name="HistoryParams">
+			<item name="PatientName" value="1"/>
+			<item name="PatientID" value="0"/>
+			<item name="InPatientID" value="0"/>
+			<item name="OutPatientID" value="0"/>
+			<item name="MedicareID" value="0"/>
+			<item name="IDCardNumber" value="1"/>
+			<item name="MedicalRecordID" value="0"/>
+			<item name="HisPatientID" value="0"/>
+			<item name="PatientBirthday" value="0"/>
+		</item>
+	</item>
+	<item name="TopicConfiguration">
+		<item name="QueryGridConfig">
+			<item name="Worklist">
+				<!--右键菜单有分组的功能，目前有3组，可根据需要增加或移除组，也可以在每个组里增加或移除菜单项-->
+				<item name="RightClickMenuConfig" value="#Array">
+					<item value="#Array">
+						<item value="ShowRequisition"/>
+						<item value="ShowComment"/>
+						<item value="ScanOrderPaper"/>
+					</item>
+					<item value="#Array">
+						<item value="DeleteOrder"/>
+						<item value="ModifyOrder"/>
+						<item value="RecoverOrder"/>
+					</item>
+					<item value="#Array">
+						<item value="ExportOrder"/>
+						<item value="ExportSelectedOrders"/>
+					</item>
+					<!-- 区域版 -->
+					<item value="#Array">
+						<item value="AreaRemoteUSConsult"/>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+	<item name="ToolbarConfiguration">
+		<item name="US">
+			<item name="Worklist" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="AreaRemoteUSConsult"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ViewRemoteUSConsult"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ViewOrderComment"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="USConsult"/>
+					</item>
+					<item>
+						<item name="Name" value="PrintUSConsultReport"/>
+					</item>
+					<item>
+						<item name="Name" value="ManageConsult"/>
+					</item>
+				</item>
+			</item>
+			<item name="Report" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+					<item>
+						<item name="Name" value="ViewConsult"/>
+					</item>
+					<item>
+						<item name="Name" value="ViewOrderComment"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="SaveReport"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveVerifyReport"/>
+					</item>
+					<item>
+						<item name="Name" value="CopyReport"/>
+					</item>
+					<item>
+						<item name="Name" value="PasteReport"/>
+					</item>
+				</item>
+				<item>
+					<item name="ExpandLevel" value="1"/>
+					<item name="Items" value="#Array">
+						<item>
+							<item name="Name" value="SaveReportCache"/>
+						</item>
+						<item>
+							<item name="Name" value="RestoreReportCache"/>
+						</item>
+						<item>
+							<item name="Name" value="SaveReportTemplate"/>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="PrintPreview"/>
+					</item>
+					<item>
+						<item name="Name" value="CloseReport"/>
+					</item>
+					<item>
+						<item name="Name" value="USConsult"/>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+	<item name="PreDefineConfiguration">
+		<item name="DefaultQueryPredefine">
+			<item name="UseDefault" value="true"/>
+			<item name="QuerySet" value="#Array">
+				<item>
+					<!--Param里的值参考QueryConditionPreDefine中的定义-->
+					<item name="Param" value="DateRange"/>
+					<item name="Value" value="#Array">
+						<item value="今天"/>
+					</item>
+				</item>
+				<item>
+					<item name="Param" value="DateType"/>
+					<item name="Value" value="#Array">
+						<item value="R"/>
+					</item>
+				</item>
+				<item>
+					<item name="Param" value="CallTerminalID"/>
+					<item name="Value" value="#Array">
+						<item value="false"/>
+					</item>
+				</item>
+				<item>
+					<item name="Param" value="Modality"/>
+					<item name="Value" value="#Array">
+						<item value="US  "/>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+</config>

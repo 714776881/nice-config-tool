@@ -1,0 +1,9 @@
+<config>
+  <item name="PersonalConfiguration">
+    <item name="QueryValueRestrict">
+      <item name="Hospital" value="#Array">
+        <item value="会诊医院名称" />
+      </item>
+    </item>
+  </item>
+</config>

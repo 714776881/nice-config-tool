@@ -1,0 +1,14 @@
+﻿<config>
+	<item name="RegionConfiguration">
+		
+		<!--区域会诊管理 支持的类型   0：不显示   1：显示  -->
+		<item name="RegionTaskManagerClassification">
+			<item name="Consultation" value="0"/>
+			<item name="Write" value="0"/>
+			<item name="Verify" value="0"/>
+			<item name="USConsultation" value="1"/>
+		</item>
+		<!-- 是否自动启动超声会诊客户端  0:不启动   1：启动-->
+		<item name="StartUSConsultClient" value="1"/>
+	</item>
+</config>

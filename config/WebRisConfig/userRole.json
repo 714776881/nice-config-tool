@@ -24,7 +24,7 @@
           }
         ]
       },
-	  "dicSql": "select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value "
+	  "dicSql": "select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup != '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value"
     },
 	{
       "title": "权限名称",
@@ -70,7 +70,40 @@
             "message": "请输入角色编号"
           }
         ],
-        "defaultValueBySql": "select '8' ||  LPAD(COUNT(*) , 3, '0') as value from t_userrole where userrolegroup = '8' and deleted='0'"
+        "defaultValueBySql": "select generate_code('t_userrole.userrolecode','','4') value from dual"
+      }
+    },
+	{
+      "title": "是否具有作用域",
+      "key": "ISUSESCOPE",
+      "width": 120,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "具有作用域",
+          "options": [
+            {
+              "label": "无",
+              "value": "0"
+            },
+            {
+              "label": "有",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择"
+          }
+        ],
+        "defaultValue": "0"
       }
     },
 	{
@@ -130,12 +163,12 @@
     }
   ],
   "sqlTemplates": {
-    "select": "select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0'",
-    "insert": "insert into t_userrole(userroleid,userrolecode,userrolename,userrolegroup) values('{ID}','{USERROLECODE}','{USERROLENAME}','{USERROLEGROUP}')",
-    "update": "update t_userrole set userrolecode='{USERROLECODE}',userrolename='{USERROLENAME}' where userroleid='{ID}'",
+    "select": "select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup != '8') g where u.userrolegroup = g.rolegroupid",
+    "insert": "insert into t_userrole(userroleid,userrolecode,userrolename,userrolegroup,isusescope) values('{ID}','{USERROLECODE}','{USERROLENAME}','{USERROLEGROUP}','{ISUSESCOPE}')",
+    "update": "update t_userrole set userrolecode='{USERROLECODE}',userrolename='{USERROLENAME}',isusescope='{ISUSESCOPE}' where userroleid='{ID}'",
     "setState": "update t_userrole set deleted = '{DELETED}' where userroleid = '{ID}'",
-	"delete": "delete from t_userrole where userroleid = '{ID}'",
-	"setSequence":"update t_userrole set sequence = '{SEQUENCE}' where userroleid = '{ID}'",
+    "delete": "delete from t_userrole where userroleid = '{ID}'",
+    "setSequence":"update t_userrole set sequence = '{SEQUENCE}' where userroleid = '{ID}'",
     "exportData": "select e.*,e.userroleid id from t_userrole e where 1=1 order by sequence"
   },
   "buttonsShow":{

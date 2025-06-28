@@ -1,0 +1,169 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "参数配置",
+			"filePath":"D:\\project\\config-tool\\src\\config\\RisConfig\\WebStatisticConfiguration.xml",
+			"nodePath":"/config/item[@name='WebStatisticConfiguration']/item[@name='params']"
+		}
+	],
+	"keyLabelMap":[
+		{
+			"key": "name",
+			"label" : "参数名称(唯一)"
+		},
+		{
+			"key": "Flagname",
+			"label" : "参数别名"
+		},
+		{
+			"key": "type",
+			"label" : "参数类型"
+		},
+		{
+			"key": "id",
+			"label" : "控件ID"
+		},
+		{
+			"key": "valuetype",
+			"label" : "值类型"
+		},
+		{
+			"key": "params",
+			"label" : "查询参数"
+		},
+		{
+			"key": "defaultvalue",
+			"label" : "默认值"
+		}
+	],
+	"inputConfig":[
+		{
+			"key": "defaultvalue",
+			"component": {
+				"name": "a-textarea",
+				"props": {
+					"placeholder": "请选择内容！",
+					"style": "width:900px",
+					"autosize":"true"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择内容！"
+					}
+				],
+				"defaultValue": ""
+			}
+		},
+		{
+			"key": "type",
+			"component": {
+				"name": "a-radio-group",
+				"props": {
+					"placeholder": "请输入类型！",
+					"options": [
+						{
+							"label": "日期",
+							"value": "data"
+						},
+						{
+							"label": "年份",
+							"value": "year"
+						},
+						{
+							"label": "月份",
+							"value": "month"
+						},	
+						{
+							"label": "多选",
+							"value": "multipleselect"
+						},
+						{
+							"label": "单选",
+							"value": "select"
+						},
+						{
+							"label": "文本",
+							"value": "text"
+						},
+						{
+							"label": "小时",
+							"value": "hours"
+						},
+						{
+							"label": "联动下拉框",
+							"value": "hours"
+						},
+						{
+							"label": "默认值",
+							"value": "defaultvalue"
+						}
+					]
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择孕龄单位"
+					}
+				],
+				"defaultValue": ""
+			}
+		},
+		{
+			"key": "valuetype",
+			"component": {
+				"name": "a-radio-group",
+				"props": {
+					"placeholder": "请输入类型！",
+					"options": [
+						{
+							"label": "方法",
+							"value": "0"
+						},
+						{
+							"label": "字符串",
+							"value": "1"
+						},
+						{
+							"label": "键值对",
+							"value": "01"
+						},	
+						{
+							"label": "逗号隔开",
+							"value": "10"
+						},
+						{
+							"label": "SQL",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择孕龄单位"
+					}
+				],
+				"defaultValue": ""
+			}
+		}
+	],
+	"arrayConfig":[
+		{
+			"key": "params",
+			"type":"Collapse",
+			"props":{
+				"index":"0"
+			}
+		}
+	],
+	"themeConfig":{
+		"isShowAnnotate":false
+	}
+}

@@ -1,0 +1,24 @@
+﻿<config> 
+ <item name="VersionConfiguration">
+    <!-- 设置IEIS的语言   ZH 中文   EN  英文 -->
+    <item name="Language" value="ZH"/>	
+    <!-- 工作站的名字 -->
+    <item name="WorkStationName" value="医学影像管理与通讯系统软件"/>
+	<!-- 型号、规格： -->
+    <item name="ProductModel" value="MiPACS"/>
+	<!-- 发布版本号 -->
+	<item name="ReleaseVersion" value="01"/>
+	<!-- 完整版本号 -->
+	<item name="CompleteVersion" value="01.03.00"/>
+	<!-- 注册证编号 -->
+	<item name="RegCode" value="粤械注准20232210943"/>
+	<!-- 注册人/生产企业名称 -->
+	<item name="Registrant" value="深圳迈瑞生物医疗电子股份有限公司"/>
+	<!-- 企业名称 -->
+	<item name="CompanyName" value="深圳迈瑞生物医疗电子股份有限公司"/>
+	<!-- 企业地址 -->
+	<item name="CompanyAddress" value="深圳市南山区高新技术产业园区科技南十二路迈瑞大厦1-4层  邮编：518057"/>
+	<!-- 适用范围 -->
+	<item name="ApplicationScope" value="用于医学图像的采集、存储、显示、处理、报告及系统管理。"/>
+ </item>
+</config>

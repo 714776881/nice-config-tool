@@ -1,0 +1,228 @@
+{
+  "columnConfig": [
+  	{
+      "title": "设备名称",
+      "key": "EQUIPMENT",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "型号",
+      "key": "MODEL",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "型号"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入型号"
+          }
+        ],
+
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "制造商",
+      "key": "MENUFACTURER",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+		"span": "24",
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "购买时间",
+      "key": "BUYDATE",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "data-picker",
+        "props": {
+          "placeholder": "请输入",
+		  "format": "YYYY-MM-DD"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "探头使用状态",
+      "key": "STATUS",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "使用状态"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+		"defaultValue": "",
+		"span": "24"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_style"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select t.equipmentId id,t.* from t_us_transducer t",
+    "insert": "insert into t_us_transducer(equipmentId,equipment,model,manufacturer,buydate,status,deleted) values('{ID}','{EQUIPMENT}','{MODEL}','{MENUFACTURER}','{BUYDATE}','{STATUS}','0')",
+    "update": "update t_us_transducer set equipment='{EQUIPMENT}',model='{MODEL}',manufacturer='{MENUFACTURER}',buydate='{BUYDATE}',status='{STATUS}' where equipmentId='{ID}'",
+    "setState": "update t_us_transducer set deleted = '{DELETED}' where equipmentId = '{ID}'",
+	"delete": "delete from t_us_transducer where equipmentId = '{ID}'",
+	"setSequence":"update t_us_transducer set sequence = '{SEQUENCE}' where equipmentId = '{ID}'",
+    "exportData": "select e.*,e.equipmentId id from t_us_transducer e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"20"
+  },
+  "scopeConfig":{
+	  "isShow": false,
+	  "level": 2
+  }
+}

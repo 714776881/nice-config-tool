@@ -1,0 +1,130 @@
+<config>
+  <item name="WebStatisticConfiguration">
+    <item name="topicals" value="#Array">
+      <item>
+        <item name="name" value="检查数量统计" />
+        <item name="topicalgroup" value="掌超统计" />
+        <item name="departments" value="#Array">
+          <item>
+            <item name="id" value="*" />
+            <item name="roles" value="*" />
+          </item>
+        </item>
+        <item name="params" value="#Array">
+          <item value="时间范围" />
+          <item value="检查医生-多选" />
+        </item>
+        <item name="elements" value="#Array">
+          <item>
+            <item name="elementname" value="检查数量统计列表" />
+            <item name="type" value="table" />
+            <item name="sql" value="select substr(r.verifydt, 0, 10) as 检查日期,&#xA;                                       o.examitem as 检查项目,&#xA;                                       count(*) as 检查数量&#xA;                                  from t_order o, t_report r&#xA;                                 where o.reportseq = r.reportseq&#xA;                                   and o.deleted = '0'&#xA;                                   and o.modality = 'US'&#xA;                                   and o.orderstatus &gt;= '1170'&#xA;                                   and r.verifydt &gt;= @startquerydatetime&#xA;                                   and r.verifydt &lt;= @endquerydatetime&#xA;                                   and r.verifydrid = @userid&#xA;                                 group by substr(r.verifydt, 0, 10), o.examitemid, o.examitem&#xA;                                 order by 检查日期, 检查项目" />
+            <item name="needmergecols" value="检查日期" />
+            <item name="needsumcols" value="检查数量" />
+            <item name="drillingfuns" value="#Array">
+              <item>
+                <item name="col" value="*" />
+                <item name="drillingtopicalname" value="检查数量统计明细" />
+              </item>
+            </item>
+          </item>
+        </item>
+      </item>
+      <item>
+        <!--主题名称-->
+        <item name="name" value="取材统计" />
+        <!--主题分组名称-->
+        <item name="topicalgroup" value="驾驶舱" />
+        <!--主题权限-->
+        <item name="departments" value="#Array">
+          <item>
+            <!--科室Code-->
+            <item name="id" value="*" />
+            <!--用户角色Code-->
+            <item name="roles" value="*" />
+          </item>
+        </item>
+        <!--查询参数-->
+        <item name="params" value="#Array">
+          <item value="取材日期" />
+          <item value="状态" />
+          <item value="病人类型-单选" />
+          <item value="病理号" />
+          <item value="取材医生" />
+          <item value="记录员" />
+          <item value="检查项目" />
+        </item>
+        <!--图表元素-->
+        <item name="elements" value="#Array">
+          <item>
+            <!--图表元素名称-->
+            <item name="elementname" value="明细列表" />
+            <!--图表类型-->
+            <item name="type" value="table" />
+            <!--查询数据sql-->
+            <item name="sql" value="select '202300228' as 病理号, '常规病理' as 检查项目, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300229' as 病理号, '常规病理' as 检查项目, '赵明浩' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '淋巴结' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300230' as 病理号, '常规病理' as 检查项目, '王志勇' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '胃角' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300231' as 病理号, '常规病理' as 检查项目, '薛国立' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '幽门口' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300232' as 病理号, '常规病理' as 检查项目, '陈海华' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300233' as 病理号, '常规病理' as 检查项目, '刘子玉' as 姓名, '女' as 性别, '43' as 年龄, '未取材' as 状态,'1' as 蜡块数, '' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300234' as 病理号, '冰冻' as 检查项目, '陈宇' as 姓名, '男' as 性别, '43' as 年龄, '未取材' as 状态,'1' as 蜡块数, '' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '食管' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300235' as 病理号, '常规病理' as 检查项目, '王洛安' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '食管' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300236' as 病理号, '常规病理' as 检查项目, '宋临阳' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '食管' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300237' as 病理号, '常规病理' as 检查项目, '邓子超' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300238' as 病理号, '常规病理' as 检查项目, '王梓云' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300229' as 病理号, '常规病理' as 检查项目, '赵明浩' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '淋巴结' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300230' as 病理号, '常规病理' as 检查项目, '王志勇' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '胃角' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300231' as 病理号, '常规病理' as 检查项目, '薛国立' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '幽门口' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300232' as 病理号, '常规病理' as 检查项目, '陈海华' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300233' as 病理号, '常规病理' as 检查项目, '刘子玉' as 姓名, '女' as 性别, '43' as 年龄, '未取材' as 状态,'1' as 蜡块数, '' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300234' as 病理号, '冰冻' as 检查项目, '陈宇' as 姓名, '男' as 性别, '43' as 年龄, '未取材' as 状态,'1' as 蜡块数, '' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '食管' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300235' as 病理号, '常规病理' as 检查项目, '王洛安' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '食管' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300236' as 病理号, '常规病理' as 检查项目, '宋临阳' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '食管' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300237' as 病理号, '常规病理' as 检查项目, '邓子超' as 姓名, '男' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300238' as 病理号, '常规病理' as 检查项目, '王梓云' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)" />
+            <!--表格的拓展属性-->
+            <!--需要合并的列：多值用英文分号分隔-->
+            <item name="needmergecols" value="" />
+            <!--需要合计的列：多值用英文分号分隔-->
+            <item name="needsumcols" value="" />
+            <!--下钻功能-->
+            <item name="drillingfuns" value="#Array" />
+            <!--表格的拓展属性-->
+          </item>
+          <item>
+            <!--图表元素名称-->
+            <item name="elementname" value="汇总列表" />
+            <!--图表类型-->
+            <item name="type" value="table" />
+            <!--查询数据sql-->
+            <item name="sql" value="select '202300228' as 病理号, '4' as 蜡块总数, '常规病理' as 检查项目名称, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300228' as 病理号, '4' as 蜡块总数, '常规病理' as 检查项目名称, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300228' as 病理号, '4' as 蜡块总数, '常规病理' as 检查项目名称, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300228' as 病理号, '4' as 蜡块总数, '常规病理' as 检查项目名称, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300228' as 病理号, '4' as 蜡块总数, '常规病理' as 检查项目名称, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300228' as 病理号, '4' as 蜡块总数, '常规病理' as 检查项目名称, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300228' as 病理号, '4' as 蜡块总数, '常规病理' as 检查项目名称, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)&#xA;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;union all(select '202300228' as 病理号, '4' as 蜡块总数, '常规病理' as 检查项目名称, '吴秀丽' as 姓名, '女' as 性别, '43' as 年龄, '已取材' as 状态,'1' as 蜡块数, '2024-04-12 13:23' as 取材时间, '陈怡' as 取材医生, '陈怡' as 记录员, '息肉' as 取材部位 from dual)" />
+            <!--表格的拓展属性-->
+            <!--需要合并的列：多值用英文分号分隔-->
+            <item name="needmergecols" value="" />
+            <!--需要合计的列：多值用英文分号分隔-->
+            <item name="needsumcols" value="" />
+            <!--下钻功能-->
+            <item name="drillingfuns" value="#Array" />
+            <!--表格的拓展属性-->
+          </item>
+        </item>
+      </item>
+    </item>
+    <item name="topicalgroups" value="#Array">
+			<item>
+				<item name="name" value="驾驶舱"/>
+				<item name="iconurl" value=""/>
+			</item>
+			<item>
+				<item name="name" value="掌超统计"/>
+				<item name="iconurl" value=""/>
+			</item>
+		</item>
+    		<item name="params" value="#Array">
+			<item>
+				<item name="name" value="病人类型-单选"/>
+				<item name="Flagname" value="病人类型"/>
+				<item name="type" value="select"/>
+				<item name="id" value="pattype"/>
+				<!--参数值类型。枚举值如下：
+					0: 方法，即通过方法查询来获取值，已弃用; 
+					1: 值类型，即字符串 
+					01: 键值对类型，举例: 门诊病人:O,急诊病人:E,住院病人:I,体检病人:P,住院急诊病人:N,下城体检:X,VIP病人:W
+					10: 逗号隔开字符串，举例：MR,CT,DX
+					2: 数据库sql，即通过数据库查询获取键值，举例：select u.username Name, u.usercode Value from t_user u where u.deleted = '0' and u.usercode is not null and rownum &lt;= 10-->
+				<item name="valuetype" value="01"/>
+				<!--默认值，选填。字符串或者方法名-->
+				<item name="defaultvalue" value="门诊病人:O,急诊病人:E,住院病人:I,体检病人:P,住院急诊病人:N,下城体检:X,VIP病人:W"/>
+			</item>
+			<item>
+				<item name="name" value="病人类型-多选"/>
+				<item name="Flagname" value="病人类型"/>
+				<item name="type" value="multipleselect"/>
+				<item name="id" value="mulpattype"/>
+				<item name="valuetype" value="01"/>
+				<item name="defaultvalue" value="门诊病人:O,急诊病人:E,住院病人:I,体检病人:P,住院急诊病人:N,下城体检:X,VIP病人:W"/>
+			</item>
+		</item>
+  </item>
+</config>

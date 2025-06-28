@@ -1,0 +1,104 @@
+﻿<config>
+	<!--导航栏的各项定义，包括显示值，使用的图标，一般情况下不需要修改-->
+	<item name="ThemePreDefineConfiguration" value="#Array">
+		<item>
+			<item name="Id" value="1040"/>
+			<item name="Name" value="NavRegister"/>
+			<item name="Description" value="登记检查"/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-Register"/>
+		</item>
+		<item>
+			<item name="Id" value="0"/>
+			<item name="Name" value="NavWorklist"/>
+			<item name="Description" value="检查列表"/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-Worklist"/>
+			<item name="AlwaysExist" value="true"/>
+		</item>
+		<item>
+			<item name="Id" value="0"/>
+			<item name="Name" value="NavReport"/>
+			<item name="Description" value="报告编辑"/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-Report"/>
+			<item name="AlwaysExist" value="true"/>
+		</item>
+		<item>
+			<item name="Id" value="16"/>
+			<item name="Name" value="NavWebConfigTool"/>
+			<item name="Description" value="配置工具"/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-WebConfigTool"/>
+			<item name="AlwaysExist" value="true"/>
+		</item>
+		<!-- <item>
+			<item name="Id" value="10"/>
+			<item name="Name" value="NaviScanHelper"/>
+			<item name="Description" value="扫图指导"/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-iScanHelper"/>
+			<item name="AlwaysExist" value="true"/>
+		</item> -->
+		
+		<!-- <item> -->
+			<!-- <item name="Id" value="12"/> -->
+			<!-- <item name="Name" value="NavStatisticsScreen"/> -->
+			<!-- <item name="Description" value="统计大屏"/> -->
+			<!-- <item name="HasIcon" value="true"/> -->
+			<!-- <item name="IconName" value="glsvg-navbar-StatisticsScreen"/> -->
+			<!-- <item name="AlwaysExist" value="true"/> -->
+		<!-- </item> -->
+		
+		<!-- <item>
+			<item name="Id" value="14"/>
+			<item name="Name" value="NavCreateMeeting"/>
+			<item name="Description" value="创建会议"/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-CreateMeeting"/>
+			<item name="AlwaysExist" value="true"/>
+		</item>
+		<item>
+			<item name="Id" value="15"/>
+			<item name="Name" value="NavOpenMeeting"/>
+			<item name="Description" value="进入会议"/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-OpenMeeting"/>
+			<item name="AlwaysExist" value="true"/>
+		</item> -->
+		
+		<item>
+			<item name="Id" value="15"/>
+			<item name="Name" value="NavNotifyMessage"/>
+			<item name="Description" value=""/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-NotifyMessage"/>
+			<item name="AlwaysExist" value="true"/>
+		</item>
+		<item>
+			<item name="Id" value="6"/>
+			<item name="Name" value="NavMore"/>
+			<item name="Description" value=""/>
+			<item name="HasIcon" value="true"/>
+			<item name="IconName" value="glsvg-navbar-More"/>
+			<item name="SubThemeSet" value="#Array">
+				<item>
+					<item name="Id" value="00"/>
+					<item name="Name" value="NavHide"/>
+					<item name="Description" value="隐藏"/>
+					<item name="HasIcon" value="true"/>
+					<item name="IconName" value="glsvg-navbar-Hide"/>
+					<item name="AlwaysExist" value="true"/>
+				</item>
+				<item>
+					<item name="Id" value="02"/>
+					<item name="Name" value="NavExit"/>
+					<item name="Description" value="退出"/>
+					<item name="HasIcon" value="true"/>
+					<item name="IconName" value="glsvg-navbar-Exit"/>
+					<item name="AlwaysExist" value="true"/>
+				</item>
+			</item>
+		</item>
+	</item>
+</config>

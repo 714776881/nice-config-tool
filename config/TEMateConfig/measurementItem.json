@@ -1,0 +1,310 @@
+{
+  "columnConfig": [
+    {
+      "title": "项目名称",
+      "key": "ITEMNAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 140,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "测量项名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入测量项名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "类别",
+      "key": "ITEMNAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "测量项名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入测量项名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "值类型",
+      "key": "VALUETYPE",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+			"options": [
+            {
+              "label": "数字",
+              "value": "NumberType"
+            },
+            {
+              "label": "文本",
+              "value": "StringType"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择值类型"
+          }
+        ]
+      },
+      "dicSql": ""
+    },
+	{
+      "title": "单位",
+      "key": "UNIT",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "单位"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入单位"
+          }
+        ]
+      }
+    },
+	{
+      "title": "最小值",
+      "key": "MINLIMIT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "最小值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入最小值"
+          }
+        ]
+      }
+    },
+	{
+      "title": "最大值",
+      "key": "MAXLIMIT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "最大值"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入最大值"
+          }
+        ]
+      }
+    },
+	{
+      "title": "是否导入",
+      "key": "IMPORT",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+			"options": [
+            {
+              "label": "导入",
+              "value": "1"
+            },
+            {
+              "label": "不导入",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择值类型"
+          }
+        ]
+      },
+      "dicSql": ""
+    },
+	{
+      "title": "解析规则",
+      "key": "XPATH",
+      "width": "120px",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+		   "placeholder": "请填写XPATH路径！",
+		   "auto-size":{
+			 "minRows": 2
+		   }
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写值路径"
+          },        
+		  {
+			"validator": "isValidJSON",
+			"message": "请输入有效的 JSON 格式！"
+		  }
+        ],
+		"span": "24"
+      }
+    },
+    {
+      "title": "计算公式",
+      "key": "FORMULA",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 150,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "计算公式",
+		  "auto-size":{
+			"minRows": 2
+		  }
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入计算公式"
+          }
+        ],
+		"span":"24"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_measure_template_item t where t.templateid='{SUPER}{ID}' ",
+    "insert": "insert into t_measure_template_item(id,templateid,itemname,valuetype,unit,deleted,xpath,formula,code,fgformulaid,gaformulaid,fgformulaidmf,gaformulaidmf,externalname,externalcode,description) values('{ID}','BEE0A696-4184-41D7-8F99-CD805EAC2BF0','{ITEMNAME}','{VALUETYPE}','{UNIT}','{DELETED}','{XPATH}','{FORMULA}','{CODE}','{FGFORMULAID}','{GAFORMULAID}','{FGFORMULAIDMF}','{GAFORMULAIDMF}','{EXTERNALNAME}','{EXTERNALCODE}','{DESCRIPTION}')",
+    "update": "update t_measure_template_item set templateid = '{TEMPLATEID}',itemname = '{ITEMNAME}',valuetype = '{VALUETYPE}',unit = '{UNIT}',deleted = '{DELETED}',xpath = '{XPATH}',formula = '{FORMULA}',code = '{CODE}',fgformulaid = '{FGFORMULAID}',gaformulaid = '{GAFORMULAID}',fgformulaidmf = '{FGFORMULAIDMF}',gaformulaidmf = '{GAFORMULAIDMF}',externalname = '{EXTERNALNAME}',externalcode = '{EXTERNALCODE}',description = '{DESCRIPTION}' where id = '{ID}'",
+    "setState": "update t_measure_template_item set deleted = '{DELETED}' where id = '{ID}'",
+	"delete": "delete from t_measure_template_item where id = '{ID}'",
+	"setSequence":"update t_measure_template_item set sequence = '{SEQUENCE}' where id = '{ID}'",
+    "exportData": "select * from t_measure_template_item"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": false,
+	"exportData": true,
+	"importData": true
+  }
+}

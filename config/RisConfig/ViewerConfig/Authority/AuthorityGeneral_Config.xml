@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!--目前配置读取功能中，子功能读取以“.”来分割，因此，请避免在功能键中填写"."-->
+    <!--Export功能 -->
+    <item name="Export" value="Enable">
+      <!--用户可以设置 Enable, NotDisplay，Disable, Forbid四个值， 分别指功能可以使用，不显示，功能相关控件disable及操作弹框警告不能使用-->
+      <item name="ExamExport" value="Disable"/>
+      <item name="SeriesExport" value="Disable"/>      
+    </item>
+    <!--打印功能-->
+    <item name="Print" value="Enable">
+      <!--检查打印-->
+      <item name="ExamPrint" value="NotDisplay"/>    
+    </item>
+    <item name="MergeExam" value="Enable"/>
+    <item name="SplitSeries" value="Enable"/>
+    <item name="UploadSeries" value="Enable"/>
+    <item name="DeleteExam" value="Enable"/>
+    <item name="DeletePS" value="Enable"/>    
+    <item name="Dental" value="Enable"/>
+    <!--设置导入图像的配置-->
+    <item name="ImportImage" value="Enable"/>
+	<item name="SplitExam" value="Disable"/>
+	<!--是否可以使用VR-->
+	<item name="ThreeDVR" value="Disable"/>
+</config>

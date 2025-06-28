@@ -1,0 +1,497 @@
+<config>
+	<item name="ReportConfiguration">
+
+		<!-- 迈瑞手柄按键配置,只用于webris -->
+		<item name="MindrayGamepadConfiguration">
+			<item name="ShotImage" value="C"/>
+			<item name="StartRecord" value="A"/>
+			<item name="StopRecord" value="B"/>
+		</item>
+		<!-- 采集快捷键配置（脚踏也用这套快捷键，只用于webris） -->
+		<item name="ShotcutKeyConfiguration">
+			<item name="ShotImage" value="F7"/>
+			<item name="StartRecord" value="F8"/>
+			<item name="StopRecord" value="F9"/>
+		</item>
+		
+		<!--报告批量打印的最大数量  默认是10 -->
+		<item name="PrintReportMaxNum" value="3"/>
+		<!-- 报告编辑界面添加水印[UserCode] [UserName] [DepartmentID] [DepartmentName] [HospitalID] [HospitalName]  -->
+		<item name="WatermarkSetting" value=""/>
+		
+		<!--自动打开申请单的病人类型-->
+		<item name="AutoOpenAppOrderPatientType" value="E" />
+		
+		<!-- 是否开启匿名采集  0：关闭匿名采集   1:开启匿名采集  -->
+		<item name="EnableAnonymous" value="1"/>
+		<!-- 是否开启图像裁剪  0：关闭图像裁剪   1:开启图像裁剪 -->
+		<item name="EnableCropping" value="1"/>
+		<!-- 图像顺序  0：顺序  1：倒序 -->
+		<item name="EnableImageDisplay" value="0"/>
+		
+		<!-- 超声缩略图 是否显示标签 -->
+		<item name="ShowTags" value="1"/>
+
+		<!-- 缩略图菜单 -->
+		<item name="ImageListToolbar" value="#Array">
+			<item>
+				<item name="Name" value="selectall"/>
+				<item name="Description" value="全选"/>
+				<item name="IconName" value="glsvg-imagelist-selectall"/>
+			</item>
+			<item>
+				<item name="Name" value="import"/>
+				<item name="Description" value="导入"/>
+				<item name="IconName" value="glsvg-imagelist-import"/>
+			</item>
+			<item>
+				<item name="Name" value="export"/>
+				<item name="Description" value="导出"/>
+				<item name="IconName" value="glsvg-imagelist-export"/>
+			</item>
+			<item>
+				<!-- 移动按钮不能放入二级菜单、也不推荐放在最左侧 -->
+				<item name="Name" value="move"/>
+				<item name="Description" value="移动"/>
+				<item name="IconName" value="glsvg-imagelist-move"/>
+			</item>
+			<item>
+				<item name="Name" value="delete"/>
+				<item name="Description" value="删除"/>
+				<item name="IconName" value="glsvg-imagelist-delete"/>
+			</item>
+			<item>
+				<item name="Name" value="more"/>
+				<item name="IconName" value="glsvg-imagelist-more"/>
+				<item name="SubThemeSet" value="#Array">
+					<item>
+						<item name="Name" value="paste"/>
+						<item name="Description" value="粘贴"/>
+						<item name="IconName" value="glsvg-imagelist-paste"/>
+					</item>
+					<item>
+						<item name="Name" value="refresh"/>
+						<item name="Description" value="刷新"/>
+						<item name="IconName" value="glsvg-imagelist-refresh"/>
+					</item>
+				</item>
+			</item>
+		</item>
+		
+		<!-- 报告信息是否允许编辑 -->
+		<item name="ReportEditorContent">
+			<item name="EditReportDr" value="1"/>
+			<item name="EditVerifyDr" value="1"/>
+		</item>
+		<!-- 修改审核医生  修改报告医生  1:修改  0：不修改 （只用于webris）-->
+		<item name="ModifyVerifyDoctor" value="1"/>
+		<item name="ModifyReportDoctor" value="1"/>
+		<!-- 报告电子签名  0：不显示签名   1：显示文字  2：显示电子签名图片 （只用于webris）-->
+		<item name="VerifyDrSignature" value="3"/>
+		<item name="ReportDrSignature" value="3"/>
+		<!--是否在报告上启用首次审核医生和首次审核时间，如果配置为1， 则修改已审核报告时不修改tx文件中的审核医生，只修改数据库里面的审核医生,默认是修改审核医生 1开启 0关闭 （只用于webris）-->
+		<item name="FirstVerify" value="0"/>
+		<!-- 审核报告的动作  0：只审核报告   1：审核后打印报告 -->
+		<item name="VerifyAction" value="0"/>
+		<!--保存报告时是否弹出阴阳性的提醒  value值是模态US,CT，多个模态用逗号分隔，为空时不弹阴阳性-->
+		<item name="AbnormalSwitch" value=""/>
+		<!--阴阳性默认值，0为阴性；1为阳性-->
+		<item name="DefaultReportAbnormal" value="1"/>
+		
+		<!-- 报告标记菜单 -->
+		<item name="ReportRemarkTool" value="#Array">
+			<!-- <item>
+				<item name="ID" value="MainReport_TempReport"/>
+				<item name="Data" value="TempReport"/>
+				<item name="Title" value="临时报告"/>
+				<item name="ControlType" value="checkbox"/>
+			</item> -->
+			<item>
+				<item name="ID" value="MainReport_TUB"/>
+				<item name="Data" value="TUB"/>
+				<item name="Title" value="肺结核"/>
+				<item name="ControlType" value="checkbox"/>
+			</item>
+			<item>
+				<item name="ID" value="MainReport_Abnormal"/>
+				<item name="Data" value="Abnormal"/>
+				<item name="Title" value="阴阳性"/>
+				<item name="ControlType" value="select"/>
+				<item name="Children" value="#Array">
+					<item>
+						<item name="Desc" value=""/>
+						<item name="Data" value=""/>
+						<item name="Default" value="1"/>
+					</item>
+					<item>
+						<item name="Desc" value="阴性"/>
+						<item name="Data" value="0"/>
+					</item>
+					<item>
+						<item name="Desc" value="阳性"/>
+						<item name="Data" value="1"/>
+					</item>
+				</item>
+			</item>
+			<!-- <item>
+				<item name="ID" value="MainReport_Emergency"/>
+				<item name="Data" value="Emergency"/>
+				<item name="Title" value="危急值"/>
+				<item name="ControlType" value="dropdown"/>
+			</item> -->
+			<item>
+				<item name="ID" value="MainReport_CacheReport"/>
+				<item name="Data" value="CacheReport"/>
+				<item name="Title" value="缓存报告"/>
+				<item name="ControlType" value="button"/>
+				<item name="Style" value=""/>
+			</item>
+			<item>
+				<item name="ID" value="MainReport_ClearEdit"/>
+				<item name="Data" value="ClearEdit"/>
+				<item name="Title" value="清空编辑"/>
+				<item name="ControlType" value="button"/>
+				<item name="Style" value=""/>
+			</item>
+		</item>
+		
+		<!-- 写报告时 是否启动默认设备  0：不启用   1：启动  -->
+		<item name="UseDefaultEquipment" value="0"/>
+		<!-- 是否开启报告二维码的功能  1：开启   0:不开启 -->
+		<item name="ReportQRCode" value="1"/>
+
+		
+		<!--报告富文本编辑模式 0：纯文本模式  1：富文本模式（包含关键字） -->
+		<item name="RichTextEditing" value="0"/>
+		<!--特殊字符配置-->
+		<item name="SpecialKey" value="×,$,Ω,.,。, mm,cm,*"/>
+
+		<!-- 报告编辑窗口 -->
+		<item name="ReportEditorTemplate" value="#Array">
+			<!-- 报告编辑，基本信息 -->
+			<item>
+				<item name="ID" value="ReportBasicInfoContent"/>
+				<item name="Data" value="BasicInfo"/>
+				<item name="Title" value=""/>
+				<item name="Collapse" value="1"/>
+				<item name="Style" value=""/>
+				<item name="liTitleStyle" value=""/>
+				<item name="CompositeTitle" value="#Array">
+					<item>
+						<item name="ID" value="ReportEditor_PatName"/>
+						<item name="Data" value="PatName"/>
+						<item name="Style" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_PatSex"/>
+						<item name="Data" value="PatSex"/>
+						<item name="Style" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_PatAge"/>
+						<item name="Data" value="PatAge"/>
+						<item name="Style" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_OrderStatusName"/>
+						<item name="Data" value="OrderStatusName"/>
+						<item name="Style" value="float:right; margin-right:40px;"/>
+					</item>
+				</item>
+				<item name="Content" value="#Array">
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_PatType"/>
+							<item name="Data" value="PatType"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="病人类型"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ModalityID"/>
+							<item name="Data" value="ModalityID"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="检查号"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ReportDr"/>
+							<item name="Data" value="ReportDr"/>
+							<item name="ControlType" value="editor"/>
+							<item name="Title" value="报告医生"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item name="ReportDT">
+							<item name="ID" value="ReportEditor_ReportDT"/>
+							<item name="Data" value="ReportDT"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="报告时间"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_OrderDr"/>
+							<item name="Data" value="OrderDr"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="请检医生"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_Clinic"/>
+							<item name="Data" value="Clinic"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="请检科室"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_VerifyDr"/>
+							<item name="Data" value="VerifyDr"/>
+							<item name="ControlType" value="editor"/>
+							<item name="Title" value="审核医生"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_VerifyDT"/>
+							<item name="Data" value="VerifyDT"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="审核时间"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+
+					</item>
+					<item value="#Array">
+
+						<item>
+							<item name="ID" value="ReportEditor_Modality"/>
+							<item name="Data" value="Modality"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="检查模态"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ExamDT"/>
+							<item name="Data" value="ExamDT"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="检查时间"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_Examitem"/>
+							<item name="Data" value="Examitem"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="检查项目"/>
+							<item name="Colspan" value="2"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+					</item>
+				</item>
+			</item>
+			
+			<!-- 报告编辑，报告贴图  -->
+			<item>
+				<item name="ID" value="ReportImageContent"/>
+				<item name="Data" value="ReportImage"/>
+				<item name="Title" value="报告贴图"/>
+				<item name="Style" value=""/>
+				<item name="Collapse" value="0"/>
+				<item name="liTitleStyle" value=""/>
+				<item name="Content" value="#Array">
+				</item>
+			</item>
+			
+			<!-- 报告编辑，测量值  -->
+			<!-- <item>
+				<item name="ID" value="ReportMeasureValueContent"/>
+				<item name="Data" value="ReportMeasureValue"/>
+				<item name="Title" value="检查参数"/>
+				<item name="Style" value=""/>
+				<item name="Collapse" value="1"/>
+				<item name="liTitleStyle" value=""/>
+				<item name="TitleMenu" value="#Array">
+					<item>
+						<item name="ID" value="ReportEditor_MeasureCalc"/>
+						<item name="Data" value="MeasureCalc"/>
+						<item name="ControlType" value="button"/>
+						<item name="Title" value="计算"/>
+						<item name="Style" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_MeasurePaste"/>
+						<item name="Data" value="MeasurePaste"/>
+						<item name="ControlType" value="button"/>
+						<item name="Title" value="粘贴数据"/>
+						<item name="Style" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_MeasureClear"/>
+						<item name="Data" value="MeasureClear"/>
+						<item name="ControlType" value="button"/>
+						<item name="Title" value="清空数据"/>
+						<item name="Style" value=""/>
+					</item>
+				</item>
+				
+				<item name="ControlMenu" value="#Array">
+					<item>
+						<item name="ID" value="ReportEditor_MeasureTemplate"/>
+						<item name="Data" value="MeasureTemplate"/>
+						<item name="ControlType" value="select"/>
+						<item name="Title" value="选择模板"/>
+						<item name="Colspan" value="1"/>
+						<item name="Style" value=""/>
+						<item name="liTitleStyle" value=""/>
+						<item name="liContentStyle" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_OneValue"/>
+						<item name="Data" value="RadioValue"/>
+						<item name="ControlType" value="radio"/>
+						<item name="Title" value="单参数"/>
+						<item name="Colspan" value="1"/>
+						<item name="Style" value=""/>
+						<item name="liTitleStyle" value=""/>
+						<item name="liContentStyle" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_TwoValue"/>
+						<item name="Data" value="RadioValue"/>
+						<item name="ControlType" value="radio"/>
+						<item name="Title" value="双参数"/>
+						<item name="Colspan" value="1"/>
+						<item name="Style" value=""/>
+						<item name="liTitleStyle" value=""/>
+						<item name="liContentStyle" value=""/>
+					</item>
+				</item>
+				
+				<item name="Content" value="#Array">
+				</item>
+			</item> -->
+			
+			<!-- 报告编辑，检查所见区域  -->
+			<item>
+				<item name="ID" value="ReportStudyResultContent"/>
+				<item name="Data" value="ReportStudyResult"/>
+				<item name="Title" value="检查所见"/>
+				<item name="Style" value=""/>
+				<item name="Collapse" value="1"/>
+				<!-- <item name="TextIndent" value="1"/>
+				<item name="TextOrderedList" value="1"/>
+				<item name="TextFontSize" value="1"/>
+				<item name="TextFontStyle" value="1"/> -->
+				<item name="liTitleStyle" value=""/>
+				<item name="Content" value="#Array">
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_StudyResult"/>
+							<item name="Data" value="StudyResult"/>
+							<item name="ControlType" value="textarea"/>
+							<item name="Essential" value="1"/>
+							<item name="Limit" value="2000"/>
+							<item name="NumberCount" value="1"/>
+							<item name="Title" value=""/>
+							<item name="Desc" value="检查所见"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="min-height:150px;"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<!-- 报告编辑，诊断结果区域  -->
+			<item>
+				<item name="ID" value="ReportDiagResultContent"/>
+				<item name="Data" value="ReportDiagResult"/>
+				<item name="Title" value="诊断结果"/>
+				<item name="Style" value=""/>
+				<item name="Collapse" value="1"/>
+				<!-- <item name="TextIndent" value="1"/>
+				<item name="TextOrderedList" value="1"/>
+				<item name="TextFontSize" value="1"/>
+				<item name="TextFontStyle" value="1"/> -->
+				<item name="liTitleStyle" value=""/>
+				<item name="Content" value="#Array">
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_DiagResult"/>
+							<item name="Data" value="DiagResult"/>
+							<item name="ControlType" value="textarea"/>
+							<item name="Essential" value="1"/>
+							<item name="Limit" value="2000"/>
+							<item name="NumberCount" value="1"/>
+							<item name="Title" value=""/>
+							<item name="Desc" value="诊断结果"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="min-height:150px;"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<!-- 报告编辑，诊断建议  -->
+			<!-- <item>
+				<item name="ID" value="ReportDiagAdviceContent"/>
+				<item name="Data" value="ReportDiagAdvice"/>
+				<item name="Title" value="诊断建议"/>
+				<item name="Style" value=""/>
+				<item name="Collapse" value="0"/>
+				<item name="liTitleStyle" value=""/>
+				<item name="Content" value="#Array">
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_DiagAdvice"/>
+							<item name="Data" value="DiagAdvice"/>
+							<item name="ControlType" value="textarea"/>
+							<item name="Essential" value="0"/>
+							<item name="Limit" value="2000"/>
+							<item name="NumberCount" value="1"/>
+							<item name="Title" value=""/>
+							<item name="Desc" value="诊断建议"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="min-height:100px;"/>
+						</item>
+					</item>
+				</item>
+			</item> -->
+			
+		</item>
+	
+	</item>
+</config>

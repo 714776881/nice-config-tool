@@ -2,25 +2,10 @@
   {
     "label": "基础数据",
     "key": "base",
-    "icon": "SnippetsOutlined",
+    "icon": "AppstoreOutlined",
     "children": [
-      { "label": "数据字典", "key": "dictionary", "icon": "AppstoreAddOutlined", "path": "/common/crud","fileName":"dictionary.json"},
+      { "label": "数据字典", "key": "dictionary", "icon": "SnippetsOutlined", "path": "/common/crud","fileName":"dictionary.json"},
       { "label": "病人类型", "key": "patType", "icon": "SnippetsOutlined", "path": "/common/crud","fileName":"patType.json"},
-      { "label": "检查项目", "key": "gmExamitem", "icon": "SnippetsOutlined", "path": "/common/crud","fileName":"gmExamitem.json"},
-	  { 
-		"label": "请检部位", 
-		"key": "qingjianBodypart", 
-		"icon": "SnippetsOutlined", 
-		"path": "/common/crud",
-		"fileName":"qingjianBodypart.json"
-	  },
-      { 
-		"label": "请检医生", 
-		"key": "doctor", 
-	    "icon": "SnippetsOutlined",         
-		"path": "/common/crud",
-		"fileName":"doctor.json"
-	  },
       { 
 		"label": "采集方式", 
 		"key": "caijifangshi", 
@@ -34,22 +19,8 @@
 	    "icon": "SnippetsOutlined",         
 		"path": "/common/crud",
 		"fileName":"biaobenleixing.json"
-	  } 
-    ]
-  },
-  {
-    "label": "部门/科室",
-    "key": "dept",
-    "icon": "AppstoreAddOutlined",
-    "children": [
-      {
-        "label": "部门",
-        "key": "department",
-        "icon": "SnippetsOutlined",
-		"path": "/common/crud",
-		"fileName":"department.json"
-      },
-      {
+	  },
+	  {
         "label": "请检医院",
         "key": "hospital",
         "icon": "SnippetsOutlined",
@@ -62,6 +33,34 @@
         "icon": "SnippetsOutlined",
 		"path": "/common/crud",
 		"fileName":"clinicalDept.json"
+      },
+	  { 
+		"label": "请检部位", 
+		"key": "qingjianBodypart", 
+		"icon": "SnippetsOutlined", 
+		"path": "/common/crud",
+		"fileName":"qingjianBodypart.json"
+	  },
+      { 
+		"label": "请检医生", 
+		"key": "doctor", 
+	    "icon": "SnippetsOutlined",         
+		"path": "/common/crud",
+		"fileName":"doctor.json"
+	  }
+    ]
+  },
+  {
+    "label": "部门/科室",
+    "key": "dept",
+    "icon": "PartitionOutlined",
+    "children": [
+      {
+        "label": "部门",
+        "key": "department",
+        "icon": "SnippetsOutlined",
+		"path": "/common/crud",
+		"fileName":"department.json"
       },
       {
         "label": "病区",
@@ -82,12 +81,12 @@
   {
     "label": "用户/角色",
     "key": "user",
-    "icon": "SnippetsOutlined",
+    "icon": "TeamOutlined",
     "children": [
       {
         "label": "用户",
         "key": "userManager",
-        "icon": "SnippetsOutlined",
+        "icon": "UserOutlined",
 		"path": "/common/crud",
 		"fileName":"userManager.json"
       },
@@ -108,6 +107,13 @@
     ]
   },
   {
+    "label": "检查项目",
+    "key": "gmExamitem",
+    "icon": "BorderOutlined",
+    "path": "/common/crud",
+	"fileName":"gmExamitem.json"
+  },
+  {
     "label": "知识库",
     "key": "reportLibrary",
     "icon": "ZhihuOutlined",
@@ -117,7 +123,7 @@
   {
     "label": "取材/巨检",
     "key": "giantInspectionSampling",
-    "icon": "SnippetsOutlined",
+    "icon": "WalletOutlined",
     "children": [
 	  { 
 		"label": "取材部位", 
@@ -138,7 +144,7 @@
   {
     "label": "打印模板",
     "key": "previewPrintStyle",
-    "icon": "SnippetsOutlined",
+    "icon": "ContainerOutlined",
 	"path": "/webgm/styleCategory",
 	"fileName":"styleCategory.json"
   }

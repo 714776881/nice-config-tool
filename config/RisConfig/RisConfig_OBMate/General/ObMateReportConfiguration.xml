@@ -1,0 +1,888 @@
+<config>
+	<item name="ObMateReportConfiguration">
+		<!-- 系统最大胎儿数 -->
+		<item name="MaxFetalCount" value="4"/>
+		<!-- 默认孕龄选择类型：0 临床孕龄，1 超声孕龄 -->
+		<item name="DefaulGaSelect" value="0"/>
+		<!-- 解剖结构正常内容，多值英文分号分隔 -->
+		<item name="AnatomyNormalContent" value="可见;Gr0级;前壁;未见明显异常;左;目前未及明显膨出物;左侧胸腔;正向;LOA;未见明显异常包块;可及;远离;"/>
+		<!-- 检查所见和诊断结果默认值，0 空，1 使用模板中配置-->
+		<item name="ReportTextDefault" value="1"/>
+		<!-- 解剖结构默认值，0 空，1 第一个候选项 -->
+		<!-- 报告生成时是否需要弹预览窗口确认， 0 不弹出，1 弹出 -->
+		<item name="ReportConfirm" value="1"/>
+		<!-- 测量值偏差显示方式， 0 不显示，1 显示标准差，2 显示百分比 -->
+		<item name="DeviationType" value="2"/>
+		<!-- 生长曲线上是否显示偏差值， 0 不显示，1 显示 -->
+		<item name="GraphShowDeviation" value="0"/>
+		<!-- 显示测量值偏差的公式 -->
+		<item name="DeviationFormula" value="#Array">
+			<item value="OBMATE.FGFML.BPD.HADLOCK"/>
+			<item value="OBMATE.FGFML.HC.HADLOCK"/>
+			<item value="OBMATE.FGFML.AC.HADLOCK"/>
+			<item value="OBMATE.FGFML.FL.HADLOCK"/>
+		</item>
+		<!-- 测量值小数位数的设置 -->
+		<item name="DecimalPrecision">
+		    <item name="Default" value="2"/>
+		    <!-- 按单位指定特殊小数位数 -->
+		    <item name="SpecialUnit" value="#Array">
+		        <item>
+		            <item name="Unit" value="mm"/>
+		            <item name="Precision" value="1"/>
+		            <!-- 设置这个单位下特殊测量项 -->
+		            <item name="SpecialMeasure" value="#Array">
+		                <item>
+		                    <item name="Code" value="MID.OB.NT"/>
+		                    <item name="Precision" value="2"/>
+		                </item>
+		                <item>
+		                    <item name="Code" value="MID.OB.IT*Dist"/>
+		                    <item name="Precision" value="2"/>
+		                </item>
+		            </item>
+		        </item>
+		        <item>
+		            <item name="Unit" value="g"/>
+		            <item name="Precision" value="0"/>
+		        </item>
+		        <item>
+		            <item name="Unit" value="{H.B.}/min"/>
+		            <item name="Precision" value="0"/>
+		        </item>
+		        <item>
+		            <item name="Unit" value="bpm"/>
+		            <item name="Precision" value="0"/>
+		        </item>
+		        <item>
+		            <item name="Unit" value="pcs"/>
+		            <item name="Precision" value="0"/>
+		        </item>
+		        <item>
+		            <item name="Unit" value="1"/>
+		            <item name="Precision" value="2"/>
+		            <!-- 正负号类的，不需要小数 -->
+		            <item name="SpecialMeasure" value="#Array">
+		                <item>
+		                    <item name="Code" value="OBMATE.Pelvic.BSD.R*Dist.SIGN"/>
+		                    <item name="Precision" value="0"/>
+		                </item>
+		                <item>
+		                    <item name="Code" value="OBMATE.Pelvic.BSD.S*Dist.SIGN"/>
+		                    <item name="Precision" value="0"/>
+		                </item>
+		                <item>
+		                    <item name="Code" value="OBMATE.Pelvic.BL.Desc.R*Dist.SIGN"/>
+		                    <item name="Precision" value="0"/>
+		                </item>
+		                <item>
+		                    <item name="Code" value="OBMATE.Pelvic.BL.Desc.S*Dist.SIGN"/>
+		                    <item name="Precision" value="0"/>
+		                </item>
+		                <item>
+		                    <item name="Code" value="OBMATE.Pelvic.UT.Desc.R*Dist.SIGN"/>
+		                    <item name="Precision" value="0"/>
+		                </item>
+		                <item>
+		                    <item name="Code" value="OBMATE.Pelvic.UT.Desc.S*Dist.SIGN"/>
+		                    <item name="Precision" value="0"/>
+		                </item>
+		                <item>
+		                    <item name="Code" value="OBMATE.VAGINAL.FORNIX.R.SIGN"/>
+		                    <item name="Precision" value="0"/>
+		                </item>
+		                <item>
+		                    <item name="Code" value="OBMATE.VAGINAL.FORNIX.S.SIGN"/>
+		                    <item name="Precision" value="0"/>
+		                </item>
+		            </item>
+		        </item>
+		    </item>
+		</item>
+		<!-- 回传PACS配置-->
+		<item name="PacsReturn">
+		    <item name="ClinicalGA">
+		        <item name="Name" value="临床孕周"/>
+		        <item name="Code" value=""/>
+		        <!-- {w}为周数，{d}为天数。中括号不会显示，当天数为0时[]内的内容也隐藏。  -->
+		        <item name="Format" value="{w}w+{d}d"/>
+		    </item>
+		    <item name="USGA">
+		        <item name="Name" value="超声孕周"/>
+		        <item name="Code" value=""/>
+		        <item name="Format" value="{w}w+{d}d"/>
+		    </item>
+		    <item name="SelectedGA">
+		        <item name="Name" value="孕周"/>
+		        <item name="Code" value=""/>
+		        <item name="Format" value="{w}w+{d}d"/>
+		    </item>
+		    <item name="ClinicalEdd">
+		        <item name="Name" value="临床预产期"/>
+		        <item name="Code" value=""/>
+		        <item name="Format" value="yyyy年MM月dd日"/>
+		    </item>
+		    <item name="USEdd">
+		        <item name="Name" value="超声预产期"/>
+		        <item name="Code" value=""/>
+		        <item name="Format" value="yyyy年MM月dd日"/>
+		    </item>
+		    <item name="SelectedEdd">
+		        <item name="Name" value="预产期"/>
+		        <item name="Code" value=""/>
+		        <item name="Format" value="yyyy年MM月dd日"/>
+		    </item>
+		</item>
+		<!-- 测量值异常提醒配置 -->
+		<!--<item name="AbnormalNotify" value="#Array">
+			<item>
+				<item name="NotifyMeasCode" value="OBMATE.DVP"/>
+				<item name="ContitionList" value="#Array">
+					<item>
+						<item name="MeasCode" value="OBMATE.DVP"/>
+						<item name="Condition" value="#Array">
+							<item value="&lt;=5"/>
+						</item>
+					</item>
+				</item>
+				<item name="NotifyContent" value="羊水过少"/>
+				<item name="ReasonDetail" value="羊水过少的原因胎儿泌尿系统异常（婴儿型多囊肾、双肾缺如等）、宫内发育受限、胎盘功能减退、过期妊娠，胎盘老化等。"/>
+			</item>
+			<item>
+				<item name="NotifyMeasCode" value="OBMATE.DVP"/>
+				<item name="ContitionList" value="#Array">
+					<item>
+						<item name="MeasCode" value="OBMATE.DVP"/>
+						<item name="Condition" value="#Array">
+							<item value="&gt;5"/>
+							<item value="&lt;=8"/>
+						</item>
+					</item>
+				</item>
+				<item name="NotifyContent" value="羊水偏少"/>
+				<item name="ReasonDetail" value=""/>
+			</item>
+			<item>
+				<item name="NotifyMeasCode" value="OBMATE.DVP"/>
+				<item name="ContitionList" value="#Array">
+					<item>
+						<item name="MeasCode" value="OBMATE.DVP"/>
+						<item name="Condition" value="#Array">
+							<item value="&gt;18"/>
+							<item value="&lt;=25"/>
+						</item>
+					</item>
+				</item>
+				<item name="NotifyContent" value="羊水偏多"/>
+				<item name="ReasonDetail" value=""/>
+			</item>
+			<item>
+				<item name="NotifyMeasCode" value="OBMATE.DVP"/>
+				<item name="ContitionList" value="#Array">
+					<item>
+						<item name="MeasCode" value="OBMATE.DVP"/>
+						<item name="Condition" value="#Array">
+							<item value="&gt;25"/>
+						</item>
+					</item>
+				</item>
+				<item name="NotifyContent" value="羊水过多"/>
+				<item name="ReasonDetail" value="羊水过多的原因胎儿吞咽减少，如：头面部异常（唇腭裂等）、胃肠道梗阻、肺病变、胸腔狭窄等。"/>
+			</item>
+			<item>
+				<item name="NotifyMeasCode" value="MID.OB.FHR*HR"/>
+				<item name="ContitionList" value="#Array">
+					<item>
+						<item name="MeasCode" value="MID.OB.FHR*HR"/>
+						<item name="Condition" value="#Array">
+							<item value="&lt;=100"/>
+						</item>
+					</item>
+				</item>
+				<item name="NotifyContent" value="胎动过缓"/>
+				<item name="ReasonDetail" value=""/>
+			</item>
+			<item>
+				<item name="NotifyMeasCode" value="MID.OB.FHR*HR"/>
+				<item name="ContitionList" value="#Array">
+					<item>
+						<item name="MeasCode" value="MID.OB.FHR*HR"/>
+						<item name="Condition" value="#Array">
+							<item value="&gt;=200"/>
+						</item>
+					</item>
+				</item>
+				<item name="NotifyContent" value="心动过速"/>
+				<item name="ReasonDetail" value=""/>
+			</item>
+			<item>
+				<item name="NotifyMeasCode" value="MID.OB.Cervix.L*Dist"/>
+				<item name="ContitionList" value="#Array">
+					<item>
+						<item name="MeasCode" value="OBMATE.SelectedGa"/>
+						<item name="Condition" value="#Array">
+							<item value="&gt;=112"/>
+							<item value="&lt;=168"/>
+						</item>
+					</item>
+					<item>
+						<item name="MeasCode" value="MID.OB.Cervix.L*Dist"/>
+						<item name="Condition" value="#Array">
+							<item value="&lt;=25"/>
+						</item>
+					</item>
+				</item>
+				<item name="NotifyContent" value="宫颈管缩短，存在早产或流产风险"/>
+				<item name="ReasonDetail" value=""/>
+			</item>
+		</item>-->
+		<!-- 关键词检测,支持正则表达式 -->
+		<item name="KeyWordDetection" value="#Array">
+			<item>
+				<item name="Category" value="ChiefComplaint"/>
+				<item name="KeyWordClassification" value="#Array">
+					<item>
+						<item name="ClassificationName" value="疼痛相关"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="下腹痛"/>
+						    <item value="盆腔痛"/>
+						    <item value="性交痛"/>
+						    <item value="痛经进行性加重"/>
+						    <item value="盆腔痛"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="异常出血"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="月经量过多"/>
+						    <item value="经期延长"/>
+						    <item value="经间期出血|绝经后出血|阴道出血|出血"/>
+						    <item value="见红"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="异常分泌物"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="分泌物脓性"/>
+						    <item value="分泌物血性"/>
+						    <item value="恶臭阴道分泌物"/>
+						    <item value="水样分泌物"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="结构异常症状"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="触及盆腔包块"/>
+						    <item value="腹部膨隆"/>
+						    <item value="尿频"/>
+						    <item value="尿潴留"/>
+						    <item value="便秘"/>
+						    <item value="里急后重"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="妊娠相关"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="停经"/>
+						    <item value="腹痛"/>
+						    <item value="阴道出血"/>
+						    <item value="胎动减少"/>
+						    <item value="胎动消失"/>
+						    <item value="避孕环移位"/>
+						    <item value="节育环移位"/>
+						    <item value="避孕环嵌顿"/>
+						    <item value="节育环嵌顿"/>
+						    <item value="内置避孕环"/>
+						    <item value="内置节育环"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="生育问题"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="不孕症"/>
+						    <item value="复发性流产"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item>
+				<item name="Category" value="MedicalHistory"/>
+				<item name="KeyWordClassification" value="#Array">
+					<item>
+						<item name="ClassificationName" value="重大妇科疾病史"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="子宫内膜异位症"/>
+						    <item value="子宫腺肌病"/>
+						    <item value="多囊卵巢综合征（PCOS）"/>
+						    <item value="宫颈上皮内瘤变（CIN）病史"/>
+						    <item value="妇科恶性肿瘤"/>
+						    <item value="卵巢癌"/>
+						    <item value="子宫内膜癌"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="手术史"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="子宫肌瘤剔除术"/>
+						    <item value="子宫切除术"/>
+						    <item value="卵巢囊肿剥除术"/>
+						    <item value="盆腹腔放疗史"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="妊娠相关高危史"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="前置胎盘"/>
+						    <item value="胎盘植入史"/>
+						    <item value="妊娠期高血压疾病"/>
+						    <item value="HELLP综合征"/>
+						    <item value="葡萄胎"/>
+						    <item value="绒毛膜癌病史"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="感染史"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="盆腔炎性疾病（PID）反复发作"/>
+						    <item value="衣原体感染"/>
+						    <item value="淋球菌感染"/>
+						    <item value="盆腔结核"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="系统性疾病"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="凝血功能障碍"/>
+						    <item value="血友病"/>
+						    <item value="系统性红斑狼疮"/>
+						    <item value="甲状腺功能异常"/>
+						</item>
+					</item>
+					<item>
+						<item name="ClassificationName" value="家族史"/>
+						<item name="KeyWords" value="#Array">
+						    <item value="BRCA基因突变"/>
+						    <item value="林奇综合征"/>
+						    <item value="一级亲属早发妇科肿瘤史"/>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<!-- 各个检测模式下的报告编辑模板 -->
+		<item name="ObMateReportEditTemplate" value="#Array">
+			<item>
+				<item name="Type" value="DocumentEditor"/>
+				<item name="ExamMode" value="OB9"/>
+				<item name="Template" value="OvarianFollicle"/>
+			</item>
+			<item>
+				<item name="Type" value="DocumentEditor"/>
+				<item name="ExamMode" value="OB4"/>
+				<item name="Template" value="PelvicFloor"/>
+			</item>
+			<item>
+				<item name="ExamMode" value="OB"/>
+				<item name="FetalMeasurementList" value="#Array">
+					<item>
+						<item name="Group" value="附属物测量"/>
+						<item name="Measurements" value="#Array">
+							<item value="MID.OB.BPD"/>
+							<item value="MID.OB.CRL"/>
+							<item value="MID.OB.HC"/>
+							<item value="MID.OB.AC"/>
+							<item value="MID.OB.FL"/>
+							<item value="MID.OB.NT"/>
+							<item value="OBMATE.DVP"/>
+						</item>
+					</item>	
+					<item>
+						<item name="Group" value="羊水指数测试"/>
+						<item name="Measurements" value="#Array">
+							<item value="MID.OB.AF1*Dist"/>
+							<item value="MID.OB.AF2*Dist"/>
+							<item value="MID.OB.AF3*Dist"/>
+							<item value="MID.OB.AF4*Dist"/>
+						</item>
+					</item>						
+					<item>
+						<item name="Group" value="多普勒测量"/>
+						<item name="Measurements" value="#Array">
+							<item value="MID.OB.FHR*HR"/>
+							<item value="CID.OB.Ut.A*RI_L"/>
+							<item value="CID.OB.Ut.A*PI_L"/>
+							<item value="CID.OB.Ut.A*S.D_L"/>
+							<item value="CID.OB.Ut.A*RI_R"/>
+							<item value="CID.OB.Ut.A*PI_R"/>
+							<item value="CID.OB.Ut.A*S.D_R"/>
+						</item>
+					</item>
+				</item>
+				<item name="AnatomicalStructure" value="#Array">
+					<item>
+						<item name="Group" value="胎盘"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.Placenta.grade"/>
+							<item value="OBMATE.AS.Placenta.Pos"/>
+							<item value="OBMATE.AS.Placenta.MCI"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="四肢"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.ARM.LEFT"/>
+							<item value="OBMATE.AS.LEG.LEFT"/>
+							<item value="OBMATE.AS.ARM.RIGHT"/>
+							<item value="OBMATE.AS.LEG.RIGHT"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="胸腹"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.Stomach.pos"/>
+							<item value="OBMATE.AS.Stomach"/>
+							<item value="OBMATE.AS.UC.Entry.AW"/>
+							<item value="OBMATE.AS.Bladder"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="颜面"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.Nostrils"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="脑部"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.CR"/>							
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="心脏"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.FCH"/>
+							<item value="OBMATE.AS.FCH.pos"/>
+							<item value="OBMATE.AS.CVC"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="脊柱"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.VC"/>
+						</item>
+					</item>
+				</item>
+				<item name="ReportGraph" value="#Array">
+				</item>
+				<item name="USGestatinalAge" value="#Array">
+					<item value="MID.OB.BPD"/>
+					<item value="MID.OB.HC"/>
+					<item value="MID.OB.AC"/>
+					<item value="MID.OB.FL"/>
+				</item>
+				<item name="OtherAnatomicalTemplate" value="#Array">					
+					<item value="孕母双附件区未及明显异常回声包块。"/>
+					<item value="胎儿颅脑异常，建议复查"/>
+				</item>	
+				<item name="StudyResultTemplate" value="#Array">					
+					<item value="孕母双附件区未及明显异常回声包块。"/>
+					<item value="胎儿颅脑异常，建议复查"/>
+				</item>	
+				<item name="DiagResultTemplate" value="#Array">
+					<item value="宫内孕，单活胎（双绒毛膜囊）"/>
+					<item value="宫内孕，双活胎（双绒毛膜囊）"/>
+					<item value="胎儿NT： mm，建议产科门诊复查"/>
+					<item value="胎儿骨性鼻骨显示不清，建议复查"/>
+				</item>
+				<!-- 不能被AI自动识别的解剖结构 -->
+				<item name="AnatomyCannotIdentified" value="#Array">
+				</item>
+				<!-- 该模板默认填入的解剖结构和文本内容 -->
+				<!-- AnatomyDefault 解剖结构默认值，0 空，1 第一个候选项，2 使用AnatomicalStructure中配置，其余不填充，3 使用AnatomicalStructure中配置，其余用第一个候选项 -->
+				<!-- AnatomicalStructure 需要自动填入的解剖结构列表 -->
+				<!-- OtherAnatomical 其他解剖结构 -->
+				<!-- StudyReuslt 检查所见 -->
+				<!-- DiagResult 诊断结果 -->
+				<!--
+				<item name="DefaultValue">
+					<item name="Measurement" value="#Array">
+						<item>
+							<item name="Code" value=""/>
+							<item name="Value" value=""/>
+						</item>
+					</item>
+				    <item name="AnatomyDefault" value="2"/>
+					<item name="AnatomicalStructure" value="#Array">
+						<item>
+							<item name="Code" value=""/>
+							<item name="Value" value=""/>
+						</item>
+					</item>
+					<item name="OtherAnatomical" value=""/>
+					<item name="StudyReuslt" value=""/>
+					<item name="DiagResult" value=""/>
+				</item>
+				-->
+				<item name="ImagePlane" value="#Array">
+					<item value="A0"/>
+					<item value="A1"/>
+					<item value="A2"/>
+					<item value="A3"/>
+					<item value="A4"/>
+					<item value="A5"/>
+					<item value="B6"/>
+					<item value="B7"/>
+				</item>
+				<item name="Serialization">
+					<item name="Measurement" value="#Array">
+					   <item value="附属物测量:"/>	
+					   <item value="[MID.OB.FHR*HR-20]"/>
+					</item>
+				    <item name="StudyResult" value="#Array">
+					   <item value="其他：[StudyResult]"/>
+					</item>
+					<item name="DiagResult" value="#Array">
+					   <item value="[DiagResult]"/>
+					</item>
+				</item>
+				<!-- 回传PACS的报告截图打印模板 -->
+				<!-- Id - 回传的截图标识 -->
+				<!-- Type - 回传的截图类型：Table 测量表格 -->
+				<!-- Template - 回传的截图模板文件名 -->
+				<!-- PerFetal - 是否对每个胎儿各生成一个，默认0 -->
+				<!--<item name="PrintTemplate" value="#Array">
+					<item>
+						<item name="Id" value="MeasureTable"/>
+						<item name="Type" value="Table"/>
+						<item name="Template" value="ob-print-measure-basic.vue"/>
+						<item name="PerFetal" value="1"/>
+					</item>
+				</item>-->
+			</item>
+			<item>
+				<item name="ExamMode" value="OB2"/>
+				<item name="FetalMeasurementList" value="#Array">
+					<item>
+						<item name="Group" value="生物学测量"/>
+						<item name="Measurements" value="#Array">
+							<item value="MID.OB.BPD"/>
+							<item value="MID.OB.HC"/>
+							<item value="MID.OB.AC"/>
+							<item value="MID.OB.HUM"/>
+							<item value="MID.OB.FL"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="胎重"/>
+						<item name="Measurements" value="#Array">
+							<item value="CID.OB.EFW"/>
+							<item value="CID.OB.EFW1"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="附属物测量"/>
+						<item name="Measurements" value="#Array">
+							<item value="MID.OB.FHR*HR"/>
+							<item value="MID.OB.Placental.Thickness*Dist"/>
+							<item value="MID.OB.AF*Dist"/>
+							<item value="CID.OB.AFI"/>
+						</item>
+					</item>
+				</item>
+				<item name="AnatomicalStructure" value="#Array">
+					<item>
+						<item name="Group" value="脑部"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.CSP"/>
+							<item value="OBMATE.AS.CR"/>
+							<item value="OBMATE.AS.Lateral.V"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="心脏"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.FCH"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="胸腹"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.Stomach"/>
+							<item value="OBMATE.AS.UC.Entry.AW"/>
+							<item value="OBMATE.AS.Kidneys"/>
+							<item value="OBMATE.AS.Bladder"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="脊柱"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.VC"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="四肢"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.Humerus"/>
+							<item value="OBMATE.AS.Femur"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="胎盘"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.UC"/>
+							<item value="OBMATE.AS.Placenta.Pos"/>
+						</item>
+					</item>
+				</item>
+				<item name="ReportGraph" value="#Array">
+					<item value="MID.OB.BPD"/>
+					<item value="MID.OB.HC"/>
+					<item value="MID.OB.TCD"/>
+				</item>
+				<item name="USGestatinalAge" value="#Array">
+					<item value="MID.OB.BPD"/>
+					<item value="MID.OB.HC"/>
+					<item value="MID.OB.AC"/>
+					<item value="MID.OB.FL"/>
+				</item>
+				<item name="OtherAnatomicalTemplate" value="#Array">
+					<!--<item value="预定义1"/>
+					<item value="预定义2"/>
+					<item value="预定义3"/>
+					<item value="预定义4"/>
+					<item value="预定义5"/>-->
+				</item>	
+				<item name="StudyResultTemplate" value="#Array">					
+					<item value="胎儿脐带绕颈一周"/>	
+				</item>				
+				<item name="DiagResultTemplate" value="#Array">	
+					<item value="宫内孕，单活胎"/>
+					<item value="宫内孕，双活胎"/>				
+				</item>	
+				<item name="ImagePlane" value="#Array">
+					<item value="B8"/>
+					<item value="B9"/>
+					<item value="B10"/>
+					<item value="B38"/>
+					<item value="B40"/>
+					<item value="B41"/>
+					<item value="B42"/>
+					<item value="B43"/>
+				</item>
+			
+     			<item name="Serialization">
+					<item name="Measurement" value="#Array">
+                       <item value="生物学测量:"/>					
+					   <item value="[MID.OB.BPD-10][MID.OB.HC-10]"/>
+					   <item value="[MID.OB.AC-10][MID.OB.HUM-10]"/>
+					   <item value="[MID.OB.FL-10]"/>
+					   <item value="附属物测量:"/>	
+					   <item value="[MID.OB.FHR*HR-20]"/>
+					</item>
+				    <item name="StudyResult" value="#Array">
+					   <item value="其他：[StudyResult]"/>
+					</item>
+					<item name="DiagResult" value="#Array">
+					   <item value="[DiagResult]"/>
+					</item>
+				</item>
+			</item>
+			<item>
+				<item name="ExamMode" value="OB3"/>
+				<item name="FetalMeasurementList" value="#Array">
+					<item>
+						<item name="Group" value="生物学测量"/>
+						<item name="Measurements" value="#Array">
+							<item value="MID.OB.BPD"/>
+							<item value="MID.OB.HC"/>
+							<item value="MID.OB.AC"/>
+							<item value="MID.OB.FL"/>
+							<item value="MID.OB.HUM"/>
+							<item value="CID.OB.AFI"/>
+							<item value="OBMATE.DVP"/>
+							<item value="MID.OB.AF*Dist"/>
+							<item value="CID.OB.CL"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="羊水指数测试"/>
+						<item name="Measurements" value="#Array">
+							<item value="MID.OB.AF1*Dist"/>
+							<item value="MID.OB.AF2*Dist"/>
+							<item value="MID.OB.AF3*Dist"/>
+							<item value="MID.OB.AF4*Dist"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="多普勒测量"/>
+						<item name="Measurements" value="#Array">
+							<item value="MID.OB.FHR*HR"/>						
+							<item value="CID.OB.Umb.A*S.D"/>	
+							<item value="CID.OB.Umb.A*PI"/>
+						</item>
+					</item>
+				</item>
+				<item name="AnatomicalStructure" value="#Array">
+					<item>
+						<item name="Group" value="胎盘"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.Placenta.grade"/>
+							<item value="OBMATE.AS.Placenta.Pos"/>
+							<item value="OBMATE.AS.Placenta.Loa"/>
+							<item value="OBMATE.AS.Placenta.FM"/>
+							<item value="OBMATE.AS.Placenta.MCI"/>
+							<item value="OBMATE.AS.Placenta.XX"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="四肢"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.ARM.LEFT"/>
+							<item value="OBMATE.AS.LEG.LEFT"/>
+							<item value="OBMATE.AS.ARM.RIGHT"/>
+							<item value="OBMATE.AS.LEG.RIGHT"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="胸腹"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.Stomach.pos"/>
+							<item value="OBMATE.AS.Stomach"/>
+							<item value="OBMATE.AS.UC.Entry.AW"/>
+							<item value="OBMATE.AS.UA"/>
+							<item value="OBMATE.AS.Lungs"/>
+							<item value="OBMATE.AS.Kidneys"/>
+							<item value="OBMATE.AS.Mass"/>
+							<item value="OBMATE.AS.Bo"/>
+							<item value="OBMATE.AS.Bladder"/>
+							<item value="OBMATE.AS.Placenta.OVA"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="颜面"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.Nostrils"/>
+							<item value="OBMATE.AS.UL"/>
+							<item value="OBMATE.AS.OC"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="脑部"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.CR"/>
+							<item value="OBMATE.AS.CSP"/>
+							<item value="OBMATE.AS.FC"/>
+							<item value="OBMATE.AS.TH"/>
+							<item value="OBMATE.AS.Lateral.V"/>
+							<item value="OBMATE.AS.CB"/>
+							<item value="OBMATE.AS.PCF"/>
+						</item>
+					</item>
+					<item>
+						<item name="Group" value="心脏"/>
+						<item name="StructureList" value="#Array">
+							<item value="OBMATE.AS.FCH.SIZE"/>
+							<item value="OBMATE.AS.FCH.pos"/>
+							<item value="OBMATE.AS.AXIS"/>
+							<item value="OBMATE.AS.FCH"/>
+							<item value="OBMATE.AS.LVOT"/>
+							<item value="OBMATE.AS.RVOT"/>							
+						</item>
+					</item>	
+					<item>
+						<item name="Group" value="脊柱"/>
+						<item name="StructureList" value="#Array">
+						 <item value="OBMATE.AS.VC"/>
+						</item>
+					</item>
+				</item>
+				<item name="ReportGraph" value="#Array">
+					<item value="MID.OB.BPD"/>
+					<item value="MID.OB.HC"/>
+					<item value="MID.OB.TCD"/>
+				</item>
+				<item name="USGestatinalAge" value="#Array">
+					<item value="MID.OB.BPD"/>
+					<item value="MID.OB.HC"/>
+					<item value="MID.OB.AC"/>
+					<item value="MID.OB.FL"/>
+				</item>
+				<item name="OtherAnatomicalTemplate" value="#Array">					
+					<item value="胎儿脐带绕颈一周"/>
+					<item value="胎儿颅脑异常，建议复查"/>
+					<item value="胎儿右侧侧脑室后角宽约 cm（位于超声近场）"/>
+					<item value="双胎间见分隔"/>					
+					<item value="颈部见“U”形切迹"/>
+					<item value="左心室内见一枚 cm强光斑"/>
+					<item value="左心室内见一枚 * cm强光斑"/>
+				</item>
+				<item name="StudyResultTemplate" value="#Array">					
+					<item value="胎儿脐带绕颈一周"/>
+					<item value="胎儿颅脑异常，建议复查"/>
+					<item value="胎儿右侧侧脑室后角宽约 cm（位于超声近场）"/>
+					<item value="双胎间见分隔"/>					
+					<item value="颈部见“U”形切迹"/>
+					<item value="左心室内见一枚 cm强光斑"/>
+					<item value="左心室内见一枚 * cm强光斑"/>
+				</item>
+				<item name="DiagResultTemplate" value="#Array">
+					<item value="宫内孕，单活胎"/>
+					<item value="宫内孕，双活胎"/>
+					<item value="目前胎儿脐带绕颈一周"/>
+					<item value="胎儿颅脑情况如上述"/>
+					<item value="球拍状胎盘可能"/>
+					<item value="请结合MRI"/>
+				</item>
+				<item name="ImagePlane" value="#Array">
+					<item value="F17"/>
+					<item value="F34"/>
+					<item value="G26"/>
+					<item value="F36"/>
+					<item value="G27"/>
+					<item value="G28"/>
+					<item value="G30"/>
+					<item value="G31"/>
+				</item>
+				<item name="Serialization">
+					<item name="Measurement" value="#Array">
+                       <item value="生物学测量:"/>					
+					   <item value="[MID.OB.BPD-10][MID.OB.HC-10]"/>
+					   <item value="[MID.OB.AC-10][MID.OB.HUM-10]"/>
+					   <item value="[MID.OB.FL-10]"/>
+					   <item value="附属物测量:"/>	
+					   <item value="[MID.OB.FHR*HR-20]"/>
+					   <item value="胎盘:"/>	
+					   <item value="[OBMATE.AS.UC-10];[OBMATE.AS.Placenta.Pos-10]"/>
+					</item>
+				    <item name="StudyResult" value="#Array">
+					   <item value="其他：[StudyResult]"/>
+					</item>
+					<item name="DiagResult" value="#Array">
+					   <item value="[DiagResult]"/>
+					</item>
+				</item>
+			</item>
+		</item>
+	    <!-- 切面质量  评价标准 -->
+		<item name="PlaneQualityStandard" value="#Array">
+    		<item>
+    			<item name="Name" value="标准"/>
+				<item name="Max" value=""/>
+				<item name="Min" value="=75"/>
+			</item>
+			<item>
+    			<item name="Name" value="基本标准"/>
+				<item name="Max" value="75"/>
+				<item name="Min" value="=60"/>
+			</item>
+			<item>
+    			<item name="Name" value="不标准"/>
+				<item name="Max" value="60"/>
+				<item name="Min" value=""/>
+			</item>
+		</item>
+	
+		<!-- 激活切面缩略的检查类型（A20接入时），默认激活 发育曲线 -->
+		<item name="ActivatePlaneQualityList" value="OB;OB2;OB3"/>
+	</item>
+</config>

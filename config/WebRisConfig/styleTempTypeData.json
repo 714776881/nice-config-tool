@@ -1,0 +1,305 @@
+{
+  "columnConfig": [
+	{
+      "title": "模板名称",
+      "key": "STYLE",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 120,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "模板名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入模板名称"
+          }
+        ],
+
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "所属科室",
+      "key": "DEPTCODE",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "模板名称",
+		  "allowClear": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入模板名称"
+          }
+        ],
+        "defaultValue": ""
+      },
+	  "dicSql":"select distinct itemcode as value,itemname||'|'||itemcode||'|'||srm as label from t_dictionary d where d.diccategory='1001' and d.deleted='0' and d.hospitalid='{GLOBAL}{HOSPITALID}'"
+    },
+	{
+      "title": "普通/临时",
+      "key": "STYLETYPE1",
+      "width": 100,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "普通/临时",
+		  "options": [
+			{ "label": "普通", "value": "1000" },
+			{ "label": "临时", "value": "1001" }
+		  ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入病人类型"
+          }
+        ],
+		"defaultValue":"1000"
+      }
+    },
+	{
+      "title": "最大贴图数量",
+      "key": "FILMNUM",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 100,
+      "component": {
+        "name": "a-input-number",
+        "props": {
+          "placeholder": "打印图片数",
+		  "width": "160px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入打印图片数"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "允许编辑",
+      "key": "ALLOWEDITPAGE",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择",
+          "options": [
+            {
+              "label": "允许",
+              "value": "1"
+            },
+            {
+              "label": "不允许",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择是否激活"
+          }
+        ],
+        "defaultValue": "1"
+      }
+    },
+	{
+      "title": "是否激活",
+      "key": "ACTIVE",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择是否激活",
+          "options": [
+            {
+              "label": "活动",
+              "value": "1"
+            },
+            {
+              "label": "停用",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择是否激活"
+          }
+        ],
+        "defaultValue": "1"
+      }
+    },
+	{
+      "title": "模板文件",
+      "key": "CONTENTHTML",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": false,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "模板名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入模板名称"
+          }
+        ],
+
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_style"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select s.styleid id,s.style,s.deptcode,s.styletype1,s.filmnum,s.alloweditpage,s.active,s.deleted,s.sequence,s.contenthtml from t_style s where s.stylecategoryid = '{SUPER}{ID}'",
+    "insert": "insert into t_style(styleid,stylecategoryid,style,styletype1,filmnum,deptcode,active,deleted,sequence) values('{ID}','{SUPER}{ID}','{STYLE}','{STYLETYPE1}','{FILMNUM}','{DEPTCODE}','{ACTIVE}','{DELETED}','{SEQUENCE}')",
+    "update": "UPDATE t_style SET stylecategoryid = '{SUPER}{ID}', style = '{STYLE}', styletype1 = '{STYLETYPE1}', filmnum = '{FILMNUM}', deptcode='{DEPTCODE}', active = '{ACTIVE}' WHERE styleid = '{ID}'",
+    "setState": "update t_style set deleted = '{DELETED}' where styleid = '{ID}'",
+	"delete": "delete from t_style where styleid = '{ID}'",
+	"setSequence":"update t_style set sequence = '{SEQUENCE}' where styleid = '{ID}'",
+    "exportData": "select e.*,e.styleid id from t_style e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "addedButtons":[
+	{
+	   "name": "预览模板",
+	   "defaultShowText":"",
+	   "width":1000,
+	   "exeSql":"update t_style set contenthtml=:CONTENTHTML where styleid='{ID}'",
+	   "isBetch": ""
+	}
+  ],
+  "tableConfig":{
+	"defaultPageSize":"50"
+  }
+}

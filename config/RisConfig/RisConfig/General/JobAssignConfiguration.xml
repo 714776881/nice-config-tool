@@ -1,0 +1,61 @@
+<config versiontag="root">
+  <item name="JobAssignConfiguration" versiontag="201912.2">
+    <item name="TimePeriodPreDefine" versiontag="201912.3">
+      <item name="AM" value="1" versiontag="201912.4">
+        <item name="Description" value="上午" versiontag="201912.5" />
+        <item name="Enable" value="1" versiontag="201912.6" />
+      </item>
+      <item name="Noon" value="2" versiontag="201912.7">
+        <item name="Description" value="中班" versiontag="201912.8" />
+        <item name="Enable" value="1" versiontag="201912.9" />
+      </item>
+      <item name="PM" value="3" versiontag="201912.10">
+        <item name="Description" value="下午" versiontag="201912.11" />
+        <item name="Enable" value="1" versiontag="201912.12" />
+      </item>
+      <item name="Night" value="4" versiontag="201912.13">
+        <item name="Description" value="夜班" versiontag="201912.14" />
+        <item name="Enable" value="1" versiontag="201912.15" />
+      </item>
+      <item name="All" value="5" versiontag="201912.16">
+        <item name="Description" value="全天" versiontag="201912.17" />
+        <item name="Enable" value="1" versiontag="201912.18" />
+      </item>
+      <item name="Current" value="6" versiontag="201912.19">
+        <item name="Description" value="当天" versiontag="201912.20" />
+        <item name="Enable" value="1" versiontag="201912.21" />
+      </item>
+      <item name="Duty" value="7" versiontag="201912.22">
+        <item name="Description" value="值班" versiontag="201912.23" />
+        <item name="Enable" value="1" versiontag="201912.24" />
+      </item>
+      <item name="ShortNight" value="8" versiontag="201912.25">
+        <item name="Description" value="小夜班" versiontag="201912.26" />
+        <item name="Enable" value="1" versiontag="201912.27" />
+      </item>
+    </item>
+    <item name="ExamitemStrategy" versiontag="201912.28">
+      <item name="DiagnoseGroup" versiontag="201912.29">
+        <item name="Enable" value="1" versiontag="201912.30" />
+      </item>
+      <item name="Examitem" versiontag="201912.31">
+        <item name="Enable" value="1" versiontag="201912.32" />
+      </item>
+    </item>
+    <!-- 是否启用岗位配置 -->
+    <item name="EnableWorkPost" value="0" versiontag="202109.52" />
+    <!--任务分发管理中周显示配置，0为周日至周六，1为周一至周日 默认为0-->
+    <item name="WeekDisplay" value="0" versiontag="202210.1" />
+    <!--人员设置和排版表选择配置查看的前后周的范围，1-可以选择上一周，下一周。2-可以选择上上周，下下周…… 依此类推-->
+    <item name="WeekRange" value="2" versiontag="202210.2" />
+    <!--人员设置管理中是否允许复制当前周排班人员 0:不允许 1:允许-->
+    <item name="IsAllowCopyCurWeekPerson" value="0" versiontag="202405.1" />
+    <!-- 是否启用医院配置 -->
+    <item name="EnableHospital" value="0" versiontag="202304.1" />
+    <!-- 医院预定义 -->
+    <item name="HospitalPreDefine" versiontag="202304.2">
+      <item name="社区医院" value="Community" versiontag="202304.3" />
+      <item name="中心医院" value="Central" versiontag="202304.4" />
+    </item>
+  </item>
+</config>

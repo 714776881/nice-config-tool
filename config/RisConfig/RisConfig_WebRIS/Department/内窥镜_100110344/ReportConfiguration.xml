@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<item name="ReportConfiguration">
+		<!-- 报告编辑框的模式  tx:TX编辑框     h5：H5编辑框 -->
+		<item name="ReportEditorPattern" value="h5"/>
+		<!-- 超声缩略图的视图模式  0：通用模式  1:贴图模式  2:全选贴图-->
+		<item name="USListViewMode" value="1"/>
+		<!-- 报告编辑模板映射-->
+		<item name="ReportEditorTemplateMapping" value="#Array">
+			<item>
+				<item name="ID" value="ReportEditorTemplate"/>
+				<item name="Category" value=""/>
+				<item name="Modality" value=""/>
+				<item name="PatType" value=""/>
+				<item name="ExamItem" value="肠镜"/>
+			</item>
+			<item>
+				<item name="ID" value="ReportEditorTemplate"/>
+				<item name="Category" value=""/>
+				<item name="Modality" value=""/>
+				<item name="PatType" value=""/>
+				<item name="ExamItem" value="胃镜"/>
+			</item>
+			<item>
+				<item name="ID" value="ReportEditorTemplateRemoteUS"/>
+				<item name="Category" value="RemoteUS"/>
+				<item name="Modality" value=""/>
+				<item name="PatType" value=""/>
+				<item name="ExamItem" value=""/>
+			</item>
+		</item>
+		<!-- 报告编辑窗口 -->
+		<item name="ReportEditorTemplate" value="#Array">
+			<!-- 报告编辑，基本信息 -->
+			<item>
+				<item name="ID" value="ReportBasicInfoContent"/>
+				<item name="Data" value="BasicInfo"/>
+				<item name="Title" value=""/>
+				<item name="Collapse" value="1"/>
+				<item name="Style" value=""/>
+				<item name="liTitleStyle" value=""/>
+				<item name="CompositeTitle" value="#Array">
+					<item>
+						<item name="ID" value="ReportEditor_PatName"/>
+						<item name="Data" value="PatName"/>
+						<item name="Style" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_PatSex"/>
+						<item name="Data" value="PatSex"/>
+						<item name="Style" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_PatAge"/>
+						<item name="Data" value="PatAge"/>
+						<item name="Style" value=""/>
+					</item>
+					<item>
+						<item name="ID" value="ReportEditor_OrderStatusName"/>
+						<item name="Data" value="OrderStatusName"/>
+						<item name="Style" value="float:right; margin-right:40px;"/>
+					</item>
+				</item>
+				<item name="Content" value="#Array">
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_PatType"/>
+							<item name="Data" value="PatType"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="病人类型"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ModalityID"/>
+							<item name="Data" value="ModalityID"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="检查号"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ReportDr"/>
+							<item name="Data" value="ReportDr"/>
+							<item name="ControlType" value="editor"/>
+							<item name="Title" value="报告医生"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_NurseDr"/>
+							<item name="Data" value="NurseDr"/>
+							<item name="ControlType" value="editor"/>
+							<item name="Title" value="操作护士"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_OrderDr"/>
+							<item name="Data" value="OrderDr"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="请检医生"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ExamDT"/>
+							<item name="Data" value="ExamDT"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="检查时间"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item name="ReportDT">
+							<item name="ID" value="ReportEditor_ReportDT"/>
+							<item name="Data" value="ReportDT"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="报告时间"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_VerifyDT"/>
+							<item name="Data" value="VerifyDT"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="操作时间"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="letter-spacing: -1px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_Clinic"/>
+							<item name="Data" value="Clinic"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="请检科室"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_Modality"/>
+							<item name="Data" value="Modality"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="检查模态"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_Examitem"/>
+							<item name="Data" value="Examitem"/>
+							<item name="ControlType" value="label"/>
+							<item name="Title" value="检查项目"/>
+							<item name="Colspan" value="2"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value=""/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<!-- 报告编辑，内镜报告编辑  -->
+			<item>
+				<item name="ID" value="ReportESContent"/>
+				<item name="Data" value="ReportES"/>
+				<item name="Title" value="内镜治疗"/>
+				<item name="Style" value=""/>
+				<item name="Collapse" value="1"/>
+				<item name="liTitleStyle" value="line-height: 30px;width:130px;"/>
+				<item name="Content" value="#Array">
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESBiopsy"/>
+							<item name="Data" value="ESBiopsy"/>
+							<item name="ControlType" value="editSelect"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="活检部位"/>
+							<item name="Desc" value="活检部位"/>
+							<item name="Colspan" value="4"/>
+							<item name="Style" value="height:40px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;"/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESNote"/>
+							<item name="Data" value="ESNote"/>
+							<item name="ControlType" value="editSelect"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="附          注"/>
+							<item name="Desc" value="附          注"/>
+							<item name="Colspan" value="4"/>
+							<item name="Style" value="height:40px;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;"/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ColonoscopyPreparation"/>
+							<item name="Data" value="ColonoscopyPreparation"/>
+							<item name="ControlType" value="select"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="肠镜准备情况"/>
+							<item name="Desc" value="肠镜准备情况"/>
+							<item name="Colspan" value="4"/>
+							<item name="Style" value="height:40px;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;"/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESTherapy"/>
+							<item name="Data" value="ESTherapy"/>
+							<item name="ControlType" value="select"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="治  疗"/>
+							<item name="Desc" value="治  疗"/>
+							<item name="Colspan" value="4"/>
+							<item name="Style" value="height:40px;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;"/>
+							<item name="Children" value="#Array">
+								<item>
+									<item name="Desc" value="普通"/>
+									<item name="Data" value="0"/>
+								</item>
+								<item>
+									<item name="Desc" value="无痛"/>
+									<item name="Data" value="1"/>
+								</item>
+								<item>
+									<item name="Desc" value="无治疗"/>
+									<item name="Data" value="2"/>
+								</item>
+							</item>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESTherapyItem"/>
+							<item name="Data" value="ESTherapyItem"/>
+							<item name="ControlType" value="select"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="治疗项目"/>
+							<item name="Desc" value="治疗项目"/>
+							<item name="Colspan" value="4"/>
+							<item name="Style" value="height:40px;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;"/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESOperationFinding"/>
+							<item name="Data" value="ESOperationFinding"/>
+							<item name="ControlType" value="plaintext"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="手术名字及所见"/>
+							<item name="Desc" value="手术名字及所见"/>
+							<item name="Colspan" value="4"/>
+							<item name="Style" value="height:40px;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;height:60px;"/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESHP"/>
+							<item name="Data" value="ESHP"/>
+							<item name="ControlType" value="select"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="HP"/>
+							<item name="Desc" value="HP"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="height:40px; width:25%;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value="width: 40px;line-height: 35px;"/>
+							<item name="liContentStyle" value="width:50%;"/>
+							<item name="Children" value="#Array">
+								<item>
+									<item name="Desc" value=""/>
+									<item name="Data" value=""/>
+								</item>
+								<item>
+									<item name="Desc" value="阴性"/>
+									<item name="Data" value="0"/>
+								</item>
+								<item>
+									<item name="Desc" value="阳性"/>
+									<item name="Data" value="1"/>
+								</item>
+							</item>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ESHIV"/>
+							<item name="Data" value="ESHIV"/>
+							<item name="ControlType" value="select"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="HIV"/>
+							<item name="Desc" value="HIV"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="height:40px; width:25%;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value="width: 40px;line-height: 35px;"/>
+							<item name="liContentStyle" value="width:50%;"/>
+							<item name="Children" value="#Array">
+								<item>
+									<item name="Desc" value=""/>
+									<item name="Data" value=""/>
+								</item>
+								<item>
+									<item name="Desc" value="阴性"/>
+									<item name="Data" value="0"/>
+								</item>
+								<item>
+									<item name="Desc" value="阳性"/>
+									<item name="Data" value="1"/>
+								</item>
+							</item>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ESHCV"/>
+							<item name="Data" value="ESHCV"/>
+							<item name="ControlType" value="text"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="HCV"/>
+							<item name="Desc" value="HCV"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="height:40px; width:25%;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value="width: 40px;line-height: 35px;"/>
+							<item name="liContentStyle" value="width:50%;"/>
+							<item name="Children" value="#Array">
+							</item>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_ESHBsAg"/>
+							<item name="Data" value="ESHBsAg"/>
+							<item name="ControlType" value="text"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="HBsAg"/>
+							<item name="Desc" value="HBsAg"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value="height:40px; width:25%;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value="width: 60px;line-height: 35px;"/>
+							<item name="liContentStyle" value="width:50%;"/>
+							<item name="Children" value="#Array">
+							</item>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESPathologyID"/>
+							<item name="Data" value="ESPathologyID"/>
+							<item name="ControlType" value="text"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="病理号"/>
+							<item name="Desc" value="病理号"/>
+							<item name="Colspan" value="2"/>
+							<item name="Style" value="height:30px;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;height:60px;"/>
+						</item>
+						<item>
+							<item name="ID" value="ReportEditor_BlockNumber"/>
+							<item name="Data" value="BlockNumber"/>
+							<item name="ControlType" value="text"/>
+							<item name="Essential" value="1"/>
+							<item name="Title" value="块号"/>
+							<item name="Desc" value="块号"/>
+							<item name="Colspan" value="2"/>
+							<item name="Style" value="height:30px;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;height:60px;"/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESPathologyDiagResult"/>
+							<item name="Data" value="ESPathologyDiagResult"/>
+							<item name="ControlType" value="plaintext"/>
+							<item name="Essential" value="1"/>
+							<item name="Limit" value="512"/>
+							<item name="Title" value="病理建议"/>
+							<item name="Desc" value="病理建议"/>
+							<item name="Colspan" value="4"/>
+							<item name="Style" value="height:40px;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;min-height:60px;"/>
+						</item>
+					</item>
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_ESDoctorAdvice"/>
+							<item name="Data" value="ESDoctorAdvice"/>
+							<item name="ControlType" value="plaintext"/>
+							<item name="Essential" value="1"/>
+							<item name="Limit" value="512"/>
+							<item name="Title" value="医生建议"/>
+							<item name="Desc" value="医生建议"/>
+							<item name="Colspan" value="4"/>
+							<item name="Style" value="height:40px;border-bottom: 1px solid #e0ecff;"/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="width:50%;min-height:60px;"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<!-- 报告编辑，检查所见区域  -->
+			<item>
+				<item name="ID" value="ReportStudyResultContent"/>
+				<item name="Data" value="ReportStudyResult"/>
+				<item name="Title" value="检查所见"/>
+				<item name="Style" value=""/>
+				<item name="Collapse" value="1"/>
+				<item name="liTitleStyle" value=""/>
+				<item name="Content" value="#Array">
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_StudyResult"/>
+							<item name="Data" value="StudyResult"/>
+							<item name="ControlType" value="textarea"/>
+							<item name="Essential" value="1"/>
+							<item name="Limit" value="2000"/>
+							<item name="NumberCount" value="1"/>
+							<item name="Title" value=""/>
+							<item name="Desc" value="检查所见"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="min-height:100px;"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<!-- 报告编辑，检查所见区域  -->
+			<item>
+				<item name="ID" value="ReportDiagResultContent"/>
+				<item name="Data" value="ReportDiagResult"/>
+				<item name="Title" value="诊断结果"/>
+				<item name="Style" value=""/>
+				<item name="Collapse" value="0"/>
+				<item name="liTitleStyle" value=""/>
+				<item name="Content" value="#Array">
+					<item value="#Array">
+						<item>
+							<item name="ID" value="ReportEditor_DiagResult"/>
+							<item name="Data" value="DiagResult"/>
+							<item name="ControlType" value="textarea"/>
+							<item name="Essential" value="1"/>
+							<item name="Limit" value="2000"/>
+							<item name="NumberCount" value="1"/>
+							<item name="Title" value=""/>
+							<item name="Desc" value="诊断结果"/>
+							<item name="Colspan" value="1"/>
+							<item name="Style" value=""/>
+							<item name="liTitleStyle" value=""/>
+							<item name="liContentStyle" value="min-height:100px;"/>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<!-- 报告编辑窗口 -->
+	</item>
+</config>

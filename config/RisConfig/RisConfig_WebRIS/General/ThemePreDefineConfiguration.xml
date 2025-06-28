@@ -1,0 +1,117 @@
+<config>
+  <!--导航栏的各项定义，包括显示值，使用的图标，一般情况下不需要修改-->
+  <item name="ThemePreDefineConfiguration" value="#Array">
+    <item>
+      <item name="Id" value="1040" />
+      <item name="Name" value="NavRegister" />
+      <item name="Description" value="登记检查" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-Register" />
+    </item>
+    <item>
+      <item name="Id" value="0" />
+      <item name="Name" value="NavWorklist" />
+      <item name="Description" value="检查列表" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-Worklist" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="0" />
+      <item name="Name" value="NavReport" />
+      <item name="Description" value="报告编辑" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-Report" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="16" />
+      <item name="Name" value="NavWebConfigTool" />
+      <item name="Description" value="配 置" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-WebConfigTool" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="13" />
+      <item name="Name" value="NavQueueConfiguration" />
+      <item name="Description" value="队列管理" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-QueueConfiguration" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="14" />
+      <item name="Name" value="NavCallingScreen" />
+      <item name="Description" value="队列信息" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-NavCallingScreen" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="16" />
+      <item name="Name" value="NavTechnicianStation" />
+      <item name="Description" value="技师站" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-StatisticsScreen" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="17" />
+      <item name="Name" value="NavGMSampling" />
+      <item name="Description" value="病理取材" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-StatisticsScreen" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="14" />
+      <item name="Name" value="NavVideoMonitoring" />
+      <item name="Description" value="诊室管理" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-VideoMonitoring" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="15" />
+      <item name="Name" value="NavSystemAbout" />
+      <item name="Description" value="系统关于" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-About" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="15" />
+      <item name="Name" value="NavNotifyMessage" />
+      <item name="Description" value="提醒" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-NotifyMessage" />
+      <item name="AlwaysExist" value="true" />
+    </item>
+    <item>
+      <item name="Id" value="6" />
+      <item name="Name" value="NavMore" />
+      <item name="Description" value="其他" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="glsvg-navbar-More" />
+      <item name="SubThemeSet" value="#Array">
+        <item>
+          <item name="Id" value="00" />
+          <item name="Name" value="NavHide" />
+          <item name="Description" value="隐藏" />
+          <item name="HasIcon" value="true" />
+          <item name="IconName" value="glsvg-navbar-Hide" />
+          <item name="AlwaysExist" value="true" />
+        </item>
+        <item>
+          <item name="Id" value="02" />
+          <item name="Name" value="NavExit" />
+          <item name="Description" value="退出" />
+          <item name="HasIcon" value="true" />
+          <item name="IconName" value="glsvg-navbar-Exit" />
+          <item name="AlwaysExist" value="true" />
+        </item>
+      </item>
+    </item>
+  </item>
+</config>

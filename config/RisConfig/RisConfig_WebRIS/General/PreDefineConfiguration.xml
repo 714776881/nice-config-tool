@@ -1,0 +1,4958 @@
+﻿<config>
+	<item name="PreDefineConfiguration">
+		<!--worklist中结果列的全集，一般情况下不需要修改-->
+		<item name="WorkListGridPreDefine">
+			<item name="Modality">
+				<item name="Description" value="检查类型"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="Modality"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+			</item>
+			<item name="PatientID">
+				<item name="Description" value="影像号"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Modalityid">
+				<item name="Description" value="模态号"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="PatientType">
+				<item name="Description" value="病人类型"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="SortType" value="PatientType"/>
+				<item name="Formatter" value="PatientType"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+			</item>
+			<item name="PatientName">
+				<item name="Description" value="姓名"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="text"/>
+				<item name="Formatter" value="PatientName"/>
+			</item>
+			<item name="PatientNameAlias">
+				<item name="Description" value="AliasName"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="text"/>
+			</item>
+			<item name="PatientSex">
+				<item name="Description" value="性别"/>
+				<item name="Width" value="50"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="PatientSex"/>
+			</item>
+			<item name="PatientAge">
+				<item name="Description" value="年龄"/>
+				<item name="Width" value="50"/>
+				<item name="Sortable" value="true"/>
+				<item name="SortType" value="age"/>
+			</item>
+			<item name="PatientAgeNow">
+				<item name="Description" value="当前年龄"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="SortType" value="age"/>
+			</item>
+			<item name="PatientBirthday">
+				<item name="Description" value="出生日期"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Bodypart">
+				<item name="Description" value="检查部位"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Examitem">
+				<item name="Description" value="检查项目"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Examdt">
+				<item name="Description" value="检查时间"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Accno">
+				<item name="Description" value="流水号"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Equipment">
+				<item name="Description" value="影像设备"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="OutPatientID">
+				<item name="Description" value="门诊号/就诊卡号"/>
+				<item name="Width" value="120"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="PhysicalExamID">
+				<item name="Description" value="体检号"/>
+				<item name="Width" value="120"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="MedicareID">
+				<item name="Description" value="病历号/病案号"/>
+				<item name="Width" value="120"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="InPatientID">
+				<item name="Description" value="住院号"/>
+				<item name="Width" value="120"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Disease">
+				<item name="Description" value="临床诊断"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Clinic">
+				<item name="Description" value="请检科室"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="OrderDr">
+				<item name="Description" value="请检医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Ward">
+				<item name="Description" value="病区"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Bedno">
+				<item name="Description" value="床号"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="OrderComment">
+				<item name="Description" value="备注"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="DataSourceName">
+				<item name="Description" value="院区"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+			</item>
+			<item name="HospitalName">
+				<item name="Description" value="医院名"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+			</item>
+			<item name="OrderStatus">
+				<item name="Description" value="状态"/>
+				<item name="Width" value="70"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="ExamStatus"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+			</item>
+			<item name="StudyResult">
+				<item name="Description" value="检查所见"/>
+				<item name="Width" value="200"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="DiagResult">
+				<item name="Description" value="诊断"/>
+				<item name="Width" value="200"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="ReportStatus">
+				<!-- <item name="Description" value="会诊标记"/>-->
+				<!-- 区域版 -->
+				<item name="Description" value="会诊状态"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="ReportStatus"/>
+			</item>
+			<item name="Reportdr">
+				<item name="Description" value="报告医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Reportdt">
+				<item name="Description" value="报告日期"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="VerifyDr">
+				<item name="Description" value="审核医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Verifydt">
+				<item name="Description" value="审核日期"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="ReportRecordDr">
+				<item name="Description" value="报告登记员"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="TelphoneNo">
+				<item name="Description" value="联系电话"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Address">
+				<item name="Description" value="地址"/>
+				<item name="Width" value="200"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="HisID">
+				<item name="Description" value="申请单号"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="OpResult">
+				<item name="Description" value="手术结果"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="OrderDate">
+				<item name="Description" value="登记时间"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Register">
+				<item name="Description" value="登记员"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="PatientCategory">
+				<item name="Description" value="病人类别"/>
+				<item name="Width" value="120"/>
+			</item>
+			<item name="Charge">
+				<item name="Description" value="费用"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="SortType" value="int"/>
+			</item>
+			<item name="Chargeconfirm">
+				<item name="Description" value="实际费用"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="SortType" value="int"/>
+			</item>
+			<item name="ExamDr">
+				<item name="Description" value="检查医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Operatename">
+				<item name="Description" value="操作人"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Technician">
+				<item name="Description" value="检查技师"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="DicomExamstatus">
+				<item name="Description" value="采图状态"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="FilmStatus">
+				<item name="Description" value="胶片状态"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="FilmStatus"/>
+			</item>
+			<item name="Medic">
+				<item name="Description" value="实习医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Printdt">
+				<item name="Description" value="打印日期"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="ConsultationDr">
+				<item name="Description" value="会诊医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="DeliverAffirmName">
+				<item name="Description" value="分发确认"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="PathologyResult">
+				<item name="Description" value="病理结果"/>
+				<item name="Width" value="200"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Accordinstance">
+				<item name="Description" value="符合率"/>
+				<item name="Width" value="50"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Examroom">
+				<item name="Description" value="机房号"/>
+				<item name="Width" value="50"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="PatientWeight">
+				<item name="Description" value="体重"/>
+				<item name="Width" value="50"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="PatientHeight">
+				<item name="Description" value="身高"/>
+				<item name="Width" value="50"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Dose">
+				<item name="Description" value="剂量"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="WorkPositionName">
+				<item name="Description" value="工位名"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="WorkPositionID">
+				<item name="Description" value="工位ID"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="FollowUpCommiterId">
+				<item name="Description" value="随访提交者Id"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="FollowUpCommiterName">
+				<item name="Description" value="随访提交者"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="FollowUpStatus">
+				<item name="Description" value="随访状态"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="FollowUpStatus"/>
+			</item>
+			<item name="HisPatientID">
+				<item name="Description" value="HisPatientID"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="IDCardNumber">
+				<item name="Description" value="身份证号"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="CallTerminalID">
+				<item name="Description" value="呼叫站"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+				<item name="Formatter" value="CallTerminalID"/>
+			</item>
+			<item name="MedicalRecordID">
+				<item name="Description" value="病案号"/>
+				<item name="Width" value="120"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="PrintCount">
+				<item name="Description" value="打印次数"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="Deleted">
+				<item name="Description" value="已删除"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="Deleted"/>
+			</item>
+			<item name="SharedFlag">
+				<item name="Description" value="区域任务"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+				<item name="Formatter" value="SharedFlag"/>
+			</item>
+			<item name="RegionDataSourceID">
+				<item name="Description" value="区域来源ID"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="RegionDataSourceName">
+				<item name="Description" value="区域来源名称"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="DownloadProgress">
+				<item name="Description" value="下载进度(%)"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="DownloadProgress"/>
+			</item>
+			<item name="QueueCode">
+				<item name="Description" value="序号"/>
+				<item name="Width" value="40"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="QueueState">
+				<item name="Description" value="呼叫状态"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="QueueState"/>
+			</item>
+			<item name="QueueName">
+				<item name="Description" value="队列名称"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="CallTimes">
+				<item name="Description" value="呼叫次数"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="CallTime">
+				<item name="Description" value="呼叫时间"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="QueuePatientType">
+				<item name="Description" value="病人类型"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="QueuePatientType"/>
+			</item>
+			<item name="Abnormal">
+				<item name="Description" value="阳性结果"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="Abnormal"/>
+			</item>
+			<item name="ImageReadyDate">
+				<item name="Description" value="匹配时间"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="IsVIP">
+				<item name="Description" value="重保病人"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="JobDoctorName">
+				<item name="Description" value="任务医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="WaitStationID">
+				<item name="Description" value="排队诊室ID"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="WaitTime">
+				<item name="Description" value="等待时间"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="IsWaiting">
+				<item name="Description" value="门口等待"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="Abnormal"/>
+			</item>
+			<item name="PerformDeptId">
+				<item name="Description" value="科室"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="Department"/>
+			</item>
+			<item name="FstReportDr">
+				<item name="Description" value="首次报告医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="FstReportDt">
+				<item name="Description" value="首次报告日期"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="FstVerifyDr">
+				<item name="Description" value="首次审核医生"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="FstVerifyDt">
+				<item name="Description" value="首次审核日期"/>
+				<item name="Width" value="150"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="EmergencyLevel">
+				<item name="Description" value="急诊等级"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="CallingInfo">
+				<item name="Description" value="播放状态"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="JobDate">
+				<item name="Description" value="任务日期"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="WaitStationName">
+				<item name="Description" value="排队诊室"/>
+				<item name="Width" value="80"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="JobCategory">
+				<item name="Description" value="任务类型"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+				<item name="Formatter" value="JobCategory"/>
+			</item>
+			<item name="JobStatus">
+				<item name="Description" value="任务状态"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+				<item name="Formatter" value="JobStatus"/>
+			</item>
+			<item name="ViewerPrintCount">
+				<item name="Description" value="胶片打印"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="ViewerPrintCount"/>
+			</item>
+			<item name="AearHospitalName">
+				<item name="Description" value="会诊医院"/>
+				<item name="Width" value="100"/>
+				<item name="Sortable" value="true"/>
+				<item name="Search" value="true"/>
+				<item name="SearchType" value="checkbox"/>
+			</item>
+			<item name="AearOperateDt">
+				<item name="Description" value="会诊提交时间"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="AearConsultDt">
+				<item name="Description" value="会诊完成时间"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="WorkPostName">
+				<item name="Description" value="岗位名称"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="IsExamWarning">
+				<item name="Description" value="超时提醒"/>
+				<item name="Width" value="60"/>
+				<item name="Sortable" value="true"/>
+				<item name="Formatter" value="Warning"/>
+			</item>
+			<item name="GraphicReport">
+				<item name="Description" value="图文报告"/>
+				<item name="Width" value="60"/>
+				<item name="Formatter" value="Abnormal"/>
+			</item>
+			<item name="HisCancelled">
+				<item name="Description" value="已撤单"/>
+				<item name="Width" value="60"/>
+				<item name="Formatter" value="Abnormal"/>
+			</item>
+			<item name="Advice">
+				<item name="Description" value="诊断建议"/>
+				<item name="Width" value="200"/>
+				<item name="Sortable" value="true"/>
+			</item>
+			<item name="HisFilmType">
+				<item name="Description" value="胶片类型"/>
+				<item name="Width" value="60"/>
+			</item>
+			<item name="ImageQualityScore">
+				<item name="Description" value="胶片评分"/>
+				<item name="Width" value="80"/>
+			</item>
+			<item name="ImageQualityDr">
+				<item name="Description" value="胶片评分医生"/>
+				<item name="Width" value="120"/>
+				<item name="Hidden" value="1"/>
+			</item>
+			<item name="ImageQualityTime">
+				<item name="Description" value="胶片评分时间"/>
+				<item name="Width" value="130"/>
+			</item>
+			<item name="ImageQualityUpvote">
+				<item name="Description" value="胶片点赞"/>
+				<item name="Width" value="60"/>
+				<item name="Formatter" value="Abnormal"/>
+			</item>
+			<item name="ImageQualityRemark">
+				<item name="Description" value="胶片评分备注"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="ImageQualityItems">
+				<item name="Description" value="胶片扣分项目"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="ImageQualityDetails">
+				<item name="Description" value="胶片扣分明细"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="ReportQualityScore">
+				<item name="Description" value="报告评分"/>
+				<item name="Width" value="80"/>
+			</item>
+			<item name="ReportQualityDr">
+				<item name="Description" value="报告评分医生"/>
+				<item name="Width" value="120"/>
+				<item name="Hidden" value="1"/>
+			</item>
+			<item name="ReportQualityTime">
+				<item name="Description" value="报告评分时间"/>
+				<item name="Width" value="130"/>
+			</item>
+			<item name="ReportQualityUpvote">
+				<item name="Description" value="报告点赞"/>
+				<item name="Width" value="60"/>
+				<item name="Formatter" value="Abnormal"/>
+			</item>
+			<item name="ReportQualityRemark">
+				<item name="Description" value="报告评分备注"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="ReportQualityItems">
+				<item name="Description" value="报告扣分项目"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="ReportQualityDetails">
+				<item name="Description" value="报告扣分明细"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="ImageQualityLevel">
+				<item name="Description" value="胶片评级"/>
+				<item name="Width" value="80"/>
+			</item>
+			<item name="ReportQualityLevel">
+				<item name="Description" value="报告评级"/>
+				<item name="Width" value="80"/>
+			</item>
+		    <item name="Examno">
+		        <item name="Description" value="检查号"/>
+		        <item name="Width" value="100" />
+		        <item name="Sortable" value="true"/>
+		    </item>
+			<item name="TransducerNo">
+				<item name="Description" value="探头编号"/>
+				<item name="Width" value="150"/>
+			</item>
+			<item name="TransducerName">
+				<item name="Description" value="探头名称"/>
+				<item name="Width" value="150"/>
+			</item>
+		</item>
+		<!--操作预定义，工具栏，右键菜单中的操作全集，一般情况下不需要修改-->
+		<!--Enable配置按钮的可用条件, 采用分组的方式, 每组之间是或的关系, 组内条件直接是与的关系-->
+		<!--PowerList 用户权限值-->
+		<!--DataOwner 数据来源, 支持ExamGrid/HistoryGrid/QueueGrid/Report,默认ExamGrid和Report-->
+		<!--SelectMode 选择模式, 支持Single/Multiple, 默认Single-->
+		<!--Dep 所属科室, 支持US/ES/RAD-->
+		<!--其他条件为检查本身的属性. 支持以下非固定值,使用中括号做标识: -->
+		<!--[UserID][UserName]当前登录用户[DepartmentID][DepartmentName]当前登录科室[HospitalID][HospitalName]当前登录医院[TerminalIP]终端IP-->
+		<item name="OperationPreDefine">
+			<item name="ShowVisitDialog">
+				<item name="Name" value="ShowVisitDialog"/>
+				<item name="Description" value="查看回访"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="1190"/>
+							<item value="1200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowImage">
+				<item name="Name" value="ShowImage"/>
+				<item name="Description" value="查看图像"/>
+				<item name="Image" value="glsvg-op-viewimage"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+						</item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+				<item name="Visible" value="#Array">
+					<item>
+						<item name="Browser" value="#Array">
+							<item value="desktop"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="BrowseImage">
+				<item name="Name" value="BrowseImage"/>
+				<item name="Description" value="浏览图像"/>
+				<item name="Image" value="icon-IE"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="AppendImage">
+				<item name="Name" value="AppendImage"/>
+				<item name="Description" value="追加图像"/>
+				<item name="Image" value="icon-image-compare"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowReport">
+				<item name="Name" value="ShowReport"/>
+				<item name="Description" value="查看报告"/>
+				<item name="Image" value="glsvg-op-vieworder"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PreviewPDFReport">
+				<item name="Name" value="PreviewPDFReport"/>
+				<item name="Description" value="报告预览"/>
+				<item name="Image" value="glsvg-op-vieworder"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowReportBackup">
+				<item name="Name" value="ShowReportBackup"/>
+				<item name="Description" value="查看修改痕迹"/>
+				<item name="Image" value="icon-clipboard2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowComment">
+				<item name="Name" value="ShowComment"/>
+				<item name="Description" value="备注"/>
+				<item name="Image" value="glsvg-op-ordercomment"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="WriteReport">
+				<item name="Name" value="WriteReport"/>
+				<item name="Description" value="书写报告"/>
+				<item name="Image" value="glsvg-op-writereport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3010"/>
+							<item value="3020"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1030"/>
+							<item value="1040"/>
+							<item value="1050"/>
+							<item value="1060"/>
+							<item value="1070"/>
+							<item value="1080"/>
+							<item value="1090"/>
+							<item value="1100"/>
+							<item value="1105"/>
+							<item value="1110"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+						</item>
+						<item name="Reportdr" value="#Array">
+							<item value="[UserName]"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3070"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PrintReport">
+				<item name="Name" value="PrintReport"/>
+				<item name="Description" value="打印报告"/>
+				<item name="Image" value="glsvg-op-printreport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3050"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3040+3050"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3050+3051"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1180"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3050"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1170"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3040+3050"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3050+3051"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PrintTempReport">
+				<item name="Name" value="PrintTempReport"/>
+				<item name="Description" value="打印临时报告"/>
+				<item name="Image" value="glsvg-op-printreport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3050"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="2040"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3050"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="2040"/>
+						</item>
+					</item>
+
+				</item>
+			</item>
+			<item name="ModifyReport">
+				<item name="Name" value="ModifyReport"/>
+				<item name="Description" value="审核报告"/>
+				<item name="Image" value="glsvg-op-verifyreport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3040"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+						<item name="Reportdr" value="#Array">
+							<item value="[UserName]"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3070+3040"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3040+3080"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1180"/>
+						</item>
+						<item name="Reportdr" value="#Array">
+							<item value="[UserName]"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="order"/>
+							<item value="report"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="3040+3070+3080"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1180"/>
+						</item>
+						<item name="OnCloud" value="#Array">
+							<item value="0"/>
+							<item value="1"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Consultation">
+				<item name="Name" value="Consultation"/>
+				<item name="Description" value="会诊标记"/>
+				<item name="Image" value="icon-star-full2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3010"/>
+							<item value="3020"/>
+						</item>
+						<item name="ReportStatus" value="#Array">
+							<item value=""/>
+							<item value="0"/>
+							<item value="1000"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CancelConsultation">
+				<item name="Name" value="CancelConsultation"/>
+				<item name="Description" value="取消会诊标记"/>
+				<item name="Image" value="icon-star-empty3"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3010"/>
+							<item value="3020"/>
+						</item>
+						<item name="ReportStatus" value="#Array">
+							<item value="1210"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="DeleteOrder">
+				<item name="Name" value="DeleteOrder"/>
+				<item name="Description" value="删除检查"/>
+				<item name="Image" value="icon-trash"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="1060"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1010"/>
+							<item value="1020"/>
+							<item value="1030"/>
+							<item value="1040"/>
+							<item value="1050"/>
+							<item value="1060"/>
+							<item value="1070"/>
+							<item value="1080"/>
+							<item value="1090"/>
+							<item value="1100"/>
+							<item value="1105"/>
+							<item value="1220"/>
+							<item value="1102"/>
+							<item value="1108/"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="1065"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="1190"/>
+							<item value="1200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ModifyOrder">
+				<item name="Name" value="ModifyOrder"/>
+				<item name="Description" value="修改检查"/>
+				<item name="Image" value="icon-pencil"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3090"/>
+						</item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+					</item>
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+						<item name="PowerList" value="#Array">
+							<item value="1050"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="RecoverOrder">
+				<item name="Name" value="RecoverOrder"/>
+				<item name="Description" value="恢复检查"/>
+				<item name="Image" value="icon-undo"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Deleted" value="#Array">
+							<item value="1"/>
+						</item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="TechnicalReport">
+				<item name="Name" value="TechnicalReport"/>
+				<item name="Description" value="医技报告"/>
+				<item name="Image" value="icon-star-full2"/>
+			</item>
+			<item name="ShowEMR">
+				<item name="Name" value="ShowEMR"/>
+				<item name="Description" value="电子病历"/>
+				<item name="Image" value="glsvg-toolbar-emr"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowRequisition">
+				<item name="Name" value="ShowRequisition"/>
+				<item name="Description" value="申请单"/>
+				<item name="Image" value="glsvg-op-vieworder"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ToRegister">
+				<item name="Name" value="ToRegister"/>
+				<item name="Description" value="预约转登记"/>
+				<item name="Image" value="icon-star-full2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="1020"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1010"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PatToRegister">
+				<item name="Name" value="PatToRegister"/>
+				<item name="Description" value="同病人转登记"/>
+				<item name="Image" value="icon-star-full2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="1020"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1010"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ToWorkList">
+				<item name="Name" value="ToWorkList"/>
+				<item name="Description" value="发送到Worklist"/>
+				<item name="Image" value="icon-star-full2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SplitPat">
+				<item name="Name" value="SplitPat"/>
+				<item name="Description" value="拆分病人"/>
+				<item name="Image" value="icon-star-full2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3090"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1180"/>
+							<item value="1190"/>
+							<item value="1200"/>
+						</item>
+					</item>
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="1050"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ExportOrder">
+				<item name="Name" value="ExportOrder"/>
+				<item name="Description" value="导出检查"/>
+				<item name="Image" value="icon-folder-download3"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="QueueGrid"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="None"/>
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="BatchReport">
+				<item name="Name" value="BatchReport"/>
+				<item name="Description" value="报告批处理"/>
+				<item name="Image" value="icon-star-full2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3060"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1030"/>
+							<item value="1040"/>
+							<item value="1050"/>
+							<item value="1060"/>
+							<item value="1070"/>
+							<item value="1080"/>
+							<item value="1090"/>
+							<item value="1100"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="DirectVerify">
+				<item name="Name" value="DirectVerify"/>
+				<item name="Description" value="直接审核"/>
+				<item name="Image" value="icon-file-check"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3040"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ReportF">
+				<item name="Name" value="ReportF"/>
+				<item name="Description" value="报告确认"/>
+				<item name="Image" value="icon-star-full2"/>
+			</item>
+			<item name="FilmDeliver">
+				<item name="Name" value="FilmDeliver"/>
+				<item name="Description" value="分发胶片"/>
+				<item name="Image" value="icon-star-full2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="1070"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1180"/>
+							<item value="1190"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ViewHISBilling">
+				<item name="Name" value="ViewHISBilling"/>
+				<item name="Description" value="查看通费记录"/>
+				<item name="Image" value="icon-profile"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ViewOrderComment">
+				<item name="Name" value="ViewOrderComment"/>
+				<item name="Description" value="检查备注"/>
+				<item name="Image" value="glsvg-op-ordercomment"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="OTDiagResult">
+				<item name="Name" value="OTDiagResult"/>
+				<item name="Description" value="查看病理结果"/>
+				<item name="Image" value="glsvg-toolbar-viewgmresult"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Modality" value="#Array">
+							<item value="GM  "/>
+						</item>
+					</item>
+					<item name="DataOwner" value="#Array">
+						<item value="ExamGrid"/>
+						<item value="HistoryGrid"/>
+						<item value="Report"/>
+					</item>
+				</item>
+			</item>
+			<item name="ExportSelectedOrders">
+				<item name="Name" value="ExportSelectedOrders"/>
+				<item name="Description" value="导出选中检查"/>
+				<item name="Image" value="icon-file-download"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ExportReportList">
+				<item name="Name" value="ExportReportList"/>
+				<item name="Description" value="导出报告列表"/>
+				<item name="Image" value="icon-profile"/>
+			</item>
+			<item name="ExportPatReport">
+				<item name="Name" value="ExportPatReport"/>
+				<item name="Description" value="导出病人报告"/>
+				<item name="Image" value="icon-profile"/>
+			</item>
+			<item name="AddFavorite">
+				<item name="Name" value="AddFavorite"/>
+				<item name="Description" value="添加收藏"/>
+				<item name="Image" value="glsvg-toolbar-favourate"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="MuliPrintOrder">
+				<item name="Name" value="MuliPrintOrder"/>
+				<item name="Description" value="批量打印登记单"/>
+				<item name="Image" value="icon-profile"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ReportTemplate">
+				<item name="Name" value="ReportTemplate"/>
+				<item name="Description" value="报告模板"/>
+				<item name="Image" value="icon-circle-small"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SaveReport">
+				<item name="Name" value="SaveReport"/>
+				<item name="Description" value="书写保存"/>
+				<item name="Image" value="glsvg-toolbar-savereport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CopyImage">
+				<item name="Name" value="CopyImage"/>
+				<item name="Description" value="报告贴图"/>
+				<item name="Image" value="glsvg-toolbar-insertpicture"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowDtOrder">
+				<item name="Name" value="ShowDtOrder"/>
+				<item name="Description" value="查看医嘱"/>
+				<item name="Image" value="glsvg-toolbar-clinicorder"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="AutoRefresh">
+				<item name="Name" value="AutoRefresh"/>
+				<item name="Description" value="自动刷新"/>
+			</item>
+			<item name="AutoNext">
+				<item name="Name" value="AutoNext"/>
+				<item name="Description" value="自动下一个"/>
+			</item>
+			<item name="AutoOrderPaper">
+				<item name="Name" value="AutoOrderPaper"/>
+				<item name="Description" value="自动申请单"/>
+			</item>
+			<item name="ShowQueue">
+				<item name="Name" value="ShowQueue"/>
+				<item name="Description" value="呼叫列表"/>
+			</item>
+			<item name="QualityScore">
+				<item name="Name" value="QualityScore"/>
+				<item name="Description" value="质评"/>
+				<item name="Image" value="icon-checkmark4"/>
+			</item>
+			<item name="FilmQuality">
+				<item name="Name" value="FilmQuality"/>
+				<item name="Description" value="胶片质评"/>
+				<item name="Image" value="glsvg-toolbar-filmquality"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="InterTherapy">
+				<item name="Name" value="InterTherapy"/>
+				<item name="Description" value="介入治疗"/>
+				<item name="Image" value="glsvg-toolbar-interventional"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+							<item value="ES"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1150"/>
+							<item value="1148"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CTInterTherapy">
+				<item name="Name" value="CTInterTherapy"/>
+				<item name="Description" value="介入治疗"/>
+				<item name="Image" value="fa fa-bed"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+							<item value="ES"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1150"/>
+							<item value="1148"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ReportBack">
+				<item name="Name" value="ReportBack"/>
+				<item name="Description" value="回退报告"/>
+				<item name="Image" value="glsvg-toolbar-revertreport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3040"/>
+						</item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+							<item value="US"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1150"/>
+							<item value="1160"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SubmitReport">
+				<item name="Name" value="SubmitReport"/>
+				<item name="Description" value="提交报告"/>
+				<item name="Image" value="icon-file-upload"/>
+			</item>
+			<item name="InterimReport">
+				<item name="Name" value="InterimReport"/>
+				<item name="Description" value="临时报告"/>
+			</item>
+			<item name="ShowHistoryReport">
+				<item name="Name" value="ShowHistoryReport"/>
+				<item name="Description" value="历史报告"/>
+				<item name="Image" value="icon-history"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SaveReportTemplate">
+				<item name="Name" value="SaveReportTemplate"/>
+				<item name="Description" value="存为模板"/>
+				<item name="Image" value="glsvg-toolbar-savetemplate"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="VerifyReport">
+				<item name="Name" value="VerifyReport"/>
+				<item name="Description" value="审核报告"/>
+				<item name="Image" value="glsvg-op-verifyreport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3040"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SuspendReport">
+				<item name="Name" value="SuspendReport"/>
+				<item name="Description" value="报告挂起"/>
+				<item name="Image" value="icon-file-locked"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1140"/>
+							<item value="1150"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SaveVerifyReport">
+				<item name="Name" value="SaveVerifyReport"/>
+				<item name="Description" value="审核保存"/>
+				<item name="Image" value="glsvg-op-verifyreport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="3040"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SaveReportCache">
+				<item name="Name" value="SaveReportCache"/>
+				<item name="Description" value="缓存报告"/>
+				<item name="Image" value="glsvg-toolbar-cachereport"/>
+			</item>
+			<item name="RestoreReportCache">
+				<item name="Name" value="RestoreReportCache"/>
+				<item name="Description" value="恢复报告"/>
+				<item name="Image" value="glsvg-toolbar-recoverreport"/>
+			</item>
+			<item name="ImageProcessing">
+				<item name="Name" value="ImageProcessing"/>
+				<item name="Description" value="图像处理"/>
+				<item name="Image" value="glsvg-toolbar-imageprocess"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+							<item value="ES"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1140"/>
+							<item value="1160"/>
+							<item value="1150"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CreateNewExam">
+				<item name="Name" value="CreateNewExam"/>
+				<item name="Description" value="检查"/>
+				<item name="Image" value="icon-folder-plus4"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowLocalRecords">
+				<item name="Name" value="ShowLocalRecords"/>
+				<item name="Description" value="本院就诊记录"/>
+				<item name="Image" value="icon-folder-search"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PrintPreview">
+				<item name="Name" value="PrintPreview"/>
+				<item name="Description" value="打印预览"/>
+				<item name="Image" value="icon-file-text2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1100"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PrintCurrentPage">
+				<item name="Name" value="PrintCurrentPage"/>
+				<item name="Description" value="打印当前页"/>
+				<item name="Image" value="icon-file-text2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="3010"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SetVIP">
+				<item name="Name" value="SetVIP"/>
+				<item name="Description" value="VIP"/>
+				<item name="Image" value="icon-file-text2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="3010"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="MatchImage">
+				<item name="Name" value="MatchImage"/>
+				<item name="Description" value="匹配"/>
+				<item name="Image" value="icon-link"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="3010"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="AreaConsult">
+				<item name="Name" value="AreaConsult"/>
+				<item name="Description" value="区域会诊"/>
+				<item name="Image" value="icon-users"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5100"/>
+							<item value="5120"/>
+							<item value="5200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="AreaRemoteUSConsult">
+				<item name="Name" value="AreaRemoteUSConsult"/>
+				<item name="Description" value="超声会诊"/>
+				<item name="Image" value="icon-users"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5100"/>
+							<item value="5120"/>
+							<item value="5200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CommitRemoteUSConsult">
+				<item name="Name" value="CommitRemoteUSConsult"/>
+				<item name="Description" value="提交超声会诊"/>
+				<item name="Image" value="icon-file-upload"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ReportStatus" value="#Array">
+							<item value="0"/>
+							<item value=""/>
+							<item value="1000"/>
+							<item value="5030"/>
+							<item value="5040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CancelRemoteUSConsult">
+				<item name="Name" value="CancelRemoteUSConsult"/>
+				<item name="Description" value="取消超声会诊"/>
+				<item name="Image" value="icon-file-empty"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5100"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ViewRemoteUSConsult">
+				<item name="Name" value="ViewRemoteUSConsult"/>
+				<item name="Description" value="查看会诊报告"/>
+				<item name="Image" value="icon-clipboard3"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CommitConsult">
+				<item name="Name" value="CommitConsult"/>
+				<item name="Description" value="提交区域会诊"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1150"/>
+							<item value="1170"/>
+							<item value="1180"/>
+						</item>
+						<item name="ReportStatus" value="#Array">
+							<item value="0"/>
+							<item value=""/>
+							<item value="1000"/>
+							<item value="5030"/>
+							<item value="5040"/>
+						</item>
+						<item name="SharedFlag" value="#Array">
+							<item value="1004"/>
+							<item value="0"/>
+							<item value=""/>
+							<item value="1000"/>
+							<item value="1001"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CancelRegionConsult">
+				<item name="Name" value="CancelRegionConsult"/>
+				<item name="Description" value="取消区域会诊"/>
+				<item name="Image" value="icon-file-empty"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5100"/>
+							<item value="5101"/>
+							<item value="5102"/>
+						</item>
+						<item name="SharedFlag" value="#Array">
+							<item value="1001"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ManageConsult">
+				<item name="Name" value="ManageConsult"/>
+				<item name="Description" value="区域会诊管理"/>
+				<item name="Image" value="glsvg-toolbar-consultmanagement"/>
+			</item>
+			<item name="CommitAreaWrite">
+				<item name="Name" value="CommitAreaWrite"/>
+				<item name="Description" value="提交区域书写"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1030"/>
+							<item value="1040"/>
+							<item value="1050"/>
+							<item value="1060"/>
+							<item value="1070"/>
+							<item value="1080"/>
+							<item value="1090"/>
+							<item value="1100"/>
+							<item value="1105"/>
+						</item>
+						<item name="SharedFlag" value="#Array">
+							<item value="1004"/>
+							<item value="0"/>
+							<item value=""/>
+							<item value="1000"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CancelAreaWrite">
+				<item name="Name" value="CancelAreaWrite"/>
+				<item name="Description" value="取消区域书写"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1030"/>
+							<item value="1040"/>
+							<item value="1050"/>
+							<item value="1060"/>
+							<item value="1070"/>
+							<item value="1080"/>
+							<item value="1090"/>
+							<item value="1100"/>
+							<item value="1105"/>
+						</item>
+						<item name="SharedFlag" value="#Array">
+							<item value="1002"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CommitAreaVerify">
+				<item name="Name" value="CommitAreaVerify"/>
+				<item name="Description" value="提交区域审核"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1150"/>
+						</item>
+						<item name="SharedFlag" value="#Array">
+							<item value="1004"/>
+							<item value="0"/>
+							<item value=""/>
+							<item value="1002"/>
+							<item value="1000"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CancelAreaVerify">
+				<item name="Name" value="CancelAreaVerify"/>
+				<item name="Description" value="取消区域审核"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1150"/>
+						</item>
+						<item name="SharedFlag" value="#Array">
+							<item value="1003"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowFollowUp">
+				<item name="Name" value="ShowFollowUp"/>
+				<item name="Description" value="随访信息"/>
+				<item name="Image" value="glsvg-toolbar-visitinfo"/>
+			</item>
+			<item name="FollowUp">
+				<item name="Name" value="FollowUp"/>
+				<item name="Description" value="需随访"/>
+				<item name="Image" value="glsvg-toolbar-visit"/>
+			</item>
+			<item name="CopyReport">
+				<item name="Name" value="CopyReport"/>
+				<item name="Description" value="复制报告"/>
+				<item name="Image" value="glsvg-toolbar-copyreport"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="Report"/>
+							<item value="HistoryGrid"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="USConsultSubmission">
+				<item name="Name" value="USConsultSubmission"/>
+				<item name="Description" value="启动会诊（提交）"/>
+				<item name="Image" value="glsvg-toolbar-ultrasync"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="USConsultCenter">
+				<item name="Name" value="USConsultCenter"/>
+				<item name="Description" value="启动会诊（中心）"/>
+				<item name="Image" value="glsvg-toolbar-ultrasync"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="USConsult">
+				<item name="Name" value="USConsult"/>
+				<item name="Description" value="启动瑞影云"/>
+				<item name="Image" value="glsvg-toolbar-ultrasync"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5100"/>
+							<item value="5120"/>
+							<item value="5150"/>
+						</item>
+						<!--             <item name="OrderStatus" value="#Array">
+				  <item value="1020"/>
+				  <item value="1110"/>
+				  <item value="1120"/>
+				  <item value="1140"/>
+				  <item value="1145"/>
+				  <item value="1148"/>
+				  <item value="1150"/>
+				  <item value="1160"/>
+				  <item value="1170"/>
+				  <item value="1180"/>
+				  <item value="2040"/>
+				</item> -->
+					</item>
+				</item>
+			</item>
+			<item name="OBMateClient">
+				<item name="Name" value="OBMateClient"/>
+				<item name="Description" value="产科软件"/>
+				<item name="Image" value="glsvg-toolbar-ultrasync"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PrintUSConsultReport">
+				<item name="Name" value="PrintUSConsultReport"/>
+				<item name="Description" value="打印会诊报告"/>
+				<item name="Image" value="glsvg-op-printconsult"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CreateMeetingUser">
+				<item name="Name" value="CreateMeetingUser"/>
+				<item name="Image" value="icon-user-plus"/>
+				<item name="Description" value="创建用户"/>
+			</item>
+			<item name="CreateMeeting">
+				<item name="Name" value="CreateMeeting"/>
+				<item name="Description" value="创建会议"/>
+				<item name="Image" value="icon-comment-discussion"/>
+			</item>
+			<item name="OpenMeeting">
+				<item name="Name" value="OpenMeeting"/>
+				<item name="Description" value="开启会议"/>
+				<item name="Image" value="icon-comment-discussion"/>
+			</item>
+			<item name="USOpenMTalk">
+				<item name="Name" value="USOpenMTalk"/>
+				<item name="Description" value="开启聊天室"/>
+				<item name="Image" value="glsvg-toolbar-chatroom"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="US"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1020"/>
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1148"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="2040"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ShowLabResult">
+				<item name="Name" value="ShowLabResult"/>
+				<item name="Description" value="检验结果"/>
+				<item name="Image" value="glsvg-toolbar-libresult"/>
+			</item>
+			<item name="Queue.CallNext">
+				<item name="Name" value="Queue.CallNext"/>
+				<item name="Description" value="顺呼"/>
+				<item name="Image" value="icon-volume-medium"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Queue.CallAgain">
+				<item name="Name" value="Queue.CallAgain"/>
+				<item name="Description" value="复呼"/>
+				<item name="Image" value="icon-rotate-ccw3"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Queue.CallSelect">
+				<item name="Name" value="Queue.CallSelect"/>
+				<item name="Description" value="选呼"/>
+				<item name="Image" value="icon-play3"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+						<item name="QueueState" value="#Array">
+							<item value="0"/>
+							<item value="5"/>
+							<item value="1"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Queue.Recover">
+				<item name="Name" value="Queue.Recover"/>
+				<item name="Description" value="召回"/>
+				<item name="Image" value="icon-undo2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+						<item name="QueueState" value="#Array">
+							<item value="1"/>
+							<item value="2"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Queue.Abandon">
+				<item name="Name" value="Queue.Abandon"/>
+				<item name="Description" value="弃号"/>
+				<item name="Image" value="icon-trash"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+						<item name="QueueState" value="#Array">
+							<item value="0"/>
+							<item value="5"/>
+							<item value="1"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Queue.Hang">
+				<item name="Name" value="Queue.Hang"/>
+				<item name="Description" value="挂起"/>
+				<item name="Image" value="icon-lock4"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+						<item name="QueueState" value="#Array">
+							<item value="1"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Queue.UnHang">
+				<item name="Name" value="Queue.UnHang"/>
+				<item name="Description" value="解挂"/>
+				<item name="Image" value="icon-unlocked"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+						<item name="QueueState" value="#Array">
+							<item value="3"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Queue.Refresh">
+				<item name="Name" value="Queue.Refresh"/>
+				<item name="Description" value="刷新"/>
+				<item name="Image" value="icon-loop3"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="Queue.Revert">
+				<item name="Name" value="Queue.Revert"/>
+				<item name="Description" value="退回"/>
+				<item name="Image" value="icon-exit3"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="DataOwner" value="#Array">
+							<item value="QueueGrid"/>
+						</item>
+						<item name="QueueState" value="#Array">
+							<item value="0"/>
+							<item value="5"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SendSMS">
+				<item name="Name" value="SendSMS"/>
+				<item name="Description" value="发送短信"/>
+				<item name="Image" value="glsvg-toolbar-sendsms"/>
+			</item>
+			<item name="PasteReport">
+				<item name="Name" value="PasteReport"/>
+				<item name="Description" value="粘贴报告"/>
+				<item name="Image" value="glsvg-toolbar-pastereport"/>
+			</item>
+			<item name="ClearReport">
+				<item name="Name" value="ClearReport"/>
+				<item name="Description" value="清空报告"/>
+				<item name="Image" value="glsvg-toolbar-clearreport"/>
+			</item>
+			<item name="SendMessage">
+				<item name="Name" value="SendMessage"/>
+				<item name="Description" value="发送消息"/>
+				<item name="Image" value="glsvg-toolbar-sendmessage"/>
+			</item>
+			<item name="ViewConsult">
+				<item name="Name" value="ViewConsult"/>
+				<item name="Description" value="查看会诊单"/>
+				<item name="Image" value="glsvg-toolbar-consultorder"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+							<item value="US"/>
+							<item value="ES"/>
+						</item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5030"/>
+							<item value="5040"/>
+							<item value="5100"/>
+							<item value="5120"/>
+							<item value="5150"/>
+							<item value="5200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="BackConsult">
+				<item name="Name" value="BackConsult"/>
+				<item name="Description" value="回退会诊"/>
+				<item name="Image" value="fa fa-mail-reply"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+							<item value="US"/>
+							<item value="ES"/>
+						</item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5100"/>
+							<item value="5120"/>
+							<item value="5150"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ConsultReport">
+				<item name="Name" value="ConsultReport"/>
+				<item name="Description" value="会诊报告"/>
+				<item name="Image" value="glsvg-toolbar-consultation"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+							<item value="US"/>
+							<item value="ES"/>
+						</item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5100"/>
+							<item value="5120"/>
+							<item value="5150"/>
+							<item value="5200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="RealTimeVideo">
+				<item name="Name" value="RealTimeVideo"/>
+				<item name="Description" value="实时视频"/>
+				<item name="Image" value="glsvg-toolbar-realtimevideo"/>
+			</item>
+			<item name="iScanHelper">
+				<item name="Name" value="iScanHelper"/>
+				<item name="Description" value="扫图指导"/>
+				<item name="Image" value="glicon-iscan"/>
+			</item>
+			<item name="ScanOrderPaper">
+				<item name="Name" value="ScanOrderPaper"/>
+				<item name="Description" value="拍摄申请单"/>
+				<item name="Image" value="icon-camera"/>
+			</item>
+			<item name="Booking">
+				<item name="Name" value="Booking"/>
+				<item name="Description" value="预约"/>
+				<item name="Image" value="icon-watch2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1010"/>
+							<item value="1020"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="BookingEmergency">
+				<item name="Name" value="BookingEmergency"/>
+				<item name="Description" value="预约急诊"/>
+				<item name="Image" value="icon-alarm-check"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1010"/>
+							<item value="1020"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="BookingQuery">
+				<item name="Name" value="BookingQuery"/>
+				<item name="Description" value="号源查询"/>
+				<item name="Image" value="icon-folder-search"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="SelectMode" value="#Array">
+							<item value="None"/>
+							<item value="Multiple"/>
+							<item value="Single"/>
+						</item>
+						<item name="DataOwner" value="#Array">
+							<item value="ExamGrid"/>
+							<item value="HistoryGrid"/>
+							<item value="Report"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PrintPathology">
+				<item name="Name" value="PrintPathology"/>
+				<item name="Description" value="打印病理单"/>
+				<item name="Image" value="glsvg-toolbar-printgmorder"/>
+			</item>
+			<item name="BackMachineExamFinish">
+				<item name="Name" value="BackMachineExamFinish"/>
+				<item name="Description" value="申请洗消"/>
+				<item name="Image" value="glsvg-toolbar-wash"/>
+			</item>
+			<item name="ViewHistoryMachine">
+				<item name="Name" value="ViewHistoryMachine"/>
+				<item name="Description" value="已设镜子"/>
+				<item name="Image" value="glsvg-toolbar-checkmirror"/>
+			</item>
+			<item name="MirrorSetting">
+				<item name="Name" value="MirrorSetting"/>
+				<item name="Description" value="设置镜子"/>
+				<item name="Image" value="glsvg-toolbar-setmirror"/>
+			</item>
+			<item name="PrintOrderPaper">
+				<item name="Name" value="PrintOrderPaper"/>
+				<item name="Description" value="补打登记单"/>
+				<item name="Image" value="icon-printer4"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ResultMode" value="#Array">
+							<item value="report"/>
+							<item value="order"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="SaveWindow">
+				<item name="Name" value="SaveWindow"/>
+				<item name="Description" value="固定视窗"/>
+				<item name="Image" value="icon-windows2"/>
+			</item>
+			<item name="Dashbord">
+				<item name="Name" value="Dashbord"/>
+				<item name="Description" value="驾驶舱"/>
+				<item name="Image" value="fa fa-user-md"/>
+			</item>
+			<item name="TypicalPathology">
+				<item name="Name" value="TypicalPathology"/>
+				<item name="Description" value="典型病理"/>
+				<item name="Image" value="icon-microscope"/>
+			</item>
+			<item name="RegionQA">
+				<item name="Name" value="RegionQA"/>
+				<item name="Description" value="区域质控"/>
+				<item name="Image" value="icon-lan"/>
+			</item>
+			<item name="ResetReportLayout">
+				<item name="Name" value="ResetReportLayout"/>
+				<item name="Description" value="重置布局"/>
+				<item name="Image" value="icon-grid5"/>
+			</item>
+			<item name="DownloadView">
+				<item name="Name" value="DownloadView"/>
+				<item name="Description" value="检查预取"/>
+				<item name="Image" value="icon-cloud-download"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="OnCloud" value="#Array">
+							<item value="1"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="InputVitalSign">
+				<item name="Name" value="InputVitalSign"/>
+				<item name="Description" value="输入体温单"/>
+				<item name="Image" value="icon-paragraph-left3"/>
+			</item>
+			<item name="ResetReportTemplate">
+				<item name="Name" value="ResetReportTemplate"/>
+				<item name="Description" value="重置模板"/>
+				<item name="Image" value="glsvg-toolbar-resettemplate"/>
+			</item>
+			<item name="CloseReport">
+				<item name="Name" value="CloseReport"/>
+				<item name="Description" value="关闭报告"/>
+				<item name="Image" value="glsvg-toolbar-closereport"/>
+			</item>
+			<item name="TransmitData">
+				<item name="Name" value="TransmitData"/>
+				<item name="Description" value="传输数据"/>
+				<item name="Image" value="glsvg-toolbar-sendsms"/>
+			</item>
+			<item name="AllowModification">
+				<item name="Name" value="AllowModification"/>
+				<item name="Description" value="修改报告"/>
+				<item name="Image" value="glsvg-op-verifyreport"/>
+			</item>
+			<item name="ImprintExport">
+				<item name="Name" value="ImprintExport"/>
+				<item name="Description" value="刻录导出"/>
+				<item name="Image" value="icon-circles2"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="1190"/>
+							<item value="1100"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="PrintPatientLabel">
+				<item name="Name" value="PrintPatientLabel"/>
+				<item name="Description" value="打印标签"/>
+				<item name="Image" value="glsvg-toolbar-printlabel"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1110"/>
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="1190"/>
+							<item value="1100"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ViewConsultResult">
+				<item name="Name" value="ViewConsultResult"/>
+				<item name="Description" value="查看会诊结果"/>
+				<item name="Image" value="glsvg-toolbar-consultresult"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+							<item value="US"/>
+							<item value="ES"/>
+						</item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5100"/>
+							<item value="5120"/>
+							<item value="5200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ViewConsultDiff">
+				<item name="Name" value="ViewConsultDiff"/>
+				<item name="Description" value="对比会诊结果"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="ReportStatus" value="#Array">
+							<item value="5200"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="ContrastInject">
+				<item name="Name" value="ContrastInject"/>
+				<item name="Description" value="造影剂注射"/>
+			</item>
+			<item name="InjectEvent">
+				<item name="Name" value="InjectEvent"/>
+				<item name="Description" value="注射不良事件"/>
+			</item>
+			<item name="AssignReportDoctor">
+				<item name="Name" value="AssignReportDoctor"/>
+				<item name="Description" value="指定报告医生"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="PowerList" value="#Array">
+							<item value="1105"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="CommitReportUpload">
+				<item name="Name" value="CommitReportUpload"/>
+				<item name="Description" value="提交报告上传"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="SelectMode" value="#Array">
+							<item value="Single"/>
+							<item value="Multiple"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1170"/>
+							<item value="1180"/>
+							<item value="1190"/>
+							<item value="1100"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<item name="RollbackRegisterState">
+				<item name="Name" value="RollbackRegisterState"/>
+				<item name="Description" value="回退登记"/>
+				<item name="Image" value="glsvg-toolbar-revertregister"/>
+				<item name="Enable" value="#Array">
+					<item>
+						<item name="Dep" value="#Array">
+							<item value="RAD"/>
+							<item value="US"/>
+							<item value="ES"/>
+						</item>
+						<item name="OrderStatus" value="#Array">
+							<item value="1110"/>
+							<item value="1120"/>
+							<item value="1130"/>
+							<item value="1140"/>
+							<item value="1145"/>
+							<item value="1150"/>
+							<item value="1160"/>
+							<item value="1170"/>
+						</item>
+					</item>
+				</item>
+			</item>
+			<!-- ExternalSystem_XXX为打开外部系统的功能项，IEIS会根据下划线后面的名称按配置区分处理 -->
+			<!-- 可以同时配置多个，如ExternalSystem_EMR和ExternalSystem_CIS等 -->
+			<item name="ExternalSystem_XXX">
+				<item name="Name" value="ExternalSystem_XXX"/>
+				<item name="Description" value="电子病历"/>
+				<item name="Image" value="icon-profile"/>
+			</item>
+			<item name="ExternalSystem_EMR">
+				<item name="Name" value="ExternalSystem_EMR"/>
+				<item name="Description" value="电子病历"/>
+				<item name="Image" value="icon-profile"/>
+			</item>
+			<item name="ExternalSystem_Pathology">
+				<item name="Name" value="ExternalSystem_Pathology"/>
+				<item name="Description" value="查看病理结果"/>
+				<item name="Image" value="icon-profile"/>
+			</item>
+			<item name="ExternalWebSite_Guiding">
+				<item name="Name" value="ExternalWebSite_Guiding"/>
+				<item name="Description" value="导诊系统"/>
+				<item name="Image" value="icon-profile"/>
+			</item>
+			<item name="ShowTraceBlood" versiontag="202103.43">
+    			<item name="Name" value="ShowTraceBlood" versiontag="202103.44" />
+				<item name="Description" value="示意图描记" versiontag="202103.45" />
+				<item name="Image" value="icon-file-upload" versiontag="202103.46" />
+			</item>
+			<item name="SaveTempReport">
+				<item name="Name" value="SaveTempReport"/>
+				<item name="Description" value="保存临时报告"/>
+				<item name="Image" value="icon-profile"/>
+			</item>
+			<item name="ExportPDF">
+				<item name="Name" value="ExportPDF"/>
+				<item name="Description" value="导出PDF"/>
+				<item name="Image" value="icon-file-pdf"/>
+			</item>
+			
+		</item>
+		<item name="ParameterValueFormatter">
+			<item name="ExamStatus" value="#Array">
+				<item>
+					<item name="Disp" value="已预约"/>
+					<item name="Tr" value="1010"/>
+				</item>
+				<item>
+					<item name="Disp" value="已登记"/>
+					<item name="Tr" value="1020"/>
+				</item>
+				<item>
+					<item name="Disp" value="排队中"/>
+					<item name="Tr" value="1030"/>
+				</item>
+				<item>
+					<item name="Disp" value="排队挂起"/>
+					<item name="Tr" value="1040"/>
+				</item>
+				<item>
+					<item name="Disp" value="划价"/>
+					<item name="Tr" value="1050"/>
+				</item>
+				<item>
+					<item name="Disp" value="通费中"/>
+					<item name="Tr" value="1060"/>
+				</item>
+				<item>
+					<item name="Disp" value="已通费"/>
+					<item name="Tr" value="1070"/>
+				</item>
+				<item>
+					<item name="Disp" value="检查中"/>
+					<item name="Tr" value="1080"/>
+				</item>
+				<item>
+					<item name="Disp" value="检查挂起"/>
+					<item name="Tr" value="1090"/>
+				</item>
+				<item>
+					<item name="Disp" value="等待QA"/>
+					<item name="Tr" value="1095"/>
+				</item>
+				<item>
+					<item name="Disp" value="检查完成"/>
+					<item name="Tr" value="1100"/>
+				</item>
+				<item>
+					<item name="Disp" value="检查备注"/>
+					<item name="Tr" value="1105"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告书写中"/>
+					<item name="Tr" value="1110"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告挂起"/>
+					<item name="Tr" value="1120"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告退回"/>
+					<item name="Tr" value="1130"/>
+				</item>
+				<item>
+					<item name="Disp" value="实习报告"/>
+					<item name="Tr" value="1140"/>
+				</item>
+				<item>
+					<item name="Disp" value="临时报告"/>
+					<item name="Tr" value="1145"/>
+				</item>
+				<item>
+					<item name="Disp" value="临时报告已打印"/>
+					<item name="Tr" value="1148"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告已书写"/>
+					<item name="Tr" value="1150"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告审核中"/>
+					<item name="Tr" value="1160"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告已审核"/>
+					<item name="Tr" value="1170"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告已打印"/>
+					<item name="Tr" value="1180"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告已分发"/>
+					<item name="Tr" value="1190"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告已确认"/>
+					<item name="Tr" value="1195"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告已作废"/>
+					<item name="Tr" value="1200"/>
+				</item>
+				<item>
+					<item name="Disp" value="会诊报告"/>
+					<item name="Tr" value="1210"/>
+				</item>
+				<item>
+					<item name="Disp" value="待报告"/>
+					<item name="Tr" value="2010"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告未打印"/>
+					<item name="Tr" value="2020"/>
+				</item>
+			</item>
+			<item name="OrderType" value="#Array">
+				<item>
+					<item name="Disp" value="手工申请单"/>
+					<item name="Tr" value="1000"/>
+				</item>
+				<item>
+					<item name="Disp" value="电子申请单"/>
+					<item name="Tr" value="1001"/>
+				</item>
+			</item>
+			<item name="ReportStatus" value="#Array">
+				<item>
+					<item name="Disp" value="是"/>
+					<item name="Tr" value="1210"/>
+				</item>
+				<item>
+					<item name="Disp" value=" "/>
+					<item name="Tr" value="*"/>
+				</item>
+			</item>
+			<!-- 区域版 -->
+			<item name="ReportStatus" value="#Array">
+				<item>
+					<item name="Disp" value="本院会诊"/>
+					<item name="Tr" value="1210"/>
+				</item>
+				<item>
+					<item name="Disp" value="等待会诊"/>
+					<item name="Tr" value="5100"/>
+				</item>
+				<item>
+					<item name="Disp" value="会诊提交成功"/>
+					<item name="Tr" value="5101"/>
+				</item>
+				<item>
+					<item name="Disp" value="会诊提交失败"/>
+					<item name="Tr" value="5102"/>
+				</item>
+				<item>
+					<item name="Disp" value="会诊中"/>
+					<item name="Tr" value="5120"/>
+				</item>
+				<item>
+					<item name="Disp" value="挂起会诊"/>
+					<item name="Tr" value="5150"/>
+				</item>
+				<item>
+					<item name="Disp" value="完成会诊"/>
+					<item name="Tr" value="5200"/>
+				</item>
+				<item>
+					<item name="Disp" value="回退会诊"/>
+					<item name="Tr" value="5030"/>
+				</item>
+				<item>
+					<item name="Disp" value="取消会诊"/>
+					<item name="Tr" value="5040"/>
+				</item>
+				<item>
+					<item name="Disp" value=" "/>
+					<item name="Tr" value="*"/>
+				</item>
+			</item>
+			<item name="FilmStatus" value="#Array">
+				<item>
+					<item name="Disp" value="无胶片"/>
+					<item name="Tr" value="*"/>
+				</item>
+				<item>
+					<item name="Disp" value="未分发"/>
+					<item name="Tr" value="2000"/>
+				</item>
+				<item>
+					<item name="Disp" value="已分发"/>
+					<item name="Tr" value="3000"/>
+				</item>
+				<item>
+					<item name="Disp" value="预约借片"/>
+					<item name="Tr" value="4000"/>
+				</item>
+				<item>
+					<item name="Disp" value="已借出"/>
+					<item name="Tr" value="5000"/>
+				</item>
+				<item>
+					<item name="Disp" value="已复制"/>
+					<item name="Tr" value="6000"/>
+				</item>
+			</item>
+			<item name="QueueState" value="#Array">
+				<item>
+					<item name="Disp" value="等待"/>
+					<item name="Tr" value="0"/>
+				</item>
+				<item>
+					<item name="Disp" value="已呼"/>
+					<item name="Tr" value="1"/>
+				</item>
+				<item>
+					<item name="Disp" value="弃号"/>
+					<item name="Tr" value="2"/>
+				</item>
+				<item>
+					<item name="Disp" value="挂起"/>
+					<item name="Tr" value="3"/>
+				</item>
+				<item>
+					<item name="Disp" value="已诊"/>
+					<item name="Tr" value="4"/>
+				</item>
+				<item>
+					<item name="Disp" value="确约"/>
+					<item name="Tr" value="5"/>
+				</item>
+			</item>
+			<item name="QueuePatientType" value="#Array">
+				<item>
+					<item name="Disp" value="急诊"/>
+					<item name="Tr" value="0"/>
+				</item>
+				<item>
+					<item name="Disp" value="门诊"/>
+					<item name="Tr" value="1"/>
+				</item>
+				<item>
+					<item name="Disp" value="住院"/>
+					<item name="Tr" value="2"/>
+				</item>
+				<item>
+					<item name="Disp" value="体检"/>
+					<item name="Tr" value="3"/>
+				</item>
+				<item>
+					<item name="Disp" value="住院急诊"/>
+					<item name="Tr" value="4"/>
+				</item>
+				<item>
+					<item name="Disp" value="复查"/>
+					<item name="Tr" value="5"/>
+				</item>
+			</item>
+			<item name="SharedFlag" value="#Array">
+				<item>
+					<item name="Disp" value=" "/>
+					<item name="Tr" value="*"/>
+				</item>
+				<item>
+					<item name="Disp" value="提交会诊"/>
+					<item name="Tr" value="1001"/>
+				</item>
+				<item>
+					<item name="Disp" value="提交书写"/>
+					<item name="Tr" value="1002"/>
+				</item>
+				<item>
+					<item name="Disp" value="提交审核"/>
+					<item name="Tr" value="1003"/>
+				</item>
+				<item>
+					<item name="Disp" value="区域会诊"/>
+					<item name="Tr" value="2001"/>
+				</item>
+				<item>
+					<item name="Disp" value="区域书写"/>
+					<item name="Tr" value="2002"/>
+				</item>
+				<item>
+					<item name="Disp" value="区域审核"/>
+					<item name="Tr" value="2003"/>
+				</item>
+			</item>
+			<item name="Abnormal" value="#Array">
+				<item>
+					<item name="Disp" value="是"/>
+					<item name="Tr" value="1"/>
+				</item>
+				<item>
+					<item name="Disp" value=" "/>
+					<item name="Tr" value="0"/>
+				</item>
+			</item>
+			<item name="DownloadProgress" value="#Array">
+				<item>
+					<item name="Disp" value="失败"/>
+					<item name="Tr" value="-1"/>
+				</item>
+			</item>
+			<item name="CallTerminalID" value="#Array">
+				<item>
+					<item name="Disp" value="不限"/>
+					<item name="Tr" value="false"/>
+				</item>
+				<item>
+					<item name="Disp" value="本机"/>
+					<item name="Tr" value="true"/>
+				</item>
+			</item>
+			<item name="RegDoctor" value="#Array">
+				<item>
+					<item name="Disp" value="无"/>
+					<item name="Tr" value="null"/>
+				</item>
+			</item>
+			<item name="ReportDoctor" value="#Array">
+				<item>
+					<item name="Disp" value="无"/>
+					<item name="Tr" value="null"/>
+				</item>
+			</item>
+			<item name="JobDoctor" value="#Array">
+				<item>
+					<item name="Disp" value="无"/>
+					<item name="Tr" value="null"/>
+				</item>
+			</item>
+			<item name="VerifyDoctor" value="#Array">
+				<item>
+					<item name="Disp" value="无"/>
+					<item name="Tr" value="null"/>
+				</item>
+			</item>
+			<item name="ReportRecordDoctor" value="#Array">
+				<item>
+					<item name="Disp" value="无"/>
+					<item name="Tr" value="null"/>
+				</item>
+			</item>
+			<item name="ConsultDoctor" value="#Array">
+				<item>
+					<item name="Disp" value="无"/>
+					<item name="Tr" value="null"/>
+				</item>
+			</item>
+			<item name="JobCategory" value="#Array">
+				<item>
+					<item name="Disp" value="书写报告"/>
+					<item name="Tr" value="1001"/>
+				</item>
+				<item>
+					<item name="Disp" value="审核报告"/>
+					<item name="Tr" value="1002"/>
+				</item>
+				<item>
+					<item name="Disp" value="书写并审核"/>
+					<item name="Tr" value="1003"/>
+				</item>
+			</item>
+			<item name="JobStatus" value="#Array">
+				<item>
+					<item name="Disp" value="任务就绪"/>
+					<item name="Tr" value="1001"/>
+				</item>
+				<item>
+					<item name="Disp" value="任务完成"/>
+					<item name="Tr" value="1003"/>
+				</item>
+			</item>
+			<item name="ViewerPrintCount" value="#Array">
+				<item>
+					<item name="Disp" value="是"/>
+					<item name="Tr" value="*"/>
+				</item>
+				<item>
+					<item name="Disp" value=" "/>
+					<item name="Tr" value=""/>
+				</item>
+				<item>
+					<item name="Disp" value=" "/>
+					<item name="Tr" value="0"/>
+				</item>
+			</item>
+			<item name="Warning" value="#Array">
+				<item>
+					<item name="Disp" value="检查超时"/>
+					<item name="Tr" value="1"/>
+				</item>
+				<item>
+					<item name="Disp" value="报告超时"/>
+					<item name="Tr" value="2"/>
+				</item>
+				<item>
+					<item name="Disp" value="审核超时"/>
+					<item name="Tr" value="3"/>
+				</item>
+				<item>
+					<item name="Disp" value=" "/>
+					<item name="Tr" value="0"/>
+				</item>
+			</item>
+		</item>
+		<!--定义查询条件中可以使用的值范围, ...表示server中查回来的全部值-->
+		<item name="QueryValueRestrict">
+			<item name="CoincidenceRate" value="#Array">
+				<item value="符合"/>
+				<item value="基本符合"/>
+				<item value="不符合"/>
+			</item>
+			<item name="PatientAge" value="#Array">
+				<item>
+					<item name="Min" value="0"/>
+					<item name="Max" value="150"/>
+					<item name="Required" value="false"/>
+					<item name="Editable" value="true"/>
+				</item>
+			</item>
+			<item name="PatientAgeNow" value="#Array">
+				<item>
+					<item name="Min" value="0"/>
+					<item name="Max" value="150"/>
+					<item name="Required" value="false"/>
+					<item name="Editable" value="true"/>
+				</item>
+			</item>
+			<item name="ReportStatus" value="#Array">
+				<item value="等待会诊"/>
+				<item value="挂起会诊"/>
+				<item value="会诊中"/>
+				<item value="完成会诊"/>
+				<item value="回退会诊"/>
+				<item value="取消会诊"/>
+				<item value="会诊提交成功"/>
+				<item value="会诊提交失败"/>
+			</item>
+			<item name="CallTerminalID" value="#Array">
+				<item value="不限"/>
+				<item value="本机"/>
+				<item value="..."/>
+			</item>
+			<item name="Modality" value="#Array">
+				<item value="MR"/>
+				<item value="CT"/>
+				<item value="CR"/>
+				<item value="DR"/>
+				<item value="DX"/>
+				<item value="XA"/>
+				<item value="US"/>
+				<item value="ES"/>
+				<item value="CS"/>
+			</item>
+			<item name="RegDoctor" value="#Array">
+				<item value="无"/>
+				<item value="..."/>
+			</item>
+			<item name="ReportDoctor" value="#Array">
+				<item value="无"/>
+				<item value="..."/>
+			</item>
+			<item name="JobDoctor" value="#Array">
+				<item value="无"/>
+				<item value="..."/>
+			</item>
+			<item name="VerifyDoctor" value="#Array">
+				<item value="无"/>
+				<item value="..."/>
+			</item>
+			<item name="ReportRecordDoctor" value="#Array">
+				<item value="无"/>
+				<item value="..."/>
+			</item>
+			<item name="ConsultDoctor" value="#Array">
+				<item value="无"/>
+				<item value="..."/>
+			</item>
+			<item name="Department" value="#Array">
+			</item>
+		</item>
+		<!--查询区域中，查询条件的预定义，定义类型，显示宽度等，一般情况下不需要修改-->
+		<item name="QueryConditionPreDefine">
+			<item name="ResultMode" value="#Array">
+				<item>
+					<item name="Param" value="ResultMode"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="查询结果"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="DateTimeCondtion" value="#Array">
+				<item>
+					<item name="Param" value="DateType"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="DateRange"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="DateFrom"/>
+					<item name="Type" value="datetime"/>
+					<item name="Title" value="从"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+				<item>
+					<item name="Param" value="DateTo"/>
+					<item name="Type" value="datetime"/>
+					<item name="Title" value="至"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="PatientType" value="#Array">
+				<item>
+					<item name="Param" value="PatientType"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="病人类型"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="PatientName" value="#Array">
+				<item>
+					<item name="Param" value="PatientName"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="病人姓名"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="InPatientID" value="#Array">
+				<item>
+					<item name="Param" value="InPatientIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="住院号"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="InPatientID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="InPatientIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+			</item>
+			<item name="InPatientIDComplex" value="#Array">
+				<item>
+					<item name="Param" value="InPatientID"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="住院号"/>
+					<item name="CssClass" value="Comp_First"/>
+				</item>
+				<item>
+					<item name="Param" value="InPatientIDCard"/>
+					<item name="Type" value="splitbutton"/>
+					<item name="CssClass" value="Comp_Last"/>
+				</item>
+			</item>
+			<item name="OutPatientID" value="#Array">
+				<item>
+					<item name="Param" value="OutPatientIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="门诊号"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="OutPatientID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="OutPatientIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+			</item>
+			<item name="OutPatientIDComplex" value="#Array">
+				<item>
+					<item name="Param" value="OutPatientID"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="门诊号"/>
+					<item name="CssClass" value="Comp_First"/>
+				</item>
+				<item>
+					<item name="Param" value="OutPatientIDCard"/>
+					<item name="Type" value="splitbutton"/>
+					<item name="CssClass" value="Comp_Last"/>
+				</item>
+			</item>
+			<item name="PhysicalExamID" value="#Array">
+				<item>
+					<item name="Param" value="PhysicalExamIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="体检号"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PhysicalExamID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="PhysicalExamIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+			</item>
+			<item name="MedicareID" value="#Array">
+				<item>
+					<item name="Param" value="MedicareID"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="病历号"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="Accno" value="#Array">
+				<item>
+					<item name="Param" value="Accno"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="流水号"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="HisID" value="#Array">
+				<item>
+					<item name="Param" value="HisID"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="申请单号"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="Modality" value="#Array">
+				<item>
+					<item name="Param" value="Modality"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="检查类型"/>
+					<item name="CssClass" value="Basic_Long"/>
+				</item>
+			</item>
+			<item name="ModalityExpand" value="#Array">
+				<item>
+					<item name="Param" value="ModalityExpand"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="检查类型"/>
+					<item name="CssClass" value="Basic_Long"/>
+				</item>
+			</item>
+			<item name="VariableID" value="#Array">
+				<item>
+					<item name="Param" value="VariableIDName"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Var_First"/>
+				</item>
+				<item>
+					<item name="Param" value="VarModalityIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Var_Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="VarModalityID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarModalityIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarPatientIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Var_Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="VarPatientID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarPatientIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarInPatientIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Var_Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="VarInPatientID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarInPatientIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarOutPatientIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Var_Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="VarOutPatientID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarOutPatientIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarPhysicalExamIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Var_Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="VarPhysicalExamID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarPhysicalExamIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarMedicareID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Var_Second"/>
+				</item>
+				<item>
+					<item name="Param" value="VarMedicalRecordIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="CssClass" value="Var_Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="VarMedicalRecordID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+				<item>
+					<item name="Param" value="VarMedicalRecordIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Var_Last"/>
+				</item>
+			</item>
+			<!-- 基本查询中模态号、住院号等ID的显示格式配置 -->
+			<item name="ModalityID" value="#Array">
+				<item>
+					<item name="Param" value="ModalityIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="模态号"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="ModalityID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="ModalityIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+			</item>
+			<!-- 高级查询中模态号、住院号等ID的显示格式配置 -->
+			<!-- 	  <item name="ModalityID" value="#Array">
+			<item>
+			  <item name="Param" value="ModalityIDType"/>
+			  <item name="Type" value="combobox"/>
+			  <item name="Title" value="模态号"/>
+			  <item name="CssClass" value="Middle"/>
+			</item>
+			<item>
+			  <item name="Param" value="ModalityID"/>
+			  <item name="Type" value="text"/>
+			  <item name="CssClass" value="MiddleEx"/>
+			</item>
+			<item>
+			  <item name="Param" value="ModalityIDTail"/>
+			  <item name="Type" value="combotree"/>
+			  <item name="CssClass" value="MiddleEx"/>
+			</item>
+		  </item> -->
+			<item name="PatientID" value="#Array">
+				<item>
+					<item name="Param" value="PatientIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="影像号"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Middle"/>
+					<item name="EncodingFormat" value="EncodingFormat1"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+			</item>
+			<item name="MedicalRecordID" value="#Array">
+				<item>
+					<item name="Param" value="MedicalRecordIDType"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="病案号"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="MedicalRecordID"/>
+					<item name="Type" value="text"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="MedicalRecordIDTail"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+			</item>
+			<item name="PatientIDReport" value="#Array">
+				<item>
+					<item name="Param" value="PatientIDReport"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="影像号"/>
+					<item name="CssClass" value="Long"/>
+					<item name="EncodingFormat" value="EncodingFormat1"/>
+				</item>
+			</item>
+			<item name="ModalityIDReport" value="#Array">
+				<item>
+					<item name="Param" value="ModalityIDReport"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="模态号"/>
+					<item name="CssClass" value="Long"/>
+					<item name="EncodingFormat" value="EncodingFormat3"/>
+				</item>
+			</item>
+			<item name="OutPatientIDReport" value="#Array">
+				<item>
+					<item name="Param" value="OutPatientIDReport"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="门诊号"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="InPatientIDReport" value="#Array">
+				<item>
+					<item name="Param" value="InPatientIDReport"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="住院号"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="PhysicalExamIDReport" value="#Array">
+				<item>
+					<item name="Param" value="PhysicalExamIDReport"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="体检号"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="Hospital" value="#Array">
+				<item>
+					<item name="Param" value="Hospital"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="院区"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="PatientSex" value="#Array">
+				<item>
+					<item name="Param" value="PatientSex"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="病人性别"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="PatientAge" value="#Array">
+				<item>
+					<item name="Param" value="PatientAgeCondition"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="病人年龄"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientAge"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientAgeFrom"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientAgeTo"/>
+					<item name="Type" value="number"/>
+					<item name="Title" value="- "/>
+					<item name="CssClass" value="Short"/>
+				</item>
+			</item>
+			<item name="PatientAgeNow" value="#Array">
+				<item>
+					<item name="Param" value="PatientAgeNowCondition"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="当前年龄"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientAgeNow"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientAgeNowFrom"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientAgeNowTo"/>
+					<item name="Type" value="number"/>
+					<item name="Title" value="- "/>
+					<item name="CssClass" value="Short"/>
+				</item>
+			</item>
+			<item name="ExamStatus" value="#Array">
+				<item>
+					<item name="Param" value="ExamStatus"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="状态"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="Equipment" value="#Array">
+				<item>
+					<item name="Param" value="EquipmentSelect"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="影像设备"/>
+					<item name="CssClass" value="Long_Comp_First"/>
+				</item>
+				<item>
+					<item name="Param" value="Equipment"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Long_Comp_Last"/>
+				</item>
+			</item>
+			<item name="OrderType" value="#Array">
+				<item>
+					<item name="Param" value="OrderType"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="申请单类型"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="RegDoctor" value="#Array">
+				<item>
+					<item name="Param" value="RegDoctor"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="登记医生"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="Ward" value="#Array">
+				<item>
+					<item name="Param" value="Ward"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="病区"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="Clinic" value="#Array">
+				<item>
+					<item name="Param" value="Clinic"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="请检科室"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="OrderDoctor" value="#Array">
+				<item>
+					<item name="Param" value="OrderDoctor"/>
+					<item name="Type" value="autocompletemultiselect"/>
+					<item name="Title" value="请检医生"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="BodyPart" value="#Array">
+				<item>
+					<item name="Param" value="BodyPart"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="检查部位"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="ExamItems" value="#Array">
+				<item>
+					<item name="Param" value="ExamItemsRestrictType"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="检查项目"/>
+					<item name="CssClass" value="Long_Comp_First"/>
+				</item>
+				<item>
+					<item name="Param" value="ExamItems"/>
+					<item name="Type" value="combotree"/>
+					<item name="CssClass" value="Long_Comp_Last"/>
+				</item>
+			</item>
+			<item name="Charge" value="#Array">
+				<item>
+					<item name="Param" value="ChargeCondition"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="费用"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="Charge"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="ChargeFrom"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="ChargeTo"/>
+					<item name="Type" value="number"/>
+					<item name="Title" value="- "/>
+					<item name="CssClass" value="Short"/>
+				</item>
+			</item>
+			<item name="Disease" value="#Array">
+				<item>
+					<item name="Param" value="Disease"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="临床诊断"/>
+					<item name="CssClass" value="Double"/>
+				</item>
+			</item>
+			<item name="Remark" value="#Array">
+				<item>
+					<item name="Param" value="Remark"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="备注"/>
+					<item name="CssClass" value="Double"/>
+				</item>
+			</item>
+			<item name="ReportDoctor" value="#Array">
+				<item>
+					<item name="Param" value="ReportDoctor"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="报告医生"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="JobDoctor" value="#Array">
+				<item>
+					<item name="Param" value="JobDoctor"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="任务医生"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="VerifyDoctor" value="#Array">
+				<item>
+					<item name="Param" value="VerifyDoctor"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="审核医生"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="ReportRecordDoctor" value="#Array">
+				<item>
+					<item name="Param" value="ReportRecordDoctor"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="报告登记员"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="ConsultDoctor" value="#Array">
+				<item>
+					<item name="Param" value="ConsultDoctor"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="会诊医生"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="KeyWord" value="#Array">
+				<item>
+					<item name="Param" value="KeyWord"/>
+					<item name="Type" value="combotreenocascade"/>
+					<item name="Title" value="关键词"/>
+					<item name="CssClass" value="Double"/>
+				</item>
+			</item>
+			<item name="ConincidenceRate" value="#Array">
+				<item>
+					<item name="Param" value="CoincidenceRate"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="诊断符合率"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="ImageShowType" value="#Array">
+				<item>
+					<item name="Param" value="ImageShowType"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="显像型式"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="ReportRemark" value="#Array">
+				<item>
+					<item name="Param" value="ReportRemark"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="报告标记"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="ReportList" value="#Array">
+				<item>
+					<item name="Param" value="ReportList"/>
+					<item name="Type" value="checkbox"/>
+					<item name="Title" value="报告列表"/>
+					<item name="CssClass" value="Checkbox"/>
+				</item>
+			</item>
+			<item name="PositiveResult" value="#Array">
+				<item>
+					<item name="Param" value="PositiveResult"/>
+					<item name="Type" value="checkbox"/>
+					<item name="Title" value="阳性结果"/>
+					<item name="CssClass" value="Checkbox"/>
+				</item>
+			</item>
+			<item name="MotionImage" value="#Array">
+				<item>
+					<item name="Param" value="MotionImage"/>
+					<item name="Type" value="checkbox"/>
+					<item name="Title" value="动态图像"/>
+					<item name="CssClass" value="Checkbox"/>
+				</item>
+			</item>
+			<item name="Tuberculosis" value="#Array">
+				<item>
+					<item name="Param" value="Tuberculosis"/>
+					<item name="Type" value="checkbox"/>
+					<item name="Title" value="肺结核"/>
+					<item name="CssClass" value="Checkbox"/>
+				</item>
+			</item>
+			<item name="ExamFinding" value="#Array">
+				<item>
+					<item name="Param" value="ExamFinding"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="检查所见"/>
+					<item name="CssClass" value="Double"/>
+				</item>
+			</item>
+			<item name="DiagnoseResult" value="#Array">
+				<item>
+					<item name="Param" value="DiagnoseResult"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="诊断结果"/>
+					<item name="CssClass" value="Double"/>
+				</item>
+			</item>
+			<item name="PathologyResult" value="#Array">
+				<item>
+					<item name="Param" value="PathologyResult"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="病理结果"/>
+					<item name="CssClass" value="Double"/>
+				</item>
+			</item>
+			<item name="ExamRoom" value="#Array">
+				<item>
+					<item name="Param" value="ExamRoom"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="机房号"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="ExamRoomList" value="#Array">
+				<item>
+					<item name="Param" value="ExamRoomList"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="检查房间"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="DiagnosisGroup" value="#Array">
+				<item>
+					<item name="Param" value="DiagnosisGroup"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="诊断组"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="PatientWeight" value="#Array">
+				<item>
+					<item name="Param" value="PatientWeightCondition"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="体重(kg)"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientWeight"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientWeightFrom"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientWeightTo"/>
+					<item name="Type" value="number"/>
+					<item name="Title" value="- "/>
+					<item name="CssClass" value="Short"/>
+				</item>
+			</item>
+			<item name="Technician" value="#Array">
+				<item>
+					<item name="Param" value="Technician"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="检查技师"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="ExamDoctor" value="#Array">
+				<item>
+					<item name="Param" value="ExamDoctor"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="检查医生"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="PatientHeight" value="#Array">
+				<item>
+					<item name="Param" value="PatientHeightCondition"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="身高(cm)"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientHeight"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientHeightFrom"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="PatientHeightTo"/>
+					<item name="Type" value="number"/>
+					<item name="Title" value="- "/>
+					<item name="CssClass" value="Short"/>
+				</item>
+			</item>
+			<item name="Dose" value="#Array">
+				<item>
+					<item name="Param" value="DoseCondition"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="剂量"/>
+					<item name="CssClass" value="Middle"/>
+				</item>
+				<item>
+					<item name="Param" value="Dose"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="DoseFrom"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="DoseTo"/>
+					<item name="Type" value="number"/>
+					<item name="Title" value="- "/>
+					<item name="CssClass" value="Short"/>
+				</item>
+			</item>
+			<item name="ReportStatus" value="#Array">
+				<item>
+					<item name="Param" value="ReportStatus"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="区域会诊"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="LocalConsult" value="#Array">
+				<item>
+					<item name="Param" value="LocalConsult"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="本院会诊"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="FirstName" value="#Array">
+				<item>
+					<item name="Param" value="FirstName"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="First Name"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="MiddleName" value="#Array">
+				<item>
+					<item name="Param" value="MiddleName"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="Middle Name"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="LastName" value="#Array">
+				<item>
+					<item name="Param" value="LastName"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="Last Name"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="WorkPositionID" value="#Array">
+				<item>
+					<item name="Param" value="WorkPositionID"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="工位名"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="FollowUpStatus" value="#Array">
+				<item>
+					<item name="Param" value="FollowUpStatus"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="随访状态"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="FollowUpStatusList" value="#Array">
+				<item>
+					<item name="Param" value="FollowUpStatusList"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="随访状态"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="FollowUpCommiter" value="#Array">
+				<item>
+					<item name="Param" value="FollowUpCommiter"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="随访提交者"/>
+					<item name="CssClass" value="Adv_Middle"/>
+				</item>
+			</item>
+			<item name="IDCardNumber" value="#Array">
+				<item>
+					<item name="Param" value="IDCardNumber"/>
+					<item name="Type" value="text"/>
+					<item name="Title" value="身份证号"/>
+					<item name="CssClass" value="Adv_Middle"/>
+				</item>
+			</item>
+			<item name="LocalCalled" value="#Array">
+				<item>
+					<item name="Param" value="CallTerminalID"/>
+					<item name="Type" value="checkbox"/>
+					<item name="Title" value="限本机呼叫"/>
+					<item name="CssClass" value="Checkbox"/>
+				</item>
+			</item>
+			<item name="CallTerminalID" value="#Array">
+				<item>
+					<item name="Param" value="CallTerminalID"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="呼叫站"/>
+					<item name="CssClass" value="Adv_Middle"/>
+				</item>
+			</item>
+			<item name="Deleted" value="#Array">
+				<item>
+					<item name="Param" value="Deleted"/>
+					<item name="Type" value="checkbox"/>
+					<item name="Title" value="已删除的检查"/>
+					<item name="CssClass" value="Checkbox"/>
+				</item>
+			</item>
+			<item name="QueueNameID" value="#Array">
+				<item>
+					<item name="Param" value="QueueNameID"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="队列"/>
+					<item name="CssClass" value="Adv_Middle"/>
+				</item>
+			</item>
+			<item name="Department" value="#Array">
+				<item>
+					<item name="Param" value="Department"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="科室"/>
+					<item name="CssClass" value="Basic_Long"/>
+				</item>
+			</item>
+			<item name="JobCategory" value="#Array">
+				<item>
+					<item name="Param" value="JobCategory"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="任务类型"/>
+					<item name="CssClass" value="Adv_Middle"/>
+				</item>
+			</item>
+			<item name="JobStatus" value="#Array">
+				<item>
+					<item name="Param" value="JobStatus"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="任务状态"/>
+					<item name="CssClass" value="Adv_Middle"/>
+				</item>
+			</item>
+			<item name="FilmPrinted" value="#Array">
+				<item>
+					<item name="Param" value="FilmPrinted"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="胶片打印"/>
+					<item name="CssClass" value="Adv_Middle"/>
+				</item>
+			</item>
+			<item name="WorkPost" value="#Array">
+				<item>
+					<item name="Param" value="WorkPost"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="岗位"/>
+					<item name="CssClass" value="Basic_Long"/>
+				</item>
+			</item>
+			<item name="QualityDoctor" value="#Array">
+				<item>
+					<item name="Param" value="QualityDoctor"/>
+					<item name="Type" value="combotree"/>
+					<item name="Title" value="评分医生"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="QualityLevel" value="#Array">
+				<item>
+					<item name="Param" value="QualityLevelCondition"/>
+					<item name="Type" value="combobox"/>
+					<item name="Title" value="评分"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+				<item>
+					<item name="Param" value="QualityLevel"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="QualityLevelFrom"/>
+					<item name="Type" value="number"/>
+					<item name="CssClass" value="Short"/>
+				</item>
+				<item>
+					<item name="Param" value="QualityLevelTo"/>
+					<item name="Type" value="number"/>
+					<item name="Title" value="- "/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+			<item name="RandomCount" value="#Array">
+				<item>
+					<item name="Param" value="RandomCount"/>
+					<item name="Type" value="number"/>
+					<item name="Title" value="随机数量"/>
+					<item name="CssClass" value="Long"/>
+				</item>
+			</item>
+		</item>
+		<!--Tips显示信息的预定义，一般情况下不需要修改-->
+		<item name="ResultGridTipPreDefine">
+			<item name="ShowImage">
+				<item name="Name" value="ShowImage"/>
+				<item name="Type" value="button"/>
+				<item name="Description" value="查看图像"/>
+			</item>
+			<item name="BrowseImage">
+				<item name="Name" value="BrowseImage"/>
+				<item name="Type" value="button"/>
+				<item name="Description" value="浏览图像"/>
+			</item>
+			<item name="ShowReport">
+				<item name="Name" value="ShowReport"/>
+				<item name="Type" value="button"/>
+				<item name="Description" value="查看报告"/>
+			</item>
+			<item name="CopyReport">
+				<item name="Name" value="CopyReport"/>
+				<item name="Type" value="button"/>
+				<item name="Description" value="复制报告"/>
+			</item>
+			<item name="CopyMeasureValue">
+				<item name="Name" value="CopyMeasureValue"/>
+				<item name="Type" value="button"/>
+				<item name="Description" value="复制测量值"/>
+			</item>
+			<item name="PatientID">
+				<item name="Name" value="PatientID"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="影像号"/>
+			</item>
+			<item name="PatientName">
+				<item name="Name" value="PatientName"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="姓名"/>
+			</item>
+			<item name="PatientSex">
+				<item name="Name" value="PatientSex"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="性别"/>
+			</item>
+			<item name="PatientAge">
+				<item name="Name" value="PatientAge"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="年龄"/>
+			</item>
+			<item name="PatientAgeNow">
+				<item name="Name" value="PatientAgeNow"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="当前年龄"/>
+			</item>
+			<item name="MedicareID">
+				<item name="Name" value="MedicareID"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="病案号"/>
+			</item>
+			<item name="OutPatientID">
+				<item name="Name" value="OutPatientID"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="门诊/体检号"/>
+			</item>
+			<item name="TelphoneNo">
+				<item name="Name" value="TelphoneNo"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="电话"/>
+			</item>
+			<item name="Address">
+				<item name="Name" value="Address"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="地址"/>
+			</item>
+			<item name="Examitem">
+				<item name="Name" value="Examitem"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="检查项目"/>
+			</item>
+			<item name="Disease">
+				<item name="Name" value="Disease"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="临床诊断"/>
+			</item>
+			<item name="OrderComment">
+				<item name="Name" value="OrderComment"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="备注信息"/>
+			</item>
+			<item name="OrderDr">
+				<item name="Name" value="OrderDr"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="请检医生"/>
+			</item>
+			<item name="OrderDate">
+				<item name="Name" value="OrderDate"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="请检日期"/>
+			</item>
+			<item name="ExamDr">
+				<item name="Name" value="ExamDr"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="检查技师"/>
+			</item>
+			<item name="Examdt">
+				<item name="Name" value="Examdt"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="检查日期"/>
+			</item>
+			<item name="StudyResult">
+				<item name="Name" value="StudyResult"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="检查所见"/>
+			</item>
+			<item name="DiagResult">
+				<item name="Name" value="DiagResult"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="诊断报告"/>
+			</item>
+			<item name="Advice">
+				<item name="Name" value="Advice"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="诊断建议"/>
+			</item>
+			<item name="Reportdr">
+				<item name="Name" value="Reportdr"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="报告医生"/>
+			</item>
+			<item name="Reportdt">
+				<item name="Name" value="Reportdt"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="报告日期"/>
+			</item>
+			<item name="VerifyDr">
+				<item name="Name" value="VerifyDr"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="审核医生"/>
+			</item>
+			<item name="Verifydt">
+				<item name="Name" value="Verifydt"/>
+				<item name="Type" value="label"/>
+				<item name="Description" value="审核日期"/>
+			</item>
+		</item>
+		<!--预定义的公共快捷查询，QuerySet中的Param的值参考QueryConditionPreDefine中的子节点名-->
+		<item name="PublicQueryPreDefine"/>
+		<!--默认查询条件，当UseDefault为true时，Worklist中查询条件的默认值为QuerySet中的值-->
+		<item name="DefaultQueryPredefine">
+			<item name="UseDefault" value="true"/>
+			<item name="QuerySet" value="#Array">
+				<item>
+					<!--Param里的值参考QueryConditionPreDefine中的定义-->
+					<item name="Param" value="DateRange"/>
+					<item name="Value" value="#Array">
+						<item value="今天"/>
+					</item>
+				</item>
+				<item>
+					<item name="Param" value="DateType"/>
+					<item name="Value" value="#Array">
+						<item value="R"/>
+					</item>
+				</item>
+				<item>
+					<item name="Param" value="CallTerminalID"/>
+					<item name="Value" value="#Array">
+						<item value="false"/>
+					</item>
+				</item>
+				<item>
+					<item name="Param" value="Modality"/>
+					<item name="Value" value="#Array">
+						<item value="CR  "/>
+						<item value="CT  "/>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item name="QueryEncodingFormat">
+			<item name="EncodingFormat1">
+				<item name="FormatString" value="P0000000"/>
+				<item name="AutoZero" value="true"/>
+			</item>
+			<item name="EncodingFormat2">
+				<item name="FormatString" value="N0000000"/>
+				<item name="AutoZero" value="true"/>
+			</item>
+			<item name="EncodingFormat3">
+				<item name="FormatString" value="US0000000"/>
+				<item name="AutoZero" value="true"/>
+			</item>
+		</item>
+		<!--表格中结果的排序规则预定义，值越小的则显示在最前面-->
+		<item name="GridResultSortRule">
+			<item name="PatientType">
+				<item name="急诊病人" value="1"/>
+				<item name="住院急诊" value="2"/>
+				<item name="住院急诊病人" value="2"/>
+				<item name="复查病人" value="4"/>
+				<item name="门诊病人" value="5"/>
+				<item name="住院病人" value="6"/>
+				<item name="体检病人" value="7"/>
+				<item name="外院病人" value="8"/>
+			</item>
+		</item>
+	</item>
+</config>

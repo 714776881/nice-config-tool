@@ -1,0 +1,78 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "测量项异常提示列表",
+			"filePath":"General\\ObMateReportConfiguration.xml",
+			"nodePath":"/config/item[@name='ObMateReportConfiguration']/item[@name='AbnormalNotify']"
+		}
+	],
+	"keyLabelMap":[
+		{
+			"key": "NotifyMeasCode",
+			"label" : "测量项"
+		},
+		{
+			"key": "MeasCode",
+			"label" : "参考测量项"
+		},
+		{
+			"key": "ContitionList",
+			"label" : "条件列表"
+		},
+		{
+			"key": "Condition",
+			"label" : "条件"
+		},
+		{
+			"key": "NotifyContent",
+			"label" : "提示内容"
+		},
+		{
+			"key": "ReasonDetail",
+			"label" : "详细原因"
+		}
+	],
+	"inputConfig":[
+		{
+			"key": "NotifyMeasCode;MeasCode",
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择测量值！",
+					"style": "width:200px",
+					"show-search": true,
+					"option-filter-prop": "label"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择测量项"
+					}
+				],
+				"defaultValue": ""
+			},
+			"dicSql": "select m.itemname as label,m.code value from t_measure_template_item m"
+		},
+		{
+			"key": "NotifyContent;ReasonDetail",
+			"component": {
+				"name": "a-input",
+				"props": {
+					"placeholder": "请选择内容！",
+					"style": "width:900px"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择内容！"
+					}
+				],
+				"defaultValue": ""
+			}
+		}
+	]
+}

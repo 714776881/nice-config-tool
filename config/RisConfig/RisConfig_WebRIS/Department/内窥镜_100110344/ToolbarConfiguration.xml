@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>	
+	<!--工具栏配置,RAD对应放射科，US对应超声科，ES对应内镜科-->
+	<item name="ToolbarConfiguration">
+		<!--Worklist配置对应科室下的Worklist界面的工具栏-->
+		<!--Report配置对应科室下的报告界面的工具栏-->
+		<item name="RAD">
+			<item name="Worklist" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="WriteReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ModifyReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowReportBackup"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="PrintReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowImage"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowComment"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ScanOrderPaper"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="CreateMeetingUser"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="CreateMeeting"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="OpenMeeting"/>
+					</item>
+				</item>
+				<!-- 区域版 -->
+				<!--<item value="#Array">
+          <item>
+            <item name="Name" value="AreaConsult"/>
+          </item>
+        </item>-->
+				<item value="#Array">
+					<item>
+						<item name="Name" value="DownloadView"/>
+					</item>
+				</item>
+			</item>
+			<item name="Report" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+					<item>
+						<item name="Name" value="ShowComment"/>
+					</item>
+					<item>
+						<item name="Name" value="ShowImage"/>
+					</item>
+				</item>
+				<!--<item value="#Array">
+          <item>
+            <item name="Name" value="ConsultReport"/>
+          </item>
+		  <item>
+            <item name="Name" value="ViewConsult"/>
+          </item>
+		  <item>
+            <item name="Name" value="BackConsult"/>
+          </item>
+        </item>-->
+				<item value="#Array">
+					<item>
+						<item name="Name" value="SuspendReport"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveReport"/>
+					</item>
+					<item>
+						<item name="Name" value="VerifyReport"/>
+					</item>
+					<item>
+						<item name="Name" value="PrintReport"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveReportCache"/>
+					</item>
+					<item>
+						<item name="Name" value="RestoreReportCache"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveReportTemplate"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="SaveVerifyReport"/>
+					</item>
+					<item>
+						<item name="Name" value="CloseReport"/>
+					</item>
+					<item>
+						<item name="Name" value="PrintPreview"/>
+					</item>
+				</item>
+				<item>
+					<item name="Items" value="#Array">
+						<item>
+							<item name="Name" value="ReportTemplate"/>
+						</item>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item name="US">
+			<item name="Worklist" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="WriteReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ModifyReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowReportBackup"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="PrintReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="PrintOrderPaper"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowImage"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowComment"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ViewOrderComment"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="CreateMeetingUser"/>
+					</item>
+					<item>
+						<item name="Name" value="CreateMeeting"/>
+					</item>
+				</item>
+				<!-- 区域版 -->
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ExternalSystem_EMR"/>
+					</item>
+				</item>
+			</item>
+			<item name="Report" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+					<item>
+						<item name="Name" value="ConsultReport"/>
+					</item>
+					<item>
+						<item name="Name" value="ViewConsult"/>
+					</item>
+					<item>
+						<item name="Name" value="ViewOrderComment"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="SaveReport"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveVerifyReport"/>
+					</item>
+					<item>
+						<item name="Name" value="PrintPreview"/>
+					</item>
+					<item>
+						<item name="Name" value="ReportBack"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveReportCache"/>
+					</item>
+					<item>
+						<item name="Name" value="RestoreReportCache"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveReportTemplate"/>
+					</item>
+					<item>
+						<item name="Name" value="ExternalSystem_EMR"/>
+					</item>
+					<item>
+						<item name="ExpandLevel" value="1"/>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="SuspendReport"/>
+							</item>
+							<item>
+								<item name="Name" value="PrintReport"/>
+							</item>
+						</item>
+					</item>
+					<item>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="ReportTemplate"/>
+							</item>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="ExpandLevel" value="2"/>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="CopyReport"/>
+							</item>
+							<item>
+								<item name="Name" value="PasteReport"/>
+							</item>
+							<item>
+								<item name="Name" value="CloseReport"/>
+							</item>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ExternalSystem_EMR"/>
+					</item>
+					<item>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="AutoRefresh"/>
+							</item>
+							<item>
+								<item name="Name" value="AutoOrderPaper"/>
+							</item>
+							<item>
+								<item name="Name" value="ShowQueue"/>
+							</item>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="RealTimeVideo"/>
+					</item>
+				</item>
+			</item>
+		</item>
+		<item name="ES">
+			<item name="Worklist" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="WriteReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ModifyReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="PrintReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowImage"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowComment"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="FollowUp"/>
+					</item>
+				</item>
+			</item>
+			<item name="Report" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+					<item>
+						<item name="Name" value="ShowLabResult"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="SaveReport"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveVerifyReport"/>
+					</item>
+					<item>
+						<item name="ExpandLevel" value="1"/>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="SuspendReport"/>
+							</item>
+							<item>
+								<item name="Name" value="PrintReport"/>
+							</item>
+							<item>
+								<item name="Name" value="PrintPreview"/>
+							</item>
+						</item>
+					</item>
+					<item>
+						<item name="Name" value="SaveReportTemplate"/>
+					</item>
+					<item>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="ReportTemplate"/>
+							</item>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="ExpandLevel" value="2"/>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="CopyReport"/>
+							</item>
+							<item>
+								<item name="Name" value="PasteReport"/>
+							</item>
+							<item>
+								<item name="Name" value="ClearReport"/>
+							</item>
+						</item>
+					</item>
+					<item>
+						<item name="Name" value="CloseReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="ExpandLevel" value="1"/>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="ShowComment"/>
+							</item>
+							<item>
+								<item name="Name" value="ExternalSystem_EMR"/>
+							</item>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="InterTherapy"/>
+					</item>
+					<item>
+						<item name="Name" value="RealTimeVideo"/>
+					</item>
+					<item>
+						<item name="Items" value="#Array">
+							<item>
+								<item name="Name" value="AutoRefresh"/>
+							</item>
+							<item>
+								<item name="Name" value="AutoOrderPaper"/>
+							</item>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="BackMachineExamFinish"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="PrintPathology"/>
+					</item>
+					<item>
+						<item name="Name" value="PrintPatientLabel"/>
+					</item>
+					<item>
+						<item name="Name" value="ExternalSystem_Pathology"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="MirrorSetting"/>
+					</item>
+					<item>
+						<item name="Name" value="ViewHistoryMachine"/>
+					</item>
+				</item>
+			</item>
+		</item>
+	</item>
+</config>

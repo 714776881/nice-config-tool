@@ -1,0 +1,442 @@
+<config versiontag="root">
+  <!--报告界面的工具栏的预定义，包括是否有图标，显示为button还是checkbox还是下拉控件等,一般情况下不需要修改-->
+  <item name="ToolbarPreDefineConfiguraion" versiontag="201812.2999">
+    <item name="ShowVisitDialog" versiontag="201812.3000">
+      <item name="HasIcon" value="true" versiontag="201812.3001" />
+      <item name="Type" value="button" versiontag="201812.3002" />
+    </item>
+    <item name="ShowImage" versiontag="201812.3003">
+      <item name="HasIcon" value="true" versiontag="201812.3004" />
+      <item name="Type" value="button" versiontag="201812.3005" />
+    </item>
+    <item name="BrowseImage" versiontag="201906.180">
+      <item name="HasIcon" value="true" versiontag="201906.181" />
+      <item name="Type" value="button" versiontag="201906.182" />
+    </item>
+    <item name="ShowReport" versiontag="201812.3006">
+      <item name="HasIcon" value="true" versiontag="201812.3007" />
+      <item name="Type" value="button" versiontag="201812.3008" />
+    </item>
+    <item name="ShowComment" versiontag="201812.3009">
+      <item name="HasIcon" value="true" versiontag="201812.3010" />
+      <item name="Type" value="button" versiontag="201812.3011" />
+    </item>
+    <item name="WriteReport" versiontag="201812.3012">
+      <item name="HasIcon" value="true" versiontag="201812.3013" />
+      <item name="Type" value="button" versiontag="201812.3014" />
+      <item name="Description" value="书写" versiontag="201812.3015" />
+    </item>
+    <item name="PrintReport" versiontag="201812.3016">
+      <item name="HasIcon" value="true" versiontag="201812.3017" />
+      <item name="Type" value="button" versiontag="201812.3018" />
+      <item name="Description" value="打印" versiontag="201812.3019" />
+    </item>
+    <item name="ModifyReport" versiontag="201812.3020">
+      <item name="HasIcon" value="true" versiontag="201812.3021" />
+      <item name="Type" value="button" versiontag="201812.3022" />
+      <item name="Description" value="修改" versiontag="201812.3023" />
+    </item>
+    <item name="Consultation" versiontag="201812.3024">
+      <item name="HasIcon" value="true" versiontag="201812.3025" />
+      <item name="Type" value="button" versiontag="201812.3026" />
+    </item>
+    <item name="DeleteOrder" versiontag="201812.3027">
+      <item name="HasIcon" value="false" versiontag="201812.3028" />
+      <item name="Type" value="button" versiontag="201812.3029" />
+    </item>
+    <item name="ModifyOrder" versiontag="201812.3030">
+      <item name="HasIcon" value="false" versiontag="201812.3031" />
+      <item name="Type" value="button" versiontag="201812.3032" />
+    </item>
+    <item name="TechnicalReport" versiontag="201812.3033">
+      <item name="HasIcon" value="true" versiontag="201812.3034" />
+      <item name="Type" value="button" versiontag="201812.3035" />
+    </item>
+    <item name="ShowEMR" versiontag="201812.3036">
+      <item name="HasIcon" value="true" versiontag="201812.3037" />
+      <item name="Type" value="button" versiontag="201812.3038" />
+    </item>
+    <item name="ShowRequisition" versiontag="201812.3039">
+      <item name="HasIcon" value="true" versiontag="201812.3040" />
+      <item name="Type" value="button" versiontag="201812.3041" />
+    </item>
+    <item name="ToRegister" versiontag="201812.3042">
+      <item name="HasIcon" value="false" versiontag="201812.3043" />
+      <item name="Type" value="button" versiontag="201812.3044" />
+    </item>
+    <item name="PatToRegister" versiontag="201812.3045">
+      <item name="HasIcon" value="false" versiontag="201812.3046" />
+      <item name="IconName" value="icon-star-full2" versiontag="201812.3047" />
+    </item>
+    <item name="ToWorkList" versiontag="201812.3048">
+      <item name="HasIcon" value="false" versiontag="201812.3049" />
+      <item name="Type" value="button" versiontag="201812.3050" />
+    </item>
+    <item name="RecoverOrder" versiontag="201812.3051">
+      <item name="HasIcon" value="false" versiontag="201812.3052" />
+      <item name="Type" value="button" versiontag="201812.3053" />
+    </item>
+    <item name="SplitPat" versiontag="201812.3054">
+      <item name="HasIcon" value="false" versiontag="201812.3055" />
+      <item name="Type" value="button" versiontag="201812.3056" />
+    </item>
+    <item name="ExportOrder" versiontag="201812.3057">
+      <item name="HasIcon" value="true" versiontag="201812.3058" />
+      <item name="Type" value="button" versiontag="201812.3059" />
+    </item>
+    <item name="BatchReport" versiontag="201812.3060">
+      <item name="HasIcon" value="false" versiontag="201812.3061" />
+      <item name="Type" value="button" versiontag="201812.3062" />
+    </item>
+    <item name="DirectVerify" versiontag="201812.3063">
+      <item name="HasIcon" value="true" versiontag="201812.3064" />
+      <item name="Type" value="button" versiontag="201812.3065" />
+    </item>
+    <item name="ReportF" versiontag="201812.3066">
+      <item name="HasIcon" value="false" versiontag="201812.3067" />
+      <item name="Type" value="button" versiontag="201812.3068" />
+    </item>
+    <item name="FilmDeliver" versiontag="201812.3069">
+      <item name="HasIcon" value="false" versiontag="201812.3070" />
+      <item name="Type" value="button" versiontag="201812.3071" />
+    </item>
+    <item name="ViewHISBilling" versiontag="201812.3072">
+      <item name="HasIcon" value="false" versiontag="201812.3073" />
+      <item name="Type" value="button" versiontag="201812.3074" />
+    </item>
+    <item name="ViewOrderComment" versiontag="201812.3075">
+      <item name="HasIcon" value="true" versiontag="201812.3076" />
+      <item name="Type" value="button" versiontag="201812.3077" />
+    </item>
+    <item name="OTDiagResult" versiontag="201812.3078">
+      <item name="HasIcon" value="false" versiontag="201812.3079" />
+      <item name="Type" value="button" versiontag="201812.3080" />
+    </item>
+    <item name="ExportSelectedOrders" versiontag="201812.3081">
+      <item name="HasIcon" value="true" versiontag="201812.3082" />
+      <item name="Type" value="button" versiontag="201812.3083" />
+    </item>
+    <item name="ExportReportList" versiontag="201812.3084">
+      <item name="HasIcon" value="false" versiontag="201812.3085" />
+      <item name="Type" value="button" versiontag="201812.3086" />
+    </item>
+    <item name="ExportPatReport" versiontag="201812.3087">
+      <item name="HasIcon" value="false" versiontag="201812.3088" />
+      <item name="Type" value="button" versiontag="201812.3089" />
+    </item>
+    <item name="AddFavorite" versiontag="201812.3090">
+      <item name="HasIcon" value="true" versiontag="201812.3091" />
+      <item name="Type" value="button" versiontag="201812.3092" />
+    </item>
+    <item name="MuliPrintOrder" versiontag="201812.3093">
+      <item name="HasIcon" value="false" versiontag="201812.3094" />
+      <item name="Type" value="button" versiontag="201812.3095" />
+    </item>
+    <item name="ReportTemplate" versiontag="201812.3096">
+      <item name="HasIcon" value="false" versiontag="201812.3097" />
+      <item name="Type" value="dropdownwithtext" versiontag="201812.3098" />
+    </item>
+    <item name="SaveReport" versiontag="201812.3099">
+      <item name="HasIcon" value="true" versiontag="201812.3100" />
+      <item name="Type" value="button" versiontag="201812.3101" />
+      <item name="Description" value="保存" versiontag="201812.3102" />
+    </item>
+    <item name="CopyImage" versiontag="201812.3103">
+      <item name="HasIcon" value="true" versiontag="201812.3104" />
+      <item name="Type" value="button" versiontag="201812.3105" />
+    </item>
+    <item name="ShowDtOrder" versiontag="201812.3106">
+      <item name="HasIcon" value="true" versiontag="201812.3107" />
+      <item name="Type" value="button" versiontag="201812.3108" />
+    </item>
+    <item name="AutoRefresh" versiontag="201812.3109">
+      <item name="HasIcon" value="false" versiontag="201812.3110" />
+      <item name="Type" value="checkbox" versiontag="201812.3111" />
+    </item>
+    <item name="AutoNext" versiontag="201812.3112">
+      <item name="HasIcon" value="false" versiontag="201812.3113" />
+      <item name="Type" value="checkbox" versiontag="201812.3114" />
+    </item>
+    <item name="LockReportLayout" versiontag="202109.126">
+      <item name="HasIcon" value="false" versiontag="202109.127" />
+      <item name="Type" value="checkbox" versiontag="202109.128" />
+    </item>
+    <item name="AutoOrderPaper" versiontag="201812.3115">
+      <item name="HasIcon" value="false" versiontag="201812.3116" />
+      <item name="Type" value="checkbox" versiontag="201812.3117" />
+    </item>
+    <item name="ShowQueue" versiontag="201812.3118">
+      <item name="HasIcon" value="false" versiontag="201812.3119" />
+      <item name="Type" value="checkbox" versiontag="201812.3120" />
+    </item>
+    <item name="FilmQuality" versiontag="201812.3121">
+      <item name="HasIcon" value="true" versiontag="201812.3122" />
+      <item name="Type" value="button" versiontag="201812.3123" />
+    </item>
+    <item name="InterTherapy" versiontag="201812.3124">
+      <item name="HasIcon" value="true" versiontag="201812.3125" />
+      <item name="Type" value="button" versiontag="201812.3126" />
+    </item>
+    <item name="ReportBack" versiontag="201812.3127">
+      <item name="HasIcon" value="true" versiontag="201812.3128" />
+      <item name="Type" value="button" versiontag="201812.3129" />
+    </item>
+    <item name="SubmitReport" versiontag="201812.3130">
+      <item name="HasIcon" value="true" versiontag="201812.3131" />
+      <item name="Type" value="button" versiontag="201812.3132" />
+      <item name="Description" value="提交" versiontag="201812.3133" />
+    </item>
+    <item name="InterimReport" versiontag="201812.3134">
+      <item name="HasIcon" value="false" versiontag="201812.3135" />
+      <item name="Type" value="checkbox" versiontag="201812.3136" />
+    </item>
+    <item name="ShowHistoryReport" versiontag="201812.3137">
+      <item name="HasIcon" value="true" versiontag="201812.3138" />
+      <item name="Type" value="button" versiontag="201812.3139" />
+    </item>
+    <item name="SaveReportTemplate" versiontag="201812.3140">
+      <item name="HasIcon" value="true" versiontag="201812.3141" />
+      <item name="Type" value="button" versiontag="201812.3142" />
+    </item>
+    <item name="VerifyReport" versiontag="201812.3143">
+      <item name="HasIcon" value="true" versiontag="201812.3144" />
+      <item name="Type" value="button" versiontag="201812.3145" />
+      <item name="Description" value="审核" versiontag="201812.3146" />
+    </item>
+    <item name="SuspendReport" versiontag="201812.3147">
+      <item name="HasIcon" value="true" versiontag="201812.3148" />
+      <item name="Type" value="button" versiontag="201812.3149" />
+      <item name="Description" value="挂起" versiontag="201812.3150" />
+    </item>
+    <item name="SaveVerifyReport" versiontag="201812.3151">
+      <item name="HasIcon" value="true" versiontag="201812.3152" />
+      <item name="Type" value="button" versiontag="201812.3153" />
+      <item name="Description" value="保存并审核" versiontag="201812.3154" />
+    </item>
+    <item name="ImageProcessing" versiontag="201812.3155">
+      <item name="HasIcon" value="true" versiontag="201812.3156" />
+      <item name="Type" value="button" versiontag="201812.3157" />
+      <item name="Description" value="图像处理" versiontag="201812.3158" />
+    </item>
+    <item name="ShowLocalRecords" versiontag="201812.3159">
+      <item name="HasIcon" value="true" versiontag="201812.3160" />
+      <item name="Type" value="button" versiontag="201812.3161" />
+      <item name="Description" value="全景视图" versiontag="201812.3162" />
+    </item>
+    <item name="PrintPreview" versiontag="201812.3163">
+      <item name="HasIcon" value="true" versiontag="201812.3164" />
+      <item name="Type" value="button" versiontag="201812.3165" />
+      <item name="Description" value="打印预览" versiontag="201812.3166" />
+    </item>
+    <item name="MatchImage" versiontag="201812.3167">
+      <item name="HasIcon" value="true" versiontag="201812.3168" />
+      <item name="Type" value="button" versiontag="201812.3169" />
+      <item name="Description" value="匹配" versiontag="201812.3170" />
+    </item>
+    <item name="CommitConsult" versiontag="201812.3171">
+      <item name="HasIcon" value="false" versiontag="201812.3172" />
+      <item name="Type" value="button" versiontag="201812.3173" />
+    </item>
+    <item name="ManageConsult" versiontag="201812.3174">
+      <item name="HasIcon" value="false" versiontag="201812.3175" />
+      <item name="Type" value="button" versiontag="201812.3176" />
+    </item>
+    <item name="CancelAreaWrite" versiontag="201812.3177">
+      <item name="HasIcon" value="false" versiontag="201812.3178" />
+      <item name="Type" value="button" versiontag="201812.3179" />
+    </item>
+    <item name="CancelAreaVerify" versiontag="201812.3180">
+      <item name="HasIcon" value="false" versiontag="201812.3181" />
+      <item name="Type" value="button" versiontag="201812.3182" />
+    </item>
+    <item name="ShowFollowUp" versiontag="201812.3183">
+      <item name="HasIcon" value="true" versiontag="201812.3184" />
+      <item name="Type" value="button" versiontag="201812.3185" />
+    </item>
+    <item name="FollowUp" versiontag="201812.3186">
+      <item name="HasIcon" value="true" versiontag="201812.3187" />
+      <item name="Type" value="button" versiontag="201812.3188" />
+    </item>
+    <item name="USConsult" versiontag="201812.3189">
+      <item name="HasIcon" value="true" versiontag="201812.3190" />
+      <item name="Type" value="button" versiontag="201812.3191" />
+    </item>
+    <item name="USOpenMTalk" versiontag="201812.3192">
+      <item name="HasIcon" value="true" versiontag="201812.3193" />
+      <item name="Type" value="button" versiontag="201812.3194" />
+    </item>
+    <item name="ShowLabResult" versiontag="201812.3195">
+      <item name="HasIcon" value="true" versiontag="201812.3196" />
+      <item name="Type" value="button" versiontag="201812.3197" />
+    </item>
+    <item name="SendSMS" versiontag="201812.3198">
+      <item name="HasIcon" value="true" versiontag="201812.3199" />
+      <item name="Type" value="button" versiontag="201812.3200" />
+    </item>
+    <item name="CopyReport" versiontag="201812.3201">
+      <item name="HasIcon" value="true" versiontag="201812.3202" />
+      <item name="Type" value="button" versiontag="201812.3203" />
+    </item>
+    <item name="PasteReport" versiontag="201812.3204">
+      <item name="HasIcon" value="true" versiontag="201812.3205" />
+      <item name="Type" value="button" versiontag="201812.3206" />
+    </item>
+    <item name="ClearReport" versiontag="201812.3207">
+      <item name="HasIcon" value="true" versiontag="201812.3208" />
+      <item name="Type" value="button" versiontag="201812.3209" />
+    </item>
+    <item name="SendMessage" versiontag="201812.3210">
+      <item name="HasIcon" value="true" versiontag="201812.3211" />
+      <item name="Type" value="button" versiontag="201812.3212" />
+    </item>
+    <item name="ViewConsult" versiontag="201812.3213">
+      <item name="HasIcon" value="true" versiontag="201812.3214" />
+      <item name="Type" value="button" versiontag="201812.3215" />
+    </item>
+    <item name="BackConsult" versiontag="201812.3216">
+      <item name="HasIcon" value="true" versiontag="201812.3217" />
+      <item name="Type" value="button" versiontag="201812.3218" />
+    </item>
+    <item name="ConsultReport" versiontag="201812.3219">
+      <item name="HasIcon" value="true" versiontag="201812.3220" />
+      <item name="Type" value="button" versiontag="201812.3221" />
+    </item>
+    <item name="RealTimeVideo" versiontag="201812.3222">
+      <item name="HasIcon" value="true" versiontag="201812.3223" />
+      <item name="Type" value="button" versiontag="201812.3224" />
+    </item>
+    <item name="iScanHelper" versiontag="201812.3225">
+      <item name="HasIcon" value="true" versiontag="201812.3226" />
+      <item name="Type" value="button" versiontag="201812.3227" />
+    </item>
+    <item name="PrintPathology" versiontag="201812.3228">
+      <item name="HasIcon" value="true" versiontag="201812.3229" />
+      <item name="Type" value="button" versiontag="201812.3230" />
+    </item>
+    <item name="MirrorSetting" versiontag="201812.3231">
+      <item name="HasIcon" value="true" versiontag="201812.3232" />
+      <item name="Type" value="button" versiontag="201812.3233" />
+    </item>
+    <item name="PrintPatientLabel" versiontag="201912.256">
+      <item name="HasIcon" value="true" versiontag="201912.257" />
+      <item name="Type" value="button" versiontag="201912.258" />
+    </item>
+    <item name="SaveWindow" versiontag="201812.3234">
+      <item name="HasIcon" value="true" versiontag="201812.3235" />
+      <item name="Type" value="button" versiontag="201812.3236" />
+    </item>
+    <item name="TypicalPathology" versiontag="201812.3237">
+      <item name="HasIcon" value="true" versiontag="201812.3238" />
+      <item name="Type" value="button" versiontag="201812.3239" />
+    </item>
+    <item name="RegionQA" versiontag="201812.3240">
+      <item name="HasIcon" value="true" versiontag="201812.3241" />
+      <item name="Type" value="button" versiontag="201812.3242" />
+    </item>
+    <item name="ResetReportLayout" versiontag="201812.3243">
+      <item name="HasIcon" value="true" versiontag="201812.3244" />
+      <item name="Type" value="button" versiontag="201812.3245" />
+    </item>
+    <!--重置模板ResetReportTemplate-->
+    <item name="ResetReportTemplate" versiontag="201906.183">
+      <item name="HasIcon" value="true" versiontag="201906.184" />
+      <item name="Type" value="button" versiontag="201906.185" />
+    </item>
+    <item name="CloseReport" versiontag="201812.3246">
+      <item name="HasIcon" value="true" versiontag="201812.3247" />
+      <item name="Type" value="button" versiontag="201812.3248" />
+    </item>
+    <item name="ImprintExport" versiontag="201912.259">
+      <item name="HasIcon" value="true" versiontag="201912.260" />
+      <item name="Type" value="button" versiontag="201912.261" />
+    </item>
+    <!--打印当前页PrintCurrentPage-->
+    <item name="PrintCurrentPage" versiontag="201912.262">
+      <item name="HasIcon" value="true" versiontag="201912.263" />
+      <item name="Type" value="button" versiontag="201912.264" />
+    </item>
+    <!--VIP-->
+    <item name="SetVIP" versiontag="201912.265">
+      <item name="HasIcon" value="true" versiontag="201912.266" />
+      <item name="Type" value="button" versiontag="201912.267" />
+    </item>
+    <item name="BackMachineExamFinish" versiontag="201912.268">
+      <item name="HasIcon" value="true" versiontag="201912.269" />
+      <item name="Type" value="button" versiontag="201912.270" />
+    </item>
+    <item name="ViewHistoryMachine" versiontag="201912.271">
+      <item name="HasIcon" value="true" versiontag="201912.272" />
+      <item name="Type" value="button" versiontag="201912.273" />
+    </item>
+    <item name="CommitReportUpload" versiontag="202006.417">
+      <item name="HasIcon" value="true" versiontag="202006.418" />
+      <item name="Type" value="button" versiontag="202006.419" />
+    </item>
+    <item name="ExternalSystem_XXX" versiontag="202006.420">
+      <item name="HasIcon" value="true" versiontag="202006.421" />
+      <item name="Type" value="button" versiontag="202006.422" />
+    </item>
+    <item name="CTInterTherapy" versiontag="202006.423">
+      <item name="HasIcon" value="true" versiontag="202006.424" />
+      <item name="Type" value="button" versiontag="202006.425" />
+    </item>
+    <item name="RollbackRegisterState" versiontag="202006.426">
+      <item name="HasIcon" value="true" versiontag="202006.427" />
+      <item name="Type" value="button" versiontag="202006.428" />
+    </item>
+    <item name="ExportPDF" versiontag="202012.102">
+      <item name="HasIcon" value="true" versiontag="202012.103" />
+      <item name="Type" value="button" versiontag="202012.104" />
+    </item>
+    <item name="SaveTempReport" versiontag="202006.429">
+      <item name="HasIcon" value="true" versiontag="202006.430" />
+      <item name="Type" value="button" versiontag="202006.431" />
+    </item>
+    <item name="ReturnWorklist" versiontag="202012.105">
+      <item name="HasIcon" value="true" versiontag="202012.106" />
+      <item name="Type" value="button" versiontag="202012.107" />
+    </item>
+    <item name="Exit" versiontag="202012.108">
+      <item name="HasIcon" value="true" versiontag="202012.109" />
+      <item name="Type" value="button" versiontag="202012.110" />
+    </item>
+    <item name="ShowTraceBlood" versiontag="202103.81">
+      <item name="HasIcon" value="true" versiontag="202103.82" />
+      <item name="Type" value="button" versiontag="202103.83" />
+    </item>
+    <item name="PrintDocument_XXX" versiontag="202106.8">
+      <item name="HasIcon" value="true" versiontag="202106.9" />
+      <item name="Type" value="button" versiontag="202106.10" />
+    </item>
+    <item name="QualityScore" versiontag="202110.110">
+      <item name="HasIcon" value="true" versiontag="202110.111" />
+      <item name="Type" value="button" versiontag="202110.112" />
+    </item>
+    <item name="ShowReportTrack" versiontag="202112.19">
+      <item name="HasIcon" value="true" versiontag="202112.20" />
+      <item name="Type" value="button" versiontag="202112.21" />
+    </item>
+    <item name="RevertImage" versiontag="202205.81">
+      <item name="HasIcon" value="true" versiontag="202205.82" />
+      <item name="Type" value="button" versiontag="202205.83" />
+    </item>
+    <item name="SelectViewer" versiontag="202209.27">
+      <item name="HasIcon" value="true" versiontag="202209.28" />
+      <item name="Type" value="button" versiontag="202209.29" />
+      <item name="Description" value="选择阅片" versiontag="202209.30" />
+      <item name="IconName" value="icon-stack-picture" versiontag="202209.31" />
+    </item>
+    <item name="AutoViewer" versiontag="202309.114">
+      <item name="HasIcon" value="true" versiontag="202309.115" />
+      <item name="Type" value="button" versiontag="202309.116" />
+    </item>
+    <item name="StructuredReport" versiontag="202210.12">
+      <item name="HasIcon" value="true" versiontag="202210.13" />
+      <item name="Type" value="button" versiontag="202210.14" />
+    </item>
+    <item name="VerifyCA" versiontag="202304.123">
+      <item name="HasIcon" value="true" versiontag="202304.124" />
+      <item name="Type" value="button" versiontag="202304.125" />
+    </item>
+  </item>
+</config>

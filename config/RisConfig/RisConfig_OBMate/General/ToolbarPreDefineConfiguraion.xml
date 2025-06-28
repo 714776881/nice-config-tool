@@ -1,0 +1,427 @@
+﻿<config>
+	<!--报告界面的工具栏的预定义，包括是否有图标，显示为button还是checkbox还是下拉控件等,一般情况下不需要修改-->
+	<item name="ToolbarPreDefineConfiguraion">
+		<item name="ShowVisitDialog">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ShowImage">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="BrowseImage">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ShowReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="PreviewPDFReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ShowComment">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="WriteReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="书写"/>
+		</item>
+		<item name="PrintReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="打印报告"/>
+		</item>
+		<item name="ModifyReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="修改"/>
+		</item>
+		<item name="Consultation">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="checkbox"/>
+		</item>
+		<item name="DeleteOrder">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ModifyOrder">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="TechnicalReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ShowEMR">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ShowRequisition">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ToRegister">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="PatToRegister">
+			<item name="HasIcon" value="false"/>
+			<item name="IconName" value="icon-star-full2"/>
+		</item>
+		<item name="ToWorkList">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="RecoverOrder">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="SplitPat">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ExportOrder">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="BatchReport">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="DirectVerify">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ReportF">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="FilmDeliver">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ViewHISBilling">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ViewOrderComment">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="OTDiagResult">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ExportSelectedOrders">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ExportReportList">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ExportPatReport">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="AddFavorite">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="MuliPrintOrder">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ReportTemplate">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="dropdownwithtext"/>
+		</item>
+		<item name="SaveReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="书写保存"/>
+		</item>
+		<item name="CopyImage">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ShowDtOrder">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="AutoRefresh">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="checkbox"/>
+		</item>
+		<item name="AutoNext">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="checkbox"/>
+		</item>
+		<item name="AutoOrderPaper">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="checkbox"/>
+		</item>
+		<item name="ShowQueue">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="checkbox"/>
+		</item>
+		<item name="FilmQuality">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="InterTherapy">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ReportBack">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="回退报告"/>
+		</item>
+		<item name="SubmitReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="提交"/>
+		</item>
+		<item name="InterimReport">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="checkbox"/>
+		</item>
+		<item name="ShowHistoryReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="SaveReportTemplate">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="VerifyReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="审核"/>
+		</item>
+		<item name="SuspendReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="报告挂起"/>
+		</item>
+		<item name="SaveVerifyReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="审核保存"/>
+		</item>
+		<item name="SaveReportCache">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="缓存报告"/>
+		</item>
+		<item name="RestoreReportCache">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="恢复报告"/>
+		</item>
+		<item name="ImageProcessing">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="图像处理"/>
+		</item>
+		<item name="ShowLocalRecords">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="全景视图"/>
+		</item>
+		<item name="PrintPreview">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="报告预览"/>
+		</item>
+		<item name="MatchImage">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+			<item name="Description" value="匹配"/>
+		</item>
+		<item name="CommitConsult">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ManageConsult">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="CancelAreaWrite">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="CancelAreaVerify">
+			<item name="HasIcon" value="false"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ShowFollowUp">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="FollowUp">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="USConsult">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="USOpenMTalk">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ShowLabResult">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="SendSMS">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="CopyReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="PasteReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ClearReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="SendMessage">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ViewConsult">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="BackConsult">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ConsultReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="RealTimeVideo">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="iScanHelper">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="PrintPathology">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="MirrorSetting">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="PrintPatientLabel">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="SaveWindow">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="TypicalPathology">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="RegionQA">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ResetReportLayout">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<!--重置模板ResetReportTemplate-->
+		<item name="ResetReportTemplate">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="CloseReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ImprintExport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<!--打印当前页PrintCurrentPage-->
+		<item name="PrintCurrentPage">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<!--VIP-->
+		<item name="SetVIP">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="BackMachineExamFinish">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ViewHistoryMachine">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="PrintPatientLabel">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="CommitReportUpload">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ExternalSystem_XXX">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ExternalSystem_EMR">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ExternalSystem_Pathology">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="CTInterTherapy">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ExportPDF">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="SaveTempReport">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="ViewConsultResult">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="USConsult">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+		<item name="QualityScore">
+			<item name="HasIcon" value="true"/>
+			<item name="Type" value="button"/>
+		</item>
+	</item>
+</config>

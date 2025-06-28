@@ -44,7 +44,7 @@
             "message": "请输入角色编号"
           }
         ],
-        "defaultValueBySql": "select '8' ||  LPAD(COUNT(*) , 3, '0') AS value from t_useractor where modality like 'GM%'"
+        "defaultValueBySql": "select '8' ||  LPAD(COUNT(*) , 3, '0') AS value from t_useractor"
       }
     },
 	{
@@ -72,7 +72,7 @@
         ],
         "defaultValueBySql": ""
       },
-	  "dicSql": "select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label"
+	  "dicSql": "select distinct u.userrolecode value,u.userrolename as label,g.rolegroup category from t_userrole u, (select userroleid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup != '8') g where u.userrolegroup = g.userroleid and deleted = '0' order by label"
     },
 	{
       "title": "排斥的角色",
@@ -99,7 +99,7 @@
         ],
         "defaultValue": ""
       },
-	  "dicSql": "select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0' and r.modality like 'GM%'"
+	  "dicSql": "select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0'"
     },
 	{
       "title": "状态",
@@ -158,9 +158,9 @@
     }
   ],
   "sqlTemplates": {
-    "select": "select r.useractorid id,r.* from t_useractor r where r.modality like 'GM%'",
-    "insert": "insert into t_useractor(useractorid,useractorcode,useractorname,defaultrole,restrictactor,deleted,modality) values('{ID}','{USERACTORCODE}','{USERACTORNAME}','{DEFAULTROLE}','{RESTRICTACTOR}','0','GM')",
-    "update": "update t_useractor set useractorid='{ID}',useractorcode='{USERACTORCODE}',useractorname='{USERACTORNAME}',defaultrole='{DEFAULTROLE}',restrictactor='{RESTRICTACTOR}',deleted='{DELETED}',modality='GM' where useractorid = '{ID}'",
+    "select": "select r.useractorid id,r.* from t_useractor r",
+    "insert": "insert into t_useractor(useractorid,useractorcode,useractorname,defaultrole,restrictactor,deleted,modality) values('{ID}','{USERACTORCODE}','{USERACTORNAME}','{DEFAULTROLE}','{RESTRICTACTOR}','0','')",
+    "update": "update t_useractor set useractorid='{ID}',useractorcode='{USERACTORCODE}',useractorname='{USERACTORNAME}',defaultrole='{DEFAULTROLE}',restrictactor='{RESTRICTACTOR}',deleted='{DELETED}',modality='' where useractorid = '{ID}'",
     "setState": "update t_useractor set deleted = '{DELETED}' where useractorid = '{ID}'",
 	"delete": "delete from t_useractor where useractorid = '{ID}'",
 	"setSequence":"update t_useractor set sequence = '{SEQUENCE}' where useractorid = '{ID}'",

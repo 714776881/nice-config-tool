@@ -1,0 +1,162 @@
+﻿<config>
+	<item name="MiscellaneousConfiguration">
+		<!--日志级别，1：Fatal，2：Error,3：Warining，4：Info-->
+		<item name="LogLevel" value="4"/>
+		<!-- 超声内镜在一些医院需要通过viewer看历史图像，比如浙江医院看莱达的图象，图象在pacs库中，这里的正则表达式匹配流水号规则，如果匹配则调用viewer看图，且采用替换方式加载，如^44，如果为空不做控制-->
+		<item name="USNeedViewerShowImageRegular" value=""/>
+		<!-- 查询超时-->
+		<item name="QueryWaitTimeout" value="60"/>
+		<!--文本查询模糊匹配, 1:任意位置包含, 2:以文本开始 -->
+		<item name="FuzzyMatching">
+			<item name="PatientName" value="2"/>
+			<!-- <item name="FirstName" value="1"/>
+			<item name="MiddleName" value="1"/>
+			<item name="LastName" value="1"/> -->
+			<item name="Examroom" value="1"/>
+		</item>
+		<!--查询历史、同名检查时，最多查几年的数据-->
+		<item name="HistorySameNameYears" value="3"/>
+   
+		<!--历史查询使用的参数开关, 0 不使用, 1 使用-->
+		<item name="HistoryParams">
+			<item name="PatientName" value="1"/>
+			<item name="PatientID" value="1"/>
+			<item name="InPatientID" value="0"/>
+			<item name="OutPatientID" value="0"/>
+			<item name="MedicareID" value="0"/>
+			<item name="IDCardNumber" value="1"/>
+			<item name="MedicalRecordID" value="0"/>
+			<item name="HisPatientID" value="0"/>
+			<item name="PatientBirthday" value="0"/>
+		</item>
+		<!--同名查询的规则，value的取值分号分隔,前一部分来自于WorkListGridPreDefine里的子节点名称。这里默认使用病人姓名. 后一部分是查询条件的定义. 如果两者相同则可以省略分号以及后者-->
+		<item name="SameNameParams" value="#Array">
+			<item value="PatientName"/>
+			<!-- <item value="Bodypart;BodyPart"/> -->
+		</item>
+		<!-- 历史和同名查询允许查询到的检查状态，为空不限制 -->
+		<item name="OrderStatusInHistory" value="#Array">
+		  <!-- <item value="1150"/>
+			<item value="1170"/>
+			<item value="1180"/> -->
+		</item>    
+		<!-- 历史和同名查询允许查询到的检查类型，为空不限制 -->
+		<item name="ModalityInHistory" value="#Array">
+		  <!-- <item value="CT"/>
+			<item value="MR"/>
+			<item value="CR"/> -->
+		</item>
+		
+		<!--列表是否使用多列排序-->
+		<item name="MultiSort" value="true"/>
+		<!--年龄计算方法, General为通用算法(一岁以内：X月X天/一岁到两岁：一岁X月/两岁以上：X岁), AlwaysMonth（超过1岁显示X岁X月，不到1岁显示X月X天，X岁0月和X月0天直接显示X岁和X月），空为各个模块自行决定-->
+		<item name="AgeConfig" value="General"/>
+		<!--允许快速连续呼叫 0 限制（当前呼叫结束前不允许呼叫），1 允许（不限制，可以任意呼叫）-->
+		<item name="AllowFastCall" value="0"/>
+		<!--二次分诊checkbox是否显示. 1,显示. 0,不显示-->
+		<item name="DisplayPullWait" value="1"/>
+		<!--是否允许报告报告编辑状态下切换报告打印模板，0：不允许切换，1：允许切换-->
+		<item name="SwitchTemplate" value="0"/>
+		<!--是否可以双击知识库模板预览窗口选中的内容进去报告 0:不允许，1：允许 -->
+		<item name="DbReptTempPreview" value="0"/>
+		<!--从当前时间 往前推多少天数可以合并写报告，如果不配，默认为5天-->
+		<item name="MergeExamDays" value="5"/>
+		<!--查询后自动清空的查询条件-->
+		<item name="AutoClearQuery" value="#Array">
+	    <!-- <item value="InPatientID"/>
+        <item value="OutPatientID"/>
+        <item value="PatientID"/>
+        <item value="PatientName"/> -->
+		</item>
+
+		<!-- 危急值是否需要发短信 1 需要，0 不要 ，2危急值走省平台-->
+		<item name="NeedNoticeTag" value="0"/>
+		<!--是否需要在报告里面添加开始采图和结束采图的时间，1：需要 0：不需要 默认不需要 -->
+		<item name="MinMaxImageDateConfig" value="0"/>
+		<!--发送危急值时没有请检医生是否调用hisinterface接口获取，默认给0不调用-->
+		<item name="NeedGetOrderDrSendENNotice" value="0"/>
+		<!--武大口腔根据身份证或者medicareid查询本地数据库中的病人信息-->
+		<item name="FIELDNAME" value="MedicareID"/>
+		<!--是否根据HIS中的就诊卡ID查询本地数据中的病人信息,其他医院设置为1，武大口腔设置为0-->
+		<item name="IsUseMedicalId" value="0"/>
+		<!--报告审核后的时间范围控制,在这个时间范围内,只要有审核权限都可以修改, 超出这个时间范围的,需要有长期审核权限才可以修改. 配成0不控制-->
+		<item name="VerifyHour" value="24"/>
+		<!--是否控制审核医生(包括首次审核医生)在时间控制范围之外再次审核报告 0:不控制 1:控制-->
+		<item name="VerifyDoctorMode" value="0"/>
+		<!--胶片质评的名字需要可配置,默认是优良中差-->
+		<item name="GradeA" value="甲"/>
+		<item name="GradeB" value="乙"/>
+		<item name="GradeC" value="丙"/>
+		<item name="GradeD" value="丁"/>
+	
+		<!--登记模块：科内患者类型控件下拉列表枚举值，多值用英文分号分割，默认值为空。（备注：此配置也用于控制科内患者类型控件是否显示，值为空时控件不显示） -->
+		<item name="PatientCategoryEnumValue" value="普通"/>
+	
+		<!--保存完报告是否调用his postRISOrderSaveReport 接口 ，默认给0不调用-->
+		<item name="NeedPostRisOrderSaveReport" value="0"/>
+		<!--知识库关键字下拉是否能多选 1为多选 -->
+		<item name="KeyWordMultiSelect" value="0"/>
+		<!--新版IEIS报告生成二维码 0:淳安医院 1:浙二方式 2:瑞安方式(后面webservice方式都用2的方式) 3: 迈瑞二维码 空表示不走二维码方式-->
+		<item name="QRCodeConfig" value=""/>
+		<!--报告打印模板是否使用上一次手工选择的模板 1: 是， 其他：否-->
+		<item name="LastTemplate" value="0"/>
+		<!--当保存或者审核后的状态满足配置里面的状态时生成二维码。可以配置多个值，通过英文逗号分开-->
+		<item name="QRCodeStatus" value="1170,1180"/>
+	
+		<!-- 放射科刻录导出dcm文件增加的配置-->
+		<!--pacs库对应的数据库type-->
+		<item name="PacsDBType" value="4"/>
+		<!--连接的电脑上的TNSname-->
+		<item name="PACSDBName" value="pacs"/>
+		<!--pacs数据库ip-->
+		<item name="PACSDBServer" value="192.168.1.60"/>
+		<!--pacs数据库用户名-->
+		<item name="PACSDBUser" value="pacs"/>
+		<!--pacs数据库密码-->
+		<item name="PACSDBPassword" value="maro"/>
+		<!--导出图像的模态号-->
+		<item name="PACSModality" value="CT;CR;MR"/>
+		<!--导出图像的存储路径，第一个配置是就先读，找不到再去读后面的-->
+		<item name="PACSTypeList" value="MID;SHT"/>
+		<!--未审核报告是否能导出 0不导出，1导出-->
+		<item name="canImprintBeForeCheck" value="1"/>
+		<!--保存报告时是否弹出ImageQuality浙二版本的胶片评分按钮-->
+		<item name="SaveReportShowImageQuality" value="0"/>
+		<!--粘贴报告时是否带关键字格式，0：不带格式，1：带格式，默认为0-->
+		<item name="TXFormatPaste" value="0"/>
+
+		<!-- 允许关联合并书写报告的检查状态 -->
+		<item name="OrderStatusCanReport" value="#Array">
+			<!-- <item value="1020"/>
+	    <item value="1080"/>
+	    <item value="1090"/>
+	    <item value="1095"/> -->
+			<item value="1100"/>
+			<item value="1105"/>
+		</item>
+	
+		<!--检查字体颜色类型设置。默认是使用PatientType。如果需要其他字段，在这里配置-->
+		<item name="ExamColorType" value="#Array">
+			<!--此节点表示当Ward为急诊留观时，使用急诊（E）类型对应的颜色-->
+			<!--Ward来自于PreDefineConfiguration中的WorkListGridPreDefine的定义-->
+			<item>
+				<item name="Type" value="E"/>
+				<item name="Condition">
+					<item name="Ward" value="#Array">
+						<item value="急诊留观"/>
+					</item>
+				</item>
+			</item>
+		</item>
+	
+		<!--检查项目关联默认设备关系模式，Common: 通用模式，SRM: 省人民模式，默认值为Common。-->
+		<item name="ExamitemDefaultEquipmentMode" value="Common"/>
+       
+		<!--控制登记模块获取到电子申请单后手工添加检查，新增加的检查是否填充此次电子申请单的申请单号（0：不填充，1：填充，默认为0。（目前仅浙江省人民医院使用，配置为1））-->
+		<item name="FillHisIdForMenualOrder" value="0"/>
+	
+		<!--报告编辑框是否显示背景色 1: 是， 其他：否 -->
+		<item name="ReportColorConfig" value="0"/>
+	   
+	</item>
+</config>

@@ -1,0 +1,357 @@
+<config versiontag="root">
+  <item name="MiscellaneousConfiguration" versiontag="201906.1">    
+    <!-- 网站备案信息 -->
+    <item name="CopyRightInfo" value="Copyright © 2018 浙江格林蓝德信息技术有限公司 版权所有" versiontag="202401.1" />
+    <item name="RegistrationInfo" value="浙ICP备19041094号-1" versiontag="202401.2" />
+    <item name="RegistrationUrl" value="http://127.0.0.1" versiontag="202401.3" />
+    <!--日志级别，1：Fatal，2：Error,3：Warining，4：Info，5：Debug-->
+    <item name="LogLevel" value="4" versiontag="201906.2" />
+    <!-- 超声内镜在一些医院需要通过viewer看历史图像，比如浙江医院看莱达的图象，图象在pacs库中，这里的正则表达式匹配流水号规则，如果匹配则调用viewer看图，且采用替换方式加载，如^44，如果为空不做控制-->
+    <item name="USNeedViewerShowImageRegular" value="" versiontag="201906.3" />
+    <!-- 查询超时-->
+    <item name="QueryWaitTimeout" value="60" versiontag="201906.4" />
+    <!-- 使用精确查询（PaientID,InPatientID,OutPatientID,MedicareID,MedicalRecordID,PatientName(非模糊)）时,是否在终端过滤时间后范围,避免oracle不使用索引 -->
+    <item name="UnlimitTimeRangeForExactlyQuery" value="0" versiontag="202203.38" />
+    <!--文本查询模糊匹配, 0：精准查询，1:全模糊查询, 2:后模糊查询 -->
+    <item name="FuzzyMatching" versiontag="201906.5">
+      <item name="PatientName" value="2" versiontag="201906.6" />
+      <!--<item name="FirstName" value="1"/>
+      <item name="MiddleName" value="1"/>
+      <item name="LastName" value="1"/>-->
+      <item name="Examroom" value="1" versiontag="201906.12" />
+    </item>
+    <!--是否启用模态号后N位的模糊查询-->
+    <item name="UseModalityBackQuery" value="0" versiontag="202306.1" />
+    <!--是否启用ID查询区域兼容，启用后影响号和流水号查询可以不输入院区ID前缀，需要加函数索引-->
+    <item name="UseRegionQueryCompatible" value="" versiontag="202306.2" />
+    <!--查询历史、同名检查时，最多查几年的数据-->
+    <item name="HistorySameNameYears" value="3" versiontag="201906.13" />
+    <!-- 查询历史和同名检查时，是否需要根据检查过滤条件进行过滤 -->
+    <item name="HistorySameNameFilter" value="0" versiontag="202309.1" />
+    <!--历史查询使用的参数开关, 0 不使用, 1 使用-->
+    <item name="HistoryParams" versiontag="201906.14">
+      <item name="PatientName" value="1" versiontag="201906.15" />
+      <item name="PatientID" value="1" versiontag="201906.16" />
+      <item name="InPatientID" value="0" versiontag="201906.17" />
+      <item name="OutPatientID" value="0" versiontag="201906.18" />
+      <item name="MedicareID" value="0" versiontag="201906.19" />
+      <item name="IDCardNumber" value="0" versiontag="201906.20" />
+      <item name="MedicalRecordID" value="0" versiontag="201906.21" />
+      <item name="HisPatientID" value="0" versiontag="201906.22" />
+      <item name="PatientBirthday" value="0" versiontag="201912.320" />
+    </item>
+    <!--同名查询的规则，value的取值分号分隔,前一部分来自于WorkListGridPreDefine里的子节点名称。这里默认使用病人姓名. 后一部分是查询条件的定义. 如果两者相同则可以省略分号以及后者-->
+    <item name="SameNameParams" value="#Array" versiontag="201906.23">
+      <item value="PatientName" versiontag="201906.24" />
+      <!-- <item value="Bodypart;BodyPart"/> -->
+    </item>
+    <!-- 历史和同名查询允许查询到的检查状态，为空不限制 -->
+    <item name="OrderStatusInHistory" value="#Array" versiontag="202103.87">
+      <!-- <item value="1150"/>
+	    <item value="1170"/>
+	    <item value="1180"/> -->
+    </item>
+    <!-- 历史和同名查询允许查询到的检查类型，为空不限制 -->
+    <item name="ModalityInHistory" value="#Array" versiontag="202405.2">
+      <!-- <item value="CT"/>
+	    <item value="MR"/>
+	    <item value="CR"/> -->
+    </item>
+    <!-- 排他查询参数,列表中的参数如果出现在查询条件中,则忽略其他查询参数. 参数名来自查询条件的定义 -->
+    <item name="ExclusiveParameter" value="#Array" versiontag="202012.120">
+      <!-- <item value="InPatientID"/> -->
+    </item>
+    <!--是否固定查询科室ID，用于限制跨科室检查可见-->
+    <item name="AlwaysQueryDepartmentID" value="false" versiontag="202306.3" />
+    <!--列表是否使用多列排序-->
+    <item name="MultiSort" value="true" versiontag="201906.25" />
+    <!--列表是否统一排序,统一后使用worklist模式的排序。值为true和false-->
+    <item name="UnifiedSort" value="false" versiontag="202304.5" />
+    <!--年龄计算方法, General为通用算法(一岁以内：X月X天/一岁到两岁：一岁X月/两岁以上：X岁), AlwaysMonth（超过1岁显示X岁X月，不到1岁显示X月X天，X岁0月和X月0天直接显示X岁和X月），空为各个模块自行决定-->
+    <item name="AgeConfig" value="" versiontag="201906.26" />
+    <!--允许快速连续呼叫 0 限制（当前呼叫结束前不允许呼叫），1 允许（不限制，可以任意呼叫）-->
+    <item name="AllowFastCall" value="0" versiontag="202006.501" />
+    <!--二次分诊checkbox是否显示. 1,显示. 0,不显示-->
+    <item name="DisplayPullWait" value="1" versiontag="201906.28" />
+    <!--二次分诊checkbox是否可选. 1,可用. 0,不可用-->
+    <item name="EnablePullWait" value="" versiontag="202408.15" />
+    <!--是否允许在除1110（报告书写中）外状态下切换打印模板，0：不允许，1：允许切换-->
+    <item name="SwitchTemplate" value="0" versiontag="201906.29" />
+    <!--是否可以双击知识库模板预览窗口选中的内容进去报告 0:不允许，1：允许 -->
+    <item name="DbReptTempPreview" value="0" versiontag="201906.30" />
+    <!--报告模块查询自动合并检查时间范围，从当前时间 往前推多少天数可以合并写报告，如果不配，默认为5天-->
+    <item name="MergeExamDays" value="5" versiontag="202111.1" />
+    <!--查询后自动清空的查询条件-->
+    <item name="AutoClearQuery" value="#Array" versiontag="201906.32">
+      <!--    <item value="InPatientID"/>
+        <item value="OutPatientID"/>
+        <item value="PatientID"/>
+        <item value="PatientName"/>-->
+    </item>
+    <!--点击清空按钮后，是否清空列表。0：不清空，1：清空-->
+    <item name="AutoClearList" value="0" versiontag="202103.88" />
+    <!--是否在报告上启用首次审核医生和首次审核时间，如果配置为1， 则修改已审核报告时不修改tx文件中的审核医生，只修改数据库里面的审核医生,默认是修改审核医生 1开启 0关闭-->
+    <item name="FirstVerify" value="0" versiontag="201906.33" />
+    <!-- 危急值是否需要发短信 1 需要 [会弹出发短信的界面并且往t_en_noticecontent以及t_en_noticedetaill插入数据]，
+	                          0 不要[不弹出发短信的界面,只会往t_en_noticereceive表插入数据],
+							  2危急值走省平台 [不弹出发短信的界面,会往t_en_noticecontent以及t_en_noticedetaill以及t_en_noticereceive表插入数据] -->
+    <item name="NeedNoticeTag" value="0" versiontag="201906.34" />
+    <!-- 是否使用新的消息通道显示危机值确认消息 1 需要，0 不要-->
+    <item name="IsConfirmEnMessageOnMC" value="0" versiontag="202012.121" />
+    <!--是否需要在报告里面添加开始采图和结束采图的时间，1：需要 0：不需要 默认不需要 -->
+    <item name="MinMaxImageDateConfig" value="0" versiontag="201906.35" />
+    <!--发送危急值时没有请检医生是否调用hisinterface接口获取，默认给0不调用-->
+    <item name="NeedGetOrderDrSendENNotice" value="0" versiontag="201906.36" />
+    <!--设置自动检测危急值的时机，配置为空或者1：仅审核时检测；0: 仅保存时检测；其他： 保存和审核都检测，默认为空-->
+    <item name="DetectEmergency" value="" versiontag="202012.122" />
+    <!--武大口腔根据身份证或者medicareid查询本地数据库中的病人信息-->
+    <item name="FIELDNAME" value="MedicareID" versiontag="201906.37" />
+    <!--是否根据HIS中的就诊卡ID查询本地数据中的病人信息,其他医院设置为1，武大口腔设置为0-->
+    <item name="IsUseMedicalId" value="1" versiontag="201906.38" />
+    <!--报告审核后的时间范围控制,在这个时间范围内,只要有审核权限都可以修改, 超出这个时间范围的,需要有长期审核权限才可以修改. 配成0不控制-->
+    <item name="VerifyHour" value="24" versiontag="201912.321" />
+    <!--是否控制审核医生(包括首次审核医生)在时间控制范围之外再次审核报告 0:不控制 1:控制-->
+    <item name="VerifyDoctorMode" value="0" versiontag="201912.322" />
+    <!--只有审核权限的时候是否允许修改/审核报告，有些医院不允许:0，默认为允许-->
+    <item name="AllowModifyReport" value="1" versiontag="202012.123" />
+    <!--胶片质评的名字需要可配置,默认是优良中差-->
+    <item name="GradeA" value="甲" versiontag="201912.323" />
+    <item name="GradeB" value="乙" versiontag="201912.324" />
+    <item name="GradeC" value="丙" versiontag="201912.325" />
+    <item name="GradeD" value="丁" versiontag="201912.326" />
+    <!--保存完报告是否调用his postRISOrderSaveReport 接口 ，默认给0不调用-->
+    <item name="NeedPostRisOrderSaveReport" value="0" versiontag="201912.327" />
+    <!--激活报告 报告切换时是否调用HIS接口 ，默认给0不调用-->
+    <item name="IsCallHisOnExchangeReport" value="0" versiontag="202103.89" />
+    <!--书写新的报告时候是否调用HIS 接口 ，默认给0不调用-->
+    <item name="IsCallHisOnNewReport" value="0" versiontag="202103.90" />
+    <!--知识库关键字下拉是否能多选 1为多选 -->
+    <item name="KeyWordMultiSelect" value="0" versiontag="201912.328" />
+    <!--新版IEIS报告生成二维码 0:淳安医院 1:浙二方式 2:瑞安方式(后面webservice方式都用2的方式) 3: 迈瑞二维码-->
+    <item name="QRCodeConfig" value="" versiontag="201912.329" />
+    <!--报告打印模板是否使用上一次手工选择的模板 1: 是， 其他：否-->
+    <item name="LastTemplate" value="0" versiontag="202006.502" />
+    <!--当保存或者审核后的状态满足配置里面的状态时生成二维码。可以配置多个值，通过英文逗号分开-->
+    <item name="QRCodeStatus" value="1170,1180" versiontag="202012.124" />
+    <!-- 放射科刻录导出dcm文件增加的配置-->
+    <!--pacs库对应的数据库type 类型是 0,1,2,3,4， 9i是3，10g/11g是4-->
+    <item name="PacsDBType" value="4" versiontag="201912.330" />
+    <!--刻录导出/导出图像，连数据库连接的是电脑上的TNSname-->
+    <item name="PACSDBName" value="RIS" versiontag="201912.331" />
+    <!--pacs数据库用户名-->
+    <item name="PACSDBUser" value="pacs" versiontag="201912.333" />
+    <!--pacs数据库密码-->
+    <item name="PACSDBPassword" value="maro" versiontag="201912.334" />
+    <!--导出图像的模态号-->
+    <item name="PACSModality" value="CT;CR;MR" versiontag="201912.335" />
+    <!--导出图像的存储路径，第一个配置是就先读，找不到再去读后面的-->
+    <item name="PACSTypeList" value="MID;SHT" versiontag="201912.336" />
+    <!--未审核报告是否能导出 0不导出，1导出-->
+    <item name="canImprintBeForeCheck" value="1" versiontag="201912.337" />
+    <!--保存报告时是否弹出胶片评分-->
+    <item name="SaveReportShowImageQuality" value="0" versiontag="201912.338" />
+    <!--粘贴报告时是否带关键字格式，0：不带格式，1：带格式，默认为0-->
+    <item name="TXFormatPaste" value="0" versiontag="201912.339" />
+    <!-- 是否限制只有同一次登记的检查可以显示在关联检查列表的待选中 0:不限制，1：限制 -->
+    <item name="SameRegisterCanReport" value="0" versiontag="202012.125" />
+    <!--自动合并书写报告策略 配置为2：金寨，同一次登记且his_id相同的检查自动勾选，配置为3，省中，体检检查自动合并；配置为空时，读取SameRegisterCanReport-->
+    <item name="AutoMergeConfig" value="" versiontag="202111.3" />
+    <!--shape颜色定义，多个颜色之间用逗号分隔-->
+    <item name="ShapeColor" value="Black,Yellow,Green,Red" versiontag="202109.50" />
+    <!--是否在浙二版本的胶片评分界面显示甲乙丙丁的等级胶片评分-->
+    <item name="ShowFilmAssess" value="0" versiontag="202109.1" />
+    <!--东阳人民医院复制历史报告后需要自动粘贴，配置为1时自动粘贴，否则不自动粘贴-->
+    <item name="AutoPasteHistory" value="0" versiontag="202212.1" />
+    <!-- 允许关联合并书写报告的检查状态 -->
+    <item name="OrderStatusCanReport" value="#Array" versiontag="201906.39">
+      <!-- <item value="1020"/>
+	    <item value="1080"/>
+	    <item value="1090"/>
+	    <item value="1095"/> -->
+      <item value="1100" versiontag="201906.40" />
+      <item value="1105" versiontag="201906.41" />
+    </item>
+    <!--允许在线质评弹框的院区(暂时不管手动点质评按钮，质控组自动弹框)，配置规则为1代表允许写报告时质评，2代表允许审核报告时质评 -->
+    <!--配置说明：配置为空，则表示所有院区都可以自动弹框，配置不为空，例如：院区A|院区B，院区A,1,2|院区B,1,2,或者 院区A,1,2|院区B,2 或者院区1,2|院区2,2等等，可以自由组合，；如果只有院区，没有1,2，则代表这个院区书写、审核弹框质评都允许，如果配了1或2，则代表这个院区只允许对应的状态时弹质评。-->
+    <item name="OnlineQualityHospitals" value="" versiontag="202401.4" />
+    <!-- 配置需要保存时自动弹框质评配置 配需要的模态与模式|分割，模态|模式，第一个参数是模态，第二个是方式（1为报告质评，0或者不配为图像质评） -->
+    <item name="SaveReportShowImageQualityModalitys" value="#Array" versiontag="202112.1">
+      <!--item value="CT"/>
+	    <item value="MR"/>
+	    <item value="CR"/>
+	    <item value="DX"/-->
+      <!--item value="CT|0"/-->
+    </item>
+    <!-- 配置需要审核时自动弹框质评配置 配需要的模态与模式|分割，模态|模式，第一个参数是模态，第二个是方式（1或者不配为报告质评，0为图像质评） -->
+    <item name="VerifyReportShowReportQualityModalitys" value="#Array" versiontag="202112.2">
+      <!--item value="CT"/>
+	    <item value="MR"/>
+	    <item value="CR"/>
+	    <item value="DX"/-->
+      <!--item value="US"/-->
+      <!--item value="CT|0"/-->
+    </item>
+    <!-- 允许在线质评的检查类型 -->
+    <item name="OnlineQualityModality" value="#Array" versiontag="202110.1">
+      <item value="CT" versiontag="202110.2" />
+      <item value="MR" versiontag="202110.3" />
+      <item value="CR" versiontag="202110.4" />
+      <item value="DX" versiontag="202110.5" />
+      <item value="DR" versiontag="202110.6" />
+      <item value="XA" versiontag="202110.7" />
+      <item value="MG" versiontag="202110.8" />
+    </item>
+    <!-- 允许离线质评的检查状态 -->
+    <item name="OrderStatusCanQuality" value="#Array" versiontag="202110.9">
+      <item value="1170" versiontag="202110.10" />
+      <item value="1180" versiontag="202110.11" />
+    </item>
+    <!-- 离线质评进行随机查询的初始份数 -->
+    <item name="QualityRandamCount" value="25" versiontag="202110.12" />
+    <!--检查字体颜色类型设置。默认是使用PatientType。如果需要其他字段，在这里配置-->
+    <item name="ExamColorType" value="#Array" versiontag="201912.340">
+      <!--此节点表示当Ward为急诊留观时，使用急诊（E）类型对应的颜色-->
+      <!--Ward来自于PreDefineConfiguration中的WorkListGridPreDefine的定义-->
+      <!--<item versiontag="201912.341">
+        <item name="Type" value="E" versiontag="201912.342" />
+        <item name="Condition" versiontag="201912.343">
+          <item name="Ward" value="#Array" versiontag="201912.344">
+            <item value="急诊留观" versiontag="201912.345" />
+          </item>
+        </item>
+      </item>
+      <item versiontag="202109.53">
+        <item name="Type" value="H" versiontag="202109.54" />
+        <item name="Condition" versiontag="202109.55">
+          <item name="EmergencyLevel" value="#Array" versiontag="202109.56">
+            <item value="Ⅲ级" versiontag="202109.57" />
+            <item value="Ⅳa级" versiontag="202109.58" />
+            <item value="Ⅳb级" versiontag="202109.59" />
+          </item>
+        </item>
+      </item>-->
+    </item>
+    <!--检查项目关联默认设备关系模式，Common: 通用模式，SRM: 省人民模式，默认值为Common。-->
+    <item name="ExamitemDefaultEquipmentMode" value="Common" versiontag="202006.503" />
+    <!--控制登记模块获取到电子申请单后手工添加检查，新增加的检查是否填充此次电子申请单的申请单号（0：不填充，1：填充，默认为0。（目前仅浙江省人民医院使用，配置为1））-->
+    <item name="FillHisIdForMenualOrder" value="0" versiontag="202006.504" />
+    <!--特殊字符配置-->
+    <item name="SpecialKey" value="×,$,Ω,.,。, mm,cm,*" versiontag="202006.505" />
+    <!--报告编辑框是否显示背景色 1: 是， 其他：否 -->
+    <item name="ReportColorConfig" value="0" versiontag="202006.506" />
+    <!--填充TX报告中病人信息内容为空的字段，value值为空表示不填充，默认为空 -->
+    <item name="DefaultFieldValue" value="" versiontag="202012.126" />
+    <!--是否开启验证登记手工单权限: 0 不校验, 1 校验,  默认不校验 -->
+    <item name="IsCheckedRegisterOperateOrderRole" value="0" versiontag="202012.127" />
+    <!--登记模块:登记时生成Accno是否增加院区代码前缀, 0 否, 1 是,  默认是 -->
+    <item name="IsUsedHopitalCodeFormatAccno" value="0" versiontag="202012.128" />
+    <!--登记模块:电子申请单信息加载完成后，将输入焦点移动到登记按钮. 0 不开启， 1  开启，默认不开启 -->
+    <item name="InputFocusMovesToRegisterBtnAfterHisOrderLoaded" value="0" versiontag="202109.51" />
+    <!--登记模块:修改申请单是否可修改病人类型. 0 否， 1  是，默认否 -->
+    <item name="ChangePatypeWhenEditOrder" value="0" versiontag="202109.2" />
+    <!--用户活动心跳周期，0 不开启此功能，正整数数值 心跳周期（单位分钟），默认不开启 -->
+    <item name="UserActiveHeartbeat" value="0" versiontag="202012.129" />
+    <!--是否使用加密用户密码，0 不启用， 1 启用，默认不启用 -->
+    <item name="IsUseEncryptUserPwd" value="0" versiontag="202012.130" />
+    <!--是否开启病理电子单-->
+    <item name="OpenPathology" value="0" versiontag="202109.3" />
+    <!--是否通过接口启用开病理电子单-->
+    <item name="IsOpenPathologyByInterface" value="0" versiontag="202109.4" />
+    <!--是否支持在登记界面批量改机房,1:修改其中一个检查机房，其他检查均修改机房；0或空：只修改单个检查机房 -->
+    <item name="ChangeExamRoomAll" value="" versiontag="202109.5" />
+    <!--登记模块:登记界面是否显示驾驶舱按钮 0：不显示 其他：显示-->
+    <item name="ShowDashBoard" value="1" versiontag="202109.6" />
+    <!--登记模块：病人类别(即科内患者类型)控件下拉列表枚举值，例如：普通;VIP;VVIP多值用英文分号分割，默认值为空。（备注：此配置也用于控制病人类别(即科内患者类型)控件是否显示，值为空时控件不显示）-->
+    <item name="PatientCategoryEnumValue" value="" versiontag="202109.60" />
+    <!--打印预览输出PDF报告刷新报告内容字体： 0是宋体，1是楷体，2 微软雅黑，其他默认为宋体-->
+    <item name="PDFImportFont" value="0" versiontag="202201.1" />
+    <!--打印报告时是否判断是否缴费，不缴费不允许打印报告。配置为1判断是否缴费，其他不判断-->
+    <item name="CheckPatCharge" value="" versiontag="202201.2" />
+    <!--限制已登记的检查显示数量，如果非空则限制已登记的检查只能查到前N条本诊室的检查，但急诊不在此限制内。用于即墨人民医院-->
+    <item name="UnexaminedLimit" value="" versiontag="202203.39" />
+    <!--登记模块：登记界面切换病人类型时，是否修改系统的默认病人类型配置。0：不修改，1：修改， 默认值为1-->
+    <item name="ChangeDefaultPatType" value="1" versiontag="202203.40" />
+    <!--选号程序的使用模式：EXE：应用程序的方式，DLL: 类库的方式，默认值为EXE-->
+    <item name="SelectQueNumberUsedMode" value="EXE" versiontag="202205.84" />
+    <!--WorkList模块预约转登记模式：SINGLE：单个模式，BATCH: 批量模式，默认值为SINGLE-->
+    <!--SINGLE模式:  即旧模式：右键预约转登记需跳转至登记界面完成登记操作-->
+    <!--BATCH模式:  新拓展的模式，点击预约转登记按钮后无需跳转至登记界面，不处理预约相关的业务-->
+    <!--BATCHCHECKIN模式:  新拓展的模式，选号程序为DLL模式使用才支持此模式。无需跳转至登记界面，会通知选号完成签到业务。-->
+    <item name="BookingToRegisterMode" value="SINGLE" versiontag="202205.85" />
+    <!--调用第三方URL或者EXE时参数间的分隔符；不配置，默认是"|"符号；当|分隔符和配置的url参数分隔符重复，注意不能用&符号，建议用$符号-->
+    <item name="ExeSplitSymbol" value="" versiontag="202207.25" />
+    <!--新版随访和诊断符合率程序开关（许昌中心需求）0或者不配置:使用原有随访界面  1：开启新版界面-->
+    <item name="FollowUpNew" value="" versiontag="202208.1" />
+    <!--当FollowUpNew=1时，新版病理符合率界面调用WAI查看历史报告的URL配置 配置格式：http://192.168.1.61:8080/ViewPdfReportPage.aspx?OrderSeq=[orderseq]&amp;modality=[modality]-->
+    <item name="PathologyInputViewpdfReport" value="" versiontag="202208.2" />
+    <!-- 新增随访记录界面随访人是否允许修改，默认允许 -->
+    <item name="EnableFollowerEditAuthority" value="1" versiontag="202405.3" />
+    <!-- 诊断符合率录入界面记录人是否允许修改，默认允许 -->
+    <item name="EnableRecorderEditAuthority" value="1" versiontag="202405.4" />
+    <!--进入报告编辑界面时是否显示审核医生签名  1: 显示  其他:不显示。 默认不显示  -->
+    <item name="ShowVerifySignature" value="0" versiontag="202209.1" />
+    <!--0表示不修改审核医生和审核时间，1表示修改审核医生和审核时间，2表示修改审核医生不修改审核时间，3表示不修改审核医生修改审核时间-->
+    <item name="AuditingToReport" value="0" versiontag="202211.1" />
+    <!--调用外部系统按钮是否走接口，可以配置一些按钮name为ExternalSystem_xxx，这里配置ExternalSystem_后面xxx的内容，表示这个按钮的逻辑走接口，多个的话以';'隔开-->
+    <item name="ExternalSystemNeedCallHinInterface" value="" versiontag="202212.37" />
+    <!--双击导入知识库时是否删除当前选中内容 1：覆盖  其他：不覆盖-->
+    <item name="DeleteReportSelectText" value="0" versiontag="202304.6" />
+    <!--判断保存报告时有没有贴图，如果没有贴图是否自动弹出放射科贴图框，如果关闭贴图框不贴图，提醒“未贴图不允许保存报告”  1：弹框 0:不弹框。默认不弹框-->
+    <item name="RisImageRemind" value="0" versiontag="202304.7" />
+    <!--CA用户签名配置，配置为1， 用登陆用户签名。配置其他，修改报告时用上一次保存或者审核的医生签名-->
+    <item name="CASignatureConfig" value="" versiontag="202304.8" />
+    <!--报告阴阳性选项配置，建议配置为",阴性,阳性,其他", 最前面的逗号不能丢，否则没有空白选项。必须按照顺序配置，为空则默认原有显示-->
+    <item name="AbnormalItemConfig" value="" versiontag="202304.9" />
+    <!--知识库阴阳性背景色配置，配置格式“0,0,0”。终端配置IsSRMReportAbnormal为1时该配置生效。若不配置或者配置为空，默认为白色-->
+    <item name="ReptBackColor" value="0,128,0" versiontag="202304.10" />
+    <!--知识库私有模板前景色配置，配置格式“0,0,0”。若不配置或者配置为空，默认为黑色-->
+    <item name="ReptForeColor" value="0,128,255" versiontag="202304.11" />
+    <!--Web统计入参KeyCode-->
+    <item name="StatWebKeyCode" value="" versiontag="202306.4" />
+    <!--登记界面是否在预约时是否开启时间校验 默认空或0，开启预约时间校验；配置为1，关闭校验-->
+    <item name="BookingTimeCheck" value="" versiontag="202306.5" />
+    <!--登记时生成Examno是否增加院区代码前缀, 0 否, 1 是,  默认是1-->
+    <item name="IsUsedHopitalCodeFormatExamno" value="1" versiontag="202308.1" />
+    <!-- 报告痕迹比对列表显示，配置其他,根据检查项目显示查询结果，配置为1根据报告显示查询结果-->
+    <item name="ShowReport" value="" versiontag="202308.2" />
+    <!-- 报告痕迹比对功能，配置为空默认当前和最新的报告做对比，配置为1默认当前选中检查和上一条修改做对比-->
+    <item name="ReportModification" value="" versiontag="202308.3" />
+    <!--介入治疗界面配置，当配置为1时用省肿瘤版本界面（需要写入治疗名称），其他配置用默认配置-->
+    <item name="InterpositionCureConfig" value="" versiontag="202308.4" />
+    <!--省人民标准码显示格式配置 {0}{1}{2}占位顺序是StandartExamName，BatchCode，StandardExamCode-->
+    <item name="StandartExamFormat" value="{0}[{1}-{2}];{0}*{1}*;{0}" versiontag="202308.5" />
+    <!--用键盘左右光标键控制选择下拉选项并跳转到下一个关键字，配置为1时生效，否则保持原有功能-->
+    <item name="SelectNextKeyWord" value="" versiontag="202308.6" />
+    <!--登记是否生成采集号 0不生成，1生成，默认为不生成-->
+    <item name="IsUseExamNo" value="0" versiontag="202308.7" />
+    <!--关键字方向键控制方法 1：温州模式，关键字后的文字还是关键字模式；空 选中关键字后，关键字后的文字变成普通文本-->
+    <item name="TextFieldFlag" value="" versiontag="202309.2" />
+    <!--编辑中报告是否锁定不能被其他用户同时修改 1：不允许修改并给予提示 其他：给与提示后可以选择修改-->
+    <item name="EnforceLockReport" value="" versiontag="202309.3" />
+    <!--内镜知识库模板报告编辑中，下拉选中的关键，关键字的节点是否导入到诊断中 0：不导入 其他：导入-->
+    <item name="ESAddParentText" value="0" versiontag="202309.4" />
+    <!--导航栏工作班次统计功能模式，默认值为0
+	  0：固定列模式，统计固定的信息
+	  1：动态列模式，依据维护的班次类型动态创建列，并统计相应班次的信息-->
+    <item name="ScheduleStatMode" value="0" versiontag="202311.1" />
+    <!--粘贴历史报告时添加的前缀信息，可以配置换行符，空格等-->
+    <item name="ReportPastePrefix" value="" versiontag="202311.2" />
+    <!--无知识库模板权限的用户是否可以在导航栏中看见该按钮。当配置为0时，没有报告模板权限的用户看不见报告模板选项-->
+    <item name="AlwayseShowTextTemplate" value="" versiontag="202311.3" />
+    <!--IEIS主界面补充显示的信息，直接在value中配置显示内容-->
+    <item name="AdditionalNotes" value="" versiontag="202311.4" />
+    <!--双击TX报告上的检查项目，配置其他，修改检查项目；配置1，复制检查项目到剪切板-->
+    <item name="CopyExamItemConfig" value="1" versiontag="202311.5" />
+    <!--当鼠标点击到所见或者诊断时，如果右边tab页当前显示为贴图列表，是否要切换到知识库模板，配置为1时切换，默认不切换-->
+    <item name="ActiveReportTemplate" value="" versiontag="202311.6" />
+    <!--检查项目配置：检查项目配置界面显示后处理模式 无默认值-->
+    <item name="PostProcessingModeDic" value="#Array" versiontag="202401.5">
+      <!--name是t_examitem表POSTPROCESSINGMODE字段的枚举值，value是枚举值对应的模式说明-->
+      <item name="0" value="不需要后处理" versiontag="202401.6" />
+      <item name="1" value="人工后处理" versiontag="202401.7" />
+      <item name="2" value="机器后处理" versiontag="202401.8" />
+    </item>
+    <!--登记模块：是否默认自动写入当前用户（用户的角色必须是useractor=1100或者1090）为后处理技师：1 默认当前用户为后处理技师（用户没有相应角色不会自动写入） 0 不写入-->
+    <item name="SetTechnicianCurrentUser" value="0" versiontag="202405.5" />
+  </item>
+</config>

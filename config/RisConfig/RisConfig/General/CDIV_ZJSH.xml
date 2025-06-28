@@ -1,0 +1,9 @@
+<config versiontag="root">
+  <!--  浙二 全景视图 -->
+  <item name="CDIV_ZJSH" versiontag="201812.1">
+    <item name="ModuleCode" value="701" versiontag="201812.2" />
+    <item name="ModuleName" value="GELINLD" versiontag="201812.3" />
+    <item name="ModulePWD" value="123456" versiontag="201812.4" />
+    <item name="CDIVWebServices" value="http://192.168.254.242:57772/csp/zemjz/WebApp.TYGLService.CLS" versiontag="201812.5" />
+  </item>
+</config>

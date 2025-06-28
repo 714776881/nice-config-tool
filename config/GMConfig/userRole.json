@@ -24,7 +24,7 @@
           }
         ]
       },
-	  "dicSql": "select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value "
+	  "dicSql": "select distinct g.rolegroupid as value,g.rolegroup as label from t_userrole u,(select userroleid rolegroupid ,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup != '8') g  where u.userrolegroup = g.rolegroupid and deleted = '0' order by value"
     },
 	{
       "title": "权限名称",
@@ -130,12 +130,12 @@
     }
   ],
   "sqlTemplates": {
-    "select": "select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup = '8') g where u.userrolegroup = g.rolegroupid and deleted = '0'",
+    "select": "select u.userroleid id,u.* from t_userrole u, (select userroleid rolegroupid,userrolename rolegroup from t_userrole where deleted = '0' and userrolegroup != '8') g where u.userrolegroup = g.rolegroupid and deleted = '0'",
     "insert": "insert into t_userrole(userroleid,userrolecode,userrolename,userrolegroup) values('{ID}','{USERROLECODE}','{USERROLENAME}','{USERROLEGROUP}')",
     "update": "update t_userrole set userrolecode='{USERROLECODE}',userrolename='{USERROLENAME}' where userroleid='{ID}'",
     "setState": "update t_userrole set deleted = '{DELETED}' where userroleid = '{ID}'",
-	"delete": "delete from t_userrole where userroleid = '{ID}'",
-	"setSequence":"update t_userrole set sequence = '{SEQUENCE}' where userroleid = '{ID}'",
+    "delete": "delete from t_userrole where userroleid = '{ID}'",
+    "setSequence":"update t_userrole set sequence = '{SEQUENCE}' where userroleid = '{ID}'",
     "exportData": "select e.*,e.userroleid id from t_userrole e where 1=1 order by sequence"
   },
   "buttonsShow":{

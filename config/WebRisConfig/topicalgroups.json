@@ -1,0 +1,24 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "主题分组配置",
+			"filePath":"D:\\project\\config-tool\\src\\config\\RisConfig\\WebStatisticConfiguration.xml",
+			"nodePath":"/config/item[@name='WebStatisticConfiguration']/item[@name='topicalgroups']"
+		}
+	],
+	"keyLabelMap":[
+		{
+			"key": "name",
+			"label" : "分组名称"
+		},
+		{
+			"key": "iconurl",
+			"label" : "图标路径"
+		}
+	],
+	"inputConfig":[
+	],
+	"arrayConfig":[
+
+	]
+}

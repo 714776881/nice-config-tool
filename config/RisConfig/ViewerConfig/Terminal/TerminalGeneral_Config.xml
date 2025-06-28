@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>	
+	<item name="netsetting">
+		<item name="loglevel" value="1"/>
+        <!--iEis,m-Talk用-->		
+		<item name="terminallistenport" value="4000"/>	
+        <!--PDU用-->		
+		<item name="terminallistenportex" value="4100"/>
+		<item name="processmemorythreshold" value="1024"/>		
+		<item name="printmemorythreshold" value="800"/>		
+		<!-- DICOM进程监听端口，指viewer连接它时所需要的监听端口-->
+		<item name="dicomserviceport" value="4001"/>
+		<!-- DICOM进程ae title-->		
+		<item name="dicomserviceaetitle" value="GLVIEWER"/>
+		<!-- DICOM进程的存储监听端口，指其作为存储scp时的监听端口-->
+		<item name="dicomservicemonitorport" value="4567"/>
+		<!-- DICOM库的日志级别-->		
+		<item name="dicomcomloglevel" value="0"/>
+		<!-- DICOM进程本地日志的日志级别-->		
+		<item name="dicomserviceloglevel" value="0"/>		
+		<!-- DICOM进程发送到日志服务时的日志级别-->
+		<item name="dicomservicesendloglevel" value="0"/>
+		<item name="localpdvmonitorport" value="4503"/>
+		<item name="pdvapplymode" value="1"/>
+		<!-- 聊天室进程同步会诊的日志开关。Y：打开；N：关闭-->
+		<item name="chatroomUseLog" value="Y"/>
+		<!-- 聊天室进程监听终端消息的接收端口-->
+		<item name="chatroomlistenport" value="4500"/>
+		<!-- 聊天室进程同步会诊的接收端口-->
+		<item name="chatroomConsultPort" value="4701"/>
+		<!-- 聊天室进程远程控制的接收端口-->
+		<item name="chatroomremoteport" value="4702"/>
+		<!-- 图像文件缓存策略,0表示不开缓存，1表示直接缓存(web版则表示开网络缓存)，2表示用网络缓存-->		
+		<item name="CacheStrategy" value="1"/>
+		<!-- 图像文件缓存目录,主要是用于web版-->		
+		<item name="CacheDir" value="D:\ViewerCacheDir"/>
+		<item name="UseProxy" value="true"/>
+		<!-- true：延迟判断；false：初始化时判断-->
+		<item name="ProxyDelayCheck" value="false"/>
+		<!-- 导出服务没有在运行，或者正在运行，但端口号不对，无法连接，需要尝试下一个端口:重试次数-->
+		<item name="ExportServiceRetryCount" value="10"/>
+		<!-- 检查初始加载时，多帧文件数量超过此阈值，则不进行下载，而是按需下载；小于等于此值，弹框等待全部下载；-1：表示不弹框，直接下载；-->
+		<item name="MultiFrameNumberForWaitDownLoad" value="20"/>
+		<!-- 弹出的检查下载等待框超时时间：单位毫秒-->
+		<item name="MultiWaitDownLoadDlgTimeout" value="120000"/>
+	</item>
+	<item name="3D">
+		<!-- 0表示不使用任何平滑算法,1表示使用qt的平滑算法，2表示用自己开发的放大算法，只有当缩放系数大于1的时候生效-->
+		<item name="zoommethod" value="0"/>
+		<item name="acceleratemethod" value="0"/>
+		<item name="defaultscale" value="0.75"/>
+		<item name="scaleuplimit" value="4.0"/>
+		<item name="imagecountfor3d" value="4"/>
+		<item name="slicespaceaccuracy" value="0.1"/>
+		<item name="MPR">
+			<item name="layout" value="1"/>
+		</item>
+		<item name="CMPR">
+			<item name="layout" value="1"/>
+			<item name="linewidth" value="1"/>
+			<item name="linecolorred" value="0"/>
+			<item name="linecolorgreen" value="255"/>
+			<item name="linecolorblue" value="0"/>
+		</item>
+		<item name="VR">
+			<item name="layout" value="1"/>
+			<item name="autocuttable" value="0"/>
+		</item>
+	</item>
+	<item name="imagedisplay">
+		<item name="automagnifythreshold" value="128"/>
+		<item name="automagnifysize" value="512"/>
+		<!-- 如果autominifythreshold设置《=0，则此功能不生效-->
+		<item name="autominifythreshold" value="200"/>
+		<item name="autominifysize" value="100"/>
+	</item>
+	<item name="GuestUser" value="true"/>
+	<item name="freespace">
+	    <item name="C" value="1000"/>
+	    <item name="D" value="10000"/>
+	</item>
+	<!-- 系统语言,EN为英语ZH为中文-->
+	<item name="SystemLanguage" value="EN"/>
+	<!--设置导出图像的配置-->
+	<item name="ExportImageConfig">
+      <item name="ProvideExportFunction" value="true" />
+    </item>
+	<!--设置导入图像的配置-->
+    <item name="ImportImageConfig">
+      <item name="ProvideImportFunction" value="true" />
+	  <item name="CurrentImportDirectory" value="c:\" />
+    </item>
+    <item name="RemoteConnectEnable" value="false" />
+    <item name="MultiFrameLoadWindowWhenNoCache" value="10" />
+    <!--是否使用mediaelement内嵌方式播放avi,false表示不使用，true表示使用；-->
+    <item name="IsUseMediaElementForAVI" value="false" ></item>
+	
+	<!--打印界面最大化时图像显示区域分辨率；-->
+    <item name="MaxPrintDisSize" value="1000" ></item>
+	<!--终端本地日志保留多少天；-->
+    <item name="LocalClientRemainDays" value="7" ></item>
+</config>

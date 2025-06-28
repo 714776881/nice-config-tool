@@ -1,0 +1,272 @@
+{
+  "columnConfig": [
+  	{
+      "title": "模态",
+      "key": "MODALITY",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择模态",
+		  "style": "width:180px",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择模态"
+          }
+        ],
+        "defaultValue": "CT  "
+      },
+	  "dicSql":" select distinct TRIM(m.MODALITY) as value ,TRIM(m.MODALITYNAME) as label from T_MODALITY_CONFIG m"
+    },
+    {
+      "title": "检查部位",
+      "key": "BODYPART",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "检查部位"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入检查部位"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "部位编码",
+      "key": "BODYPARTCODE",
+      "width": 200,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "编码",
+		  "disabled": "false"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入编码"
+          }
+        ],
+		"defaultValueBySql":"select generate_code('t_bodypart_share.bodypartcode','','6') value from dual"
+      }
+    },
+	{
+      "title": "英文名称",
+      "key": "BODYPARTENG",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "输入码",
+      "key": "SRM",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "是否体检",
+      "key": "ISPHISICAL",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请输入",
+		  "options": [
+            {
+              "label": "否",
+              "value": "0"
+            },
+            {
+              "label": "是",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            },
+            {
+              "label": "全部",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select COUNT(*) value from t_bodypart_share b"
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select b.bodypartid id,b.* from t_bodypart_share b where b.regionid='{GLOBAL}{REGIONID}' order by b.sequence",
+    "insert": "insert into t_bodypart_share (bodypartid, modality, bodypart, bodypartcode, bodyparteng, srm, isphisical, deleted, sequence, regionid) values ('{ID}', '{MODALITY}', '{BODYPART}', '{BODYPARTCODE}', '{BODYPARTENG}', '{SRM}', '{ISPHISICAL}', '0', '{SEQUENCE}', '{GLOBAL}{REGIONID}')",
+    "update": "update t_bodypart_share set modality = '{MODALITY}', bodypart = '{BODYPART}', bodypartcode = '{BODYPARTCODE}', bodyparteng = '{BODYPARTENG}', srm = '{SRM}', isphisical = '{ISPHISICAL}' where bodypartid = '{ID}'",
+    "setState": "update t_bodypart_share set deleted = '{DELETED}' where bodypartid = '{ID}'",
+	"delete": "delete from t_bodypart_share where bodypartid = '{ID}'",
+	"setSequence":"update t_bodypart_share set sequence = '{SEQUENCE}' where bodypartid = '{ID}'",
+    "exportData": "select b.bodypartid id,b.* from t_bodypart_share b where b.regionid='{GLOBAL}{REGIONID}' order by b.sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": false,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "addedButtons":[
+	{
+	   "name": "检查项目列表",
+	   "defaultShowText":"",
+	   "width":1000,
+	   "exeSql":"",
+	   "isBetch": ""
+	}
+  ],
+  "scopeConfig":{
+	  "isShow": true,
+	  "level": 0
+  }
+}

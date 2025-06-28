@@ -1,0 +1,137 @@
+{
+  "columnConfig": [
+    {
+      "title": "检查类型",
+      "key": "MODALITY",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "扩展名称",
+      "key": "MODALITYEXPAND",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "模态号格式",
+      "key": "MODALITYFORMAT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "类型",
+      "key": "MODALITYTYPE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": { 
+    "select": "select modality id,m.* from  t_modality_config m",
+    "insert": "insert into t_modality_config (modality, modalityexpand, modalityformat, modalitytype) values ('{MODALITY}', '{MODALITYEXPAND}', '{MODALITYFORMAT}', '{MODALITYTYPE}')",
+    "update": "update t_modality_config set modalityexpand = '{MODALITYEXPAND}', modalityformat = '{MODALITYFORMAT}', modalitytype = '{MODALITYTYPE}' where modality = '{ID}'",
+    "setState": "update t_modality_config set deleted = '{DELETED}' where modality = '{ID}'",
+	"delete": "delete from t_modality_config where modality = '{ID}'",
+	"setSequence":"update t_modality_config set sequence = '{SEQUENCE}' where modality = '{ID}'",
+    "exportData": "select modality id,m.* from  t_modality_config m"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": false,
+	"setState": false,
+	"setStateToDelete": true,
+	"setSequence": false,
+	"exportData": false,
+	"importData": false
+  }
+}

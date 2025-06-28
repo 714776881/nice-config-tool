@@ -1,0 +1,147 @@
+<config>
+	<item name="ToolbarConfiguration">
+		<item name="US">
+			<item name="Worklist" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="WriteReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ModifyReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="PreviewPDFReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="PrintReport"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ViewOrderComment"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowReportBackup"/>
+					</item>
+				</item>
+				<!-- <item value="#Array">
+					<item>
+						<item name="Name" value="RollbackRegisterState"/>
+					</item>
+				</item> -->
+				<item value="#Array">
+					<!-- <item>
+						<item name="Name" value="ViewConsult" />
+					</item> -->
+					<item>
+						<item name="Name" value="USConsult" />
+					</item>
+					<!-- <item>
+						<item name="Name" value="ViewRemoteUSConsult"/>
+					</item> -->
+					<item>
+						<item name="Name" value="PrintUSConsultReport" />
+					</item>
+					<item>
+						<item name="Name" value="ManageConsult" />
+					</item>
+				</item>
+			</item>
+			<item name="Report" value="#Array">
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ShowRequisition"/>
+					</item>
+					<item>
+						<item name="Name" value="ViewOrderComment"/>
+					</item>
+				</item>
+				<item>
+					<item name="Items" value="#Array">
+						<item>
+							<item name="Name" value="ReportTemplate"/>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="SaveReport"/>
+					</item>
+					<item>
+						<item name="Name" value="SaveVerifyReport"/>
+					</item>
+					<item>
+						<item name="Name" value="CopyReport"/>
+					</item>
+					<item>
+						<item name="Name" value="PasteReport"/>
+					</item>
+				</item>
+				<item>
+					<item name="ExpandLevel" value="1"/>
+					<item name="Items" value="#Array">
+						<item>
+							<item name="Name" value="SaveReportCache"/>
+						</item>
+						<item>
+							<item name="Name" value="RestoreReportCache"/>
+						</item>
+						<item>
+							<item name="Name" value="SaveReportTemplate"/>
+						</item>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="SuspendReport"/>
+					</item>
+					<item>
+						<item name="Name" value="ReportBack"/>
+					</item>
+					<item>
+						<item name="Name" value="PrintPreview"/>
+					</item>
+					<item>
+						<item name="Name" value="PrintReport"/>
+					</item>
+					<item>
+						<item name="Name" value="CloseReport"/>
+					</item>
+					<item>
+						<item name="Name" value="RealTimeVideo"/>
+					</item>
+				</item>
+				<item value="#Array">
+					<item>
+						<item name="Name" value="ViewConsult"/>
+					</item>
+					<item>
+						<item name="Name" value="USConsult" />
+					</item>	
+					<item>
+						<item name="Name" value="ViewConsultResult" />
+					</item>		  
+				</item>
+				
+			</item>
+		</item>
+	</item>
+</config>

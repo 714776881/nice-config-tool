@@ -1,5 +1,58 @@
 {
   "columnConfig": [
+    {
+      "title": "模态",
+      "key": "MODALITY",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "width": 100,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择模态",
+		  "style": "width:180px",
+		  "show-search": true,
+		  "option-filter-prop": "label"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择模态"
+          }
+        ],
+        "defaultValue": "CT  "
+      },
+	  "dicSql":" select distinct TRIM(m.MODALITY) as value ,TRIM(m.MODALITYNAME) as label from T_MODALITY_CONFIG m"
+    },
+  	{
+      "title": "模板类别",
+      "key": "STYLECATEGORYID",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 180,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择",
+		  "style": "width:180px"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请选择"
+          }
+        ],
+        "defaultValue": "",
+		"groupBy": "MODALITY"
+      },
+	  "dicSql":"select s.stylecategoryid as value,s.stylecategory as label,s.modality category from t_stylecategory s where s.deleted='0' and s.hospitalid='{GLOBAL}{HOSPITALID}'"
+    },
 	{
       "title": "模板名称",
       "key": "STYLE",
@@ -25,246 +78,30 @@
         "defaultValue": ""
       }
     },
-    {
-      "title": "打印单类型",
-      "key": "STYLECATEGORYTYPE",
-      "width": 120,
-      "isShow": true,
-      "isQuery": true,
-      "isEdit": false,
-      "component": {
-        "name": "a-radio-group",
-        "props": {
-          "placeholder": "打印单类型",
-		  "style":"width:450px",
-		  "option-type": "button",
-          "options": [
-		  	{
-              "label": "报告单",
-              "value": "1001"
-            },
-			{
-              "label": "二次报告单",
-              "value": "1116"
-            },
-			{
-              "label": "迟发报告",
-              "value": "1014"
-            },
-            {
-              "label": "预约单",
-              "value": "1002"
-            },
-			{
-              "label": "申请单",
-              "value": "1002"
-            },
-            {
-              "label": "登记单",
-              "value": "1003"
-            },
-            {
-              "label": "取材单",
-              "value": "1004"
-            },
-            {
-              "label": "借阅单",
-              "value": "1006"
-            },
-            {
-              "label": "登记本",
-              "value": "1007"
-            },
-            {
-              "label": "免疫标签单",
-              "value": "1008"
-            },
-            {
-              "label": "借阅批量",
-              "value": "1009"
-            }
-          ]
-        }
-      },
-      "formItem": {
-        "rules": [
-          {
-            "required": true,
-            "message": "请输入项目编码"
-          }
-        ]
-      }
-    },
 	{
-      "title": "分类",
-      "key": "STYLECATEGORYID",
-      "width": 120,
-      "isShow": true,
-      "isQuery": true,
+      "title": "所属科室",
+      "key": "DEPTCODE",
+      "isShow": false,
+      "isQuery": false,
       "isEdit": true,
+      "width": 180,
       "component": {
         "name": "a-select",
         "props": {
-          "placeholder": "打印单类型",
-		  "style":"width:200px",
-		  "show-search": true,
-		  "option-filter-prop": "label"
-        }
-      },
-      "formItem": {
-        "rules": [
-          {
-            "required": true,
-            "message": "请输入项目编码"
-          }
-        ]
-      },
-	  "dicSql":"select s.stylecategoryid value,s.stylecategory as label from t_stylecategory s where s.modality like 'GM%' and s.hospitalid = '101'"
-    },
-	{
-      "title": "报告类型",
-      "key": "STYLETYPE2",
-      "width": 100,
-      "isShow": true,
-      "isQuery": false,
-      "isEdit": true,
-      "component": {
-        "name": "a-select",
-        "props": {
-          "placeholder": "报告类型",
-		  "style":"width:200px",
-		  "show-search": true,
-		  "option-filter-prop": "label",
-		  "options": [
-    { "label": "通用", "value": "1000" },
-    { "label": "心脏", "value": "1001" },
-    { "label": "产前诊断", "value": "1002" },
-    { "label": "胃镜", "value": "1003" },
-    { "label": "肠镜", "value": "1004" },
-    { "label": "支气管镜", "value": "1005" },
-    { "label": "喉镜", "value": "1006" },
-    { "label": "超声内镜", "value": "1007" },
-    { "label": "介入治疗", "value": "1008" },
-    { "label": "病理组织", "value": "1009" },
-    { "label": "细胞学", "value": "1010" },
-    { "label": "液基细胞学", "value": "1011" },
-    { "label": "特殊染色", "value": "1012" },
-    { "label": "快速冰冻", "value": "1013" },
-    { "label": "分子生物学", "value": "1014" },
-    { "label": "电镜", "value": "1015" },
-    { "label": "骨髓", "value": "1017" },
-    { "label": "外周血像", "value": "1018" },
-    { "label": "ERCP", "value": "1019" },
-    { "label": "乳腺", "value": "1020" },
-    { "label": "免疫组化1", "value": "1021" },
-    { "label": "免疫组化2", "value": "1022" },
-    { "label": "免疫组化3", "value": "1023" },
-    { "label": "外院会诊", "value": "1024" },
-    { "label": "肾脏穿刺", "value": "1025" },
-    { "label": "分子", "value": "1030" },
-    { "label": "TBS细胞", "value": "1040" },
-    { "label": "质控专家会诊", "value": "1045" },
-    { "label": "巨检（大体检查）", "value": "1055" },
-    { "label": "迟发报告", "value": "1014" },
-    { "label": "登记回执单", "value": "1111" },
-    { "label": "免疫组化申请单", "value": "1112" },
-    { "label": "非妇科", "value": "1200" },
-    { "label": "尸体检查", "value": "1210" },
-    { "label": "人乳头瘤病毒检测", "value": "1212" },
-    { "label": "特殊检查检测报告单", "value": "1120" },
-    { "label": "分子基因检查检测报告单", "value": "1121" },
-    { "label": "hpv23", "value": "1122" }
-  ]
-        }
-      },
-      "formItem": {
-        "rules": [
-          {
-            "required": true,
-            "message": "请输入报告类型"
-          }
-        ]
-      }
-    },
-	{
-      "title": "病人类型",
-      "key": "STYLETYPE3",
-      "width": 100,
-      "isShow": true,
-      "isQuery": false,
-      "isEdit": true,
-      "component": {
-        "name": "a-select",
-        "props": {
-          "placeholder": "病人类型",
-		  "style":"width:200px",
-		  "show-search": true,
-		  "option-filter-prop": "label",
-		  "options": [
-			{ "label": "通用", "value": "1000" },
-			{ "label": "门诊", "value": "1001" },
-			{ "label": "住院", "value": "1002" }
-		  ]
-        }
-      },
-      "formItem": {
-        "rules": [
-          {
-            "required": true,
-            "message": "请输入病人类型"
-          }
-        ]
-      }
-    },
-	{
-      "title": "文件类型",
-      "key": "FILETYPE",
-      "width": 100,
-      "isShow": true,
-      "isQuery": false,
-      "isEdit": true,
-      "component": {
-        "name": "a-radio-group",
-        "props": {
-          "placeholder": "文件类型",
-		  "options": [
-			{ "label": "TxtextContrl", "value": "tx" },
-			{ "label": "FastReport", "value": "fr3" },
-			{ "label": "C1Report", "value": "xml" }
-		  ]
-        }
-      },
-      "formItem": {
-        "rules": [
-          {
-            "required": true,
-            "message": "请输入病人类型"
-          }
-        ]
-      }
-    },
-	{
-      "title": "项目名称",
-      "key": "STYLETYPE4",
-      "width": 100,
-      "isShow": true,
-      "isQuery": false,
-      "isEdit": true,
-      "component": {
-        "name": "a-input",
-        "props": {
-          "placeholder": "项目名称",
-		  "style":"width:200px"
+          "placeholder": "模板名称",
+		  "allowClear": "true"
         }
       },
       "formItem": {
         "rules": [
           {
             "required": false,
-            "message": "项目名称"
+            "message": "请输入模板名称"
           }
-        ]
-      }
+        ],
+        "defaultValue": ""
+      },
+	  "dicSql":"select distinct itemcode as value,itemname||'|'||itemcode||'|'||srm as label from t_dictionary d where d.diccategory='1001' and d.deleted='0' and d.hospitalid='{GLOBAL}{HOSPITALID}'"
     },
 	{
       "title": "普通/临时",
@@ -289,34 +126,12 @@
             "required": true,
             "message": "请输入病人类型"
           }
-        ]
-      }
-    },
-	{
-      "title": "默认打印机名称",
-      "key": "PRINTERNAME",
-      "isShow": true,
-      "isQuery": false,
-      "isEdit": true,
-      "width": 100,
-      "component": {
-        "name": "a-input",
-        "props": {
-          "placeholder": "默认打印机名称"
-        }
-      },
-      "formItem": {
-        "rules": [
-          {
-            "required": false,
-            "message": "请输入默认打印机名称"
-          }
         ],
-        "defaultValue": ""
+		"defaultValue":"1000"
       }
     },
 	{
-      "title": "打印图片数",
+      "title": "最大贴图数量",
       "key": "FILMNUM",
       "isShow": true,
       "isQuery": false,
@@ -326,6 +141,7 @@
         "name": "a-input-number",
         "props": {
           "placeholder": "打印图片数",
+		  "width": "160px",
 		  "min": "0"
         }
       },
@@ -336,30 +152,40 @@
             "message": "请输入打印图片数"
           }
         ],
-        "defaultValue": "1"
+        "defaultValue": ""
       }
     },
 	{
-      "title": "模板文件",
-      "key": "CONTENT",
-      "isShow": false,
-      "isQuery": false,
-      "isEdit": false,
+      "title": "允许编辑",
+      "key": "ALLOWEDITPAGE",
       "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
       "component": {
-        "name": "a-upload",
+        "name": "a-radio-group",
         "props": {
-          "placeholder": "模板文件"
+          "placeholder": "请选择",
+          "options": [
+            {
+              "label": "允许",
+              "value": "1"
+            },
+            {
+              "label": "不允许",
+              "value": "0"
+            }
+          ]
         }
       },
       "formItem": {
         "rules": [
           {
             "required": false,
-            "message": "模板文件"
+            "message": "请选择是否激活"
           }
         ],
-        "defaultValue": ""
+        "defaultValue": "1"
       }
     },
 	{
@@ -368,7 +194,7 @@
       "width": 100,
       "isShow": true,
       "isQuery": true,
-      "isEdit": false,
+      "isEdit": true,
       "component": {
         "name": "a-radio-group",
         "props": {
@@ -392,7 +218,31 @@
             "message": "请选择是否激活"
           }
         ],
-        "defaultValue": "0"
+        "defaultValue": "1"
+      }
+    },
+	{
+      "title": "模板文件",
+      "key": "CONTENTHTML",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": false,
+      "width": 180,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "模板名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入模板名称"
+          }
+        ],
+
+        "defaultValue": ""
       }
     },
     {
@@ -476,16 +326,16 @@
 	}
   ],
   "sqlTemplates": {
-    "select": "select s.styleid id,s.*,c.stylecategorytype from t_style s, (select stylecategoryid,stylecategorytype from t_stylecategory where modality like 'GM%' and hospitalid = '{GLOBAL}{HOSPITALID}' and deleted = '0') c where s.stylecategoryid = c.stylecategoryid",
-    "insert": "insert into t_examitem(examitemid,examitemcode,examitem,obexamtype,bodypartid,deleted) values('{ID}','{EXAMITEMCODE}','{EXAMITEM}','{OBEXAMTYPE}','b0950274-cb6c-4aad-bab5-9747015fe153','0')",
-    "update": "update t_examitem e set e.examitemcode = '{EXAMITEMCODE}',e.examitem = '{EXAMITEM}',e.obexamtype = '{OBEXAMTYPE}',e.deleted = '{DELETED}' where e.examitemid = '{ID}'",
-    "setState": "update t_examitem set deleted = '{DELETED}' where examitemid = '{ID}'",
-	"delete": "delete from t_examitem where examitemid = '{ID}'",
-	"setSequence":"update t_examitem set sequence = '{SEQUENCE}' where examitemid = '{ID}'",
-    "exportData": "select e.*,e.examitemid id from t_examitem e where 1=1 order by sequence"
+    "select": "select s.styleid id,s.stylecategoryid,s.style,s.deptcode,s.styletype1,s.filmnum,s.alloweditpage,s.active,s.deleted,s.sequence,sc.modality,s.contenthtml from t_style s,t_stylecategory sc where s.stylecategoryid = sc.stylecategoryid and sc.hospitalid='{GLOBAL}{HOSPITALID}'",
+    "insert": "insert into t_style(styleid,stylecategoryid,style,styletype1,filmnum,deptcode,alloweditpage,active,deleted,sequence) values('{ID}','{STYLECATEGORYID}','{STYLE}','{STYLETYPE1}','{FILMNUM}','{DEPTCODE}','{ALLOWEDITPAGE}','{ACTIVE}','{DELETED}','{SEQUENCE}')",
+    "update": "UPDATE t_style SET stylecategoryid = '{STYLECATEGORYID}', style = '{STYLE}', styletype1 = '{STYLETYPE1}', filmnum = '{FILMNUM}', contenthtml = :CONTENTHTML, deptcode='{DEPTCODE}', alloweditpage = '{ALLOWEDITPAGE}', active = '{ACTIVE}' WHERE styleid = '{ID}'",
+    "setState": "update t_style set deleted = '{DELETED}' where styleid = '{ID}'",
+	"delete": "delete from t_style where styleid = '{ID}'",
+	"setSequence":"update t_style set sequence = '{SEQUENCE}' where styleid = '{ID}'",
+    "exportData": "select e.*,e.styleid id from t_style e where 1=1 order by sequence"
   },
   "buttonsShow":{
-	"add": false,
+	"add": true,
 	"edit": true,
 	"delete": true,
 	"setState": true,
@@ -495,15 +345,19 @@
 	"importData": true
   },
   "tableConfig":{
-	"defaultPageSize":"50"
+	"defaultPageSize":"20"
   },
   "addedButtons":[
 	{
-	   "name": "上传模板文件",
+	   "name": "预览模板",
 	   "defaultShowText":"",
 	   "width":1000,
-	   "exeSql":"",
+	   "exeSql":"update t_style set contenthtml=:CONTENTHTML where styleid='{ID}'",
 	   "isBetch": ""
 	}
-  ]
+  ],
+  "scopeConfig":{
+	  "isShow": true,
+	  "level": 1
+  }
 }

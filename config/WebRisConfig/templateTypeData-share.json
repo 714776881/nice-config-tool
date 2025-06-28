@@ -1,0 +1,351 @@
+{
+  "columnConfig": [
+    {
+      "title": "模板名称",
+      "key": "REPTTEMP",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+	  "isSort": true,
+      "width": 140,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "模板名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入模板名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+	{
+      "title": "所见",
+      "key": "CSTUDYRESULT",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "report-input",
+        "props": {
+          "placeholder": "所见",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写所见"
+          }
+        ],
+		"span":"24"
+      }
+    },
+	{
+      "title": "诊断",
+      "key": "CDIAGRESULT",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 200,
+      "component": {
+        "name": "report-input",
+        "props": {
+          "placeholder": "诊断",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写诊断"
+          }
+        ],
+		"span":"24"
+      }
+    },
+	{
+      "title": "所见",
+      "key": "STUDYRESULT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "所见",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写所见"
+          }
+        ],
+		"span":"24"
+      }
+    },
+	{
+      "title": "诊断",
+      "key": "DIAGRESULT",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 200,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "诊断",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写诊断"
+          }
+        ],
+		"span":"24"
+      }
+    },
+	{
+      "title": "是否阳性",
+      "key": "ISABNORMAL",
+      "width": 100,
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择",
+          "options": [
+            {
+              "label": "否",
+              "value": "0"
+            },
+            {
+              "label": "是",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 100,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": false,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    },
+	{
+      "title": "test",
+      "key": "test",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 200,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "诊断模板",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写诊断模板"
+          }
+        ]
+      }
+    },
+	{
+      "title": "test2",
+      "key": "test2",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 200,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "诊断模板",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写诊断模板"
+          }
+        ]
+      }
+    },
+	{
+      "title": "test3",
+      "key": "test3",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 200,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "诊断模板",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写诊断模板"
+          }
+        ]
+      }
+    },
+	{
+      "title": "test4",
+      "key": "test4",
+      "isShow": false,
+      "isQuery": false,
+      "isEdit": false,
+	  "width": 200,
+      "component": {
+        "name": "a-textarea",
+        "props": {
+          "placeholder": "诊断模板",
+		  "rows": "10"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请填写诊断模板"
+          }
+        ]
+      }
+    },
+	{
+      "title": "序列",
+      "key": "SEQUENCE",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 100,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ],
+		"defaultValueBySql":"select count(*) value from t_repttemp_share"
+      }
+	}
+  ],
+  "sqlTemplates": {
+    "select": "select t.repttempid id,t.categoryid,t.repttemp,t.isabnormal,t.deleted,t.sequence,CASE WHEN t.cstudyresult IS NOT NULL THEN t.cstudyresult ELSE t.studyresult END AS cstudyresult, CASE WHEN t.cdiagresult IS NOT NULL THEN t.cdiagresult ELSE t.diagresult END AS cdiagresult,t.studyresult,t.diagresult from t_repttemp_share t,t_repttempcategory_share r where t.categoryid=r.categoryid and r.categoryid='{SUPER}{ID}' and r.deleted='0' and t.repttemp like '%{REPTTEMP}%' order by t.sequence",
+    "insert": "insert into t_repttemp_share (repttempid, repttemp, cstudyresult, cdiagresult, studyresult, diagresult, isabnormal, deleted, categoryid, sequence) values ('{ID}', '{REPTTEMP}', '{CSTUDYRESULT}', '{CDIAGRESULT}', '{STUDYRESULT}', '{DIAGRESULT}', TO_NUMBER('{ISABNORMAL}'), '0', '{SUPER}{ID}', '{SEQUENCE}')",
+    "update": "update t_repttemp_share set repttemp = '{REPTTEMP}', cstudyresult = '{CSTUDYRESULT}', cdiagresult = '{CDIAGRESULT}', studyresult = '{STUDYRESULT}', diagresult = '{DIAGRESULT}', isabnormal = TO_NUMBER('{ISABNORMAL}') where repttempid = '{ID}'",
+    "setState": "update t_repttemp_share set deleted = '{DELETED}' where repttempid = '{ID}'",
+	"delete": "delete from t_repttemp_share where repttempid = '{ID}'",
+	"setSequence":"update t_repttemp_share set sequence = '{SEQUENCE}' where repttempid = '{ID}'",
+    "exportData": "select e.*,e.repttempid id from t_repttemp_share e where 1=1 order by sequence"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": false,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  },
+  "tableConfig":{
+	"defaultPageSize":"50",
+	"diagModel":""
+  }
+}

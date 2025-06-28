@@ -4,7 +4,7 @@
       "title": "部门",
       "key": "ITEMNAME",
       "isShow": true,
-      "isQuery": false,
+      "isQuery": true,
       "isEdit": true,
       "width": 200,
       "component": {
@@ -44,7 +44,44 @@
             "message": "请输入编码"
           }
         ],
-		"defaultValueBySql":"select '1' || LPAD(COUNT(*) , 3, '0') value from t_dictionary d where (d.diccategory = '1001')"
+		"defaultValueBySql":"select generate_code('t_dictionary.itemcode','{GLOBAL}{HOSPITALID}','3') value from dual"
+      }
+    },
+	{
+      "title": "科室类型",
+      "key": "SRM",
+      "width": 120,
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+      "component": {
+        "name": "a-select",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "US",
+              "value": "US"
+            },
+            {
+              "label": "RAD",
+              "value": "RAD"
+            },
+            {
+              "label": "ES",
+              "value": "ES"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "US"
       }
     },
     {
@@ -128,13 +165,13 @@
 	}
   ],
   "sqlTemplates": {
-    "select": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' order by sequence",
-    "insert": "insert into t_dictionary(dictionaryid,diccategory,itemcode,itemname,deleted,sequence) values('{ID}','1001','{ITEMCODE}','{ITEMNAME}','{DELETED}','{SEQUENCE}')",
-    "update": "update t_dictionary d set d.diccategory = '1001',d.itemcode = '{ITEMCODE}',d.itemname = '{ITEMNAME}' where d.dictionaryid = '{ID}'",
+    "select": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' and hospitalid='{GLOBAL}{HOSPITALID}'  order by sequence",
+    "insert": "insert into t_dictionary (dictionaryid, diccategory, itemname, itemcode, srm, hospitalid, deleted, sequence) values ('{ID}', '1001', '{ITEMNAME}', '{ITEMCODE}', '{SRM}', '{GLOBAL}{HOSPITALID}', '0', '{SEQUENCE}')",
+    "update": "update t_dictionary set itemname = '{ITEMNAME}', itemcode = '{ITEMCODE}', srm = '{SRM}', sequence = '{SEQUENCE}' where dictionaryid = '{ID}'",
     "setState": "update t_dictionary set deleted = '{DELETED}' where dictionaryid = '{ID}'",
 	"delete": "delete from t_dictionary where dictionaryid = '{ID}'",
 	"setSequence":"update t_dictionary set sequence = '{SEQUENCE}' where dictionaryid = '{ID}'",
-    "exportData": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001'"
+    "exportData": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1001' and hospitalid='{GLOBAL}{HOSPITALID}'  order by sequence"
   },
   "buttonsShow":{
 	"add": true,
@@ -145,5 +182,9 @@
 	"setSequence": true,
 	"exportData": true,
 	"importData": true
+  },
+  "scopeConfig":{
+	  "isShow": true,
+	  "level": 1
   }
 }

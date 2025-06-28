@@ -1,0 +1,11 @@
+<config>
+  <!--用于替换GeneralConfig里QueryValueRestrict中的同名项目, 同时会被TerminalConfiguration的同名项目替代-->
+  <item name="PersonalConfiguration">
+    <item name="QueryValueRestrict">
+      <item name="Hospital" value="#Array">
+        <item value="Hong Kong Central Hospital" />
+      </item>
+    </item>
+  </item>
+  
+</config>

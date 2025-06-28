@@ -1,0 +1,941 @@
+<config>
+  <item name="EMSConfiguration">
+    <!--定义EMS的返回的结果列，每项代表一个表或一个视图。不支持新增-->
+    <item name="DatabaseColDefine" value="#Array">
+      <item>
+        <!--当前表或视图的Tag，和数据库表名无关，不允许修改-->
+        <item name="TableTag" value="Patient"/>
+        <!--定义当前表或视图下的列，可以新增-->
+        <!--Name：返回给前端的名称，需要和WorkListGridPreDefine一致，且不能重复-->
+        <!--DbCol：数据库列名-->
+        <!--Default：即使终端不发送也需要查询的列，一般用于表关联。新增列一般不需要设置-->
+        <!--Format：数据类型plain/date，默认plain。plain是直接把数据库的数据转string，date会把数据按时间格式化-->
+        <!--GroupType：采集视图和报告视图下，同一个采集不同项目的值如何合并。max（默认）取最大，concat 多值拼接 -->
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="PatientSequence"/>
+            <item name="DbCol" value="patseq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="HisPatientID"/>
+            <item name="DbCol" value="hispid"/>
+          </item>
+          <item>
+            <item name="Name" value="MedicalRecordID"/>
+            <item name="DbCol" value="medicalrecordid"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientID"/>
+            <item name="DbCol" value="patid"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientName"/>
+            <item name="DbCol" value="patname"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientNameAlias"/>
+            <item name="DbCol" value="patnameeng"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientSex"/>
+            <item name="DbCol" value="patsex"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientBirthday"/>
+            <item name="DbCol" value="patbirthday"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="TelphoneNo"/>
+            <item name="DbCol" value="telephoneno"/>
+          </item>
+          <item>
+            <item name="Name" value="Address"/>
+            <item name="DbCol" value="address"/>
+          </item>
+          <item>
+            <item name="Name" value="InPatientID"/>
+            <item name="DbCol" value="inpatientid"/>
+          </item>
+          <item>
+            <item name="Name" value="OutPatientID"/>
+            <item name="DbCol" value="outpatientid"/>
+          </item>
+          <item>
+            <item name="Name" value="PhysicalExamID"/>
+            <item name="DbCol" value="physicalexamid"/>
+          </item>
+          <item>
+            <item name="Name" value="MedicareID"/>
+            <item name="DbCol" value="medicareid"/>
+          </item>
+          <item>
+            <item name="Name" value="IDCardNumber"/>
+            <item name="DbCol" value="idcard"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientWeight"/>
+            <item name="DbCol" value="weight"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientHeight"/>
+            <item name="DbCol" value="height"/>
+          </item>
+          <item>
+            <item name="Name" value="Examno"/>
+            <item name="DbCol" value="examno"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="Occupation"/>
+            <item name="DbCol" value="occupation"/>
+          </item>
+          <item>
+            <item name="Name" value="ExternalExamNo"/>
+            <item name="DbCol" value="externalexamno"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientInstanceUID"/>
+            <item name="DbCol" value="instanceuid"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Order"/>
+        <item name="ColDefList" value="#Array">        
+          <item>
+            <item name="Name" value="OrderSequence"/>
+            <item name="DbCol" value="orderseq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="OrderPatientSequence"/>
+            <item name="DbCol" value="patseq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="Reportseq"/>
+            <item name="DbCol" value="reportseq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="BookedQueueId"/>
+            <item name="DbCol" value="bookedqueueid"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="Examdt"/>
+            <item name="DbCol" value="examdt"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="OrderDate"/>
+            <item name="DbCol" value="orderdt"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="OrderStatus"/>
+            <item name="DbCol" value="orderstatus"/>
+          </item>
+          <item>
+            <item name="Name" value="ExamStatus"/>
+            <item name="DbCol" value="examstatus"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="OrderType"/>
+            <item name="DbCol" value="ordertype"/>
+          </item>
+          <item>
+            <item name="Name" value="Recorddt"/>
+            <item name="DbCol" value="recorddt"/>
+          </item>
+          <item>
+            <item name="Name" value="Modality"/>
+            <item name="DbCol" value="modality"/>
+          </item>
+          <item>
+            <item name="Name" value="Accno"/>
+            <item name="DbCol" value="accno"/>
+            <item name="Default" value="1"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="Equipment"/>
+            <item name="DbCol" value="equipment"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="EquipmentID"/>
+            <item name="DbCol" value="equipmentid"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="Modalityid"/>
+            <item name="DbCol" value="modalityid"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientType"/>
+            <item name="DbCol" value="pattype"/>
+          </item>
+          <item>
+            <item name="Name" value="Bodypart"/>
+            <item name="DbCol" value="bodypart"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="BodypartID"/>
+            <item name="DbCol" value="bodypartid"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="Examitem"/>
+            <item name="DbCol" value="examitem"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="ExamitemID"/>
+            <item name="DbCol" value="examitemid"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="Examroom"/>
+            <item name="DbCol" value="examroom"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="QueueName"/>
+            <item name="DbCol" value="bookedqueueName"/>
+          </item>
+          <item>
+            <item name="Name" value="Clinic"/>
+            <item name="DbCol" value="clinic"/>
+          </item>
+          <item>
+            <item name="Name" value="Ward"/>
+            <item name="DbCol" value="ward"/>
+          </item>
+          <item>
+            <item name="Name" value="Bedno"/>
+            <item name="DbCol" value="bedno"/>
+          </item>
+          <item>
+            <item name="Name" value="Charge"/>
+            <item name="DbCol" value="charge"/>
+          </item>
+          <item>
+            <item name="Name" value="Chargeconfirm"/>
+            <item name="DbCol" value="chargeconfirm"/>
+          </item>
+          <item>
+            <item name="Name" value="HospitalName"/>
+            <item name="DbCol" value="hospitalname"/>
+          </item>
+          <item>
+            <item name="Name" value="OrderComment"/>
+            <item name="DbCol" value="ordercomment"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="FilmStatus"/>
+            <item name="DbCol" value="filmstatus"/>
+          </item>
+          <item>
+            <item name="Name" value="HisID"/>
+            <item name="DbCol" value="his_id"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="Disease"/>
+            <item name="DbCol" value="disease"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="OrderDr"/>
+            <item name="DbCol" value="orderdr"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="Register"/>
+            <item name="DbCol" value="register"/>
+          </item>
+          <item>
+            <item name="Name" value="ExamDr"/>
+            <item name="DbCol" value="examdr"/>
+          </item>
+          <item>
+            <item name="Name" value="Recorder"/>
+            <item name="DbCol" value="recorder"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportStatus"/>
+            <item name="DbCol" value="reportstatus"/>
+          </item>
+          <item>
+            <item name="Name" value="Technician"/>
+            <item name="DbCol" value="technician"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="Technicianid"/>
+            <item name="DbCol" value="technicianid"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="Technician2"/>
+            <item name="DbCol" value="technician2"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="Technician3"/>
+            <item name="DbCol" value="technician3"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="Operatename"/>
+            <item name="DbCol" value="operatename"/>
+          </item>
+          <item>
+            <item name="Name" value="SharedFlag"/>
+            <item name="DbCol" value="sharedflag"/>
+          </item>
+          <item>
+            <item name="Name" value="CallTerminalID"/>
+            <item name="DbCol" value="CallTerminalID"/>
+          </item>
+          <item>
+            <item name="Name" value="Deleted"/>
+            <item name="DbCol" value="Deleted"/>
+          </item>
+          <item>
+            <item name="Name" value="RegionDataSourceID"/>
+            <item name="DbCol" value="REGIONSOURCEID"/>
+          </item>
+          <item>
+            <item name="Name" value="RegionDataSourceName"/>
+            <item name="DbCol" value="REGIONSOURCENAME"/>
+          </item>
+          <item>
+            <item name="Name" value="ImageReadyDate"/>
+            <item name="DbCol" value="IMAGEREADYDT"/>
+            <item name="Format" value="date"/>
+          </item>
+          <item>
+            <item name="Name" value="IsVIP"/>
+            <item name="DbCol" value="ISVIP"/>
+          </item>
+          <item>
+            <item name="Name" value="DownloadProgress"/>
+            <item name="DbCol" value="DOWNLOADPROGRESS"/>
+          </item>
+          <item>
+            <item name="Name" value="PerformDeptId"/>
+            <item name="DbCol" value="PERFORMDEPTID"/>
+          </item>
+          <item>
+            <item name="Name" value="EmergencyLevel"/>
+            <item name="DbCol" value="reserved3"/>
+          </item>
+          <item>
+            <item name="Name" value="ViewerPrintCount"/>
+            <item name="DbCol" value="ViewerPrintCount"/>
+          </item>
+          <item>
+            <item name="Name" value="Favorite"/>
+            <item name="DbCol" value="favorite"/>
+          </item>
+          <item>
+            <item name="Name" value="PatientCategory"/>
+            <item name="DbCol" value="patientcategory"/>
+          </item>
+          <item>
+            <item name="Name" value="AssignedReportDr"/>
+            <item name="DbCol" value="assigneddr"/>
+          </item>
+          <item>
+            <item name="Name" value="AssignedReportDrID"/>
+            <item name="DbCol" value="assigneddrid"/>
+          </item>
+          <item>
+            <item name="Name" value="AssignedVerifyDr"/>
+            <item name="DbCol" value="assignedverifydr"/>
+          </item>
+          <item>
+            <item name="Name" value="AssignedVerifyDrID"/>
+            <item name="DbCol" value="assignedverifydrid"/>
+          </item>
+          <item>
+            <item name="Name" value="ObExamType"/>
+            <item name="DbCol" value="obexamtype"/>
+          </item>
+          <item>
+            <item name="Name" value="DeliverDt"/>
+            <item name="DbCol" value="deliverdt"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Dose"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="Dose"/>
+            <item name="DbCol" value="sumdlp"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Report"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="ReportseqInReport"/>
+            <item name="DbCol" value="reportseq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="Reportdt"/>
+            <item name="DbCol" value="reportdt"/>
+          </item>
+          <item>
+            <item name="Name" value="Verifydt"/>
+            <item name="DbCol" value="verifydt"/>
+          </item>
+          <item>
+            <item name="Name" value="Printdt"/>
+            <item name="DbCol" value="printdt"/>
+          </item>
+          <item>
+            <item name="Name" value="Modified"/>
+            <item name="DbCol" value="modified"/>
+          </item>
+          <item>
+            <item name="Name" value="Report_reportstatus"/>
+            <item name="DbCol" value="reportstatus"/>
+          </item>
+          <item>
+            <item name="Name" value="Reportdr"/>
+            <item name="DbCol" value="reportdr"/>
+          </item>
+          <item>
+            <item name="Name" value="VerifyDr"/>
+            <item name="DbCol" value="verifydr"/>
+          </item>
+          <item>
+            <item name="Name" value="ConsultationDr"/>
+            <item name="DbCol" value="verifydr2"/>
+          </item>
+          <item>
+            <item name="Name" value="Medic"/>
+            <item name="DbCol" value="medic"/>
+          </item>
+          <item>
+            <item name="Name" value="StudyResult"/>
+            <item name="DbCol" value="studyresult"/>
+          </item>
+          <item>
+            <item name="Name" value="DiagResult"/>
+            <item name="DbCol" value="diagresult"/>
+          </item>
+          <item>
+            <item name="Name" value="DeliverAffirmName"/>
+            <item name="DbCol" value="deliveraffirm"/>
+          </item>
+          <item>
+            <item name="Name" value="Abnormal"/>
+            <item name="DbCol" value="abnormal"/>
+          </item>
+          <item>
+            <item name="Name" value="PrintCount"/>
+            <item name="DbCol" value="printcount"/>
+          </item>
+          <item>
+            <item name="Name" value="FstReportDr"/>
+            <item name="DbCol" value="firstreportdr"/>
+          </item>
+          <item>
+            <item name="Name" value="FstReportDt"/>
+            <item name="DbCol" value="firstreportdt"/>
+          </item>
+          <item>
+            <item name="Name" value="FstVerifyDr"/>
+            <item name="DbCol" value="firstverifydr"/>
+          </item>
+          <item>
+            <item name="Name" value="FstVerifyDt"/>
+            <item name="DbCol" value="firstverifydt"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportRecordDr"/>
+            <item name="DbCol" value="recorddr"/>
+          </item>
+          <item>
+            <item name="Name" value="Reportdrid"/>
+            <item name="DbCol" value="reportdrid"/>
+          </item>
+          <item>
+            <item name="Name" value="Verifydrid"/>
+            <item name="DbCol" value="Verifydrid"/>
+          </item>
+          <item>
+            <item name="Name" value="Advice"/>
+            <item name="DbCol" value="ADVICE"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportClassification"/>
+            <item name="DbCol" value="reporttypecodename"/>
+          </item>
+          <item>
+            <item name="Name" value="EmergencyFlag"/>
+            <item name="DbCol" value="emergencyflag"/>
+          </item>
+          <item>
+            <item name="Name" value="MeasureValue"/>
+            <item name="DbCol" value="measurevalue"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportDelay"/>
+            <item name="DbCol" value="isdelay"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Pathology"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="OpResult"/>
+            <item name="DbCol" value="opresult"/>
+          </item>
+          <item>
+            <item name="Name" value="PathologyResult"/>
+            <item name="DbCol" value="pathologyresult"/>
+          </item>
+          <item>
+            <item name="Name" value="Accordinstance"/>
+            <item name="DbCol" value="accordinstance"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="JobDistribution"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="JobID"/>
+            <item name="DbCol" value="jobid"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="RefObjectSeq"/>
+            <item name="DbCol" value="refobjectseq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="WorkPositionID"/>
+            <item name="DbCol" value="PositionID"/>
+          </item>
+          <item>
+            <item name="Name" value="WorkPositionName"/>
+            <item name="DbCol" value="name"/>
+          </item>
+          <item>
+            <item name="Name" value="JobDoctorID"/>
+            <item name="DbCol" value="UserId"/>
+          </item>
+          <item>
+            <item name="Name" value="JobDoctorName"/>
+            <item name="DbCol" value="UserName"/>
+          </item>
+          <item>
+            <item name="Name" value="JobDate"/>
+            <item name="DbCol" value="scheduledate"/>
+          </item>
+          <item>
+            <item name="Name" value="JobCategory"/>
+            <item name="DbCol" value="JobCategory"/>
+          </item>
+          <item>
+            <item name="Name" value="JobStatus"/>
+            <item name="DbCol" value="JobStatus"/>
+          </item>
+          <item>
+            <item name="Name" value="WorkPostID"/>
+            <item name="DbCol" value="workpostID"/>
+          </item>
+          <item>
+            <item name="Name" value="WorkPostName"/>
+            <item name="DbCol" value="workpostname"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="FollowUp"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="FollowUpOrderSeq"/>
+            <item name="DbCol" value="OrderSeq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="FollowUpCommiterId"/>
+            <item name="DbCol" value="commiter_Id"/>
+          </item>
+          <item>
+            <item name="Name" value="FollowUpCommiterName"/>
+            <item name="DbCol" value="commiter_Name"/>
+          </item>
+          <item>
+            <item name="Name" value="FollowUpStatus"/>
+            <item name="DbCol" value="status"/>
+          </item>
+          <item>
+            <item name="Name" value="FollowUpReason"/>
+            <item name="DbCol" value="reason"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Aear"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="AearOrderSeq"/>
+            <item name="DbCol" value="OrderSeq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="AearReportSeq"/>
+            <item name="DbCol" value="ReportSeq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="AearHospitalName"/>
+            <item name="DbCol" value="hospitalname"/>
+          </item>
+          <item>
+            <item name="Name" value="AearOperateDt"/>
+            <item name="DbCol" value="operatedt"/>
+          </item>
+          <item>
+            <item name="Name" value="AearConsultDt"/>
+            <item name="DbCol" value="consultdt"/>
+          </item>
+          <item>
+            <item name="Name" value="AearConsultDr"/>
+            <item name="DbCol" value="consultdr"/>
+          </item>
+          <item>
+            <item name="Name" value="TaskLevel"/>
+            <item name="DbCol" value="tasklevel"/>
+          </item>
+          <item>
+            <item name="Name" value="AreaClassification"/>
+            <item name="DbCol" value="classification"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Warning"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="WarningOrderSeq"/>
+            <item name="DbCol" value="OrderSeq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="IsExamWarning"/>
+            <item name="DbCol" value="isexamwarning"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="HisOrder"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="HisCancelled"/>
+            <item name="DbCol" value="deleteflag"/>
+          </item>
+          <item>
+            <item name="Name" value="HisFilmType"/>
+            <item name="DbCol" value="filmtype"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="GraphicReport"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="GraphicReport"/>
+            <item name="DbCol" value="id"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Quality"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="ImageQualityScore"/>
+            <item name="DbCol" value="imagequalityscore"/>
+          </item>
+          <item>
+            <item name="Name" value="ImageQualityLevel"/>
+            <item name="DbCol" value="imagequalitylevel"/>
+          </item>
+          <item>
+            <item name="Name" value="ImageQualityDr"/>
+            <item name="DbCol" value="imagequalitydr"/>
+          </item>
+          <item>
+            <item name="Name" value="ImageQualityTime"/>
+            <item name="DbCol" value="imagequalitydt"/>
+            <item name="Format" value="date"/>
+          </item>
+          <item>
+            <item name="Name" value="ImageQualityUpvote"/>
+            <item name="DbCol" value="imagequalityupvote"/>
+          </item>
+          <item>
+            <item name="Name" value="ImageQualityRemark"/>
+            <item name="DbCol" value="imagequalityremark"/>
+          </item>
+          <item>
+            <item name="Name" value="ImageQualityItems"/>
+            <item name="DbCol" value="imagequalityitems"/>
+          </item>
+          <item>
+            <item name="Name" value="ImageQualityDetails"/>
+            <item name="DbCol" value="imagequalityitemremarks"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportQualityScore"/>
+            <item name="DbCol" value="reportqualityscore"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportQualityLevel"/>
+            <item name="DbCol" value="reportqualitylevel"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportQualityDr"/>
+            <item name="DbCol" value="reportqualitydr"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportQualityTime"/>
+            <item name="DbCol" value="reportqualitydt"/>
+            <item name="Format" value="date"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportQualityUpvote"/>
+            <item name="DbCol" value="reportqualityupvote"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportQualityRemark"/>
+            <item name="DbCol" value="reportqualityremark"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportQualityItems"/>
+            <item name="DbCol" value="reportqualityitems"/>
+          </item>
+          <item>
+            <item name="Name" value="ReportQualityDetails"/>
+            <item name="DbCol" value="reportqualityitemremarks"/>
+          </item>
+          <item>
+            <item name="Name" value="GroupQualityScore"/>
+            <item name="DbCol" value="groupqualityscore"/>
+          </item>
+          <item>
+            <item name="Name" value="GroupQualityLevel"/>
+            <item name="DbCol" value="groupqualitylevel"/>
+          </item>
+          <item>
+            <item name="Name" value="GroupQualityDr"/>
+            <item name="DbCol" value="groupqualitydr"/>
+          </item>
+          <item>
+            <item name="Name" value="GroupQualityTime"/>
+            <item name="DbCol" value="groupqualitydt"/>
+            <item name="Format" value="date"/>
+          </item>
+          <item>
+            <item name="Name" value="GroupQualityUpvote"/>
+            <item name="DbCol" value="groupqualityupvote"/>
+          </item>
+          <item>
+            <item name="Name" value="GroupQualityRemark"/>
+            <item name="DbCol" value="groupqualityremark"/>
+          </item>
+          <item>
+            <item name="Name" value="GroupQualityItems"/>
+            <item name="DbCol" value="groupqualityitems"/>
+          </item>
+          <item>
+            <item name="Name" value="GroupQualityDetails"/>
+            <item name="DbCol" value="groupqualityitemremarks"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="EsMachine"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="MachineNum"/>
+            <item name="DbCol" value="machineNum"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Queue"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="QueueCode"/>
+            <item name="DbCol" value="queuecode"/>
+          </item>
+          <item>
+            <item name="Name" value="CheckDate"/>
+            <item name="DbCol" value="checkdate"/>
+          </item>
+          <item>
+            <item name="Name" value="OperateTime"/>
+            <item name="DbCol" value="operatetime"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="AI"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="AiOrderSeq"/>
+            <item name="DbCol" value="hisorderid"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="AiResult"/>
+            <item name="DbCol" value="airesult"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="EsReport"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="ExamBodyPart"/>
+            <item name="DbCol" value="exambodypart"/>
+          </item>
+          <item>
+            <item name="Name" value="ExamOtDiagResult"/>
+            <item name="DbCol" value="examotdiagresult"/>
+          </item>
+          <item>
+            <item name="Name" value="HP"/>
+            <item name="DbCol" value="hp"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="Standard"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="StandardExamItemId"/>
+            <item name="DbCol" value="standardid"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="StandardExamItemCode"/>
+            <item name="DbCol" value="standardcode"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+          <item>
+            <item name="Name" value="StandardExamItem"/>
+            <item name="DbCol" value="standardname"/>
+            <item name="GroupType" value="concat"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="PostProcess"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="PostProcessOrderSeq"/>
+            <item name="DbCol" value="orderseq"/>
+          </item>
+          <item>
+            <item name="Name" value="PostProcessingMode"/>
+            <item name="DbCol" value="postprocessingmodename"/>
+          </item>
+          <item>
+            <item name="Name" value="ManualPostStatus"/>
+            <item name="DbCol" value="manualpoststatus"/>
+          </item>
+          <item>
+            <item name="Name" value="PostProcessDt"/>
+            <item name="DbCol" value="postprocessdt"/>
+          </item>
+          <item>
+            <item name="Name" value="PostProcessingDr"/>
+            <item name="DbCol" value="postprocessingdr"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="GmCutting"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="CuttingOrderSeq"/>
+            <item name="DbCol" value="orderseq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="CuttingDt"/>
+            <item name="DbCol" value="cuttingdt"/>
+          </item>
+          <item>
+            <item name="Name" value="CuttingDr"/>
+            <item name="DbCol" value="cuttingdr"/>
+          </item>
+          <item>
+            <item name="Name" value="GmRecorder"/>
+            <item name="DbCol" value="recordername"/>
+          </item>
+          <item>
+            <item name="Name" value="GmRegisterDr"/>
+            <item name="DbCol" value="registerdr"/>
+          </item>
+        </item>
+      </item>
+      <item>
+        <item name="TableTag" value="GmArchive"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="ArchiveOrderSeq"/>
+            <item name="DbCol" value="orderseq"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="ArchiveInDt"/>
+            <item name="DbCol" value="indate"/>
+          </item>
+          <item>
+            <item name="Name" value="ArchiveInMan"/>
+            <item name="DbCol" value="inman"/>
+          </item>
+        </item>
+      </item>
+	  <item>
+        <item name="TableTag" value="UsDicomImage"/>
+        <item name="ColDefList" value="#Array">
+          <item>
+            <item name="Name" value="UsDicomImageReportId"/>
+            <item name="DbCol" value="reportid"/>
+            <item name="Default" value="1"/>
+          </item>
+          <item>
+            <item name="Name" value="TransducerNo"/>
+            <item name="DbCol" value="transducerno"/>
+          </item>
+          <item>
+            <item name="Name" value="TransducerName"/>
+            <item name="DbCol" value="transducername"/>
+          </item>
+        </item>
+      </item>
+    </item>
+  </item>
+</config>

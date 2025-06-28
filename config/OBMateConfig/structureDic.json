@@ -1,0 +1,214 @@
+{
+  "columnConfig": [
+    {
+      "title": "结构名称",
+      "key": "NAME",
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "width": 150,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "结构名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入结构名称"
+          }
+        ],
+        "defaultValue": ""
+      }
+    },
+    {
+      "title": "结构编码",
+      "key": "CODE",
+      "width": 220,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "结构编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": true,
+            "message": "请输入结构编码"
+          }
+        ]
+      }
+    },
+	
+	{
+      "title": "AI结构编码",
+      "key": "AICODE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 150,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "AI结构编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入AI结构编码"
+          }
+        ]
+      }
+    },
+    {
+      "title": "选项描述",
+      "key": "ABNORMAL",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 400,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "请输入选项描述"
+		}
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入选项描述"
+          }
+        ],
+		"defaultValue": ""
+	  }
+	},
+	{
+      "title": "PACS名称",
+      "key": "EXTERNALNAME",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 150,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "PACS名称"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入PACS名称"
+          }
+        ]
+      }
+    },
+	{
+      "title": "PACS编码",
+      "key": "EXTERNALCODE",
+      "isShow": true,
+      "isQuery": false,
+      "isEdit": true,
+	  "width": 150,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "PACS编码"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请输入PACS编码"
+          }
+        ]
+      }
+    },
+    {
+      "title": "状态",
+      "key": "DELETED",
+      "width": 120,
+      "isShow": true,
+      "isQuery": true,
+      "isEdit": true,
+      "component": {
+        "name": "a-radio-group",
+        "props": {
+          "placeholder": "请选择状态",
+          "options": [
+            {
+              "label": "正常",
+              "value": "0"
+            },
+            {
+              "label": "停用",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": "请选择状态"
+          }
+        ],
+        "defaultValue": "0"
+      }
+    },
+    {
+      "title": "ID",
+      "key": "ID",
+      "isShow": false,
+      "isQuery": false,
+	  "isEdit": false,
+      "width": 350,
+      "component": {
+        "name": "a-input",
+        "props": {
+          "placeholder": "",
+          "disabled": "true"
+        }
+      },
+      "formItem": {
+        "rules": [
+          {
+            "required": false,
+            "message": ""
+          }
+        ]
+      }
+    }
+  ],
+  "sqlTemplates": {
+    "select": "select * from t_anatomical_structure_define where hospitalid='{GLOBAL}{HOSPITALID}' and departmentid = '{GLOBAL}{DEPARTMENTID}' ",
+    "insert": "insert into t_anatomical_structure_define(id,name,code,abnormal,deleted,externalcode,externalname,hospitalid,departmentid,aicode) values('{ID}','{NAME}','{CODE}','{ABNORMAL}','{DELETED}','{EXTERNALCODE}','{EXTERNALNAME}','{GLOBAL}{HOSPITALID}','{GLOBAL}{DEPARTMENTID}','{AICODE}')",
+    "update": "update t_anatomical_structure_define t set t.name='{NAME}',t.code='{CODE}',t.abnormal='{ABNORMAL}',t.deleted='{DELETED}',t.externalcode='{EXTERNALCODE}',t.externalname='{EXTERNALNAME}',t.hospitalid='{GLOBAL}{HOSPITALID}',t.departmentid='{GLOBAL}{DEPARTMENTID}',t.aicode='{AICODE}' where t.id='{ID}'",
+    "setState": "update t_anatomical_structure_define set deleted = '{DELETED}' where id = '{ID}'",
+	"delete": "delete from t_anatomical_structure_define where id = '{ID}'",
+	"setSequence":"update t_anatomical_structure_define set sequence = '{SEQUENCE}' where id = '{ID}'",
+    "exportData": "select o.* from t_anatomical_structure_define o"
+  },
+  "buttonsShow":{
+	"add": true,
+	"edit": true,
+	"delete": true,
+	"setState": true,
+	"setStateToDelete": false,
+	"setSequence": true,
+	"exportData": true,
+	"importData": true
+  }
+}

@@ -1,0 +1,66 @@
+<config versiontag="root">
+  <item name="RegionConfiguration" versiontag="201812.2689">
+    <!-- RegionCategory: 区域类别 0：内部模式（淳安区域模式） 1：平台模式（东阳区域模式） 2:云PACS方式会诊 3:XDR模式会诊 -->
+    <item name="RegionStrategyMapping" versiontag="202111.30">
+      <item name="default" value="0" versiontag="202111.31" />
+      <item name="HospitalMapping" versiontag="202111.32">
+        <item name="44-00" value="0" versiontag="202111.33" />
+        <!-- 医院44 和 医院00 之间的会诊模式0 -->
+        <!-- 医院44：提交方t_order表的hospitalid；医院00：会诊医院t_aear_consult表的hospitalcode -->
+        <item name="201-00" value="0" versiontag="202111.34" />
+        <!-- 医院201 和 医院00 之间的会诊模式0 -->
+        <item name="00-09" value="1" versiontag="202111.35" />
+        <!-- 医院00 和 医院09 之间的会诊模式1 -->
+      </item>
+    </item>
+    <!-- HospitalGroup: 区域会诊管理会诊组分类 name=会诊组名称 value="提交方院区名称_会诊方院区名称_会诊模式" -->
+    <!-- 提交方院区名称：t_order表hospitalname；t_aear_consult的hospitalname" -->
+    <!-- 会诊模式(0：内部模式（淳安区域模式） 1：平台模式（东阳区域模式） 2:云PACS方式会诊 3:XDR模式会诊)-->
+    <item name="HospitalGroup" versiontag="202111.36">
+      <item name="社区湖滨会诊" value="社区医院_湖滨院区_2" versiontag="202111.37" />
+      <item name="滨江内部会诊" value="滨江院区_湖滨院区_0" versiontag="202111.38" />
+    </item>
+    <!-- HospitalType: 医院类别  0： 社区医院    1：中心医院 -->
+    <item name="RegionHospitalType" value="1" versiontag="201812.2704" />
+    <!-- 区域代理的ip和端口 -->
+    <item name="RegionProxyIP" value="10.24.2.164" versiontag="201812.2705" />
+    <item name="RegionProxyPort" value="5903" versiontag="201812.2706" />
+    <!-- XDR模式下是否解析接收结果 1：解析  非1 ：不解析 -->
+    <item name="IsReceiveXDRConsultResponse" value="0" versiontag="202012.99" />
+    <!-- RegionWritePostback: 区域书写任务回传  0：书写完成后    1：审核完成后 -->
+    <item name="RegionWritePostback" value="1" versiontag="202006.203" />
+    <!-- 是否弹出会诊消息-->
+    <item name="IsShowRefreshConsultMessage" value="1" versiontag="202006.204" />
+    <!-- 弹出会诊消息 间隔  单位 秒 -->
+    <item name="RefreshConsultTimer" value="30" versiontag="202006.205" />
+    <!-- 是否开启功能（区域任务级别） 0：不开启    1：开启-->
+    <item name="EnableRegionTaskLevel" value="1" versiontag="202211.15" />
+    <!-- 会诊等级限制，可以设置每个职称可以查询到的会诊等级。需要用户设置职称后才生效 -->
+    <!-- DefaultLevel为默认可查询的会诊等级，如果RestrictLevel全部都不能匹配则使用DefaultLevel-->
+    <!-- TechnicalPost为字典表1004的职称的ItemCode -->
+    <!-- TaskLevel为此职称可以查询的会诊等级：0 普通，1 副高，2 正高，3 MDT -->
+    <item name="TaskLevelRestrict" versiontag="202211.16">
+      <item name="DefaultLevel" value="#Array" versiontag="202211.17">
+        <item value="0" versiontag="202211.18" />
+      </item>
+      <item name="RestrictLevel" value="#Array" versiontag="202211.19">
+        <item versiontag="202211.20">
+          <item name="TechnicalPost" value="204" versiontag="202211.21" />
+          <item name="TaskLevel" value="#Array" versiontag="202211.22">
+            <item value="0" versiontag="202211.23" />
+            <item value="1" versiontag="202211.24" />
+            <item value="2" versiontag="202211.25" />
+            <item value="3" versiontag="202211.26" />
+          </item>
+        </item>
+        <item versiontag="202211.27">
+          <item name="TechnicalPost" value="205" versiontag="202211.28" />
+          <item name="TaskLevel" value="#Array" versiontag="202211.29">
+            <item value="0" versiontag="202211.30" />
+            <item value="1" versiontag="202211.31" />
+          </item>
+        </item>
+      </item>
+	</item>
+  </item>
+</config>

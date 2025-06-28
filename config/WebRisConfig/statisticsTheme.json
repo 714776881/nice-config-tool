@@ -1,0 +1,193 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "主题配置",
+			"filePath":"D:\\project\\config-tool\\src\\config\\RisConfig\\WebStatisticConfiguration.xml",
+			"nodePath":"/config/item[@name='WebStatisticConfiguration']/item[@name='topicals']"
+		}
+	],
+	"keyLabelMap":[
+		{
+			"key": "topicals",
+			"label" : "统计主题列表"
+		},
+		{
+			"key": "topicalgroup",
+			"label" : "分组名称"
+		},
+		{
+			"key": "departments",
+			"label" : "主题权限"
+		},
+		{
+			"key": "name",
+			"label" : "统计主题"
+		},
+		{
+			"key": "id",
+			"label" : "作用科室"
+		},
+		{
+			"key": "roles",
+			"label" : "用户角色"
+		},
+		{
+			"key": "params",
+			"label" : "查询参数"
+		},
+		{
+			"key": "elements",
+			"label" : "图表元素"
+		},
+		{
+			"key": "elementname",
+			"label" : "元素名称"
+		},
+		{
+			"key": "type",
+			"label" : "元素类型"
+		},
+		{
+			"key": "sql",
+			"label" : "查询SQL"
+		},
+		{
+			"key": "needmergecols",
+			"label" : "合并的列"
+		},
+		{
+			"key": "needsumcols",
+			"label" : "合计的列"
+		},
+		{
+			"key": "drillingfuns",
+			"label" : "下钻功能"
+		},
+		{
+			"key": "col",
+			"label" : "列名"
+		},
+		{
+			"key": "drillingtopicalname",
+			"label" : "下钻的报表名称"
+		}
+	],
+	"inputConfig":[
+		{
+			"key": "sql",
+			"component": {
+				"name": "a-textarea",
+				"props": {
+					"placeholder": "请选择内容！",
+					"style": "min-width:900px",
+					"autosize":"true"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择内容！"
+					}
+				],
+				"defaultValue": ""
+			}
+		},
+		{
+			"key": "id",
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择科室名称！",
+					"style": "width:200px",
+					"show-search": true,
+					"option-filter-prop": "label"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择科室名称！"
+					}
+				],
+				"defaultValue": ""
+			},
+			"dicSql": "select ITEMNAME as label,ITEMCODE value from t_dictionary where diccategory = '1001'"
+		},
+		{
+			"key": "roles",
+			"component": {
+				"name": "a-select",
+				"props": {
+					"placeholder": "请选择用户角色Code！",
+					"style": "width:200px",
+					"show-search": true,
+					"option-filter-prop": "label"
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择用户角色Code！"
+					}
+				],
+				"defaultValue": ""
+			},
+			"dicSql": "select distinct r.useractorcode value,r.useractorname as label from t_useractor r where r.deleted = '0'"
+		},
+		{
+			"key": "type",
+			"component": {
+				"name": "a-radio-group",
+				"props": {
+					"placeholder": "请输入类型！",
+					"options": [
+						{
+							"label": "表格",
+							"value": "1"
+						},
+						{
+							"label": "柱形图",
+							"value": "2"
+						},
+						{
+							"label": "条形图",
+							"value": "3"
+						},
+						{
+							"label": "折线图",
+							"value": "4"
+						},
+						{
+							"label": "饼图",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"formItem": {
+				"rules": [
+					{
+						"required": false,
+						"message": "请选择孕龄单位"
+					}
+				],
+				"defaultValue": ""
+			}
+		}
+	],
+	"arrayConfig":[
+		{
+			"key": "topicals;elements",
+			"type":"Collapse",
+			"props":{
+				"index":"0"
+			}
+		}
+	],
+	"themeConfig":{
+		"isShowAnnotate":false
+	}
+}

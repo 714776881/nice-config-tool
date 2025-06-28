@@ -1,0 +1,270 @@
+<config versiontag="root">
+  <!--导航栏的各项定义，包括显示值，使用的图标，一般情况下不需要修改-->
+  <item name="ThemePreDefineConfiguration" value="#Array" versiontag="201812.2759">
+    <item versiontag="201812.2760">
+      <item name="Id" value="00" versiontag="201812.2761" />
+      <item name="Name" value="NavHide" versiontag="201812.2762" />
+      <item name="Description" value="隐藏" versiontag="201812.2763" />
+      <item name="HasIcon" value="true" versiontag="201812.2764" />
+      <item name="IconName" value="icon-paragraph-justify3" versiontag="201812.2765" />
+      <item name="AlwaysExist" value="true" versiontag="201812.2766" />
+    </item>
+    <item versiontag="201812.2767">
+      <item name="Id" value="0" versiontag="201812.2768" />
+      <item name="Name" value="NavWorklist" versiontag="201812.2769" />
+      <item name="Description" value="检查列表" versiontag="201812.2770" />
+      <item name="HasIcon" value="true" versiontag="201812.2771" />
+      <item name="IconName" value="icon-calendar3" versiontag="201812.2772" />
+      <item name="AlwaysExist" value="true" versiontag="201812.2773" />
+    </item>
+    <item versiontag="201812.2774">
+      <item name="Id" value="01" versiontag="201812.2775" />
+      <item name="Name" value="NavEditReport" versiontag="201812.2776" />
+      <item name="Description" value="报告编辑" versiontag="201812.2777" />
+      <item name="HasIcon" value="true" versiontag="201812.2778" />
+      <item name="IconName" value="icon-pencil7" versiontag="201812.2779" />
+      <item name="AlwaysExist" value="true" versiontag="201812.2780" />
+    </item>
+    <item versiontag="202401.614">
+      <item name="Id" value="9727" versiontag="202401.615" />
+      <item name="Name" value="NavSimilarReport" versiontag="202401.616" />
+      <item name="Description" value="相似报告" versiontag="202401.617" />
+      <item name="HasIcon" value="true" versiontag="202401.618" />
+      <item name="IconName" value="icon-stack" versiontag="202401.619" />
+    </item>
+    <item versiontag="202110.104">
+      <item name="Id" value="9703" versiontag="202110.105" />
+      <item name="Name" value="NavQualityControl" versiontag="202110.106" />
+      <item name="Description" value="质控评分" versiontag="202110.107" />
+      <item name="HasIcon" value="true" versiontag="202110.108" />
+      <item name="IconName" value="icon-stamp" versiontag="202110.109" />
+    </item>
+    <item versiontag="201812.2781">
+      <item name="Id" value="1" versiontag="201812.2782" />
+      <item name="Name" value="NavRegister" versiontag="201812.2783" />
+      <item name="Description" value="登记检查" versiontag="201812.2784" />
+      <item name="HasIcon" value="true" versiontag="201812.2785" />
+      <item name="IconName" value="icon-user-plus" versiontag="201812.2786" />
+      <item name="SubThemeSet" value="#Array" versiontag="201812.2787">
+        <item versiontag="201812.2788">
+          <item name="Id" value="1015" versiontag="201812.2789" />
+          <item name="Name" value="NavBookingList" versiontag="201812.2790" />
+          <item name="Description" value="预约列表" versiontag="201812.2791" />
+        </item>
+        <!--Form登记页面-->
+        <item versiontag="201812.2792">
+          <item name="Id" value="1040" versiontag="201812.2793" />
+          <item name="Name" value="NavRegister" versiontag="201812.2794" />
+          <item name="Description" value="新增预约/登记" versiontag="201812.2795" />
+        </item>
+        <!--Web登记页面-->
+        <!--><item>
+          <item name="Id" value="1040"/>
+          <item name="Name" value="NavRegisterWeb"/>
+          <item name="Description" value="新增预约/登记"/>
+        </item>-->
+      </item>
+    </item>
+    <item versiontag="201812.2808">
+      <item name="Id" value="3" versiontag="201812.2809" />
+      <item name="Name" value="NavReport" versiontag="201812.2810" />
+      <item name="Description" value="报告管理" versiontag="201812.2811" />
+      <item name="HasIcon" value="true" versiontag="201812.2812" />
+      <item name="IconName" value="icon-copy" versiontag="201812.2813" />
+      <item name="SubThemeSet" value="#Array" versiontag="201812.2814">
+        <item versiontag="201812.2819">
+          <item name="Id" value="3100" versiontag="201812.2820" />
+          <item name="Name" value="NavReportBackUP" versiontag="201812.2821" />
+          <item name="Description" value="修改痕迹查看" versiontag="201812.2822" />
+        </item>
+        <item versiontag="201812.2823">
+          <item name="Id" value="3110" versiontag="201812.2824" />
+          <item name="Name" value="NavPathology" versiontag="201812.2825" />
+          <item name="Description" value="诊断符合率管理" versiontag="201812.2826" />
+        </item>
+        <item versiontag="201812.2827">
+          <item name="Id" value="3130" versiontag="201812.2828" />
+          <item name="Name" value="NavConsultation" versiontag="201812.2829" />
+          <item name="Description" value="病例会诊管理" versiontag="201812.2830" />
+        </item>
+        <item versiontag="201812.2831">
+          <item name="Id" value="3444" versiontag="201812.2832" />
+          <item name="Name" value="NavMyFavorite" versiontag="201812.2833" />
+          <item name="Description" value="我的收藏夹" versiontag="201812.2834" />
+          <item name="AlwaysExist" value="true" versiontag="201812.2835" />
+        </item>
+      </item>
+    </item>
+    <item versiontag="201812.2836">
+      <item name="Id" value="6150" versiontag="201812.2837" />
+      <item name="Name" value="NavWorkLoadStat" versiontag="201812.2838" />
+      <item name="Description" value="工作量统计" versiontag="201812.2839" />
+      <item name="HasIcon" value="true" versiontag="201812.2840" />
+      <item name="IconName" value="icon-graph" versiontag="201812.2841" />
+      <item name="AlwaysExist" value="true" versiontag="202109.113" />
+      <!--item name="SubThemeSet" value="#Array">
+	    <item>
+          <item name="Id" value="6160"/>
+          <item name="Name" value="NavTodayWorkLoadStat"/>
+          <item name="Description" value="当天工作量统计"/>
+		  <item name="AlwaysExist" value="true"/>
+        </item>
+	  </item-->
+    </item>
+	<!--导航栏Web统计按钮-->
+	<!--<item>
+      <item name="Id" value="6150" />
+      <item name="Name" value="NavStatWeb" />
+      <item name="Description" value="工作量统计" />
+      <item name="HasIcon" value="true" />
+      <item name="IconName" value="icon-graph" />
+      <item name="AlwaysExist" value="true" />
+    </item>-->
+    <item versiontag="201812.2891">
+      <item name="Id" value="9" versiontag="201812.2892" />
+      <item name="Name" value="NavConfig" versiontag="201812.2893" />
+      <item name="Description" value="系统配置" versiontag="201812.2894" />
+      <item name="HasIcon" value="true" versiontag="201812.2895" />
+      <item name="IconName" value="icon-cog2" versiontag="201812.2896" />
+      <item name="SubThemeSet" value="#Array" versiontag="201812.2897">
+        <item versiontag="201812.2902">
+          <item name="Id" value="9040" versiontag="201812.2903" />
+          <item name="Name" value="NavReportTemplate" versiontag="201812.2904" />
+          <item name="Description" value="报告模板" versiontag="201812.2905" />
+        </item>
+        <item versiontag="201812.2906">
+          <item name="Id" value="9010" versiontag="201812.2907" />
+          <item name="Name" value="NavUserManage" versiontag="201812.2908" />
+          <item name="Description" value="用户管理" versiontag="201812.2909" />
+        </item>
+        <item versiontag="201812.2910">
+          <item name="Id" value="9020" versiontag="201812.2911" />
+          <item name="Name" value="NavExamItemManage" versiontag="201812.2912" />
+          <item name="Description" value="检查项目" versiontag="201812.2913" />
+        </item>
+        <item versiontag="201812.2914">
+          <item name="Id" value="9030" versiontag="201812.2915" />
+          <item name="Name" value="NavInstrumentManage" versiontag="201812.2916" />
+          <item name="Description" value="机房设备" versiontag="201812.2917" />
+        </item>
+        <item versiontag="201812.2918">
+          <item name="Id" value="9050" versiontag="201812.2919" />
+          <item name="Name" value="NavReportTemplateManage" versiontag="201812.2920" />
+          <item name="Description" value="打印模板" versiontag="201812.2921" />
+        </item>
+        <item versiontag="201812.2922">
+          <item name="Id" value="9080" versiontag="201812.2923" />
+          <item name="Name" value="NavDataBaseConfig" versiontag="201812.2924" />
+          <item name="Description" value="系统参数" versiontag="201812.2925" />
+        </item>
+        <item versiontag="201812.2926">
+          <item name="Id" value="9090" versiontag="201812.2927" />
+          <item name="Name" value="NavOtherConfig" versiontag="201812.2928" />
+          <item name="Description" value="其他" versiontag="201812.2929" />
+        </item>
+        <item versiontag="201812.2930">
+          <item name="Id" value="9100" versiontag="201812.2931" />
+          <item name="Name" value="NavChargeSetting" versiontag="201812.2932" />
+          <item name="Description" value="套餐" versiontag="201812.2933" />
+        </item>
+        <item versiontag="201812.2934">
+          <item name="Id" value="9110" versiontag="201812.2935" />
+          <item name="Name" value="NavStatSetting" versiontag="201812.2936" />
+          <item name="Description" value="统计模板" versiontag="201812.2937" />
+        </item>
+        <item versiontag="201812.2938">
+          <item name="Id" value="9120" versiontag="201812.2939" />
+          <item name="Name" value="NavEquipmentLog" versiontag="201812.2940" />
+          <item name="Description" value="设备日志" versiontag="201812.2941" />
+        </item>
+        <item versiontag="201812.2942">
+          <item name="Id" value="9130" versiontag="201812.2943" />
+          <item name="Name" value="NavExamBodyPart" versiontag="201812.2944" />
+          <item name="Description" value="内镜部位" versiontag="201812.2945" />
+        </item>
+        <item versiontag="201812.2958">
+          <item name="Id" value="9211" versiontag="201812.2959" />
+          <item name="Name" value="NavDiagnoseGroup" versiontag="201812.2960" />
+          <item name="Description" value="诊断组配置" versiontag="201812.2961" />
+        </item>
+        <item versiontag="201812.2962">
+          <item name="Id" value="9221" versiontag="201812.2963" />
+          <item name="Name" value="NavWorkPosition" versiontag="201812.2964" />
+          <item name="Description" value="任务分发管理" versiontag="201812.2965" />
+        </item>
+        <item versiontag="201812.2966">
+          <item name="Id" value="9231" versiontag="201812.2967" />
+          <item name="Name" value="AccelerateKey" versiontag="201812.2968" />
+          <item name="Description" value="快捷键配置" versiontag="201812.2969" />
+        </item>
+        <item versiontag="201812.2970">
+          <item name="Id" value="9232" versiontag="201812.2971" />
+          <item name="Name" value="Measurement" versiontag="201812.2972" />
+          <item name="Description" value="测量值配置" versiontag="201812.2973" />
+        </item>
+        <item versiontag="201812.2974">
+          <item name="Id" value="9241" versiontag="201812.2975" />
+          <item name="Name" value="CallTerminalSetting" versiontag="201812.2976" />
+          <item name="Description" value="呼叫站配置" versiontag="201812.2977" />
+        </item>
+        <item versiontag="202109.114">
+          <item name="Id" value="9242" versiontag="202109.115" />
+          <item name="Name" value="SaveRemind" versiontag="202109.116" />
+          <item name="Description" value="保存提醒配置" versiontag="202109.117" />
+        </item>
+        <item versiontag="202109.118">
+          <item name="Id" value="9629" versiontag="202109.119" />
+          <item name="Name" value="AgeRemindConfig" versiontag="202109.120" />
+          <item name="Description" value="年龄提醒配置" versiontag="202109.121" />
+        </item>
+        <item versiontag="202109.122">
+          <item name="Id" value="9243" versiontag="202109.123" />
+          <item name="Name" value="QualityControlConfig" versiontag="202109.124" />
+          <item name="Description" value="评分配置" versiontag="202109.125" />
+        </item>
+        <item versiontag="202401.620">
+          <item name="Id" value="9244" versiontag="202401.621" />
+          <item name="Name" value="EmergencyKeyWordConfig" versiontag="202401.622" />
+          <item name="Description" value="危急值配置" versiontag="202401.623" />
+        </item>
+        <!--item versiontag="202111.43">
+          <item name="Id" value="9" versiontag="202111.44" />
+          <item name="Name" value="NavTerminalConfig" versiontag="202111.45" />
+          <item name="HasIcon" value="true" versiontag="202111.46" />
+          <item name="IconName" value="icon-cog2" versiontag="202111.47" />
+          <item name="Description" value="显示屏配置" versiontag="202111.48" />
+          <item name="AlwaysExist" value="true" versiontag="202111.49" />
+        </item-->
+        <item versiontag="202405.56">
+          <item name="Id" value="9245" versiontag="202405.57" />
+          <item name="Name" value="TreatItem" versiontag="202405.58" />
+          <item name="Description" value="治疗项目配置" versiontag="202405.59" />
+        </item>
+      </item>
+    </item>
+    <item versiontag="201812.2978">
+      <item name="Id" value="02" versiontag="201812.2979" />
+      <item name="Name" value="NavLock" versiontag="201812.2980" />
+      <item name="HasIcon" value="true" versiontag="201812.2981" />
+      <item name="IconName" value="icon-lock2" versiontag="201812.2982" />
+      <item name="Description" value="锁屏" versiontag="201812.2983" />
+      <item name="AlwaysExist" value="true" versiontag="201812.2984" />
+    </item>
+    <item versiontag="201812.2985">
+      <item name="Id" value="02" versiontag="201812.2986" />
+      <item name="Name" value="NavMinimize" versiontag="201812.2987" />
+      <item name="HasIcon" value="true" versiontag="201812.2988" />
+      <item name="IconName" value="icon-shrink7" versiontag="201812.2989" />
+      <item name="Description" value="最小化" versiontag="201812.2990" />
+      <item name="AlwaysExist" value="true" versiontag="201812.2991" />
+    </item>
+    <item versiontag="201812.2992">
+      <item name="Id" value="01" versiontag="201812.2993" />
+      <item name="Name" value="NavExit" versiontag="201812.2994" />
+      <item name="HasIcon" value="true" versiontag="201812.2995" />
+      <item name="IconName" value="icon-switch2" versiontag="201812.2996" />
+      <item name="Description" value="退出" versiontag="201812.2997" />
+      <item name="AlwaysExist" value="true" versiontag="201812.2998" />
+    </item>
+  </item>
+</config>

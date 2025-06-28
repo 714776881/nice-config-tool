@@ -1,0 +1,47 @@
+{
+	"keyValueConfig": [
+		{
+			"name": "导航预定义元素",
+			"filePath":"General\\ThemePreDefineConfiguration.xml",
+			"nodePath":"/config/item[@name='ThemePreDefineConfiguration']"
+		}
+	],
+	"keyLabelMap":[
+		{
+			"key": "name",
+			"label" : "分组名称"
+		},
+		{
+			"key": "iconurl",
+			"label" : "图标路径"
+		},
+		{
+			"key": "Name",
+			"label" : "名称"
+		},
+		{
+			"key": "Description",
+			"label" : "描述"
+		},
+		{
+			"key": "HasIcon",
+			"label" : "图标显示"
+		},
+		{
+			"key": "IconName",
+			"label" : "图标编码"
+		}
+	],
+	"inputConfig":[
+		
+	],
+	"arrayConfig":[
+		{
+			"key":"ThemePreDefineConfiguration;SubThemeSet",
+			"type":"Collapse",
+			"props":{
+				"index":"2"
+			}
+		}
+	]
+}

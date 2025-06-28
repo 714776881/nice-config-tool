@@ -1,0 +1,10 @@
+﻿<config>
+	<item name="UserPowerGroupDefineConfiguraion">
+		<item name="All" value="0"/>
+		<item name="Register" value="1"/>
+		<item name="Pathology" value="2"/>
+		<item name="Report" value="0"/>
+		<item name="Statistics" value="6"/>
+		<item name="Config" value="9"/>
+	</item>
+</config>

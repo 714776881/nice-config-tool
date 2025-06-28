@@ -126,7 +126,7 @@
 	}
   ],
   "sqlTemplates": {
-    "select": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015'",
+    "select": "select d.*,d.dictionaryid id from t_dictionary d where d.diccategory = '1015' order by itemname",
     "insert": "insert into t_dictionary(dictionaryid,diccategory,itemcode,itemname,deleted,sequence) values('{ID}','1015','{ITEMCODE}','{ITEMNAME}','{DELETED}','{SEQUENCE}')",
     "update": "update t_dictionary d set d.diccategory = '1015',d.itemcode = '{ITEMCODE}',d.itemname = '{ITEMNAME}' where d.dictionaryid = '{ID}'",
     "setState": "update t_dictionary set deleted = '{DELETED}' where dictionaryid = '{ID}'",
