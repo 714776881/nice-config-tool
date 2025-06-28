@@ -1,4 +1,4 @@
-import request from '../request/index'
+import request from '../request'
 
 // 获取配置文件
 export function fetchGetConfigFile(fileName: string) {
@@ -20,20 +20,20 @@ export function fetchPostConfigFile(fileName: string, fileContent: App.Crud.Conf
 }
 
 // 获取xml节点
-export function fetchGetXmlFileNode(fileFullPath: string, nodePath: string) {
+export function fetchGetXmlFileNode(filePath: string, nodePath: string) {
   return request<string>({
     url: '/xmlFile',
     method: 'get',
-    params: { fileFullPath, nodePath }
+    params: { filePath, nodePath }
   })
 }
 
 // 提交xml节点
-export function fetchPostXmlFileNode(fileFullPath: string, nodePath: string, nodeValue: string) {
+export function fetchPostXmlFileNode(filePath: string, nodePath: string, nodeValue: string) {
   return request<boolean>({
     url: '/xmlFile',
     method: 'post',
-    params: { fileFullPath, nodePath },
+    params: { filePath, nodePath },
     data: { nodeValue: nodeValue }
   })
 }

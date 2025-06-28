@@ -1,28 +1,41 @@
 <!-- DB CRUD 通过拼接SQL实现对数据库的增删改查 -->
 <script lang="ts" setup>
-import { ref, onBeforeMount, computed } from 'vue'
-import crudtable from './table/index.vue';
-import { replaceSql, addWhereSql, uuid, deepClone } from '@/utils/tool'
+import { ref, onBeforeMount, provide } from 'vue'
+import crudtable from './components/table/index.vue';
+import { uuid, deepClone } from '@/utils/tool'
 import { fetchCrudData, fetchCrudExeSql, fetchCrudExeBatchSql } from '@/service/api/crud'
 import { useConfig } from '@/stores/config'
-import { fetchGetConfigFile, fetchPostConfigFile } from '@/service/api/file'
-import { useGlobalStore } from '@/stores/global'
 import { App, message } from 'ant-design-vue';
-import { useAuthStore } from '@/stores/auth'
-import { replaceSqlInGlobalState } from './crud'
+import { userState } from './composables/useState';
+
+const buildSql = (userState().buildSql)
 
 const props = defineProps(['configFileName', 'state'])
 const config = ref<App.Crud.Config>()
 const configStore = useConfig()
 
+// 向子组件传递配置数据,以便取用
+provide('config', config)
+
 const loadConfig = async () => {
     const file = await configStore.getConfig(props.configFileName)
     config.value = deepClone(file.fileContent)
 
+    //loadDic();
+};
+
+// 加载字典
+const loadDic = async () => {
     if (config.value.columnConfig) {
         config.value.columnConfig.forEach(item => {
             if (item.dicSql) {
-                const exeSql = replaceSqlByState(item.dicSql, item)
+                const exeSql = buildSql(item.dicSql, item, props.state)
+
+                if (sqlDic.value.find(sql => sql.key === exeSql)) {
+                    // 如果字典已经加载过，则不再加载
+                    item.component.props.options = sqlDic.value.find(sql => sql.key === exeSql).options
+                }
+
                 fetchCrudData(exeSql).then(res => {
                     var options = []
                     res.data.data.forEach(element => {
@@ -31,42 +44,55 @@ const loadConfig = async () => {
                         });
                     });
                     item.component.props.options = options
+
+                    sqlDic.value.push({
+                        key: exeSql,
+                        options: options
+                    })
                 })
             }
         })
     }
-};
+}
+
+const sqlDic = ref([])
+
 
 onBeforeMount(loadConfig)
 
 const data = ref<any[]>()
 
-const fetchData = (searchState: any) => {
-
-    // 将searchState中有值的内容拼接成SQL
-    var sql = addWhereSql(config.value.sqlTemplates.select, searchState)
-    sql = replaceSqlByState(sql, searchState)
-
+const fetchData = async (searchState: any) => {
+    // 处理查询条件
+    var sql = buildSql(config.value.sqlTemplates.select, searchState, props.state, searchState)
     console.log('查询SQL:' + sql)
 
+    await loadDic()
+
     return new Promise((resolve, reject) => {
-        fetchCrudData(sql).then((res) => {
+        fetchCrudData(sql, searchState).then((res) => {
             data.value = res.data.data
             resolve(res)
         }).catch((err) => {
+            // 弹窗提醒
+            message.error('查询失败！' + err)
             reject(err)
         })
     })
 }
 
 const fetchCreate = (fromState: any) => {
-
-    const sql = replaceSqlByState(config.value.sqlTemplates.insert, fromState)
-
+    const sql = buildSql(config.value.sqlTemplates.insert, fromState, props.state)
     console.log('插入SQL:' + sql)
 
+    //var uploadFile = null
+    //if (fromState.UPLOADFILE) {
+    //    uploadFile = fromState.UPLOADFILE
+    //    // 删除上传文件字段，避免插入到数据库中
+    //    delete fromState.UPLOADFILE
+    //}
     return new Promise((resolve, reject) => {
-        fetchCrudExeSql(sql).then((res: any) => {
+        fetchCrudExeSql(sql, fromState).then((res: any) => {
             resolve(res)
         }).catch((err: any) => {
             reject(err)
@@ -75,12 +101,20 @@ const fetchCreate = (fromState: any) => {
 }
 
 const fetchEdit = (fromState: any) => {
-    const sql = replaceSqlByState(config.value.sqlTemplates.update, fromState)
-
+    const sql = buildSql(config.value.sqlTemplates.update, fromState, props.state)
     console.log('更新SQL:' + sql)
 
+    var state = deepClone({ ...fromState })
+
+    var uploadFile = null
+    if (state.UPLOADFILE) {
+        uploadFile = state.UPLOADFILE
+        // 删除上传文件字段，避免插入到数据库中
+        delete state.UPLOADFILE
+    }
+
     return new Promise((resolve, reject) => {
-        fetchCrudExeSql(sql).then((res: any) => {
+        fetchCrudExeSql(sql, state, uploadFile).then((res: any) => {
             resolve(res)
         }).catch((err: any) => {
             reject(err)
@@ -90,9 +124,7 @@ const fetchEdit = (fromState: any) => {
 
 
 const fetchSetState = (fromState: any) => {
-    debugger;
-    const sql = replaceSqlByState(config.value.sqlTemplates.setState, fromState);
-
+    const sql = buildSql(config.value.sqlTemplates.setState, fromState, props.state)
     console.log('更新状态SQL:' + sql);
 
     return new Promise((resolve, reject) => {
@@ -106,9 +138,8 @@ const fetchSetState = (fromState: any) => {
 
 const fetchBatchRemove = (selectedRowKeys: any) => {
     const sqls = selectedRowKeys.map(key => {
-        return replaceSqlByState(config.value.sqlTemplates.delete, { ID: key })
+        return buildSql(config.value.sqlTemplates.delete, { ID: key }, props.state)
     })
-
     console.log('删除SQL:' + sqls)
 
     return new Promise((resolve, reject) => {
@@ -127,9 +158,8 @@ const fetchSwitchSort = (a, b) => {
     b.SEQUENCE = a.SEQUENCE
     a.SEQUENCE = sequence
 
-    sqls.push(replaceSqlByState(config.value.sqlTemplates.setSequence, a))
-    sqls.push(replaceSqlByState(config.value.sqlTemplates.setSequence, b))
-
+    sqls.push(buildSql(config.value.sqlTemplates.setSequence, a, props.state))
+    sqls.push(buildSql(config.value.sqlTemplates.setSequence, b, props.state))
     console.log("交换排序" + sqls)
 
     return new Promise((resolve, reject) => {
@@ -142,9 +172,8 @@ const fetchSwitchSort = (a, b) => {
 }
 
 const fetchExportData = (searchState: any) => {
-    var sql = addWhereSql(config.value.sqlTemplates.exportData, searchState)
-    sql = replaceSqlByState(sql, searchState)
-
+    // 处理导出SQL
+    var sql = buildSql(config.value.sqlTemplates.exportData, searchState, props.state, searchState)
     console.log('导出SQL:' + sql)
 
     return new Promise((resolve, reject) => {
@@ -161,10 +190,9 @@ const fetchImportData = async (data) => {
     const sqls = [];
 
     for (const item of data) {
-        debugger;
         if (item.ID && item.ID.toString().trim() !== '') {
             // 已有 ID，生成更新语句
-            sqls.push(replaceSqlByState(config.value.sqlTemplates.update, item));
+            sqls.push(buildSql(config.value.sqlTemplates.update, item, props.state));
         } else {
 
             // 没有 ID，生成新 ID 并插入
@@ -189,7 +217,7 @@ const fetchImportData = async (data) => {
             }
 
             // 生成插入语句
-            sqls.push(replaceSqlByState(config.value.sqlTemplates.insert, item));
+            sqls.push(buildSql(config.value.sqlTemplates.insert, item));
         }
     }
 
@@ -208,16 +236,6 @@ const fetchImportData = async (data) => {
 };
 
 
-// 替换sql中的状态变量
-const replaceSqlByState = (sql: string, state: any) => {
-    // 替换父组件状态
-    if (props.state) {
-        sql = replaceSql(sql, props.state, "SUPER")
-    }
-    sql = replaceSqlInGlobalState(sql, state)
-    return sql
-}
-
 // 附加操作的表单和行为
 const crudtableRef = ref(null);
 const isAddedModalVisible = ref(false)
@@ -228,9 +246,12 @@ const showAddButtonModal = (item, record) => {
     addedState.value = record
     isAddedModalVisible.value = true
 }
+
 const submitAddedForm = async () => {
+    debugger
+
     if (addedItem.value && addedItem.value.exeSql && addedItem.value.exeSql.trim() != '') {
-        const sqls = addedItem.value.exeSql.split(";").map(sql => { return replaceSqlByState(sql, addedState.value) })
+        const sqls = addedItem.value.exeSql.split(";").map(sql => { return buildSql(sql, addedState.value, props.state) })
         console.log('附加操作 ' + addedItem.value.name + ' SQL:' + sqls)
 
         return new Promise((resolve, reject) => {
@@ -245,6 +266,20 @@ const submitAddedForm = async () => {
         })
     }
     isAddedModalVisible.value = false
+}
+
+const changeState = async (state: any) => {
+    const sql = buildSql(addedItem.value.exeSql, state)
+    return new Promise((resolve, reject) => {
+        fetchCrudExeSql(sql, state).then((res: any) => {
+            // 附加操作执行后，需要再次从后端获取数据来刷新状态
+            crudtableRef.value.searchData()
+            isAddedModalVisible.value = false
+            message.success('提交成功！')
+        }).catch((err: any) => {
+            message.error('提交失败！' + err)
+        })
+    })
 }
 
 const cancelAddedForm = () => {
@@ -263,9 +298,10 @@ const cancelAddedForm = () => {
     </crudtable>
 
     <!-- 扩展操作 -->
-    <a-modal v-if="addedItem" :width="addedItem.width" v-model:visible="isAddedModalVisible" :title="addedItem.name" @ok="submitAddedForm"
-        @cancel="cancelAddedForm">
-        <slot :name="addedItem.name" :item="addedItem" :state="addedState">
+    <a-modal v-if="addedItem" :width="addedItem.width" v-model:visible="isAddedModalVisible" :title="addedItem.name"
+        :footer="null">
+        <slot :key="addedState.ID" :name="addedItem.name" :item="addedItem" :state="addedState" :change="changeState" :ok="submitAddedForm"
+            @cancel="cancelAddedForm">
             {{ addedItem.defaultShowText }}
         </slot>
     </a-modal>

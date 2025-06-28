@@ -1,10 +1,23 @@
 
+<template>
+    <!-- 菜单栏  -->
+    <a-menu class="menu" v-model:selectedKeys="state.selectedKeys" style="float: left;" mode="inline"
+        :open-keys="state.openKeys" :items="items" @select="onSelect" @openChange="onOpenChange">
+    </a-menu>
+    <a-button v-if="isDev" @click="reloadFile">刷新</a-button>
+</template>
+
 <script lang="ts" setup>
 import { h, ref, reactive, resolveComponent, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { useTheme } from '../../stores/theme';
 import { useAuthStore } from '../../stores/auth';
 import { computed } from 'vue';
+import { useConfig } from '@/stores/config';
+
+// 判断测试环境
+const isDev = process.env.NODE_ENV === 'development';
+
 const router = useRouter();
 const useAuth = useAuthStore();
 
@@ -92,15 +105,14 @@ const onOpenChange = (openKeys: string[]) => {
     }
 };
 
+const reloadFile = () => {
+    useConfig().clearConfig();
+}
+
 </script>
-<template>
-    <!-- 菜单栏  -->
-    <a-menu class="menu" v-model:selectedKeys="state.selectedKeys" style="float: left;" mode="inline"
-        :open-keys="state.openKeys" :items="items" @select="onSelect" @openChange="onOpenChange">
-    </a-menu>
-</template>
+
 <style>
 .menu {
-    background-color: #f3f7ed;
+    background-color: #e6f0ec;
 }
 </style>

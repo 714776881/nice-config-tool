@@ -1,4 +1,4 @@
-import request from '../request/index'
+import request from '../request'
 
 // 获取模态
 export function fetchGetModality() {
@@ -95,6 +95,7 @@ export function fetchGetExamItemCategory(
     data: state
   })
 }
+// 获取检查项目分组
 export function fetchGetExamItemCategoryByBodypartId(
   bodyPartId: string,
   state: Api.ReptCatelog.ReptLibStateForm,
@@ -108,6 +109,7 @@ export function fetchGetExamItemCategoryByBodypartId(
   })
 }
 
+// 删除检查项目分组
 export function fetchAddExamItemCategory(
   bodyPartId: string,
   examItemIds: string[],

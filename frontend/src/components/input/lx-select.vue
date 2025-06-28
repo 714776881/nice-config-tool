@@ -1,4 +1,5 @@
 <template>
+    <!-- 下拉选择框，支持 ; 分割的数据格式。 -->
     <div>
         <component is="a-select" v-model:value="componentModel" v-bind="componentProps" />
     </div>

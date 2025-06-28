@@ -27,5 +27,11 @@ export const useConfig = defineStore(crudStoreId, () => {
     return fileItem
   }
 
-  return { getConfig, setConfig }
+  // 清除全部缓存
+  const clearConfig = () => {
+    files.value = []
+  }
+  
+
+  return { getConfig, setConfig, clearConfig }
 })

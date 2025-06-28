@@ -13,15 +13,24 @@ const openNotification = (message) => {
     });
 };
 
+const router = useRouter()
 const authStore = useAuthStore()
 
 const { login, logout } = authStore
 
-const route = useRoute() // Http请求信息
-const router = useRouter()
-// 验证并登录
+// HTTP请求网址参数
+const route = useRoute() 
+
+// 验证用户并登录，通过WebRis进行调用
 const getUserInfo = async () => {
+    
     const loginToken = Object.keys(route.query)[0]
+
+    if(authStore.isAuthenticated)
+    {
+        router.push('/');
+        return
+    }
 
     await fetchLogin(loginToken).then(res => {
         if (res.data) {

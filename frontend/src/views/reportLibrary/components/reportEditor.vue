@@ -2,7 +2,7 @@
     <div class="rich-text-editor">
         <!-- 工具栏 -->
         <a-space v-show="showToolbar" class="toolbar" align="center" size="small">
-            <!--
+            <!-- 富文本编辑器工具栏
             <a-button type="default" @click="applyStyle('bold')" size="small">
                 <template #icon>
                     <BoldOutlined />
@@ -59,7 +59,7 @@
             v-html="editorContent" @input="updateContent" @click="handleLinkClick">
         </div>
 
-        <!-- 编辑关键字弹窗 弹窗 -->
+        <!-- 编辑关键字弹窗 -->
         <a-modal style="width: 624px;" :mask="false" ref="keyValueFromRef" v-model:open="isEditing" title="编辑关键字"
             ok-text="保存" cancel-text="删除" @ok="saveKeyword" @cancel="cancelEdit" centered>
             <KeyValueEditor :key="editingLink" v-model="currentKeywords"></KeyValueEditor>

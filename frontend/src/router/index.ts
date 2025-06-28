@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory,createWebHashHistory, type RouteRecordRaw } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/homeView.vue'
 import View404 from '../views/error/404.vue'
 import View401 from '../views/error/401.vue'
 import ViewTest from '../views/error/test.vue'
-import ViewLogin from '../views/login/index.vue'
+import ViewLogin from '../views/login.vue'
 import { useAuthStore } from '@/stores/auth'
 import { logger } from '@/utils/logger'
 

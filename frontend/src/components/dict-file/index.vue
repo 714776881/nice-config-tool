@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { ref, onBeforeMount, provide, watch } from 'vue'
-import { fetchGetConfigFile, fetchPostConfigFile } from '@/service/api/file'
-import { fetchCrudData, fetchCrudExeSql, fetchCrudExeBatchSql } from '@/service/api/crud'
+import { ref, onBeforeMount, provide } from 'vue'
+import { fetchCrudData} from '@/service/api/crud'
 import { useConfig } from '@/stores/config'
 import KeyValue from './keyValue/keyValue.vue'
-import { isRuntimeOnly } from 'vue';
-import { replaceSql, addWhereSql, uuid, deepClone } from '@/utils/tool'
+import { deepClone } from '@/utils/tool'
 
 const props = defineProps(['configFileName', 'state'])
 const config = ref<App.Dict.Config>()
@@ -70,5 +68,3 @@ onBeforeMount(loadConfig)
         <a-spin size="large" />
     </div>
 </template>
-
-@/stores/config/index

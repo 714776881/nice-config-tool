@@ -47,6 +47,12 @@ declare namespace App {
       sqlTemplates: SqlTemplates
       buttonsShow: ButtonsShow
       addedButtons: AddedButton[]
+      scopeConfig:scopeConfig
+    }
+
+    type scopeConfig = {
+      isShow: boolean
+      level:number
     }
     /**
      * @typedef Config
@@ -98,7 +104,7 @@ declare namespace App {
           options?: {
             label: string
             value: string | number
-            group: string
+            category: string
           }[]
           disabled?: string
         }
@@ -122,7 +128,7 @@ declare namespace App {
         allOptions?: {
           label: string
           value: string | number
-          group: string
+          category: string
         }[] // 存储所有选项，在需要根据分组过滤选项时使用。
       }
 
@@ -242,6 +248,7 @@ declare namespace App {
       keyValueConfig: KeyValueConfig[]
       inputConfig: InputConfig[]
       keyLabelMap: keyLabel[]
+      arrayConfig: ArrayConfig[]
     }
 
     type keyLabel = {
@@ -254,6 +261,14 @@ declare namespace App {
       filePath: string
       nodePath: String
       nodeContent: string
+    }
+
+    type ArrayConfig = {
+      name: string
+      type: string
+      props:{
+        index: number
+      }
     }
 
     type InputConfig = {
@@ -286,6 +301,7 @@ declare namespace App {
       isLoadExamItem: boolean // 是否加载检查项目
       catelogMaxLayerNumber: number // 分组节点的最大层数
       adminRoles: string[] // 管理员权限控制
+      modality: string // 检查类型，当指定是某个检查类型时，只能操作该检查类型的目录
     }
   }
 }

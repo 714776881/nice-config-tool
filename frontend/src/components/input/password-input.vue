@@ -2,13 +2,14 @@
     <!-- 密码输入框，显示密码复杂度 -->
     <div>
       <a-input type="password" v-model="password" @input="checkPasswordStrength" />
-      <div>{{ passwordStrength }}</div>
+      <div>[{{ passwordStrength }}]</div>
     </div>
 </template>
   
 <script setup lang="ts">
   import { ref,watch } from 'vue';
   
+  // 用户密码
   const password = defineModel<string>('value');
 
   const passwordStrength = ref('');

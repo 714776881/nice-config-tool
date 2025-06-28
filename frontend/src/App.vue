@@ -7,6 +7,7 @@ import Menu from '@/components/menu/index.vue'
 import zhCN from 'ant-design-vue/es/locale/zh_CN'
 import { useAuthStore } from '@/stores/auth'
 import { computed } from 'vue';
+import i18n from './locale/locale';
 
 // 获取用户信息
 const authStore = useAuthStore()
@@ -18,6 +19,10 @@ const siderWidth = computed(() => {
   }
   return '0'
 })
+
+
+i18n.global.locale = 'zh'
+
 </script>
 
 <template>
@@ -53,7 +58,7 @@ const siderWidth = computed(() => {
 
 <style scoped>
 .contnet {
-  margin-left: 16px;
+  margin-left: 22px;
   margin-top: 30px;
   margin-right: 30px;
 }

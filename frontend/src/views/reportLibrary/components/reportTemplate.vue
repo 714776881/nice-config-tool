@@ -22,8 +22,8 @@
                     </a-space>
                 </template>
                 <template #extra><a href="#"></a></template>
-                <ReportEditor ref="studyResultEditorRef" :key="templateData.reptTempId" v-model="templateData.studyResult"
-                    style="height: 350px;">
+                <ReportEditor ref="studyResultEditorRef" :key="templateData.reptTempId"
+                    v-model="templateData.studyResult" style="height: 350px;">
                 </ReportEditor>
             </a-card>
             <!-- 检查诊断 -->
@@ -41,6 +41,11 @@
                     style="height: 20%;">
                 </ReportEditor>
             </a-card>
+            <!-- 阴阳性 -->
+            <a-radio-group v-model:value="templateData.isAbnormal">
+                <a-radio :value="0">阴性</a-radio>
+                <a-radio :value="1">阳性</a-radio>
+            </a-radio-group>
         </a-space>
     </div>
 </template>
@@ -78,7 +83,6 @@ const loadTemplate = async () => {
     else {
         saveTemplateInfo.value = '已经保存到云端';
     }
-
 }
 
 // 防止频繁保存，进行防抖和节流。
@@ -98,11 +102,14 @@ watchDebounced(() => templateData.value, async (newValue, oldValue) => {
         IsPublic: templateData.value.isPublic,
         CStudyResult: templateData.value.studyResult,
         CDiagResult: templateData.value.diagResult,
+        IsAbnormal: templateData.value.isAbnormal
     }
 
     const res = await fetchPostTemplate(form);
-    saveTemplateInfo.value = '刚刚修改，已经保存到云端';
-    emit('changeTemplateNode', templateData.value);
+    if (res) {
+        saveTemplateInfo.value = '刚刚修改，已经保存到云端';
+        emit('changeTemplateNode', templateData.value);
+    }
 }, { deep: true, debounce: 600, maxWait: 1000 })
 
 onMounted(loadTemplate);

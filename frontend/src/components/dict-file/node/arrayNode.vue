@@ -20,6 +20,28 @@ const config = inject<Ref<App.Dict.Config>>('config')
 
 const node = defineModel<App.Dict.Node>()
 
+const nodeConfig = computed(() => {
+    if (config == undefined) {
+        return
+    }
+    if (config.value.arrayConfig == undefined) {
+        return
+    }
+
+    const key = node.value[':@'].name
+    return config.value.arrayConfig.find(item => item.key.split(';').includes(key))
+})
+
+const nodeType = computed(() => {
+    if (nodeConfig.value == undefined) {
+        return
+    }
+    if (nodeConfig.value.type == undefined) {
+        return
+    }
+    return nodeConfig.value.type
+})
+
 const isLeafNode = computed(() => {
     if (node.value.item.length == 0) {
         return false
@@ -30,7 +52,6 @@ const isLeafNode = computed(() => {
     if (item1[':@'] == undefined) return false
     return item1[':@'].value != undefined && item1[':@'].value != "#Array"
 })
-
 
 const addNode = () => {
     if (node.value.item.length == 0) {
@@ -51,9 +72,13 @@ const addNode = () => {
         node.value.item.splice(0, 0, item1)
     }
 }
-const removeNode = (index) => {
+const removeNode = (index,isConfirm) => {
     if (!isLeafNode.value && node.value.item.length == 1) {
         message.info("请保留一条信息作为模板！")
+        return
+    }
+    // 再次确认
+    if ( isConfirm  && !window.confirm("确定删除吗？")) {
         return
     }
 
@@ -92,15 +117,6 @@ const dragItemStyle = {
     margin: "10px 10px 0px 0px"
 }
 
-function findItem(node, name) {
-    if (node == undefined || node[':@'] == undefined) {
-        return
-    }
-    if (node[':@'].name == name && node[':@'].value != undefined) {
-        return node[':@'].value;
-    }
-}
-
 const getLabel = (item: any) => {
     if (item[':@'] == undefined || item[':@'].name == undefined) {
         return '';
@@ -116,6 +132,35 @@ const getLabel = (item: any) => {
     // 从配置文件中查找
     return item[':@'].label ? item[':@'].label : item[':@'].name
 }
+
+const getHeader = (item: any) => {
+    console.log(item)
+    
+    if (item == undefined || item.item == undefined) {
+        return '';
+    }
+    
+    var index = 0;
+    if( nodeConfig.value.props != undefined) {
+        index = nodeConfig.value.props.index;
+    }
+
+    // 将item的第一个子元素的值作为标题
+    if (item.item.length >= index) {
+        if (item.item[index][':@'] == undefined) {
+            return '';
+        }
+        return item.item[index][':@'].value ? item.item[index][':@'].value : "未命名"
+    }
+    if( item.item.length > 0) {
+        if (item.item[0][':@'] == undefined) {
+            return '';
+        }
+        return item.item[0][':@'].value ? item.item[0][':@'].value : "未命名"
+    }
+}
+
+
 
 </script>
 
@@ -145,9 +190,30 @@ const getLabel = (item: any) => {
                     </a-button>
                 </a-space>
             </div>
+            <!-- 数组：折叠面板,不可拖拽 -->
+             <a-collapse v-if="nodeType=='Collapse'" :bordered="true"  style="min-width: 400px;">
+                    <a-collapse-panel  v-for="(item, index) in node.item" :header="getHeader(node.item[index])" :key="index">
+                        <Node :parentItem="node" :level="level" v-model="node.item[index]"></Node>
+                        <template #extra>
+                            <a-space :size="[12, 12]">
+                                <a-tooltip title="上移">
+                                    <ArrowUpOutlined style="color: rgb(102, 200, 138);" @click="upNode(index)" />
+                                </a-tooltip>
+                                <a-tooltip title="删除">
+                                    <DeleteOutlined 
+                                        style="color: rgb(102, 200, 138);" :disabled="1 != 1"
+                                        @click="removeNode(index,true)" />
+                                </a-tooltip>
+                                <a-tooltip title="下移">
+                                    <ArrowDownOutlined style="color: rgb(102, 200, 138);" @click="downNode(index)" />
+                                </a-tooltip>    
+                            </a-space>
+                        </template>
+                    </a-collapse-panel>
+             </a-collapse>
 
             <!-- 数组：列表  可拖拽 -->
-            <draggable v-model="node.item" itemKey=":@" handle=".drag-handle">
+            <draggable v-else v-model="node.item" itemKey=":@" handle=".drag-handle">
                 <template #item="{ element, index }">
                     <div class="drag-item" :style="isLeafNode ? dragItemLeftStyle : dragItemStyle">
                         <a-space :size="[12, 12]" align="start">
@@ -157,7 +223,7 @@ const getLabel = (item: any) => {
                                     <CaretUpOutlined style="color: rgb(102, 200, 138);" @click="upNode(index)" />
                                 </a-tooltip>
                                 <a-tooltip title="删除">
-                                    <MinusCircleOutlined style="color: rgb(102, 200, 138);" :disabled="1 != 1"
+                                    <DeleteOutlined style="color: rgb(102, 200, 138);" :disabled="1 != 1"
                                         @click="removeNode(index)" />
                                 </a-tooltip>
                                 <a-tooltip title="下移">
@@ -174,7 +240,7 @@ const getLabel = (item: any) => {
                             <a-space :size="[0, 16]">
                                 <Node :parentItem="node" :level="level" v-model="node.item[index]"></Node>
                                 <a-tooltip title="删除">
-                                    <MinusCircleOutlined v-if="isLeafNode"
+                                    <DeleteOutlined v-if="isLeafNode"
                                         style="color: rgb(102, 200, 138);margin:0px 8px 0px -8px;" :disabled="1 != 1"
                                         @click="removeNode(index)" />
                                 </a-tooltip>

@@ -5,24 +5,22 @@ import { localStg } from '@/utils/storage'
 const AuthStoreId = 'auth-store'
 
 export const useAuthStore = defineStore(AuthStoreId, () => {
-  const loginToken = ref<Api.Auth.LoginToken>({ token: '', refreshToken: '' })
   const isAuthenticated = ref(false)
   const userInfo = ref<Api.Auth.UserInfo>()
 
-  const deptState = computed(() => {
-    if (userInfo.value == undefined) {
-      return {}
-    }
-    return {
-      REGIONID: userInfo.value.regionId,
-      HOSPITALID: userInfo.value.hospitalId,
-      DEPARTMENTID: userInfo.value.departmentId
-    }
+  const scopeState = ref({
+    REGIONID: "",
+    HOSPITALID: "",
+    DEPARTMENTID: ""
   })
 
   function login(user) {
     isAuthenticated.value = true
     userInfo.value = user
+
+    scopeState.value.REGIONID = user.regionId;
+    scopeState.value.HOSPITALID = user.hospitalId;
+    scopeState.value.DEPARTMENTID = user.departmentId;
   }
 
   function logout() {
@@ -30,5 +28,20 @@ export const useAuthStore = defineStore(AuthStoreId, () => {
     isAuthenticated.value = false
   }
 
-  return { isAuthenticated, loginToken, userInfo, deptState, login, logout }
+  const changeScopeState = (regionId,hospitalId,departmentId)=>{
+    if(regionId != "")
+    {
+      scopeState.value.REGIONID = regionId;
+    }
+    if(hospitalId != "")
+    {
+      scopeState.value.HOSPITALID = hospitalId;
+    }
+    if(departmentId != "")
+    {
+      scopeState.value.DEPARTMENTID = departmentId;
+    }
+  }
+
+  return { isAuthenticated, userInfo, scopeState, login, logout, changeScopeState }
 })

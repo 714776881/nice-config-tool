@@ -9,11 +9,23 @@ declare namespace Api {
       userId: string
       userCode: string
       userName: string
+      passWord: string
       userActor: string
       userRole: string
       departmentId: string
       hospitalId: string
       regionId: string
+    }
+  }
+  
+  namespace Scope{
+    interface Option{
+      RegionCode: string
+      RegionName: string 
+      HospitalCode: string
+      HospitalName: string
+      DepartmentCode: string
+      DepartmentName: string
     }
   }
 
@@ -70,6 +82,7 @@ declare namespace Api {
       reptTemp: string
       studyResult: string
       diagResult: string
+      isAbnormal: number
       isPublic: boolean
       modifyDT: string
     }
@@ -85,6 +98,8 @@ declare namespace Api {
       // 检查诊断
       DiagResult?: string
       CDiagResult?: string
+      // 阴阳性
+      IsAbnormal?: number
       // 是否公开
       IsPublic: boolean
       // 区域ID

@@ -18,7 +18,7 @@ export function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)]
 }
 
-// 拷贝对象 去除响应性
+// 深度拷贝对象，避免引用
 export function deepClone<T>(obj: T): T {
   if (obj == undefined) {
     return null
@@ -68,32 +68,6 @@ export function addWhereSql(sql: string, state: any): string {
   return sql
 }
 
-// 产生UUID
-export function uuid2() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    const r = (Math.random() * 16) | 0,
-      v = c == 'x' ? r : (r & 0x3) | 0x8
-    return v.toString(16)
-  })
-}
-
-/**
- * 生成一个永不重复的ID
- * @param randomLength 随机id长度 0 - 11
- */
-export function uuid(randomLength = 10): string {
-  const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-  let uuid = '';
-
-  for (let i = 0; i < randomLength; i++) {
-      const randomIndex = Math.floor(Math.random() * characters.length);
-      uuid += characters[randomIndex];
-  }
-  return uuid;
-}
-
-
-
 function replaceAll(str, search, replacement) {
   if (!str || !search) {
     return str; // 如果输入字符串或搜索字符串为空，直接返回原字符串
@@ -108,4 +82,28 @@ function replaceAll(str, search, replacement) {
   }
  
   return str.replace(searchRegex, replacement);
+}
+
+// 产生UUID
+export function uuid2() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0,
+      v = c == 'x' ? r : (r & 0x3) | 0x8
+    return v.toString(16)
+  })
+}
+
+/**
+ * 生成一个永不重复的ID
+ * @param randomLength 随机id长度 0 - 32
+ */
+export function uuid(randomLength = 32): string {
+  const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let uuid = '';
+
+  for (let i = 0; i < randomLength; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      uuid += characters[randomIndex];
+  }
+  return uuid;
 }

@@ -5,7 +5,7 @@ import { fetchGetXmlFileNode, fetchPostXmlFileNode } from '@/service/api/file'
 import { computed, inject } from 'vue';
 import { App, message } from 'ant-design-vue';
 import { deepClone } from '@/utils/tool'
-import { clearNodeValue } from '@/components/dict/node/nodeTool'
+import { clearNodeValue } from '@/components/dict-file/node/nodeTool'
 
 const props = defineProps(['name', 'filePath', 'nodePath'])
 

@@ -4,6 +4,7 @@
         <a-layout style="margin-top: -20px;margin-left: 16px;">
             <!-- 侧边栏 -->
             <a-layout-sider width="350px" style="width: 350px;background-color: rgb(246, 254, 250);">
+                <Scope v-if="isSuperMan" :hideLabel="true" style="margin-left: 24px; margin-top: 14px;" :isShow="true"></Scope>
                 <!-- 检查类型 -->
                 <a-space style="margin-left: 26px;margin-top: 10px;margin-bottom:5px">
                     <span style="font-size:medium;">检查类型：</span>
@@ -30,7 +31,7 @@
 </template>
 <script setup lang="ts">
 import { ref, reactive, provide, watch, onMounted } from 'vue';
-import CatelogTree from './catelogTree.vue';
+import CatelogTree from './tree.vue';
 import ReportTemplate from './components/reportTemplate.vue';
 import { fetchGetCatelog, fetchGetModality } from '@/service/api/reptCatelog'
 import { fetchGetTemplate } from '@/service/api/reptTemp'
@@ -40,12 +41,15 @@ import { useTheme } from '@/stores/theme'
 import { useConfig } from '@/stores/config'
 import { deepClone } from '@/utils/tool'
 import { getCatelogNode } from './treeNodes'
-const { userInfo } = useAuthStore()
+import Scope from '@/components/common/scope.vue'
+
+const { userInfo,scopeState} = useAuthStore()
 
 const config = ref<App.ReptCatelog.Config>({
     isLoadExamItem: false,
     adminRoles: [],
     catelogMaxLayerNumber: 0,
+    modality: ""
 });
 const modalityDic = ref([]) // 模态字典
 const modality = ref('') // 当前模态
@@ -60,7 +64,8 @@ const state = ref({
     HospitalId: userInfo.hospitalId,
     DepartmentId: userInfo.departmentId,
     CategoryType: 1002,
-    IsLoadExamItem: false
+    IsLoadExamItem: false,
+    IsGM : false
 })
 // 是否超级管理员
 const isSuperMan = computed(() => {
@@ -73,6 +78,20 @@ const isSuperMan = computed(() => {
     return false
 })
 
+watch(() => scopeState, async (val) => {
+    templateId.value = ''
+    catelogTreeData.value = null
+    state.value.RegionId = val.REGIONID
+    state.value.HospitalId = val.HOSPITALID
+    state.value.DepartmentId = val.DEPARTMENTID
+
+    const res = await fetchGetCatelog(modality.value, state.value)
+    if (res.data.nodes) {
+        catelogTreeData.value = res.data.nodes
+    }
+},{deep: true, immediate: true})
+
+
 // 获取当前模态下的目录树数据
 watch(() => modality.value, async (val) => {
     templateId.value = ''
@@ -80,7 +99,6 @@ watch(() => modality.value, async (val) => {
 
     const res = await fetchGetCatelog(val, state.value)
     if (res.data.nodes) {
-        console.log(res.data.nodes)
         catelogTreeData.value = res.data.nodes
     }
 })
@@ -103,6 +121,15 @@ const onload = async () => {
     const res = await fetchGetModality()
     if (res.data) {
         modalityDic.value = res.data
+        if(config.value.modality)
+        {
+            modalityDic.value = res.data.filter((item) => item.value == config.value.modality)
+        }
+        else
+        {
+            modalityDic.value = res.data
+        }
+
         if (modalityDic.value.length > 0) {
             modality.value = modalityDic.value[0].value
         }

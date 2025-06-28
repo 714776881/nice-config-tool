@@ -70,7 +70,7 @@ export function flattenTree(
   return result
 }
 
-/* 判断公有节点是否包含私有节点*/
+/* 判断公有节点是否包含私有节点 */
 export const isHavePrivateChildren = (children: Api.ReptCatelog.Node[]): boolean => {
   if (!children || children.length === 0) {
     return false

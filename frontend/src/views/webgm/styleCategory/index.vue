@@ -14,7 +14,7 @@ const formulaDataFileName = 'styleCategoryData.json'
 </script>
 <template>
     <lxCrud :key="configFileName" :configFileName="configFileName">
-        <template #管理打印单模板="{ state, item }">
+        <template #打印单模板列表="{ state, item }">
             <!-- header 插槽的内容放这里 -->
             <lxCrud :key="formulaDataFileName" :configFileName="formulaDataFileName" :state="state">
             </lxCrud>

@@ -1,4 +1,5 @@
 <template>
+    <!-- 支持两级树状输入方式 -->
   <a-tree
     v-model:checkedKeys="componentModel"
     default-expand-all
@@ -25,8 +26,6 @@ const componentProps = computed(() => {
 
 const treeData = computed(() => {
     const options : App.Common.DicElement[] = props.options;
-    
-    debugger;
 
     const categorys = []
     for (let i = 0; i < options.length; i++) {

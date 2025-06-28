@@ -1,22 +1,35 @@
-import request from '../request/index'
+import request from '../request'
 
 /**
  * 执行select sql获取数据，后面移到后端
  */
-export function fetchCrudData(sql: string) {
+export function fetchCrudData(sql: string, values: any = {}) {
   return request<Api.Crud.Data>({
-    url: '/Crud',
-    method: 'get',
-    params: { sql }
+    url: '/Crud/Select',
+    method: 'post',
+    headers:{
+      'Content-Type': 'multipart/form-data'
+    },
+    data: {
+      sql: sql,
+      values: values,
+    }
   })
 }
 
 // 执行sql
-export function fetchCrudExeSql(sql: string) {
+export function fetchCrudExeSql(sql: string, values: any = {}, file?: File) {
   return request<Api.Crud.EexResult>({
     url: '/Crud/ExeSql',
     method: 'post',
-    params: { sql }
+    headers:{
+      'Content-Type': 'multipart/form-data'
+    },
+    data: {
+      sql: sql,
+      values: values,
+      file: file
+    }
   })
 }
 // 批量执行SQL

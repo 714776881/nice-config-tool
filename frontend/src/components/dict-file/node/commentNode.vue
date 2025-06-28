@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref,inject,defineModel } from 'vue'
 
 
 /**
@@ -7,6 +7,7 @@ import { ref } from 'vue'
  */
 
 const node = defineModel<App.Dict.Node>()
+
 
 </script>
 

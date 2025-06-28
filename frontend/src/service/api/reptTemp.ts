@@ -1,4 +1,4 @@
-import request from '../request/index'
+import request from '../request'
 
 // 获取报告模板
 export function fetchGetTemplate(reptTempId: string) {
